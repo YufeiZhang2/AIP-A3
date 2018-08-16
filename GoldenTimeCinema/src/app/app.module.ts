@@ -11,6 +11,7 @@ import { NowShowingMovieListComponent } from "./now-showing-movie-list/now-showi
 import { NowShowingMoviesService } from "./now-showing-movies.service";
 import { ComingSoonMovieListComponent } from "./coming-soon-movie-list/coming-soon-movie-list.component";
 import { FooterComponent } from "./footer/footer.component";
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from "./footer/footer.component";
     ComingSoonBlockComponent,
     NowShowingMovieListComponent,
     ComingSoonMovieListComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [BrowserModule],
   providers: [NowShowingMoviesService, ComingSoonMoviesService],
