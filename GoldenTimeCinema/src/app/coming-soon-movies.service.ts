@@ -5,6 +5,11 @@ import { Injectable } from "@angular/core";
 })
 export class ComingSoonMoviesService {
   getUpcomingMovies() {
-    return ["The Lord of Ring", "Notting Hill", "Harry Potter"];
+    return [
+      "The Lord of Ring",
+      "Notting Hill",
+      "Harry Potter",
+      "American Hustles"
+    ];
   }
 }

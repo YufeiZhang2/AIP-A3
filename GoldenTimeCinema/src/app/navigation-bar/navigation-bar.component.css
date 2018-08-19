@@ -2,3 +2,10 @@
   display: block;
   background-color: whitesmoke;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+  padding-right: 50px;
+  padding-left: 50px;
+}

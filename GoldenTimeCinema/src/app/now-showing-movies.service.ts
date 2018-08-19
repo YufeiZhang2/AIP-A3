@@ -5,6 +5,11 @@ import { Injectable } from "@angular/core";
 })
 export class NowShowingMoviesService {
   getShowingMovies() {
-    return ["Good Will Hunting", "Forest Gump", "Catch Me If You Can"];
+    return [
+      "Good Will Hunting",
+      "Forest Gump",
+      "Catch Me If You Can",
+      "Terminal"
+    ];
   }
 }
