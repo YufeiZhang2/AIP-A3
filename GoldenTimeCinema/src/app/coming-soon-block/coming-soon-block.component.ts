@@ -6,7 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./coming-soon-block.component.css"]
 })
 export class ComingSoonBlockComponent implements OnInit {
-  title = "Coming Soon Moives";
+  title = "Coming Soon Movies";
 
   ngOnInit() {}
 }
