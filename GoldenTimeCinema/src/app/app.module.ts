@@ -19,6 +19,8 @@ import { AwardComponent } from "./award/award.component";
 import { CompanyInformationComponent } from "./company-information/company-information.component";
 import { NotFoundPageComponent } from "./not-found-page/not-found-page.component";
 import { AddMovieFormComponent } from "./add-movie-form/add-movie-form.component";
+import { LoginComponent } from "./login/login.component";
+import { RegisterComponent } from "./register/register.component";
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { AddMovieFormComponent } from "./add-movie-form/add-movie-form.component
     AwardComponent,
     CompanyInformationComponent,
     AddMovieFormComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -64,6 +68,14 @@ import { AddMovieFormComponent } from "./add-movie-form/add-movie-form.component
       {
         path: "addMovieForm",
         component: AddMovieFormComponent
+      },
+      {
+        path: "login",
+        component: LoginComponent
+      },
+      {
+        path: "register",
+        component: RegisterComponent
       },
       {
         path: "**",
