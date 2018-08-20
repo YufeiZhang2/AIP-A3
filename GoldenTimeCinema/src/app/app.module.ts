@@ -21,6 +21,7 @@ import { NotFoundPageComponent } from "./not-found-page/not-found-page.component
 import { AddMovieFormComponent } from "./add-movie-form/add-movie-form.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
+import { EditMovieFormComponent } from "./edit-movie-form/edit-movie-form.component";
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { RegisterComponent } from "./register/register.component";
     AddMovieFormComponent,
     NotFoundPageComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    EditMovieFormComponent
   ],
   imports: [
     BrowserModule,
@@ -76,6 +78,10 @@ import { RegisterComponent } from "./register/register.component";
       {
         path: "register",
         component: RegisterComponent
+      },
+      {
+        path: "editMovieForm",
+        component: EditMovieFormComponent
       },
       {
         path: "**",

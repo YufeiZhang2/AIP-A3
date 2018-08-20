@@ -1,3 +1,4 @@
 <ul>
-  <li *ngFor="let movie of movies">{{movie}}</li>
+  <li routerLink="../editMovieForm" *ngFor="let movie of movies">{{movie}}<a routerLink="../editMovieForm"> | Edit</a></li>
+
 </ul>
