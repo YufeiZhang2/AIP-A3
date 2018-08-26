@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ComingSoonMoviesService } from "../coming-soon-movies.service";
+import { PostService } from './../services/post.service';
 
 @Component({
   selector: "coming-soon-movie-list",
@@ -7,11 +7,14 @@ import { ComingSoonMoviesService } from "../coming-soon-movies.service";
   styleUrls: ["./coming-soon-movie-list.component.css"]
 })
 export class ComingSoonMovieListComponent implements OnInit {
-  movies;
+  movies: any[];
 
-  constructor(service: ComingSoonMoviesService) {
-    this.movies = service.getUpcomingMovies();
+  constructor(private service: PostService) { }
+
+  ngOnInit() {
+    this.service.getPosts()
+      .subscribe(response => {
+        this.movies = response.json();
+      })
   }
-
-  ngOnInit() {}
 }
