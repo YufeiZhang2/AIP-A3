@@ -1,12 +1,6 @@
-import { PostService } from './services/post.service';
-import { ComingSoonMoviesService } from "./services/coming-soon-movies.service";
-import { NowShowingMoviesService } from "./services/now-showing-movies.service";
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { RoutingModule } from './routing.module';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
-import { HttpModule } from "@angular/http";
-import { AppComponent } from "./app.component";
 import { SearchBarComponent } from "./search-bar/search-bar.component";
 import { NavigationBarComponent } from "./navigation-bar/navigation-bar.component";
 import { NowShowingBlockComponent } from "./now-showing-block/now-showing-block.component";
@@ -24,37 +18,54 @@ import { AddMovieFormComponent } from "./add-movie-form/add-movie-form.component
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { EditMovieFormComponent } from "./edit-movie-form/edit-movie-form.component";
-import { PostsComponent } from './posts/posts.component';
 
+const routes: Routes = [
+    {
+        path: "",
+        component: HomeComponent
+    },
+    {
+        path: "home",
+        component: HomeComponent
+    },
+    {
+        path: "genre",
+        component: GenreComponent
+    },
+    {
+        path: "award",
+        component: AwardComponent
+    },
+    {
+        path: "companyInformation",
+        component: CompanyInformationComponent
+    },
+    {
+        path: "addMovieForm",
+        component: AddMovieFormComponent
+    },
+    {
+        path: "login",
+        component: LoginComponent
+    },
+    {
+        path: "register",
+        component: RegisterComponent
+    },
+    {
+        path: "editMovieForm",
+        component: EditMovieFormComponent
+    },
+    {
+        path: "**",
+        component: NotFoundPageComponent
+    }
+];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SearchBarComponent,
-    NavigationBarComponent,
-    NowShowingBlockComponent,
-    ComingSoonBlockComponent,
-    NowShowingMovieListComponent,
-    ComingSoonMovieListComponent,
-    FooterComponent,
-    HeaderComponent,
-    GenreComponent,
-    HomeComponent,
-    AwardComponent,
-    CompanyInformationComponent,
-    AddMovieFormComponent,
-    NotFoundPageComponent,
-    LoginComponent,
-    RegisterComponent,
-    EditMovieFormComponent,
-    PostsComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpModule,
-    RoutingModule
-  ],
-  providers: [PostService, NowShowingMoviesService, ComingSoonMoviesService],
-  bootstrap: [AppComponent]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [
+        RouterModule
+    ]
 })
-export class AppModule { }
+export class RoutingModule { };
