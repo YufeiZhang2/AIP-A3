@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { NowShowingMoviesService } from "../../services/now-showing-movies.service";
+import { NowShowingMoviesService } from "../services/now-showing-movies.service";
 
 @Component({
   selector: "now-showing-movie-list",
@@ -12,5 +12,5 @@ export class NowShowingMovieListComponent implements OnInit {
     this.movies = service.getShowingMovies();
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
