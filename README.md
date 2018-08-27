@@ -3,13 +3,29 @@
 This is a repository that provides the deliverable for assignment 3 for our group Web Three. 
 
 ## Priciples of code style 
-
+	Code style:
+	
 	• Write meaningful variable names;
 	• Write meaningful comments;
-	• Write Consistent naming convention, meaning we use pascal case for naming property, methods and class names and camel case         for variables and methods' parameters;
+	• Write Consistent naming convention, meaning we use pascal case for naming property, methods and class names and
+	  camel case for variables and methods' parameters;
 	• Propoerly use nested loops and do not wirte long nested loops;
-	• Do not repete the same logic.  Follow KISS priciple: keep it simple and stupid;
-	• Refactor the code after it works and try to make it clean to realise the same fucntion so that the code is more readable;
+	• Do not repete the same logic to avoid duplicated code. Follow KISS priciple: keep it simple and stupid; 
+	• Refactor the code after it works and try to make it clean to realise the same fucntion so that the code is more  	     readable.
+	• Do not write long methods, one method for one purpose;
+	• Write good unit testing and it covers all the core functions;
+	
+	Design:
+	
+	• Design a clear structure for the project, 
+
+	• Seperate layers for business, data and presentation with three or more layers but less than five; 
+
+	• Consider the resusability of code;
+
+	• Make good database design with peoper attributes and data type. Eliminate redundant data.
+
+	• Consider modularity by dividing modules that serve different purposes to deal with the grow of the poeject. 
 
 ## Use guide
 
