@@ -1,14 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import { SearchBarComponent } from "./search-bar/search-bar.component";
-import { NavigationBarComponent } from "./navigation-bar/navigation-bar.component";
-import { NowShowingBlockComponent } from "./now-showing-block/now-showing-block.component";
-import { ComingSoonBlockComponent } from "./coming-soon-block/coming-soon-block.component";
-import { NowShowingMovieListComponent } from "./now-showing-movie-list/now-showing-movie-list.component";
-import { ComingSoonMovieListComponent } from "./coming-soon-movie-list/coming-soon-movie-list.component";
-import { FooterComponent } from "./footer/footer.component";
-import { HeaderComponent } from "./header/header.component";
 import { GenreComponent } from "./genre/genre.component";
 import { HomeComponent } from "./home/home.component";
 import { AwardComponent } from "./award/award.component";
