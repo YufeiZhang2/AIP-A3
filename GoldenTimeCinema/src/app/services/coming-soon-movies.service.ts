@@ -4,6 +4,7 @@ import { Injectable } from "@angular/core";
   providedIn: "root"
 })
 export class ComingSoonMoviesService {
+
   getUpcomingMovies() {
     return [
       "The Lord of Ring",
