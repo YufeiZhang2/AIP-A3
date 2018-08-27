@@ -25,6 +25,7 @@ import { LoginComponent } from "./components/login/login.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { EditMovieFormComponent } from "./components/edit-movie-form/edit-movie-form.component";
 import { PostsComponent } from "./components/posts/posts.component";
+import { MovieComponent } from './components/movie/movie.component';
 
 @NgModule({
   declarations: [
@@ -46,10 +47,11 @@ import { PostsComponent } from "./components/posts/posts.component";
     LoginComponent,
     RegisterComponent,
     EditMovieFormComponent,
-    PostsComponent
+    PostsComponent,
+    MovieComponent
   ],
   imports: [BrowserModule, HttpModule, RoutingModule],
   providers: [PostService, NowShowingMoviesService, ComingSoonMoviesService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
