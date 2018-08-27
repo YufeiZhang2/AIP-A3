@@ -1,8 +1,8 @@
 # Advanced Internet Programming 2018_Assignmemt 3_The Golden Time Cinema Project
 
-This is a repository that provides the deliverable for assignment 3 for our group Web Three. 
+This is a repository that provides the deliverable for assignment 3 for our group Web Three(two nerds now becuase one teammate dropped the subject). 
 
-## Priciples of code style 
+## Principles of code style 
 	Code style:
 	
 	• Write meaningful variable names;
@@ -18,7 +18,7 @@ This is a repository that provides the deliverable for assignment 3 for our grou
 	
 	• Do not repete the same logic to avoid duplicated code. Follow KISS priciple: keep it simple and stupid; 
 	
-	• Refactor the code after it works and try to make it clean to realise the same fucntion so that the code is more  	     readable.
+	• Refactor the code after it works and try to make it clean to realise the same fucntion so that the code is more  	     readable;
 	
 	• Do not write long methods, one method for one purpose;
 	
