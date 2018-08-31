@@ -4,7 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 const moviesController = require('./controllers/moviesController');
-// const test = require('./controllers/test');
+const usersController = require('./controllers/usersController');
 
 // Connect mongoose to our database
 mongoose.connect(config)
@@ -26,11 +26,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Set movie api routes
 app.use('/api/movies', moviesController);
+app.use('/api/users', usersController);
 
 //Handle errors when the api is not defined
-// app.use('/', (req, res) => {
-//     res.send("Invalid page");
-// })
+app.use('/', (req, res) => {
+    res.send("Invalid page");
+})
 
 //Listen to port local environment port or port 3000
 const port = process.env.PORT || 3000;

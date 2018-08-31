@@ -1,3 +1,5 @@
-const databse = 'mongodb://localhost:27017/movie';
+const moviedb = 'mongodb://localhost:27017/movie';
+const userdb = 'mongodb://localhost:27017/users';
 
-module.exports = databse;
+module.exports = moviedb;
+module.exports = userdb;

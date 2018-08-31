@@ -1,7 +1,7 @@
 const Joi = require('joi');
 const mongoose = require("mongoose");
 
-const UserModel = mongoose.model(
+const userModel = mongoose.model(
     "users",
     new mongoose.Schema({
         name: { type: String, required: true },
@@ -12,4 +12,4 @@ const UserModel = mongoose.model(
     })
 );
 
-module.exports = UserModel;
+module.exports = userModel;
