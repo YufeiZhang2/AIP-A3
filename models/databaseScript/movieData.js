@@ -6,7 +6,7 @@ mongoose
   .then(() => console.log("Connected to MongoDB...")) // Sucessfully connected
   .catch(err => console.log("Bad connection", err)); // Catch an error
 
-const Movie = mongoose.model(
+const movieModel = mongoose.model(
   "movie",
   new mongoose.Schema({
     name: { type: String, required: true },
@@ -23,7 +23,7 @@ const Movie = mongoose.model(
 async function createMovies() {
   // Create different each document to store each movie object
 
-  const forrestGump = new Movie({
+  const forrestGump = new movieModel({
     name: "Forest Gump",
     showDate: ["25-Aug-2018", "26-Aug-2018", "27-Aug-2018"],
     showTime: ["10:00 - 12:22", "3:00 - 5:22", "19:00 - 9:22"],
@@ -35,7 +35,7 @@ async function createMovies() {
     status: "nowShowing"
   });
 
-  const theLordOfRings = new Movie({
+  const theLordOfRings = new movieModel({
     name: "The Lord of Rings",
     showDate: ["25-Aug-2018", "26-Aug-2018", "27-Aug-2018"],
     showTime: ["12:30 - 15:30", "16:00 - 19:00", "20:00 - 23:00"],
@@ -47,7 +47,7 @@ async function createMovies() {
     status: "nowShowing"
   });
 
-  const theMatrix = new Movie({
+  const theMatrix = new movieModel({
     name: "The Matrix",
     showDate: ["25-Sept-2018", "26-Sept-2018", "27-Sept-2018"],
     showTime: ["12:30 - 15:30", "16:00 - 19:00", "20:00 - 23:00"],
