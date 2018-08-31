@@ -4,7 +4,6 @@
   "description": "This is a repository that provides the deliverable for assignment 3 for our group Web Three(two nerds now becuase one teammate dropped the subject).",
   "main": "app.js",
   "dependencies": {
-    "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "mongoose": "^4.13.15",
