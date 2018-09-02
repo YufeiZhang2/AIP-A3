@@ -1,8 +1,8 @@
-const Joi = require('joi');
+//const Joi = require('joi');
 const mongoose = require("mongoose");
 
 const userModel = mongoose.model(
-    "users",
+    "user",
     new mongoose.Schema({
         name: { type: String, required: true, minlength: 2, maxlength: 100 },
         gender: { type: String, enum: ["male", "female", "intersex", "secret"], required: true },

@@ -2,12 +2,12 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const config = require('./config/database');
+const dbConfig = require('./config/cinemaDb');
 const moviesController = require('./controllers/moviesController');
 const usersController = require('./controllers/usersController');
 
 // Connect mongoose to our database
-mongoose.connect(config)
+mongoose.connect(dbConfig)
     .then(() => console.log('Connected to MongoDB...'))
     .catch(err => console.log('bad connection'));
 

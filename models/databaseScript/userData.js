@@ -2,12 +2,12 @@ const mongoose = require("mongoose");
 
 // Connect to the Movie database
 mongoose
-    .connect("mongodb://localhost/users")
+    .connect("mongodb://localhost/cinema")
     .then(() => console.log("Connected to MongoDB...")) // Sucessfully connected
     .catch(err => console.log("Bad connection", err)); // Catch an error
 
 const userModel = mongoose.model(
-    "users",
+    "user",
     new mongoose.Schema({
         name: { type: String, required: true, minlength: 2, maxlength: 100 },
         gender: { type: String, enum: ["male", "female", "intersex", "secret"], required: true },
