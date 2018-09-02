@@ -1,5 +1,8 @@
-<ul>
-  <li routerLink="../editMovieForm" *ngFor="let movie of movies">{{movie.directors}}
-    <a routerLink="../editMovieForm">| Edit</a>
-  </li>
-</ul>
+<div class="comingSoonBlock">
+  <h2>Coming Soon Movies</h2>
+  <ul>
+    <li routerLink="../editMovieForm" *ngFor="let movie of movies">{{movie.name}}
+      <button class="btn btn-info btn-sm" routerLink=" ../editMovieForm">Edit</button>
+    </li>
+  </ul>
+</div>

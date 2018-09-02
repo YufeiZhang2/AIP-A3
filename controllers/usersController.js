@@ -5,6 +5,7 @@ const _ = require("lodash");
 
 //read all the users 
 router.get("/", async (req, res) => {
+    console.log(userModel);
     const users = await userModel.find();
     res.send(users);
 });
@@ -35,6 +36,7 @@ router.delete("/delete/:_id", async (req, res) => {
 
 //register a new user
 router.post('/', async (req, res) => {
+    //validate information that users entered
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
@@ -51,6 +53,5 @@ router.post('/', async (req, res) => {
     //using lodash to return certain properties to the client
     res.send(_.pick(user, ["_id", "name", "email"]));
 })
-
 
 module.exports = router;

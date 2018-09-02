@@ -1,9 +1,10 @@
 const express = require("express");
+const { movieModel } = require("../models/movieModel");
 const router = express.Router();
-const movieModel = require('../models/movieModel');
 
 //read all the movies 
 router.get("/", async (req, res) => {
+    console.log(movieModel);
     const movies = await movieModel.find();
     res.send(movies);
 });
