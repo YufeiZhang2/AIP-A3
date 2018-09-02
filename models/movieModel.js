@@ -16,4 +16,4 @@ const movieModel = mongoose.model(
     })
 );
 
-module.exports = movieModel;
+exports.movieModel = movieModel;
