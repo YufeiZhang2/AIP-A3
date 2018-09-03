@@ -25,7 +25,11 @@ import { LoginComponent } from "./components/login/login.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { EditMovieFormComponent } from "./components/edit-movie-form/edit-movie-form.component";
 import { PostsComponent } from "./components/posts/posts.component";
-import { MovieComponent } from './components/movie/movie.component';
+import { MovieComponent } from "./components/movie/movie.component";
+import { AuthenticationComponent } from "./components/authentication/authentication.component";
+import { LogoutComponent } from "./components/authentication/logout.component";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { AuthenticationService } from "./services/authentication.service";
 
 @NgModule({
   declarations: [
@@ -48,10 +52,23 @@ import { MovieComponent } from './components/movie/movie.component';
     RegisterComponent,
     EditMovieFormComponent,
     PostsComponent,
-    MovieComponent
+    MovieComponent,
+    AuthenticationComponent,
+    LogoutComponent
   ],
-  imports: [BrowserModule, HttpModule, RoutingModule],
-  providers: [PostService, NowShowingMoviesService, ComingSoonMoviesService],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    RoutingModule,
+    ReactiveFormsModule,
+    FormsModule
+  ],
+  providers: [
+    PostService,
+    NowShowingMoviesService,
+    ComingSoonMoviesService,
+    AuthenticationService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
