@@ -1,3 +1,4 @@
+const auth = require("../middleware/auth");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const bcrypt = require("bcrypt");
@@ -5,6 +6,13 @@ const express = require("express");
 const router = express.Router();
 const { userModel, validate } = require("../models/userModel");
 const _ = require("lodash");
+
+// get the current user
+// check authorization
+router.get("/me", auth, async (req, res) => {
+  const user = await User.findById(req.user._id).select("-password"); // exclude password in request sent back to client
+  res.send(user);
+});
 
 //register a new user
 router.post("/", async (req, res) => {

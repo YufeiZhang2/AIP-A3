@@ -1,3 +1,6 @@
+const auth = require("../middleware/auth");
+const admin = require("../middleware/admin");
+
 const express = require("express");
 const router = express.Router();
 const movieModel = require("../models/movieModel");
@@ -31,7 +34,7 @@ router.get("/:_id", async (req, res) => {
 });
 
 //delete a movie by its objectId
-router.delete("/delete/:_id", async (req, res) => {
+router.delete("/delete/:_id", [auth, admin], async (req, res) => {
   try {
     console.log("my test:", req.params._id);
     const result = await movieModel.deleteOne({ _id: req.params._id });
