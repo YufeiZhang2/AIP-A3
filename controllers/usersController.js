@@ -1,3 +1,5 @@
+const jwt = require("jsonwebtoken");
+const config = require("config");
 const bcrypt = require("bcrypt");
 const express = require("express");
 const router = express.Router();
@@ -55,8 +57,11 @@ router.post("/", async (req, res) => {
   //save a new user
   await user.save();
 
+  const token = jwt.sign({ _id: user._id }, config.get("jwtPrivateKey")); //set the payload of jwt
   //using lodash to return certain properties to the client
-  res.send(_.pick(user, ["_id", "name", "email"]));
+  res
+    .header("x-auth-token", token)
+    .send(_.pick(user, ["_id", "name", "email"]));
 });
 
 module.exports = router;
