@@ -6,36 +6,6 @@ const router = express.Router();
 const { userModel, validate } = require("../models/userModel");
 const _ = require("lodash");
 
-//read all the users
-router.get("/", async (req, res) => {
-  const users = await userModel.find();
-  res.send(users);
-});
-
-//read a user by its objectId
-router.get("/:_id", async (req, res) => {
-  try {
-    console.log("my test:", req.params._id);
-    const user = await userModel.find({ _id: req.params._id });
-    res.send(user);
-  } catch (err) {
-    //404 object not found
-    res.status(404).send("The user with the given ID was not found.");
-  }
-});
-
-//delete a user by its objectId
-router.delete("/delete/:_id", async (req, res) => {
-  try {
-    console.log("my test:", req.params._id);
-    const result = await userModel.deleteOne({ _id: req.params._id });
-    res.send(result);
-  } catch (err) {
-    //404 object not found
-    res.status(404).send("The movie with the given ID was not found.");
-  }
-});
-
 //register a new user
 router.post("/", async (req, res) => {
   const { error } = validate(req.body);
@@ -58,7 +28,7 @@ router.post("/", async (req, res) => {
   await user.save();
 
   const token = jwt.sign({ _id: user._id }, config.get("jwtPrivateKey")); //set the payload of jwt
-  //using lodash to return certain properties to the client
+  //using lodash to return certain properties to the client with attached header of jwt
   res
     .header("x-auth-token", token)
     .send(_.pick(user, ["_id", "name", "email"]));
