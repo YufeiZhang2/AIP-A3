@@ -15,7 +15,7 @@ export class AuthenticationService {
     const headers = new Headers({ "Content-Type": "application/json" });
     return this.http
       .post("http://localhost:3000/user", body, { headers: headers })
-      .map((response: Response) => response.json()) // transform data we get back
-      .catch((error: Response) => Observable.throw(error.json()));
+      .map((response: Response) => response.json()); // transform data we get back
+    //.catch((error: Response) => Observable.throw(error));
   }
 }

@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header></header>\n<navigation-bar></navigation-bar>\n<router-outlet></router-outlet>\n<footer></footer>"
+module.exports = "<header></header>\r\n<navigation-bar></navigation-bar>\r\n<router-outlet></router-outlet>\r\n<footer></footer>"
 
 /***/ }),
 
@@ -229,7 +229,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Add new movie</h2>\n\n<form>\n    <div class=\"form-group\">\n        <label>Movie Name</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Year</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Director(s)</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Actors</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Summary</label>\n        <textarea class=\"form-control\"></textarea>\n    </div>\n\n    <div class=\"form-group\">\n        <label>Session</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <button class=\"btn btn-primary\">Submit</button>\n</form>"
+module.exports = "<h2>Add new movie</h2>\r\n\r\n<form>\r\n    <div class=\"form-group\">\r\n        <label>Movie Name</label>\r\n        <input type=\"text\" class=\"form-control\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label>Year</label>\r\n        <input type=\"text\" class=\"form-control\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label>Director(s)</label>\r\n        <input type=\"text\" class=\"form-control\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label>Actors</label>\r\n        <input type=\"text\" class=\"form-control\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label>Summary</label>\r\n        <textarea class=\"form-control\"></textarea>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label>Session</label>\r\n        <input type=\"text\" class=\"form-control\">\r\n    </div>\r\n\r\n    <button class=\"btn btn-primary\">Submit</button>\r\n</form>"
 
 /***/ }),
 
@@ -280,7 +280,7 @@ var AddMovieFormComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"row spacing\">\n    <nav class=\"col-md-8-col-md-offset-2\">\n        <ul class=\"nav-nav-tabs\">\n            <li><a>Login</a></li>\n            <li><a>Register</a></li>\n            <li><a>Logout</a></li>\n        </ul>\n    </nav>\n</header>"
+module.exports = "<header class=\"row spacing\">\r\n    <nav class=\"col-md-8-col-md-offset-2\">\r\n        <ul class=\"nav-nav-tabs\">\r\n            <li><a>Login</a></li>\r\n            <li><a>Register</a></li>\r\n            <li><a>Logout</a></li>\r\n        </ul>\r\n    </nav>\r\n</header>"
 
 /***/ }),
 
@@ -330,7 +330,7 @@ var AuthenticationComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-8 col-md-offset-2\">\n    <button class=\"btn btn-danger\" (click)=\"onLogout()\">Logout</button>\n</div>"
+module.exports = "<div class=\"col-md-8 col-md-offset-2\">\r\n    <button class=\"btn btn-danger\" (click)=\"onLogout()\">Logout</button>\r\n</div>"
 
 /***/ }),
 
@@ -414,7 +414,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Awards</h2>\n<p>Award page is in progress.</p>"
+module.exports = "<h2>Awards</h2>\r\n<p>Award page is in progress.</p>"
 
 /***/ }),
 
@@ -465,7 +465,7 @@ var AwardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".comingSoonBlock {\n  border-style: solid;\n  background-color: whitesmoke;\n}\n\nh2 {\n  text-align: center;\n}\n"
+module.exports = ".comingSoonBlock {\r\n  border-style: solid;\r\n  background-color: whitesmoke;\r\n}\r\n\r\nh2 {\r\n  text-align: center;\r\n}\r\n"
 
 /***/ }),
 
@@ -476,7 +476,7 @@ module.exports = ".comingSoonBlock {\n  border-style: solid;\n  background-color
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"comingSoonBlock\">\n  <h2>{{title}}</h2>\n  <coming-soon-movie-list></coming-soon-movie-list>\n</div>"
+module.exports = "<div class=\"comingSoonBlock\">\r\n  <h2>{{title}}</h2>\r\n  <coming-soon-movie-list></coming-soon-movie-list>\r\n</div>"
 
 /***/ }),
 
@@ -535,7 +535,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ul>\n  <li routerLink=\"../editMovieForm\" *ngFor=\"let movie of movies\">{{movie.directors}}\n    <a routerLink=\"../editMovieForm\">| Edit</a>\n  </li>\n</ul>"
+module.exports = "<ul>\r\n  <li routerLink=\"../editMovieForm\" *ngFor=\"let movie of movies\">{{movie.directors}}\r\n    <a routerLink=\"../editMovieForm\">| Edit</a>\r\n  </li>\r\n</ul>"
 
 /***/ }),
 
@@ -605,7 +605,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>About us</h2>\n<p>About us page is in progress.</p>"
+module.exports = "<h2>About us</h2>\r\n<p>About us page is in progress.</p>"
 
 /***/ }),
 
@@ -667,7 +667,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Edit movie</h2>\n\n<form>\n    <div class=\"form-group\">\n        <label for=\"movieName\">Movie Name</label>\n        <input id=\"movieName\" type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Year</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Director(s)</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Actors</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Summary</label>\n        <textarea class=\"form-control\"></textarea>\n    </div>\n\n    <div class=\"form-group\">\n        <label>Session</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <button class=\"btn btn-primary\">Save changes</button>\n</form>"
+module.exports = "<h2>Edit movie</h2>\r\n\r\n<form>\r\n    <div class=\"form-group\">\r\n        <label for=\"movieName\">Movie Name</label>\r\n        <input id=\"movieName\" type=\"text\" class=\"form-control\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label>Year</label>\r\n        <input type=\"text\" class=\"form-control\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label>Director(s)</label>\r\n        <input type=\"text\" class=\"form-control\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label>Actors</label>\r\n        <input type=\"text\" class=\"form-control\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label>Summary</label>\r\n        <textarea class=\"form-control\"></textarea>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label>Session</label>\r\n        <input type=\"text\" class=\"form-control\">\r\n    </div>\r\n\r\n    <button class=\"btn btn-primary\">Save changes</button>\r\n</form>"
 
 /***/ }),
 
@@ -718,7 +718,7 @@ var EditMovieFormComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".footer {\n  background-color: whitesmoke;\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  color: black;\n  text-align: center;\n}\n"
+module.exports = ".footer {\r\n  background-color: whitesmoke;\r\n  position: fixed;\r\n  left: 0;\r\n  bottom: 0;\r\n  width: 100%;\r\n  color: black;\r\n  text-align: center;\r\n}\r\n"
 
 /***/ }),
 
@@ -729,7 +729,7 @@ module.exports = ".footer {\n  background-color: whitesmoke;\n  position: fixed;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"footer\">\n  {{companyName}}\n</div>"
+module.exports = "<div class=\"footer\">\r\n  {{companyName}}\r\n</div>"
 
 /***/ }),
 
@@ -792,7 +792,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Gerne</h2>\n<p>Gerne page is in progress.</p>"
+module.exports = "<h2>Gerne</h2>\r\n<p>Gerne page is in progress.</p>"
 
 /***/ }),
 
@@ -843,7 +843,7 @@ var GenreComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h1 {\n  text-align: center;\n  font: bold;\n}\n"
+module.exports = "h1 {\r\n  text-align: center;\r\n  font: bold;\r\n}\r\n"
 
 /***/ }),
 
@@ -854,7 +854,7 @@ module.exports = "h1 {\n  text-align: center;\n  font: bold;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <h1>{{title}}</h1>\n</div>"
+module.exports = "<div>\r\n  <h1>{{title}}</h1>\r\n</div>"
 
 /***/ }),
 
@@ -917,7 +917,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br/>\n<br/>\n<search-bar></search-bar>\n<br/>\n<br/>\n<now-showing-block>\n</now-showing-block>\n<br/>\n<coming-soon-block></coming-soon-block>\n<br/>\n<button class=\"btn btn-primary\" routerLink=\"../addMovieForm\">New Movie</button>"
+module.exports = "<br/>\r\n<br/>\r\n<search-bar></search-bar>\r\n<br/>\r\n<br/>\r\n<now-showing-block>\r\n</now-showing-block>\r\n<br/>\r\n<coming-soon-block></coming-soon-block>\r\n<br/>\r\n<button class=\"btn btn-primary\" routerLink=\"../addMovieForm\">New Movie</button>"
 
 /***/ }),
 
@@ -979,7 +979,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Log in</h2>\n<div class=\"col-md-8-col-md-offset-2\">\n\n    <form [formGroup]=\"myForm\" (ngSubmit)=\"onSubmit()\">\n        <div class=\"form-group\">\n            <label for=\"email\">Email</label>\n            <input type=\"text\" id=\"username\" class=\"form-control\" formControlName=\"email\">\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" id=\"password\" class=\"form-control\" formControlName=\"password\">\n        </div>\n\n        <button class=\"btn btn-primary\" type=\"submit\">Submit</button>\n    </form>\n\n</div>"
+module.exports = "<h2>Log in</h2>\r\n<div class=\"col-md-8-col-md-offset-2\">\r\n\r\n    <form [formGroup]=\"myForm\" (ngSubmit)=\"onSubmit()\">\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Email</label>\r\n            <input type=\"text\" id=\"username\" class=\"form-control\" formControlName=\"email\">\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Password</label>\r\n            <input type=\"password\" id=\"password\" class=\"form-control\" formControlName=\"password\">\r\n        </div>\r\n\r\n        <button class=\"btn btn-primary\" type=\"submit\">Submit</button>\r\n    </form>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -1058,7 +1058,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <label>{{name}}</label>\n  <br/>\n  <label>{{showtime}}</label>\n  <br/>\n  <label>{{runningTime}}</label>\n  <br/>\n  <label>{{director}}</label>\n  <br/>\n  <label>{{stars}}</label>\n  <br/>\n  <label>{{name}}</label>\n  <br/>\n  <label>{{storyline}}</label>\n  <br/>\n  <label>{{status}}</label>\n</div>"
+module.exports = "<div>\r\n  <label>{{name}}</label>\r\n  <br/>\r\n  <label>{{showtime}}</label>\r\n  <br/>\r\n  <label>{{runningTime}}</label>\r\n  <br/>\r\n  <label>{{director}}</label>\r\n  <br/>\r\n  <label>{{stars}}</label>\r\n  <br/>\r\n  <label>{{name}}</label>\r\n  <br/>\r\n  <label>{{storyline}}</label>\r\n  <br/>\r\n  <label>{{status}}</label>\r\n</div>"
 
 /***/ }),
 
@@ -1110,7 +1110,7 @@ var MovieComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".navigationBar {\n  display: block;\n  background-color: whitesmoke;\n}\n\na {\n  text-decoration: none;\n  color: black;\n  padding-right: 50px;\n  padding-left: 50px;\n}\n"
+module.exports = ".navigationBar {\r\n  display: block;\r\n  background-color: whitesmoke;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: black;\r\n  padding-right: 50px;\r\n  padding-left: 50px;\r\n}\r\n"
 
 /***/ }),
 
@@ -1121,7 +1121,7 @@ module.exports = ".navigationBar {\n  display: block;\n  background-color: white
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"col-md-10 col-md-offset-2\">\n  <ul class=\"nav nav-pills\">\n    <li routerLinkActive=\"active\"><a routerLink=\"../home\">{{home}}</a></li>\n    <li routerLinkActive=\"active\"><a routerLink=\"../genre\">{{genre}}</a></li>\n    <li routerLinkActive=\"active\"><a routerLink=\"../award\">{{award}}</a></li>\n    <li routerLinkActive=\"active\"><a routerLink=\"../companyInformation\">{{companyInformation}}</a></li>\n    <li routerLinkActive=\"active\"><a routerLink=\"../login\">Login</a></li>\n    <li routerLinkActive=\"active\"><a routerLink=\"../register\">Register</a></li>\n  </ul>\n</nav>"
+module.exports = "<nav class=\"col-md-10 col-md-offset-2\">\r\n  <ul class=\"nav nav-pills\">\r\n    <li routerLinkActive=\"active\"><a routerLink=\"../home\">{{home}}</a></li>\r\n    <li routerLinkActive=\"active\"><a routerLink=\"../genre\">{{genre}}</a></li>\r\n    <li routerLinkActive=\"active\"><a routerLink=\"../award\">{{award}}</a></li>\r\n    <li routerLinkActive=\"active\"><a routerLink=\"../companyInformation\">{{companyInformation}}</a></li>\r\n    <li routerLinkActive=\"active\"><a routerLink=\"../login\">Login</a></li>\r\n    <li routerLinkActive=\"active\"><a routerLink=\"../register\">Register</a></li>\r\n  </ul>\r\n</nav>"
 
 /***/ }),
 
@@ -1189,7 +1189,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Sorry, the page has not been found!</p>\n<footer></footer>"
+module.exports = "<p>Sorry, the page has not been found!</p>\r\n<footer></footer>"
 
 /***/ }),
 
@@ -1240,7 +1240,7 @@ var NotFoundPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".nowShowingBlock {\n  border-style: solid;\n  background-color: whitesmoke;\n}\n\nh2 {\n  text-align: center;\n}\n"
+module.exports = ".nowShowingBlock {\r\n  border-style: solid;\r\n  background-color: whitesmoke;\r\n}\r\n\r\nh2 {\r\n  text-align: center;\r\n}\r\n"
 
 /***/ }),
 
@@ -1251,7 +1251,7 @@ module.exports = ".nowShowingBlock {\n  border-style: solid;\n  background-color
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"nowShowingBlock\">\n  <h2>{{title}}</h2>\n  <now-showing-movie-list></now-showing-movie-list>\n</div>"
+module.exports = "<div class=\"nowShowingBlock\">\r\n  <h2>{{title}}</h2>\r\n  <now-showing-movie-list></now-showing-movie-list>\r\n</div>"
 
 /***/ }),
 
@@ -1314,7 +1314,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ul>\n  <li *ngFor=\"let movie of movies\">{{movie}} <button class=\"btn btn-info btn-sm\" routerLink=\"../editMovieForm\">Edit</button></li>\n</ul>"
+module.exports = "<ul>\r\n  <li *ngFor=\"let movie of movies\">{{movie}} <button class=\"btn btn-info btn-sm\" routerLink=\"../editMovieForm\">Edit</button></li>\r\n</ul>"
 
 /***/ }),
 
@@ -1379,7 +1379,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<input (keyup.enter)=\"createPost(title)\" #title type=\"text\" class=\"form-control\">\n<ul class=\"list-group\">\n  <li *ngFor=\"let post of posts\" class=\"list-group-item\">\n    <button (click)=\"updatePost(post)\" btn btn-default btn-sm>Update</button>\n    <button (click)=\"deletePost(post)\" btn btn-default btn-sm>Delete</button>\n    {{post.title}}\n  </li>\n</ul>"
+module.exports = "<input (keyup.enter)=\"createPost(title)\" #title type=\"text\" class=\"form-control\">\r\n<ul class=\"list-group\">\r\n  <li *ngFor=\"let post of posts\" class=\"list-group-item\">\r\n    <button (click)=\"updatePost(post)\" btn btn-default btn-sm>Update</button>\r\n    <button (click)=\"deletePost(post)\" btn btn-default btn-sm>Delete</button>\r\n    {{post.title}}\r\n  </li>\r\n</ul>"
 
 /***/ }),
 
@@ -1471,7 +1471,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Create an account</h2>\n\n<div class=\"col-md-8-col-md-offset-2\">\n\n    <form [formGroup]=\"myForm\" (ngSubmit)=\"onSubmit()\">\n        <div class=\"form-group\">\n            <label for=\"email\">Email</label>\n            <input type=\"text\" id=\"username\" class=\"form-control\" formControlName=\"email\">\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" id=\"password\" class=\"form-control\" formControlName=\"password\">\n        </div>\n\n        <button class=\"btn btn-primary\" type=\"submit\">Submit</button>\n    </form>\n\n</div>"
+module.exports = "<h2>Create an account</h2>\r\n\r\n<div class=\"col-md-8-col-md-offset-2\">\r\n\r\n    <form [formGroup]=\"myForm\" (ngSubmit)=\"onRegister()\">\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Email</label>\r\n            <input type=\"text\" id=\"username\" class=\"form-control\" formControlName=\"email\">\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Password</label>\r\n            <input type=\"password\" id=\"password\" class=\"form-control\" formControlName=\"password\">\r\n        </div>\r\n\r\n        <button class=\"btn btn-primary\" type=\"submit\">Submit</button>\r\n    </form>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -1506,7 +1506,7 @@ var RegisterComponent = /** @class */ (function () {
     function RegisterComponent(authService) {
         this.authService = authService;
     }
-    RegisterComponent.prototype.onSubmit = function () {
+    RegisterComponent.prototype.onRegister = function () {
         var user = new _authentication_user_model__WEBPACK_IMPORTED_MODULE_3__["User"](this.myForm.value.email, this.myForm.value.password);
         this.authService
             .register(user)
@@ -1555,7 +1555,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<input type=\"text\" value={{defaultText}}>\n<button class=\"btn btn-primary\">{{buttonName}}</button>"
+module.exports = "<input type=\"text\" value={{defaultText}}>\r\n<button class=\"btn btn-primary\">{{buttonName}}</button>"
 
 /***/ }),
 
@@ -1711,7 +1711,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
 /* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
 /* harmony import */ var rxjs_add_operator_catch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/add/operator/catch */ "./node_modules/rxjs-compat/_esm5/add/operator/catch.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1725,7 +1724,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var AuthenticationService = /** @class */ (function () {
     function AuthenticationService(http) {
         this.http = http;
@@ -1735,8 +1733,8 @@ var AuthenticationService = /** @class */ (function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]({ "Content-Type": "application/json" });
         return this.http
             .post("http://localhost:3000/user", body, { headers: headers })
-            .map(function (response) { return response.json(); }) // transform data we get back
-            .catch(function (error) { return rxjs__WEBPACK_IMPORTED_MODULE_4__["Observable"].throw(error.json()); });
+            .map(function (response) { return response.json(); }); // transform data we get back
+        //.catch((error: Response) => Observable.throw(error));
     };
     AuthenticationService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -1945,7 +1943,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/baotranbui/Golden-Time-Cinema/GoldenTimeCinema-angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\CRYS\Golden-Time-Cinema\GoldenTimeCinema-angular\src\main.ts */"./src/main.ts");
 
 
 /***/ })

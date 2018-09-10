@@ -24,9 +24,7 @@ router.post("/", async (req, res) => {
   if (user) return res.status(400).send("User already registered");
 
   //create a new user and using lodash to pick certain properties to store in the database
-  user = new User(
-    _.pick(req.body, ["name", "DOB", "gender", "email", "password"])
-  );
+  user = new User(_.pick(req.body, ["email", "password"]));
 
   // encrypt plain text password using bcrypt to generate a salt and attach salt to new hashed password
   const salt = await bcrypt.genSalt(10);

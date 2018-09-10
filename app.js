@@ -8,10 +8,10 @@ const moviesController = require("./controllers/moviesController");
 const usersController = require("./controllers/usersController");
 const authController = require("./controllers/authController");
 
-if (!config.get("jwtPrivateKey")) {
-  console.error("FATAL ERROR: jwtPrivateKey is not defined.");
-  process.exit(1);
-}
+// if (!config.get("jwtPrivateKey")) {
+//   console.error("FATAL ERROR: jwtPrivateKey is not defined.");
+//   process.exit(1);
+// }
 
 // Connect mongoose to our database
 mongoose

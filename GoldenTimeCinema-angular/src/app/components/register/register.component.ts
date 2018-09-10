@@ -11,7 +11,7 @@ import { User } from "../authentication/user.model";
 export class RegisterComponent implements OnInit {
   myForm: FormGroup;
 
-  onSubmit() {
+  onRegister() {
     const user = new User(this.myForm.value.email, this.myForm.value.password);
     this.authService
       .register(user)
