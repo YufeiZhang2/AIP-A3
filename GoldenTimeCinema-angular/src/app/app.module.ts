@@ -1,11 +1,13 @@
-import { PostService } from "./services/post.service";
+// Built-in imports
 import { ComingSoonMoviesService } from "./services/coming-soon-movies.service";
 import { NowShowingMoviesService } from "./services/now-showing-movies.service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { RoutingModule } from "./routing.module";
-
+import { HttpClientModule } from "@angular/common/http";
 import { HttpModule } from "@angular/http";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+
+// Component imports
 import { AppComponent } from "./app.component";
 import { SearchBarComponent } from "./components/search-bar/search-bar.component";
 import { NavigationBarComponent } from "./components/navigation-bar/navigation-bar.component";
@@ -26,8 +28,13 @@ import { PostsComponent } from "./components/posts/posts.component";
 import { MovieComponent } from "./components/movie/movie.component";
 import { AuthenticationComponent } from "./components/authentication/authentication.component";
 import { LogoutComponent } from "./components/authentication/logout.component";
-import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+
+// Service imports
+import { PostService } from "./services/post.service";
 import { AuthenticationService } from "./services/authentication.service";
+
+// Route imports
+import { RoutingModule } from "./routing.module";
 
 @NgModule({
   declarations: [
@@ -54,6 +61,7 @@ import { AuthenticationService } from "./services/authentication.service";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     HttpModule,
     RoutingModule,
     ReactiveFormsModule,
