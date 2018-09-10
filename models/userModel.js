@@ -3,13 +3,23 @@ const bcrypt = require('bcryptjs');
 
 var userSchema = new mongoose.Schema({
   email: {
-    type: String
+    type: String,
+    required: 'Email is required',
+    unique: true
   },
   password: {
-    type: String
+    type: String,
+    required: 'Password is required',
+    minlength: [4, 'Password must have at least 4 characters']
   },
   saltSecret: String
 });
+
+// Custom validation for email format
+userSchema.path('email').validate((value) => {
+  emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,13}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return emailRegex.test(value);
+}, 'Invalid email address');
 
 // Pre-Events before saving a new user to randomly generate a saltSecret code to encrypt the password
 userSchema.pre('save', function (next) {
