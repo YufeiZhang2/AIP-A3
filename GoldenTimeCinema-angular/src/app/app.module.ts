@@ -9,8 +9,6 @@ import { HttpModule } from "@angular/http";
 import { AppComponent } from "./app.component";
 import { SearchBarComponent } from "./components/search-bar/search-bar.component";
 import { NavigationBarComponent } from "./components/navigation-bar/navigation-bar.component";
-import { NowShowingBlockComponent } from "./components/now-showing-block/now-showing-block.component";
-import { ComingSoonBlockComponent } from "./components/coming-soon-block/coming-soon-block.component";
 import { NowShowingMovieListComponent } from "./components/now-showing-movie-list/now-showing-movie-list.component";
 import { ComingSoonMovieListComponent } from "./components/coming-soon-movie-list/coming-soon-movie-list.component";
 import { FooterComponent } from "./components/footer/footer.component";
@@ -36,8 +34,6 @@ import { AuthenticationService } from "./services/authentication.service";
     AppComponent,
     SearchBarComponent,
     NavigationBarComponent,
-    NowShowingBlockComponent,
-    ComingSoonBlockComponent,
     NowShowingMovieListComponent,
     ComingSoonMovieListComponent,
     FooterComponent,

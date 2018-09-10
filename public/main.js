@@ -101,35 +101,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _components_search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/search-bar/search-bar.component */ "./src/app/components/search-bar/search-bar.component.ts");
 /* harmony import */ var _components_navigation_bar_navigation_bar_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/navigation-bar/navigation-bar.component */ "./src/app/components/navigation-bar/navigation-bar.component.ts");
-/* harmony import */ var _components_now_showing_block_now_showing_block_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/now-showing-block/now-showing-block.component */ "./src/app/components/now-showing-block/now-showing-block.component.ts");
-/* harmony import */ var _components_coming_soon_block_coming_soon_block_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/coming-soon-block/coming-soon-block.component */ "./src/app/components/coming-soon-block/coming-soon-block.component.ts");
-/* harmony import */ var _components_now_showing_movie_list_now_showing_movie_list_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/now-showing-movie-list/now-showing-movie-list.component */ "./src/app/components/now-showing-movie-list/now-showing-movie-list.component.ts");
-/* harmony import */ var _components_coming_soon_movie_list_coming_soon_movie_list_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/coming-soon-movie-list/coming-soon-movie-list.component */ "./src/app/components/coming-soon-movie-list/coming-soon-movie-list.component.ts");
-/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
-/* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/components/header/header.component.ts");
-/* harmony import */ var _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/genre/genre.component */ "./src/app/components/genre/genre.component.ts");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_award_award_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/award/award.component */ "./src/app/components/award/award.component.ts");
-/* harmony import */ var _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/company-information/company-information.component */ "./src/app/components/company-information/company-information.component.ts");
-/* harmony import */ var _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/not-found-page/not-found-page.component */ "./src/app/components/not-found-page/not-found-page.component.ts");
-/* harmony import */ var _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/add-movie-form/add-movie-form.component */ "./src/app/components/add-movie-form/add-movie-form.component.ts");
-/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
-/* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
-/* harmony import */ var _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/edit-movie-form/edit-movie-form.component */ "./src/app/components/edit-movie-form/edit-movie-form.component.ts");
-/* harmony import */ var _components_posts_posts_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/posts/posts.component */ "./src/app/components/posts/posts.component.ts");
-/* harmony import */ var _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/movie/movie.component */ "./src/app/components/movie/movie.component.ts");
-/* harmony import */ var _components_authentication_authentication_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/authentication/authentication.component */ "./src/app/components/authentication/authentication.component.ts");
-/* harmony import */ var _components_authentication_logout_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/authentication/logout.component */ "./src/app/components/authentication/logout.component.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
+/* harmony import */ var _components_now_showing_movie_list_now_showing_movie_list_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/now-showing-movie-list/now-showing-movie-list.component */ "./src/app/components/now-showing-movie-list/now-showing-movie-list.component.ts");
+/* harmony import */ var _components_coming_soon_movie_list_coming_soon_movie_list_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/coming-soon-movie-list/coming-soon-movie-list.component */ "./src/app/components/coming-soon-movie-list/coming-soon-movie-list.component.ts");
+/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
+/* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/components/header/header.component.ts");
+/* harmony import */ var _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/genre/genre.component */ "./src/app/components/genre/genre.component.ts");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
+/* harmony import */ var _components_award_award_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/award/award.component */ "./src/app/components/award/award.component.ts");
+/* harmony import */ var _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/company-information/company-information.component */ "./src/app/components/company-information/company-information.component.ts");
+/* harmony import */ var _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/not-found-page/not-found-page.component */ "./src/app/components/not-found-page/not-found-page.component.ts");
+/* harmony import */ var _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/add-movie-form/add-movie-form.component */ "./src/app/components/add-movie-form/add-movie-form.component.ts");
+/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
+/* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
+/* harmony import */ var _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/edit-movie-form/edit-movie-form.component */ "./src/app/components/edit-movie-form/edit-movie-form.component.ts");
+/* harmony import */ var _components_posts_posts_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/posts/posts.component */ "./src/app/components/posts/posts.component.ts");
+/* harmony import */ var _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/movie/movie.component */ "./src/app/components/movie/movie.component.ts");
+/* harmony import */ var _components_authentication_authentication_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/authentication/authentication.component */ "./src/app/components/authentication/authentication.component.ts");
+/* harmony import */ var _components_authentication_logout_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/authentication/logout.component */ "./src/app/components/authentication/logout.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
 
 
 
@@ -168,38 +164,36 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
                 _components_search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_8__["SearchBarComponent"],
                 _components_navigation_bar_navigation_bar_component__WEBPACK_IMPORTED_MODULE_9__["NavigationBarComponent"],
-                _components_now_showing_block_now_showing_block_component__WEBPACK_IMPORTED_MODULE_10__["NowShowingBlockComponent"],
-                _components_coming_soon_block_coming_soon_block_component__WEBPACK_IMPORTED_MODULE_11__["ComingSoonBlockComponent"],
-                _components_now_showing_movie_list_now_showing_movie_list_component__WEBPACK_IMPORTED_MODULE_12__["NowShowingMovieListComponent"],
-                _components_coming_soon_movie_list_coming_soon_movie_list_component__WEBPACK_IMPORTED_MODULE_13__["ComingSoonMovieListComponent"],
-                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_14__["FooterComponent"],
-                _components_header_header_component__WEBPACK_IMPORTED_MODULE_15__["HeaderComponent"],
-                _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_16__["GenreComponent"],
-                _components_home_home_component__WEBPACK_IMPORTED_MODULE_17__["HomeComponent"],
-                _components_award_award_component__WEBPACK_IMPORTED_MODULE_18__["AwardComponent"],
-                _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_19__["CompanyInformationComponent"],
-                _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_21__["AddMovieFormComponent"],
-                _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_20__["NotFoundPageComponent"],
-                _components_login_login_component__WEBPACK_IMPORTED_MODULE_22__["LoginComponent"],
-                _components_register_register_component__WEBPACK_IMPORTED_MODULE_23__["RegisterComponent"],
-                _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_24__["EditMovieFormComponent"],
-                _components_posts_posts_component__WEBPACK_IMPORTED_MODULE_25__["PostsComponent"],
-                _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_26__["MovieComponent"],
-                _components_authentication_authentication_component__WEBPACK_IMPORTED_MODULE_27__["AuthenticationComponent"],
-                _components_authentication_logout_component__WEBPACK_IMPORTED_MODULE_28__["LogoutComponent"]
+                _components_now_showing_movie_list_now_showing_movie_list_component__WEBPACK_IMPORTED_MODULE_10__["NowShowingMovieListComponent"],
+                _components_coming_soon_movie_list_coming_soon_movie_list_component__WEBPACK_IMPORTED_MODULE_11__["ComingSoonMovieListComponent"],
+                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_12__["FooterComponent"],
+                _components_header_header_component__WEBPACK_IMPORTED_MODULE_13__["HeaderComponent"],
+                _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_14__["GenreComponent"],
+                _components_home_home_component__WEBPACK_IMPORTED_MODULE_15__["HomeComponent"],
+                _components_award_award_component__WEBPACK_IMPORTED_MODULE_16__["AwardComponent"],
+                _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_17__["CompanyInformationComponent"],
+                _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_19__["AddMovieFormComponent"],
+                _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_18__["NotFoundPageComponent"],
+                _components_login_login_component__WEBPACK_IMPORTED_MODULE_20__["LoginComponent"],
+                _components_register_register_component__WEBPACK_IMPORTED_MODULE_21__["RegisterComponent"],
+                _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_22__["EditMovieFormComponent"],
+                _components_posts_posts_component__WEBPACK_IMPORTED_MODULE_23__["PostsComponent"],
+                _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_24__["MovieComponent"],
+                _components_authentication_authentication_component__WEBPACK_IMPORTED_MODULE_25__["AuthenticationComponent"],
+                _components_authentication_logout_component__WEBPACK_IMPORTED_MODULE_26__["LogoutComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_6__["HttpModule"],
                 _routing_module__WEBPACK_IMPORTED_MODULE_5__["RoutingModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_29__["ReactiveFormsModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_29__["FormsModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_27__["ReactiveFormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_27__["FormsModule"]
             ],
             providers: [
                 _services_post_service__WEBPACK_IMPORTED_MODULE_0__["PostService"],
                 _services_now_showing_movies_service__WEBPACK_IMPORTED_MODULE_2__["NowShowingMoviesService"],
                 _services_coming_soon_movies_service__WEBPACK_IMPORTED_MODULE_1__["ComingSoonMoviesService"],
-                _services_authentication_service__WEBPACK_IMPORTED_MODULE_30__["AuthenticationService"]
+                _services_authentication_service__WEBPACK_IMPORTED_MODULE_28__["AuthenticationService"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
@@ -458,65 +452,6 @@ var AwardComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/coming-soon-block/coming-soon-block.component.css":
-/*!******************************************************************************!*\
-  !*** ./src/app/components/coming-soon-block/coming-soon-block.component.css ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".comingSoonBlock {\r\n  border-style: solid;\r\n  background-color: whitesmoke;\r\n}\r\n\r\nh2 {\r\n  text-align: center;\r\n}\r\n"
-
-/***/ }),
-
-/***/ "./src/app/components/coming-soon-block/coming-soon-block.component.html":
-/*!*******************************************************************************!*\
-  !*** ./src/app/components/coming-soon-block/coming-soon-block.component.html ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"comingSoonBlock\">\r\n  <h2>{{title}}</h2>\r\n  <coming-soon-movie-list></coming-soon-movie-list>\r\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/components/coming-soon-block/coming-soon-block.component.ts":
-/*!*****************************************************************************!*\
-  !*** ./src/app/components/coming-soon-block/coming-soon-block.component.ts ***!
-  \*****************************************************************************/
-/*! exports provided: ComingSoonBlockComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComingSoonBlockComponent", function() { return ComingSoonBlockComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var ComingSoonBlockComponent = /** @class */ (function () {
-    function ComingSoonBlockComponent() {
-        this.title = "Coming Soon Movies";
-    }
-    ComingSoonBlockComponent.prototype.ngOnInit = function () { };
-    ComingSoonBlockComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: "coming-soon-block",
-            template: __webpack_require__(/*! ./coming-soon-block.component.html */ "./src/app/components/coming-soon-block/coming-soon-block.component.html"),
-            styles: [__webpack_require__(/*! ./coming-soon-block.component.css */ "./src/app/components/coming-soon-block/coming-soon-block.component.css")]
-        })
-    ], ComingSoonBlockComponent);
-    return ComingSoonBlockComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/components/coming-soon-movie-list/coming-soon-movie-list.component.css":
 /*!****************************************************************************************!*\
   !*** ./src/app/components/coming-soon-movie-list/coming-soon-movie-list.component.css ***!
@@ -524,7 +459,7 @@ var ComingSoonBlockComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".comingSoonBlock {\r\n    border-style: solid;\r\n    background-color: whitesmoke;\r\n  }\r\n  \r\n  h2 {\r\n    text-align: center;\r\n  }\r\n  "
 
 /***/ }),
 
@@ -535,7 +470,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ul>\r\n  <li routerLink=\"../editMovieForm\" *ngFor=\"let movie of movies\">{{movie.directors}}\r\n    <a routerLink=\"../editMovieForm\">| Edit</a>\r\n  </li>\r\n</ul>"
+module.exports = "<div class=\"comingSoonBlock\">\r\n  <h2>Coming Soon Movies</h2>\r\n  <ul>\r\n    <li routerLink=\"../editMovieForm\" *ngFor=\"let movie of movies\">{{movie.name}}\r\n      <button class=\"btn btn-info btn-sm\" routerLink=\" ../editMovieForm\">Edit</button>\r\n    </li>\r\n  </ul>\r\n</div>"
 
 /***/ }),
 
@@ -917,7 +852,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br/>\r\n<br/>\r\n<search-bar></search-bar>\r\n<br/>\r\n<br/>\r\n<now-showing-block>\r\n</now-showing-block>\r\n<br/>\r\n<coming-soon-block></coming-soon-block>\r\n<br/>\r\n<button class=\"btn btn-primary\" routerLink=\"../addMovieForm\">New Movie</button>"
+module.exports = "<br/>\r\n<br/>\r\n<search-bar></search-bar>\r\n<br/>\r\n<br/>\r\n<now-showing-movie-list></now-showing-movie-list>\r\n<br/>\r\n<coming-soon-movie-list></coming-soon-movie-list>\r\n<br/>\r\n<button class=\"btn btn-primary\" routerLink=\"../addMovieForm\">New Movie</button>"
 
 /***/ }),
 
@@ -1233,69 +1168,6 @@ var NotFoundPageComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/now-showing-block/now-showing-block.component.css":
-/*!******************************************************************************!*\
-  !*** ./src/app/components/now-showing-block/now-showing-block.component.css ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".nowShowingBlock {\r\n  border-style: solid;\r\n  background-color: whitesmoke;\r\n}\r\n\r\nh2 {\r\n  text-align: center;\r\n}\r\n"
-
-/***/ }),
-
-/***/ "./src/app/components/now-showing-block/now-showing-block.component.html":
-/*!*******************************************************************************!*\
-  !*** ./src/app/components/now-showing-block/now-showing-block.component.html ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"nowShowingBlock\">\r\n  <h2>{{title}}</h2>\r\n  <now-showing-movie-list></now-showing-movie-list>\r\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/components/now-showing-block/now-showing-block.component.ts":
-/*!*****************************************************************************!*\
-  !*** ./src/app/components/now-showing-block/now-showing-block.component.ts ***!
-  \*****************************************************************************/
-/*! exports provided: NowShowingBlockComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NowShowingBlockComponent", function() { return NowShowingBlockComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var NowShowingBlockComponent = /** @class */ (function () {
-    function NowShowingBlockComponent() {
-        this.title = "Now Showing Movies";
-    }
-    NowShowingBlockComponent.prototype.ngOnInit = function () { };
-    NowShowingBlockComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: "now-showing-block",
-            template: __webpack_require__(/*! ./now-showing-block.component.html */ "./src/app/components/now-showing-block/now-showing-block.component.html"),
-            styles: [__webpack_require__(/*! ./now-showing-block.component.css */ "./src/app/components/now-showing-block/now-showing-block.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], NowShowingBlockComponent);
-    return NowShowingBlockComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/components/now-showing-movie-list/now-showing-movie-list.component.css":
 /*!****************************************************************************************!*\
   !*** ./src/app/components/now-showing-movie-list/now-showing-movie-list.component.css ***!
@@ -1303,7 +1175,7 @@ var NowShowingBlockComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".nowShowingBlock {\r\n    border-style: solid;\r\n    background-color: whitesmoke;\r\n  }\r\n  \r\n  h2 {\r\n    text-align: center;\r\n  }\r\n  "
 
 /***/ }),
 
@@ -1314,7 +1186,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ul>\r\n  <li *ngFor=\"let movie of movies\">{{movie}} <button class=\"btn btn-info btn-sm\" routerLink=\"../editMovieForm\">Edit</button></li>\r\n</ul>"
+module.exports = "<div class=\"nowShowingBlock\">\r\n  <h2>Now Showing Movies</h2>\r\n  <ul>\r\n    <li *ngFor=\"let movie of movies\">{{movie.name}}\r\n      <button class=\"btn btn-info btn-sm\" routerLink=\"../editMovieForm\">\r\n        Edit\r\n      </button>\r\n    </li>\r\n  </ul>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -1329,7 +1201,7 @@ module.exports = "<ul>\r\n  <li *ngFor=\"let movie of movies\">{{movie}} <button
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NowShowingMovieListComponent", function() { return NowShowingMovieListComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_now_showing_movies_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/now-showing-movies.service */ "./src/app/services/now-showing-movies.service.ts");
+/* harmony import */ var _services_post_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/post.service */ "./src/app/services/post.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1343,16 +1215,21 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var NowShowingMovieListComponent = /** @class */ (function () {
     function NowShowingMovieListComponent(service) {
-        this.movies = service.getShowingMovies();
+        this.service = service;
     }
-    NowShowingMovieListComponent.prototype.ngOnInit = function () { };
+    NowShowingMovieListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.service.getPosts().subscribe(function (response) {
+            _this.movies = response.json();
+        });
+    };
     NowShowingMovieListComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "now-showing-movie-list",
             template: __webpack_require__(/*! ./now-showing-movie-list.component.html */ "./src/app/components/now-showing-movie-list/now-showing-movie-list.component.html"),
             styles: [__webpack_require__(/*! ./now-showing-movie-list.component.css */ "./src/app/components/now-showing-movie-list/now-showing-movie-list.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_now_showing_movies_service__WEBPACK_IMPORTED_MODULE_1__["NowShowingMoviesService"]])
+        __metadata("design:paramtypes", [_services_post_service__WEBPACK_IMPORTED_MODULE_1__["PostService"]])
     ], NowShowingMovieListComponent);
     return NowShowingMovieListComponent;
 }());

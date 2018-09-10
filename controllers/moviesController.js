@@ -2,23 +2,14 @@ const auth = require("../middleware/auth");
 const admin = require("../middleware/admin");
 
 const express = require("express");
+const { movieModel } = require("../models/movieModel");
 const router = express.Router();
-const movieModel = require("../models/movieModel");
 
 //read all the movies
 router.get("/", async (req, res) => {
-  const movies = await movieModel.find();
-  res.send(movies);
-});
-
-router.post("/", auth, async (req, res) => {
-  const { error } = validate(req.body);
-  if (error) return rest.status(400).send(error.details[0].message);
-
-  let movie = new Movie({ name: req.body.name });
-  movie = await movie.save();
-
-  res.send(movie);
+    console.log(movieModel);
+    const movies = await movieModel.find();
+    res.send(movies);
 });
 
 //read a movie by its objectId
