@@ -1,3 +1,6 @@
+require('./models/userModel');
+const routesApp = require('./routes/appRouter');
+
 const config = require("config");
 const express = require("express");
 const path = require("path");
@@ -34,8 +37,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Set api routes
 app.use("/api/movies", moviesController);
-app.use("/api/users", usersController);
-app.use("/api/auth", authController);
+// app.use("/api/users", usersController);
+// app.use("/api/auth", authController);
+app.use('/api', routesApp);
 
 //Handle errors when the api is not defined
 app.use("/", (req, res) => {
