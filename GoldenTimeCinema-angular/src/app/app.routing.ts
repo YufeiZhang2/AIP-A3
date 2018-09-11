@@ -11,14 +11,17 @@ import { EditMovieFormComponent } from "./components/edit-movie-form/edit-movie-
 import { LoginComponent } from "./components/login/login.component";
 import { UserProfileComponent } from "./components/user-profile/user-profile.component";
 
+import { AuthGuard } from "./components/auth/auth.guard";
+
 const routes: Routes = [
-  {
-    path: "",
-    component: HomeComponent
-  },
   {
     path: "home",
     component: HomeComponent
+  },
+  {
+    path: "",
+    redirectTo: "/home",
+    pathMatch: "full"
   },
   {
     path: "genre",
@@ -46,7 +49,8 @@ const routes: Routes = [
   },
   {
     path: "userProfile",
-    component: UserProfileComponent
+    component: UserProfileComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "editMovieForm",

@@ -26,8 +26,8 @@ import { RegisterComponent } from "./components/register/register.component";
 import { EditMovieFormComponent } from "./components/edit-movie-form/edit-movie-form.component";
 import { PostsComponent } from "./components/posts/posts.component";
 import { MovieComponent } from "./components/movie/movie.component";
-import { AuthenticationComponent } from "./components/authentication/authentication.component";
-import { LogoutComponent } from "./components/authentication/logout.component";
+import { AuthenticationComponent } from "./components/auth/authentication.component";
+import { LogoutComponent } from "./components/auth/logout.component";
 
 // Service imports
 import { PostService } from "./services/post.service";
@@ -36,6 +36,9 @@ import { AuthenticationService } from "./services/authentication.service";
 // Route imports
 import { RoutingModule } from "./app.routing";
 import { UserProfileComponent } from "./components/user-profile/user-profile.component";
+
+// Other imports
+import { AuthGuard } from "./components/auth/auth.guard";
 
 @NgModule({
   declarations: [
@@ -73,7 +76,8 @@ import { UserProfileComponent } from "./components/user-profile/user-profile.com
     PostService,
     NowShowingMoviesService,
     ComingSoonMoviesService,
-    AuthenticationService
+    AuthenticationService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

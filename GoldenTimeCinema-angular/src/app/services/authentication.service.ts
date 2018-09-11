@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 // import "rxjs/add/operator/catch";
 
 import { environment } from "../../environments/environment";
-import { User } from "../components/authentication/user.model";
+import { User } from "../components/auth/user.model";
 // import { Observable, of, throwError } from "rxjs";
 
 @Injectable({
@@ -33,6 +33,27 @@ export class AuthenticationService {
   // save token of current user inside local storage
   setToken(token: string) {
     localStorage.setItem("token", token);
+  }
+
+  // delete token inside local storage
+  deleteToken() {
+    localStorage.removeItem("token");
+  }
+
+  // Extract user payload from token
+  getUserPayload() {
+    var token = localStorage.getItem("token");
+    if (token) {
+      var userPayload = atob(token.split(".")[1]);
+      return JSON.parse(userPayload);
+    } else return null;
+  }
+
+  isLoggedIn() {
+    var userPayload = this.getUserPayload();
+    // check if jwt expiration time is over or not
+    if (userPayload) return userPayload.exp > Date.now() / 1000;
+    else return false;
   }
 
   // register(user: User) {

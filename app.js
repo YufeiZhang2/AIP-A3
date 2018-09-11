@@ -4,18 +4,12 @@ require("./config/config");
 
 const routesApp = require("./routes/appRouter");
 const passport = require("passport");
-const config = require("config");
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const dbConfig = require("./config/cinemaDb");
 const moviesController = require("./controllers/moviesController");
-
-// if (!config.get("jwtPrivateKey")) {
-//   console.error("FATAL ERROR: jwtPrivateKey is not defined.");
-//   process.exit(1);
-// }
 
 // Connect mongoose to our database
 mongoose
