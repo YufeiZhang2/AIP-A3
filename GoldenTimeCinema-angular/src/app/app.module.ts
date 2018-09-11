@@ -3,7 +3,7 @@ import { ComingSoonMoviesService } from "./services/coming-soon-movies.service";
 import { NowShowingMoviesService } from "./services/now-showing-movies.service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { HttpModule } from "@angular/http";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 
@@ -39,6 +39,7 @@ import { UserProfileComponent } from "./components/user-profile/user-profile.com
 
 // Other imports
 import { AuthGuard } from "./components/auth/auth.guard";
+import { AuthInterceptor } from "./components/auth/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -73,6 +74,11 @@ import { AuthGuard } from "./components/auth/auth.guard";
     FormsModule
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
     PostService,
     NowShowingMoviesService,
     ComingSoonMoviesService,

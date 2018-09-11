@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       // successful authentication
       res => {
         this.authService.setToken(res["token"]); // save token to local storage
-        this.router.navigateByUrl("/userProfile"); // redirect to user profile page
+        this.router.navigateByUrl("/userprofile"); // redirect to user profile page
       },
       // If errors occur
       err => {

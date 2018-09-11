@@ -17,22 +17,43 @@ export class AuthenticationService {
     password: ""
   };
 
+  noAuthHeader = { headers: new HttpHeaders({ NoAuth: "True" }) };
+
   constructor(private http: HttpClient) {}
 
+  // httpMethods
+
   registerUser(user: User) {
-    return this.http.post(environment.apiBaseUrl + "/register", user);
+    return this.http.post(
+      environment.apiBaseUrl + "/register",
+      user,
+      this.noAuthHeader
+    );
   }
 
   login(authCredentials) {
     return this.http.post(
       environment.apiBaseUrl + "/authenticate",
-      authCredentials
+      authCredentials,
+      this.noAuthHeader
     );
   }
+
+  // need jwt in the header
+  getUserProfile() {
+    return this.http.get(environment.apiBaseUrl + "/userprofile");
+  }
+
+  //Helper Methods
 
   // save token of current user inside local storage
   setToken(token: string) {
     localStorage.setItem("token", token);
+  }
+
+  // get the token in local storage
+  getToken() {
+    return localStorage.getItem("token");
   }
 
   // delete token inside local storage
@@ -42,7 +63,7 @@ export class AuthenticationService {
 
   // Extract user payload from token
   getUserPayload() {
-    var token = localStorage.getItem("token");
+    var token = this.getToken();
     if (token) {
       var userPayload = atob(token.split(".")[1]);
       return JSON.parse(userPayload);
@@ -55,13 +76,4 @@ export class AuthenticationService {
     if (userPayload) return userPayload.exp > Date.now() / 1000;
     else return false;
   }
-
-  // register(user: User) {
-  //   const body = JSON.stringify(user);
-  //   const headers = new Headers({ "Content-Type": "application/json" });
-  //   return this.http
-  //     .post("http://localhost:3000/register", body, { headers: headers })
-  //     .map((response: Response) => response.json()) // transform data we get back
-  //     .catch((error: Response) => Observable.throw(error));
-  // }
 }
