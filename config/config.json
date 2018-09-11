@@ -1,8 +1,10 @@
 {
   "development": {
-    "jwtPrivateKey": "SECRET#123"
+    "jwtPrivateKey": "SECRET#123",
+    "jwtExpirationTime": "2m"
   },
   "production": {
-    "jwtPrivateKey": "SECRET#123"
+    "jwtPrivateKey": "SECRET#123",
+    "jwtExpirationTime": "2m"
   }
 }

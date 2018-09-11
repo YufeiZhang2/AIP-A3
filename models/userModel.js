@@ -40,7 +40,9 @@ userSchema.methods.verifyPassword = function(password) {
 };
 
 userSchema.methods.generateJwt = function() {
-  return jwt.sign({ _id: this._id }, process.env.jwtPrivateKey);
+  return jwt.sign({ _id: this._id }, process.env.jwtPrivateKey, {
+    expiresIn: process.env.jwtExpirationTime // Set JWT expiration time
+  });
 };
 
 mongoose.model("user", userSchema);
