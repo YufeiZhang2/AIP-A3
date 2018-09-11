@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { AuthenticationService } from "../../services/authentication.service";
-import { User } from "../auth/user.model";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "register",
@@ -14,9 +14,17 @@ export class RegisterComponent implements OnInit {
   successMessage: boolean;
   errorMessages: string;
 
-  constructor(private authService: AuthenticationService) {}
+  constructor(
+    private authService: AuthenticationService,
+    private router: Router
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // If user is already logged in, redirect to user profile page
+    if (this.authService.isLoggedIn()) {
+      this.router.navigateByUrl("/userprofile");
+    }
+  }
 
   onRegister(form: NgForm) {
     this.authService.registerUser(form.value).subscribe(
@@ -45,26 +53,4 @@ export class RegisterComponent implements OnInit {
     form.resetForm();
     this.errorMessages = "";
   }
-
-  // myForm: FormGroup;
-
-  // onRegister() {
-  //   const user = new User(this.myForm.value.email, this.myForm.value.password);
-  //   this.authService
-  //     .register(user)
-  //     .subscribe(data => console.log(data), error => console.error(error));
-  //   this.myForm.reset();
-  // }
-
-  // constructor(private authService: AuthenticationService) {}
-
-  // ngOnInit() {
-  //   this.myForm = new FormGroup({
-  //     email: new FormControl(null, [
-  //       Validators.required,
-  //       Validators.pattern("[^@]+@[^@]+.[^@]+")
-  //     ]),
-  //     password: new FormControl(null, Validators.required)
-  //   });
-  // }
 }

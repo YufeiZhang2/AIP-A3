@@ -22,7 +22,12 @@ export class LoginComponent implements OnInit {
     password: ""
   };
 
-  ngOnInit() {}
+  ngOnInit() {
+    // If user is already logged in, redirect to user profile page
+    if (this.authService.isLoggedIn()) {
+      this.router.navigateByUrl("/userprofile");
+    }
+  }
 
   onLogin(form: NgForm) {
     this.authService.login(form.value).subscribe(
