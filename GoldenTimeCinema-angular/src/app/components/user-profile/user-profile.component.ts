@@ -10,7 +10,10 @@ import { Router } from "@angular/router";
 export class UserProfileComponent implements OnInit {
   userDetails;
 
-  constructor(private authService: AuthenticationService) {}
+  constructor(
+    private authService: AuthenticationService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.authService.getUserProfile().subscribe(
@@ -19,5 +22,11 @@ export class UserProfileComponent implements OnInit {
       },
       err => {}
     );
+  }
+
+  // Method to logout: delete token and redirect user to login page
+  onLogout() {
+    this.authService.deleteToken();
+    this.router.navigate(["/login"]);
   }
 }
