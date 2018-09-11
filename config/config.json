@@ -1,0 +1,8 @@
+{
+  "development": {
+    "jwtPrivateKey": "SECRET#123"
+  },
+  "production": {
+    "jwtPrivateKey": "SECRET#123"
+  }
+}

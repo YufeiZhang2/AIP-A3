@@ -1,6 +1,9 @@
-require('./models/userModel');
-const routesApp = require('./routes/appRouter');
+require("./models/userModel");
+require("./config/passportConfig");
+require("./config/config");
 
+const routesApp = require("./routes/appRouter");
+const passport = require("passport");
 const config = require("config");
 const express = require("express");
 const path = require("path");
@@ -8,8 +11,6 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const dbConfig = require("./config/cinemaDb");
 const moviesController = require("./controllers/moviesController");
-const usersController = require("./controllers/usersController");
-const authController = require("./controllers/authController");
 
 // if (!config.get("jwtPrivateKey")) {
 //   console.error("FATAL ERROR: jwtPrivateKey is not defined.");
@@ -32,21 +33,23 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+//Middleware for passport
+app.use(passport.initialize());
 //a built in middleware function to serve static files.
 app.use(express.static(path.join(__dirname, "public")));
 
 // Set api routes
+app.use("/api", routesApp);
 app.use("/api/movies", moviesController);
-// app.use("/api/users", usersController);
-// app.use("/api/auth", authController);
-app.use('/api', routesApp);
 
-// Handle errors for validation 
+// Handle errors for validation
 app.use((err, req, res, next) => {
-  if (err.name === 'ValidationError') {
-      var valErrors = [];
-      Object.keys(err.errors).forEach(key => valErrors.push(err.errors[key].message));
-      res.status(422).send(valErrors)
+  if (err.name === "ValidationError") {
+    var valErrors = [];
+    Object.keys(err.errors).forEach(key =>
+      valErrors.push(err.errors[key].message)
+    );
+    res.status(422).send(valErrors);
   }
 });
 
