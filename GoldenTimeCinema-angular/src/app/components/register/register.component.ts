@@ -10,6 +10,8 @@ import { User } from "../authentication/user.model";
   providers: [AuthenticationService]
 })
 export class RegisterComponent implements OnInit {
+  // Email regular expression to validate email format
+  emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   successMessage: boolean;
   errorMessages: string;
 
@@ -19,14 +21,19 @@ export class RegisterComponent implements OnInit {
 
   onRegister(form: NgForm) {
     this.authService.registerUser(form.value).subscribe(
+      // if registration is successfull
       res => {
         this.successMessage = true;
+        setTimeout(() => (this.successMessage = false), 4000); // Success message dissapears after 4 seconds
         this.resetForm(form);
       },
+
+      // if there are errors sent from server-side
       err => {
         if (err.status === 422) {
           this.errorMessages = err.error.join("<br/>");
-        }
+        } else
+          this.errorMessages = "Something went wrong. Please contact admin.";
       }
     );
   }

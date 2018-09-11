@@ -28,3 +28,19 @@ a.danger {
 input.ng-invalid.ng-touched {
   border: 1px solid red;
 }
+
+label.validation-message {
+  color: #ed5558;
+}
+
+.alert {
+  padding: 20px;
+  color: #f44336;
+  margin-bottom: 15px;
+}
+
+.success {
+  padding: 20px;
+  color: #249424;
+  margin-bottom: 15px;
+}

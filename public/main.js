@@ -1333,7 +1333,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Create an account</h2>\r\n\r\n<div class=\"col-md-8-col-md-offset-2\">\r\n\r\n    <form #registerForm=\"ngForm\" (ngSubmit)=\"onRegister(registerForm)\">\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Email</label>\r\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\">\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Password</label>\r\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\" placeholder=\"Password\"\r\n                class=\"form-control\">\r\n        </div>\r\n\r\n        <button class=\"btn btn-primary\" type=\"submit\">Register</button>\r\n    </form>\r\n\r\n</div>\r\n\r\n<div class=\"success\" *ngIf=\"successMessage\">\r\n    Registration is completed\r\n</div>\r\n\r\n<div class=\"alert\" *ngIf=\"errorMessage\">\r\n    {{errorMessage}}\r\n</div>"
+module.exports = "<h2>Create an account</h2>\r\n\r\n<div class=\"col-md-8-col-md-offset-2\">\r\n\r\n    <form #registerForm=\"ngForm\" (ngSubmit)=\"registerForm.valid && onRegister(registerForm)\">\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Email</label>\r\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\r\n                required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !email.valid }\">\r\n            <div *ngIf=\"registerForm.submitted && email.errors\">\r\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\r\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Password</label>\r\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\" placeholder=\"Password\"\r\n                class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !password.valid }\">\r\n            <div *ngIf=\"registerForm.submitted && password.errors\">\r\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\r\n                <label *ngIf=\"password.errors.minlength\" class=\"validation-message\">Password must have at least 4 characters.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <button class=\"btn btn-primary\" type=\"submit\">Register</button>\r\n    </form>\r\n\r\n</div>\r\n\r\n\r\n<!-- Success message -->\r\n<div class=\"success\" *ngIf=\"successMessage\">\r\n    Registration is completed\r\n</div>\r\n\r\n\r\n<!-- Error message -->\r\n<div class=\"alert\" *ngIf=\"errorMessages\">\r\n    {{errorMessages}}\r\n</div>"
 
 /***/ }),
 
@@ -1363,17 +1363,26 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var RegisterComponent = /** @class */ (function () {
     function RegisterComponent(authService) {
         this.authService = authService;
+        // Email regular expression to validate email format
+        this.emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     }
     RegisterComponent.prototype.ngOnInit = function () { };
     RegisterComponent.prototype.onRegister = function (form) {
         var _this = this;
-        this.authService.registerUser(form.value).subscribe(function (res) {
+        this.authService.registerUser(form.value).subscribe(
+        // if registration is successfull
+        function (res) {
             _this.successMessage = true;
+            setTimeout(function () { return (_this.successMessage = false); }, 4000); // Success message dissapears after 4 seconds
             _this.resetForm(form);
-        }, function (err) {
-            if (err.status === 422) {
+        }, 
+        // if there are errors sent from server-side
+        function (err) {
+            if (err.status === 400) {
                 _this.errorMessages = err.error.join("<br/>");
             }
+            else
+                _this.errorMessages = "Something went wrong. Please contact admin.";
         });
     };
     RegisterComponent.prototype.resetForm = function (form) {

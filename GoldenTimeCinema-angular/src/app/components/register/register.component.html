@@ -2,16 +2,25 @@
 
 <div class="col-md-8-col-md-offset-2">
 
-    <form #registerForm="ngForm" (ngSubmit)="onRegister(registerForm)">
+    <form #registerForm="ngForm" (ngSubmit)="registerForm.valid && onRegister(registerForm)">
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" #email="ngModel" [(ngModel)]="authService.selectedUser.email" name="email" placeholder="Email" class="form-control">
+            <input type="text" #email="ngModel" [(ngModel)]="authService.selectedUser.email" name="email" placeholder="Email" class="form-control"
+                required [pattern]="emailRegex" [ngClass]="{ 'ng-invalid': registerForm.submitted && !email.valid }">
+            <div *ngIf="registerForm.submitted && email.errors">
+                <label *ngIf="email.errors.required" class="validation-message">Email is required.</label>
+                <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
+            </div>
         </div>
 
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" #password="ngModel" [(ngModel)]="authService.selectedUser.password" name="password" placeholder="Password"
-                class="form-control">
+                class="form-control" minlength="4" required [ngClass]="{ 'ng-invalid': registerForm.submitted && !password.valid }">
+            <div *ngIf="registerForm.submitted && password.errors">
+                <label *ngIf="password.errors.required" class="validation-message">Password is required.</label>
+                <label *ngIf="password.errors.minlength" class="validation-message">Password must have at least 4 characters.</label>
+            </div>
         </div>
 
         <button class="btn btn-primary" type="submit">Register</button>
@@ -19,10 +28,14 @@
 
 </div>
 
+
+<!-- Success message -->
 <div class="success" *ngIf="successMessage">
     Registration is completed
 </div>
 
-<div class="alert" *ngIf="errorMessage">
-    {{errorMessage}}
+
+<!-- Error message -->
+<div class="alert" *ngIf="errorMessages">
+    {{errorMessages}}
 </div>
