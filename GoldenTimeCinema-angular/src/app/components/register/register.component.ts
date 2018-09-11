@@ -1,13 +1,12 @@
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormControl, Validators, NgForm } from "@angular/forms";
+import { NgForm } from "@angular/forms";
 import { AuthenticationService } from "../../services/authentication.service";
 import { User } from "../authentication/user.model";
 
 @Component({
   selector: "register",
   templateUrl: "./register.component.html",
-  styleUrls: ["./register.component.css"],
-  providers: [AuthenticationService]
+  styleUrls: ["./register.component.css"]
 })
 export class RegisterComponent implements OnInit {
   // Email regular expression to validate email format

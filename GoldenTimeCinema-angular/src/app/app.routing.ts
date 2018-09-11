@@ -9,6 +9,7 @@ import { AddMovieFormComponent } from "./components/add-movie-form/add-movie-for
 import { RegisterComponent } from "./components/register/register.component";
 import { EditMovieFormComponent } from "./components/edit-movie-form/edit-movie-form.component";
 import { LoginComponent } from "./components/login/login.component";
+import { UserProfileComponent } from "./components/user-profile/user-profile.component";
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: "register",
     component: RegisterComponent
+  },
+  {
+    path: "userProfile",
+    component: UserProfileComponent
   },
   {
     path: "editMovieForm",

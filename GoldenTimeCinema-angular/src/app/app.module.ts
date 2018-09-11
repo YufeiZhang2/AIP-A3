@@ -34,7 +34,8 @@ import { PostService } from "./services/post.service";
 import { AuthenticationService } from "./services/authentication.service";
 
 // Route imports
-import { RoutingModule } from "./routing.module";
+import { RoutingModule } from "./app.routing";
+import { UserProfileComponent } from "./components/user-profile/user-profile.component";
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { RoutingModule } from "./routing.module";
     PostsComponent,
     MovieComponent,
     AuthenticationComponent,
-    LogoutComponent
+    LogoutComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

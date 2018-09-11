@@ -120,7 +120,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_authentication_logout_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/authentication/logout.component */ "./src/app/components/authentication/logout.component.ts");
 /* harmony import */ var _services_post_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/post.service */ "./src/app/services/post.service.ts");
 /* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
-/* harmony import */ var _routing_module__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./routing.module */ "./src/app/routing.module.ts");
+/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
+/* harmony import */ var _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/user-profile/user-profile.component */ "./src/app/components/user-profile/user-profile.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -161,6 +162,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 // Route imports
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -186,13 +188,14 @@ var AppModule = /** @class */ (function () {
                 _components_posts_posts_component__WEBPACK_IMPORTED_MODULE_23__["PostsComponent"],
                 _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_24__["MovieComponent"],
                 _components_authentication_authentication_component__WEBPACK_IMPORTED_MODULE_25__["AuthenticationComponent"],
-                _components_authentication_logout_component__WEBPACK_IMPORTED_MODULE_26__["LogoutComponent"]
+                _components_authentication_logout_component__WEBPACK_IMPORTED_MODULE_26__["LogoutComponent"],
+                _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_30__["UserProfileComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_5__["HttpModule"],
-                _routing_module__WEBPACK_IMPORTED_MODULE_29__["RoutingModule"],
+                _app_routing__WEBPACK_IMPORTED_MODULE_29__["RoutingModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"]
             ],
@@ -206,6 +209,108 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/app.routing.ts":
+/*!********************************!*\
+  !*** ./src/app/app.routing.ts ***!
+  \********************************/
+/*! exports provided: RoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoutingModule", function() { return RoutingModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/genre/genre.component */ "./src/app/components/genre/genre.component.ts");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
+/* harmony import */ var _components_award_award_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/award/award.component */ "./src/app/components/award/award.component.ts");
+/* harmony import */ var _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/company-information/company-information.component */ "./src/app/components/company-information/company-information.component.ts");
+/* harmony import */ var _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/not-found-page/not-found-page.component */ "./src/app/components/not-found-page/not-found-page.component.ts");
+/* harmony import */ var _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/add-movie-form/add-movie-form.component */ "./src/app/components/add-movie-form/add-movie-form.component.ts");
+/* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
+/* harmony import */ var _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/edit-movie-form/edit-movie-form.component */ "./src/app/components/edit-movie-form/edit-movie-form.component.ts");
+/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
+/* harmony import */ var _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/user-profile/user-profile.component */ "./src/app/components/user-profile/user-profile.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+var routes = [
+    {
+        path: "",
+        component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
+    },
+    {
+        path: "home",
+        component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
+    },
+    {
+        path: "genre",
+        component: _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_2__["GenreComponent"]
+    },
+    {
+        path: "award",
+        component: _components_award_award_component__WEBPACK_IMPORTED_MODULE_4__["AwardComponent"]
+    },
+    {
+        path: "companyInformation",
+        component: _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_5__["CompanyInformationComponent"]
+    },
+    {
+        path: "addMovieForm",
+        component: _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_7__["AddMovieFormComponent"]
+    },
+    {
+        path: "login",
+        component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"]
+    },
+    {
+        path: "register",
+        component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"]
+    },
+    {
+        path: "userProfile",
+        component: _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_11__["UserProfileComponent"]
+    },
+    {
+        path: "editMovieForm",
+        component: _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_9__["EditMovieFormComponent"]
+    },
+    {
+        path: "**",
+        component: _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_6__["NotFoundPageComponent"]
+    }
+];
+var RoutingModule = /** @class */ (function () {
+    function RoutingModule() {
+    }
+    RoutingModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+        })
+    ], RoutingModule);
+    return RoutingModule;
 }());
 
 
@@ -899,7 +1004,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Log in</h2>\r\n<div class=\"col-md-8-col-md-offset-2\">\r\n\r\n    <form [formGroup]=\"myForm\" (ngSubmit)=\"onSubmit()\">\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Email</label>\r\n            <input type=\"text\" id=\"username\" class=\"form-control\" formControlName=\"email\">\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Password</label>\r\n            <input type=\"password\" id=\"password\" class=\"form-control\" formControlName=\"password\">\r\n        </div>\r\n\r\n        <button class=\"btn btn-primary\" type=\"submit\">Submit</button>\r\n    </form>\r\n\r\n</div>"
+module.exports = "<h2>Log in</h2>\r\n<div class=\"col-md-8-col-md-offset-2\">\r\n\r\n    <form #loginForm=\"ngForm\" (ngSubmit)=\"onLogin(loginForm)\">\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Email</label>\r\n            <input type=\"text\" name=\"email\" #email=\"ngModel\" [(ngModel)]=\"model.email\" placeholder=\"Email\" class=\"form-control\">\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Email</label>\r\n            <input type=\"password\" name=\"password\" #password=\"ngModel\" [(ngModel)]=\"model.password\" placeholder=\"Password\" class=\"form-control\">\r\n        </div>\r\n\r\n        <button class=\"btn btn-primary\" type=\"submit\">Login</button>\r\n    </form>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -914,7 +1019,7 @@ module.exports = "<h2>Log in</h2>\r\n<div class=\"col-md-8-col-md-offset-2\">\r\
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/authentication.service */ "./src/app/services/authentication.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -929,20 +1034,26 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(authService) {
+    function LoginComponent(authService, router) {
         this.authService = authService;
+        this.router = router;
+        this.model = {
+            email: "",
+            password: ""
+        };
     }
-    LoginComponent.prototype.onSubmit = function () {
-        console.log(this.myForm);
-        this.myForm.reset();
-    };
-    LoginComponent.prototype.ngOnInit = function () {
-        this.myForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
-            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](null, [
-                _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
-                _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern("[^@]+@[^@]+.[^@]+")
-            ]),
-            password: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required)
+    LoginComponent.prototype.ngOnInit = function () { };
+    LoginComponent.prototype.onLogin = function (form) {
+        var _this = this;
+        this.authService.login(form.value).subscribe(
+        // successful authentication
+        function (res) {
+            _this.authService.setToken(res["token"]); // save token to local storage
+            _this.router.navigateByUrl("/userProfile"); // redirect to user profile page
+        }, 
+        // If errors occur
+        function (err) {
+            _this.errorMessages = err.error.message;
         });
     };
     LoginComponent = __decorate([
@@ -951,7 +1062,8 @@ var LoginComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./login.component.html */ "./src/app/components/login/login.component.html"),
             styles: [__webpack_require__(/*! ./login.component.css */ "./src/app/components/login/login.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_authentication_service__WEBPACK_IMPORTED_MODULE_2__["AuthenticationService"]])
+        __metadata("design:paramtypes", [_services_authentication_service__WEBPACK_IMPORTED_MODULE_2__["AuthenticationService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], LoginComponent);
     return LoginComponent;
 }());
@@ -1378,7 +1490,7 @@ var RegisterComponent = /** @class */ (function () {
         }, 
         // if there are errors sent from server-side
         function (err) {
-            if (err.status === 400) {
+            if (err.status === 422) {
                 _this.errorMessages = err.error.join("<br/>");
             }
             else
@@ -1397,8 +1509,7 @@ var RegisterComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "register",
             template: __webpack_require__(/*! ./register.component.html */ "./src/app/components/register/register.component.html"),
-            styles: [__webpack_require__(/*! ./register.component.css */ "./src/app/components/register/register.component.css")],
-            providers: [_services_authentication_service__WEBPACK_IMPORTED_MODULE_1__["AuthenticationService"]]
+            styles: [__webpack_require__(/*! ./register.component.css */ "./src/app/components/register/register.component.css")]
         }),
         __metadata("design:paramtypes", [_services_authentication_service__WEBPACK_IMPORTED_MODULE_1__["AuthenticationService"]])
     ], RegisterComponent);
@@ -1473,96 +1584,62 @@ var SearchBarComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/routing.module.ts":
-/*!***********************************!*\
-  !*** ./src/app/routing.module.ts ***!
-  \***********************************/
-/*! exports provided: RoutingModule */
+/***/ "./src/app/components/user-profile/user-profile.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/components/user-profile/user-profile.component.css ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/user-profile/user-profile.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/user-profile/user-profile.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  user-profile works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/user-profile/user-profile.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/user-profile/user-profile.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: UserProfileComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoutingModule", function() { return RoutingModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserProfileComponent", function() { return UserProfileComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/genre/genre.component */ "./src/app/components/genre/genre.component.ts");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_award_award_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/award/award.component */ "./src/app/components/award/award.component.ts");
-/* harmony import */ var _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/company-information/company-information.component */ "./src/app/components/company-information/company-information.component.ts");
-/* harmony import */ var _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/not-found-page/not-found-page.component */ "./src/app/components/not-found-page/not-found-page.component.ts");
-/* harmony import */ var _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/add-movie-form/add-movie-form.component */ "./src/app/components/add-movie-form/add-movie-form.component.ts");
-/* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
-/* harmony import */ var _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/edit-movie-form/edit-movie-form.component */ "./src/app/components/edit-movie-form/edit-movie-form.component.ts");
-/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
-
-
-
-
-
-
-
-
-
-
-var routes = [
-    {
-        path: "",
-        component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
-    },
-    {
-        path: "home",
-        component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
-    },
-    {
-        path: "genre",
-        component: _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_2__["GenreComponent"]
-    },
-    {
-        path: "award",
-        component: _components_award_award_component__WEBPACK_IMPORTED_MODULE_4__["AwardComponent"]
-    },
-    {
-        path: "companyInformation",
-        component: _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_5__["CompanyInformationComponent"]
-    },
-    {
-        path: "addMovieForm",
-        component: _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_7__["AddMovieFormComponent"]
-    },
-    {
-        path: "login",
-        component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"]
-    },
-    {
-        path: "register",
-        component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"]
-    },
-    {
-        path: "editMovieForm",
-        component: _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_9__["EditMovieFormComponent"]
-    },
-    {
-        path: "**",
-        component: _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_6__["NotFoundPageComponent"]
+var UserProfileComponent = /** @class */ (function () {
+    function UserProfileComponent() {
     }
-];
-var RoutingModule = /** @class */ (function () {
-    function RoutingModule() {
-    }
-    RoutingModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
-        })
-    ], RoutingModule);
-    return RoutingModule;
+    UserProfileComponent.prototype.ngOnInit = function () { };
+    UserProfileComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "user-profile",
+            template: __webpack_require__(/*! ./user-profile.component.html */ "./src/app/components/user-profile/user-profile.component.html"),
+            styles: [__webpack_require__(/*! ./user-profile.component.css */ "./src/app/components/user-profile/user-profile.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], UserProfileComponent);
+    return UserProfileComponent;
 }());
 
 
@@ -1608,6 +1685,13 @@ var AuthenticationService = /** @class */ (function () {
     }
     AuthenticationService.prototype.registerUser = function (user) {
         return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiBaseUrl + "/register", user);
+    };
+    AuthenticationService.prototype.login = function (authCredentials) {
+        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiBaseUrl + "/authenticate", authCredentials);
+    };
+    // save token of current user inside local storage
+    AuthenticationService.prototype.setToken = function (token) {
+        localStorage.setItem("token", token);
     };
     AuthenticationService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({

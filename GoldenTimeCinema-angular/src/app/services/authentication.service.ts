@@ -23,6 +23,18 @@ export class AuthenticationService {
     return this.http.post(environment.apiBaseUrl + "/register", user);
   }
 
+  login(authCredentials) {
+    return this.http.post(
+      environment.apiBaseUrl + "/authenticate",
+      authCredentials
+    );
+  }
+
+  // save token of current user inside local storage
+  setToken(token: string) {
+    localStorage.setItem("token", token);
+  }
+
   // register(user: User) {
   //   const body = JSON.stringify(user);
   //   const headers = new Headers({ "Content-Type": "application/json" });

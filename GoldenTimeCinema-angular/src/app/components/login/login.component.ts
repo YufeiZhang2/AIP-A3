@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { NgForm } from "@angular/forms";
+import { Router } from "@angular/router";
+
 import { AuthenticationService } from "../../services/authentication.service";
 
 @Component({
@@ -8,22 +10,31 @@ import { AuthenticationService } from "../../services/authentication.service";
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
-  myForm: FormGroup;
+  errorMessages: string;
 
-  constructor(private authService: AuthenticationService) {}
+  constructor(
+    private authService: AuthenticationService,
+    private router: Router
+  ) {}
 
-  onSubmit() {
-    console.log(this.myForm);
-    this.myForm.reset();
-  }
+  model = {
+    email: "",
+    password: ""
+  };
 
-  ngOnInit() {
-    this.myForm = new FormGroup({
-      email: new FormControl(null, [
-        Validators.required,
-        Validators.pattern("[^@]+@[^@]+.[^@]+")
-      ]),
-      password: new FormControl(null, Validators.required)
-    });
+  ngOnInit() {}
+
+  onLogin(form: NgForm) {
+    this.authService.login(form.value).subscribe(
+      // successful authentication
+      res => {
+        this.authService.setToken(res["token"]); // save token to local storage
+        this.router.navigateByUrl("/userProfile"); // redirect to user profile page
+      },
+      // If errors occur
+      err => {
+        this.errorMessages = err.error.message;
+      }
+    );
   }
 }
