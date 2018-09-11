@@ -10,6 +10,8 @@ import { AuthenticationService } from "../../services/authentication.service";
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
+  // Email regular expression to validate email format
+  emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   errorMessages: string;
 
   constructor(
