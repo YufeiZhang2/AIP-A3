@@ -11,6 +11,8 @@ import { Router } from "@angular/router";
 export class RegisterComponent implements OnInit {
   // Email regular expression to validate email format
   emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  gender = null;
+  genders = ["Female", "Male", "Other"];
   successMessage: boolean;
   errorMessages: string;
 
@@ -47,8 +49,12 @@ export class RegisterComponent implements OnInit {
 
   resetForm(form: NgForm) {
     this.authService.selectedUser = {
+      firstName: "",
+      lastName: "",
       email: "",
-      password: ""
+      password: "",
+      gender: "",
+      dob: null
     };
     form.resetForm();
     this.errorMessages = "";

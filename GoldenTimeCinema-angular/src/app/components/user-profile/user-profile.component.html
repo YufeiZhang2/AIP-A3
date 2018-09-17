@@ -1,18 +1,16 @@
 <table *ngIf="userDetails">
-  <thead>
-    <tr>
-      <th colspan="2">User Profile</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Email</td>
-      <td>{{userDetails.email}}</td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <button (click)="onLogout()">Logout</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+  <h2>User Profile</h2>
+
+  <div>
+    <p>First Name: {{userDetails.firstName}}</p>
+    <p>Last Name: {{userDetails.lastName}}</p>
+    <p>Email: {{userDetails.email}}</p>
+    <p>Gender: {{userDetails.gender}}</p>
+    <p>Date of birth: {{userDetails.dob}}</p>
+  </div>
+
+
+
+
+  <button (click)="onLogout()">Logout</button>

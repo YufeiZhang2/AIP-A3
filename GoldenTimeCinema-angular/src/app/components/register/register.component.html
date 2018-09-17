@@ -54,10 +54,10 @@
             <label for="gender">Gender</label>
             <select #gender="ngModel" [(ngModel)]="authService.selectedUser.gender" name="gender" placeholder="Gender" class="form-control"
                 required [ngClass]="{ 'ng-invalid': registerForm.submitted && !gender.valid }">
-                <option [value]="">Select gender</option>
-                <option [value]="female">Female</option>
-                <option [value]="male">Male</option>
-                <option [value]="other">Other/Prefer not to say</option>
+                <option [ngValue]="null" disabled>Select gender</option>
+                <option *ngFor="let gender of genders" [ngValue]="gender">
+                    {{ gender}}
+                </option>
             </select>
             <!-- Display of Validation for lastname input -->
             <div *ngIf="registerForm.submitted && gender.errors">

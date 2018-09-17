@@ -10,8 +10,12 @@ import { User } from "../components/auth/user.model";
 export class AuthenticationService {
   // Initialize a User object with empty email and password
   selectedUser: User = {
+    firstName: "",
+    lastName: "",
     email: "",
-    password: ""
+    password: "",
+    gender: "",
+    dob: null
   };
 
   noAuthHeader = { headers: new HttpHeaders({ NoAuth: "True" }) };
