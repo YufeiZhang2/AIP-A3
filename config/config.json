@@ -1,12 +1,12 @@
 {
   "development": {
     "PORT": 3000,
-    "jwtPrivateKey": "SECRET#123",
+    "jwtPrivateKey": "GoldenCinema2018",
     "jwtExpirationTime": "2m"
   },
   "production": {
     "PORT": 80,
-    "jwtPrivateKey": "SECRET#123",
+    "jwtPrivateKey": "GoldenCinema2018",
     "jwtExpirationTime": "2m"
   }
 }
