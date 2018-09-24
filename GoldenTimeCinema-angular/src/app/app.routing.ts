@@ -15,14 +15,13 @@ import { AuthGuard } from "./components/auth/auth.guard";
 
 const routes: Routes = [
   {
+    path: "",
+    component: HomeComponent
+  },
+  {
     path: "home",
     component: HomeComponent
   },
-  // {
-  //   path: "",
-  //   redirectTo: "/home",
-  //   pathMatch: "full"
-  // },
   {
     path: "genre",
     component: GenreComponent
@@ -57,7 +56,7 @@ const routes: Routes = [
     component: EditMovieFormComponent
   },
   {
-    path: "movie/:_id",
+    path: "movie/:id",
     component: MovieComponent
   },
   {

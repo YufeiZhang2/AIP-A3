@@ -272,14 +272,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 var routes = [
     {
+        path: "",
+        component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"]
+    },
+    {
         path: "home",
         component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"]
     },
-    // {
-    //   path: "",
-    //   redirectTo: "/home",
-    //   pathMatch: "full"
-    // },
     {
         path: "genre",
         component: _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_3__["GenreComponent"]
@@ -314,7 +313,7 @@ var routes = [
         component: _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_10__["EditMovieFormComponent"]
     },
     {
-        path: "movie/:_id",
+        path: "movie/:id",
         component: _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_0__["MovieComponent"]
     },
     {
