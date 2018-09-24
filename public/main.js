@@ -107,17 +107,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/components/header/header.component.ts");
 /* harmony import */ var _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/genre/genre.component */ "./src/app/components/genre/genre.component.ts");
 /* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_award_award_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/award/award.component */ "./src/app/components/award/award.component.ts");
-/* harmony import */ var _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/company-information/company-information.component */ "./src/app/components/company-information/company-information.component.ts");
-/* harmony import */ var _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/not-found-page/not-found-page.component */ "./src/app/components/not-found-page/not-found-page.component.ts");
-/* harmony import */ var _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/add-movie-form/add-movie-form.component */ "./src/app/components/add-movie-form/add-movie-form.component.ts");
-/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
-/* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
-/* harmony import */ var _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/edit-movie-form/edit-movie-form.component */ "./src/app/components/edit-movie-form/edit-movie-form.component.ts");
-/* harmony import */ var _components_posts_posts_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/posts/posts.component */ "./src/app/components/posts/posts.component.ts");
-/* harmony import */ var _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/movie/movie.component */ "./src/app/components/movie/movie.component.ts");
-/* harmony import */ var _components_auth_authentication_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/auth/authentication.component */ "./src/app/components/auth/authentication.component.ts");
-/* harmony import */ var _components_auth_logout_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/auth/logout.component */ "./src/app/components/auth/logout.component.ts");
+/* harmony import */ var _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/company-information/company-information.component */ "./src/app/components/company-information/company-information.component.ts");
+/* harmony import */ var _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/not-found-page/not-found-page.component */ "./src/app/components/not-found-page/not-found-page.component.ts");
+/* harmony import */ var _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/add-movie-form/add-movie-form.component */ "./src/app/components/add-movie-form/add-movie-form.component.ts");
+/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
+/* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
+/* harmony import */ var _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/edit-movie-form/edit-movie-form.component */ "./src/app/components/edit-movie-form/edit-movie-form.component.ts");
+/* harmony import */ var _components_posts_posts_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/posts/posts.component */ "./src/app/components/posts/posts.component.ts");
+/* harmony import */ var _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/movie/movie.component */ "./src/app/components/movie/movie.component.ts");
+/* harmony import */ var _components_auth_authentication_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/auth/authentication.component */ "./src/app/components/auth/authentication.component.ts");
+/* harmony import */ var _components_auth_logout_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/auth/logout.component */ "./src/app/components/auth/logout.component.ts");
+/* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
 /* harmony import */ var _services_post_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/post.service */ "./src/app/services/post.service.ts");
 /* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
 /* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
@@ -183,18 +183,18 @@ var AppModule = /** @class */ (function () {
                 _components_header_header_component__WEBPACK_IMPORTED_MODULE_13__["HeaderComponent"],
                 _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_14__["GenreComponent"],
                 _components_home_home_component__WEBPACK_IMPORTED_MODULE_15__["HomeComponent"],
-                _components_award_award_component__WEBPACK_IMPORTED_MODULE_16__["AwardComponent"],
-                _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_17__["CompanyInformationComponent"],
-                _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_19__["AddMovieFormComponent"],
-                _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_18__["NotFoundPageComponent"],
-                _components_login_login_component__WEBPACK_IMPORTED_MODULE_20__["LoginComponent"],
-                _components_register_register_component__WEBPACK_IMPORTED_MODULE_21__["RegisterComponent"],
-                _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_22__["EditMovieFormComponent"],
-                _components_posts_posts_component__WEBPACK_IMPORTED_MODULE_23__["PostsComponent"],
-                _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_24__["MovieComponent"],
-                _components_auth_authentication_component__WEBPACK_IMPORTED_MODULE_25__["AuthenticationComponent"],
-                _components_auth_logout_component__WEBPACK_IMPORTED_MODULE_26__["LogoutComponent"],
-                _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_30__["UserProfileComponent"]
+                _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_16__["CompanyInformationComponent"],
+                _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_18__["AddMovieFormComponent"],
+                _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_17__["NotFoundPageComponent"],
+                _components_login_login_component__WEBPACK_IMPORTED_MODULE_19__["LoginComponent"],
+                _components_register_register_component__WEBPACK_IMPORTED_MODULE_20__["RegisterComponent"],
+                _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_21__["EditMovieFormComponent"],
+                _components_posts_posts_component__WEBPACK_IMPORTED_MODULE_22__["PostsComponent"],
+                _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_23__["MovieComponent"],
+                _components_auth_authentication_component__WEBPACK_IMPORTED_MODULE_24__["AuthenticationComponent"],
+                _components_auth_logout_component__WEBPACK_IMPORTED_MODULE_25__["LogoutComponent"],
+                _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_30__["UserProfileComponent"],
+                _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_26__["AdminComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
@@ -236,12 +236,12 @@ var AppModule = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoutingModule", function() { return RoutingModule; });
-/* harmony import */ var _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/movie/movie.component */ "./src/app/components/movie/movie.component.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/genre/genre.component */ "./src/app/components/genre/genre.component.ts");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_award_award_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/award/award.component */ "./src/app/components/award/award.component.ts");
+/* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
+/* harmony import */ var _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/movie/movie.component */ "./src/app/components/movie/movie.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/genre/genre.component */ "./src/app/components/genre/genre.component.ts");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
 /* harmony import */ var _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/company-information/company-information.component */ "./src/app/components/company-information/company-information.component.ts");
 /* harmony import */ var _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/not-found-page/not-found-page.component */ "./src/app/components/not-found-page/not-found-page.component.ts");
 /* harmony import */ var _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/add-movie-form/add-movie-form.component */ "./src/app/components/add-movie-form/add-movie-form.component.ts");
@@ -273,19 +273,19 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var routes = [
     {
         path: "",
-        component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"]
+        component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"]
     },
-    {
-        path: "home",
-        component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"]
-    },
+    // {
+    //   path: "home",
+    //   component: HomeComponent
+    // },
     {
         path: "genre",
-        component: _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_3__["GenreComponent"]
+        component: _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_4__["GenreComponent"]
     },
     {
-        path: "award",
-        component: _components_award_award_component__WEBPACK_IMPORTED_MODULE_5__["AwardComponent"]
+        path: "admin",
+        component: _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_0__["AdminComponent"]
     },
     {
         path: "companyInformation",
@@ -313,8 +313,8 @@ var routes = [
         component: _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_10__["EditMovieFormComponent"]
     },
     {
-        path: "movie/:id",
-        component: _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_0__["MovieComponent"]
+        path: "movie/:_id",
+        component: _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_1__["MovieComponent"]
     },
     {
         path: "**",
@@ -325,9 +325,9 @@ var RoutingModule = /** @class */ (function () {
     function RoutingModule() {
     }
     RoutingModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]]
         })
     ], RoutingModule);
     return RoutingModule;
@@ -393,6 +393,76 @@ var AddMovieFormComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], AddMovieFormComponent);
     return AddMovieFormComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/admin/admin.component.css":
+/*!******************************************************!*\
+  !*** ./src/app/components/admin/admin.component.css ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/admin/admin.component.html":
+/*!*******************************************************!*\
+  !*** ./src/app/components/admin/admin.component.html ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngFor=\"let movie of movies\">\n  <br />\n  <h2>{{movie.name}}</h2>\n  <br />\n  <label>Sessions time: {{movie.showTime}}</label>\n  <br />\n  <label>Sessions date: {{movie.showDate}}</label>\n  <br />\n  <label>Running time: {{movie.runningTime}}</label>\n  <br />\n  <label>Director(s): {{movie.directors}}</label>\n  <br />\n  <label>Cast: {{movie.stars}}</label>\n  <br />\n  <label>Story: {{movie.storyline}}</label>\n  <br />\n  <label>Genre: {{movie.genres}}</label>\n  <br />\n  <label>Status: {{movie.status}}</label>\n  <br />\n  <br />\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/admin/admin.component.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/components/admin/admin.component.ts ***!
+  \*****************************************************/
+/*! exports provided: AdminComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminComponent", function() { return AdminComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_post_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/post.service */ "./src/app/services/post.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var AdminComponent = /** @class */ (function () {
+    function AdminComponent(service) {
+        this.service = service;
+    }
+    AdminComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.service.getPosts().subscribe(function (response) {
+            _this.movies = response.json();
+        });
+    };
+    AdminComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'admin',
+            template: __webpack_require__(/*! ./admin.component.html */ "./src/app/components/admin/admin.component.html"),
+            styles: [__webpack_require__(/*! ./admin.component.css */ "./src/app/components/admin/admin.component.css")]
+        }),
+        __metadata("design:paramtypes", [_services_post_service__WEBPACK_IMPORTED_MODULE_1__["PostService"]])
+    ], AdminComponent);
+    return AdminComponent;
 }());
 
 
@@ -612,68 +682,6 @@ var LogoutComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/award/award.component.css":
-/*!******************************************************!*\
-  !*** ./src/app/components/award/award.component.css ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/components/award/award.component.html":
-/*!*******************************************************!*\
-  !*** ./src/app/components/award/award.component.html ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2>Awards</h2>\n<p>Award page is in progress.</p>"
-
-/***/ }),
-
-/***/ "./src/app/components/award/award.component.ts":
-/*!*****************************************************!*\
-  !*** ./src/app/components/award/award.component.ts ***!
-  \*****************************************************/
-/*! exports provided: AwardComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AwardComponent", function() { return AwardComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var AwardComponent = /** @class */ (function () {
-    function AwardComponent() {
-    }
-    AwardComponent.prototype.ngOnInit = function () { };
-    AwardComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: "award",
-            template: __webpack_require__(/*! ./award.component.html */ "./src/app/components/award/award.component.html"),
-            styles: [__webpack_require__(/*! ./award.component.css */ "./src/app/components/award/award.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], AwardComponent);
-    return AwardComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/components/coming-soon-movie-list/coming-soon-movie-list.component.css":
 /*!****************************************************************************************!*\
   !*** ./src/app/components/coming-soon-movie-list/coming-soon-movie-list.component.css ***!
@@ -692,7 +700,7 @@ module.exports = ".comingSoonBlock {\n    border-style: solid;\n    background-c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"comingSoonBlock\">\n  <h2>Coming Soon Movies</h2>\n  <ul>\n    <li routerLink=\"../editMovieForm\" *ngFor=\"let movie of movies\">\n      <a [routerLink]=\"['../movie', movie._id]\">{{movie.name}}</a>\n    </li>\n  </ul>\n</div>"
+module.exports = "<div class=\"comingSoonBlock\">\n  <h2>Coming Soon Movies</h2>\n  <ul>\n    <li *ngFor=\"let movie of movies\">\n      <a [routerLink]=\"['../movie', movie._id]\">{{movie.name}}</a>\n    </li>\n  </ul>\n</div>"
 
 /***/ }),
 
@@ -1075,7 +1083,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br/>\n<br/>\n<search-bar></search-bar>\n<br/>\n<br/>\n<now-showing-movie-list></now-showing-movie-list>\n<br/>\n<coming-soon-movie-list></coming-soon-movie-list>\n<br/>\n<button class=\"btn btn-primary\" routerLink=\"../addMovieForm\">New Movie</button>"
+module.exports = "<br />\n<br />\n<search-bar></search-bar>\n<br />\n<br />\n<now-showing-movie-list></now-showing-movie-list>\n<br />\n<coming-soon-movie-list></coming-soon-movie-list>\n<br />"
 
 /***/ }),
 
@@ -1230,7 +1238,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngFor=\"let property of movie\">\n  <br />\n  <h2>{{property.name}}</h2>\n  <br />\n  <label>Sessions: {{property.showTime}}</label>\n  <br />\n  <label>Running time: {{property.runningTime}}</label>\n  <br />\n  <label>Director(s): {{property.directors}}</label>\n  <br />\n  <label>Cast: {{property.stars}}</label>\n  <br />\n  <label>Story: {{property.storyline}}</label>\n  <br />\n  <label>Status: {{property.status}}</label>\n</div>"
+module.exports = "<div *ngFor=\"let property of movie\">\n  <br />\n  <h2>{{property.name}}</h2>\n  <br />\n  <label>Sessions: {{property.showTime}}</label>\n  <br />\n  <label>Running time: {{property.runningTime}}</label>\n  <br />\n  <label>Director(s): {{property.directors}}</label>\n  <br />\n  <label>Cast: {{property.stars}}</label>\n  <br />\n  <label>Story: {{property.storyline}}</label>\n  <br />\n  <label>Genre: {{property.genres}}</label>\n  <br />\n  <label>Status: {{property.status}}</label>\n</div>"
 
 /***/ }),
 
@@ -1266,11 +1274,13 @@ var MovieComponent = /** @class */ (function () {
     }
     MovieComponent.prototype.ngOnInit = function () {
         var _this = this;
+        //get the router parameter that is the object id of a movie.
         this.route.paramMap
             .subscribe(function (params) {
-            var id = params.get('_id');
-            console.log(id);
-            _this.service.getPostsById(id).subscribe(function (response) {
+            var _id = params.get('_id');
+            console.log(_id);
+            //get a specific movie object by its object id
+            _this.service.getPostsById(_id).subscribe(function (response) {
                 _this.movie = response.json();
                 console.log(_this.movie);
             });
@@ -1309,7 +1319,7 @@ module.exports = ".navigationBar {\n  display: block;\n  background-color: white
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"col-md-10 col-md-offset-2\">\n  <ul class=\"nav nav-pills\">\n    <li routerLinkActive=\"active\">\n      <a routerLink=\"../home\">{{home}}</a>\n    </li>\n    <li routerLinkActive=\"active\">\n      <a routerLink=\"../genre\">{{genre}}</a>\n    </li>\n    <li routerLinkActive=\"active\">\n      <a routerLink=\"../award\">{{award}}</a>\n    </li>\n    <li routerLinkActive=\"active\">\n      <a routerLink=\"../companyInformation\">{{companyInformation}}</a>\n    </li>\n    <!-- User authService.isLoggedIn directly here to solve problem of manually refreshing the page to see changes -->\n    <li *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../login\">{{logIn}}</a>\n    </li>\n    <li *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../register\">{{register}}</a>\n    </li>\n    <li *ngIf=\"authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../userprofile\">{{profile}}</a>\n    </li>\n  </ul>\n</nav>"
+module.exports = "<nav class=\"col-md-10 col-md-offset-2\">\n  <ul class=\"nav nav-pills\">\n    <li routerLinkActive=\"active\">\n      <a routerLink=\"../\">{{home}}</a>\n    </li>\n    <li routerLinkActive=\"active\">\n      <a routerLink=\"../genre\">{{genre}}</a>\n    </li>\n    <li routerLinkActive=\"active\">\n      <a routerLink=\"../companyInformation\">{{companyInformation}}</a>\n    </li>\n    <li routerLinkActive=\"active\">\n      <a routerLink=\"../admin\">{{admin}}</a>\n    </li>\n    <!-- User authService.isLoggedIn directly here to solve problem of manually refreshing the page to see changes -->\n    <li *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../login\">{{logIn}}</a>\n    </li>\n    <li *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../register\">{{register}}</a>\n    </li>\n    <li *ngIf=\"authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../userprofile\">{{profile}}</a>\n    </li>\n  </ul>\n</nav>"
 
 /***/ }),
 
@@ -1343,7 +1353,7 @@ var NavigationBarComponent = /** @class */ (function () {
         this.home = "Home";
         this.register = "Register";
         this.genre = "Genre";
-        this.award = "Awards";
+        this.admin = "Admin";
         this.companyInformation = "About us";
         this.profile = "Profile";
     }
@@ -1443,7 +1453,7 @@ module.exports = ".nowShowingBlock {\n    border-style: solid;\n    background-c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"nowShowingBlock\">\n  <h2>Now Showing Movies</h2>\n  <ul>\n    <li *ngFor=\"let movie of movies\"><a>{{movie.name}}</a></li>\n  </ul>\n\n</div>"
+module.exports = "<div class=\"nowShowingBlock\">\n  <h2>Now Showing Movies</h2>\n  <ul>\n    <li *ngFor=\"let movie of movies\">\n      <a [routerLink]=\"['../movie', movie._id]\">{{movie.name}}</a>\n    </li>\n  </ul>\n\n</div>"
 
 /***/ }),
 

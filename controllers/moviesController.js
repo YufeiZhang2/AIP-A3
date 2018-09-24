@@ -7,9 +7,9 @@ const router = express.Router();
 
 //read all the movies
 router.get("/", async (req, res) => {
-    console.log(movieModel);
-    const movies = await movieModel.find();
-    res.send(movies);
+  console.log(movieModel);
+  const movies = await movieModel.find();
+  res.send(movies);
 });
 
 //read a movie by its objectId

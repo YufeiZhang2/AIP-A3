@@ -17,7 +17,6 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { GenreComponent } from "./components/genre/genre.component";
 import { HomeComponent } from "./components/home/home.component";
-import { AwardComponent } from "./components/award/award.component";
 import { CompanyInformationComponent } from "./components/company-information/company-information.component";
 import { NotFoundPageComponent } from "./components/not-found-page/not-found-page.component";
 import { AddMovieFormComponent } from "./components/add-movie-form/add-movie-form.component";
@@ -28,6 +27,7 @@ import { PostsComponent } from "./components/posts/posts.component";
 import { MovieComponent } from "./components/movie/movie.component";
 import { AuthenticationComponent } from "./components/auth/authentication.component";
 import { LogoutComponent } from "./components/auth/logout.component";
+import { AdminComponent } from './components/admin/admin.component';
 
 // Service imports
 import { PostService } from "./services/post.service";
@@ -41,6 +41,7 @@ import { UserProfileComponent } from "./components/user-profile/user-profile.com
 import { AuthGuard } from "./components/auth/auth.guard";
 import { AuthInterceptor } from "./components/auth/auth.interceptor";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,6 @@ import { AuthInterceptor } from "./components/auth/auth.interceptor";
     HeaderComponent,
     GenreComponent,
     HomeComponent,
-    AwardComponent,
     CompanyInformationComponent,
     AddMovieFormComponent,
     NotFoundPageComponent,
@@ -63,7 +63,8 @@ import { AuthInterceptor } from "./components/auth/auth.interceptor";
     MovieComponent,
     AuthenticationComponent,
     LogoutComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -87,4 +88,4 @@ import { AuthInterceptor } from "./components/auth/auth.interceptor";
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

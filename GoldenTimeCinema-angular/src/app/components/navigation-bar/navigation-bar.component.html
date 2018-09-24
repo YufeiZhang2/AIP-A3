@@ -1,16 +1,16 @@
 <nav class="col-md-10 col-md-offset-2">
   <ul class="nav nav-pills">
     <li routerLinkActive="active">
-      <a routerLink="../home">{{home}}</a>
+      <a routerLink="../">{{home}}</a>
     </li>
     <li routerLinkActive="active">
       <a routerLink="../genre">{{genre}}</a>
     </li>
     <li routerLinkActive="active">
-      <a routerLink="../award">{{award}}</a>
+      <a routerLink="../companyInformation">{{companyInformation}}</a>
     </li>
     <li routerLinkActive="active">
-      <a routerLink="../companyInformation">{{companyInformation}}</a>
+      <a routerLink="../admin">{{admin}}</a>
     </li>
     <!-- User authService.isLoggedIn directly here to solve problem of manually refreshing the page to see changes -->
     <li *ngIf="!authService.isLoggedIn()" routerLinkActive="active">

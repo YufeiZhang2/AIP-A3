@@ -13,7 +13,7 @@ export class PostService {
     return this.http.get(this.url);
   }
 
-  getPostsById(_id: string) {
+  getPostsById(_id) {
     return this.http.get(this.url + '/' + _id);
   }
 

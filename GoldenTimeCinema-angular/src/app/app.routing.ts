@@ -1,9 +1,9 @@
+import { AdminComponent } from './components/admin/admin.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { GenreComponent } from "./components/genre/genre.component";
 import { HomeComponent } from "./components/home/home.component";
-import { AwardComponent } from "./components/award/award.component";
 import { CompanyInformationComponent } from "./components/company-information/company-information.component";
 import { NotFoundPageComponent } from "./components/not-found-page/not-found-page.component";
 import { AddMovieFormComponent } from "./components/add-movie-form/add-movie-form.component";
@@ -18,17 +18,17 @@ const routes: Routes = [
     path: "",
     component: HomeComponent
   },
-  {
-    path: "home",
-    component: HomeComponent
-  },
+  // {
+  //   path: "home",
+  //   component: HomeComponent
+  // },
   {
     path: "genre",
     component: GenreComponent
   },
   {
-    path: "award",
-    component: AwardComponent
+    path: "admin",
+    component: AdminComponent
   },
   {
     path: "companyInformation",
@@ -56,7 +56,7 @@ const routes: Routes = [
     component: EditMovieFormComponent
   },
   {
-    path: "movie/:id",
+    path: "movie/:_id",
     component: MovieComponent
   },
   {

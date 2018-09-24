@@ -21,7 +21,7 @@ mongoose
 const app = express();
 
 //Middleware for CORS
-app.use(cors());
+//app.use(cors());
 
 //Middleware for bodyparsing using both json and urlencoding
 app.use(express.urlencoded({ extended: true }));
@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // Set api routes
 app.use("/api/movies", moviesController);
 app.use("/api/movies/:_id", moviesController);
-app.use("/api", routesApp);
+//app.use("/api", routesApp);
 
 // Handle errors for validation
 app.use((err, req, res, next) => {

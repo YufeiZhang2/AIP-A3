@@ -11,11 +11,11 @@ export class NavigationBarComponent implements OnInit {
   home = "Home";
   register = "Register";
   genre = "Genre";
-  award = "Awards";
+  admin = "Admin";
   companyInformation = "About us";
   profile = "Profile";
 
-  constructor(private authService: AuthenticationService) {}
+  constructor(private authService: AuthenticationService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

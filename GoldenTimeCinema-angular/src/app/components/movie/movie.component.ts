@@ -14,11 +14,14 @@ export class MovieComponent implements OnInit {
   constructor(private route: ActivatedRoute, private service: PostService) { }
 
   ngOnInit() {
+    //get the router parameter that is the object id of a movie.
     this.route.paramMap
       .subscribe(params => {
-        let id = params.get('_id');
-        console.log(id);
-        this.service.getPostsById(id).subscribe(response => {
+        let _id = params.get('_id');
+        console.log(_id);
+
+        //get a specific movie object by its object id
+        this.service.getPostsById(_id).subscribe(response => {
           this.movie = response.json();
           console.log(this.movie);
         })
