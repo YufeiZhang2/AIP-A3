@@ -1,11 +1,7 @@
 <div class="nowShowingBlock">
   <h2>Now Showing Movies</h2>
   <ul>
-    <li *ngFor="let movie of movies">{{movie.name}}
-      <button class="btn btn-info btn-sm" routerLink="../editMovieForm">
-        Edit
-      </button>
-    </li>
+    <li *ngFor="let movie of movies"><a>{{movie.name}}</a></li>
   </ul>
 
 </div>

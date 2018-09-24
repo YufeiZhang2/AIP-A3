@@ -13,6 +13,10 @@ export class PostService {
     return this.http.get(this.url);
   }
 
+  getPostsById(_id: string) {
+    return this.http.get(this.url + '/' + _id);
+  }
+
   createPosts(post) {
     return this.http.post(this.url, JSON.stringify(post));
   }

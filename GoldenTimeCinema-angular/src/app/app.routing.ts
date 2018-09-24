@@ -1,3 +1,4 @@
+import { MovieComponent } from './components/movie/movie.component';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { GenreComponent } from "./components/genre/genre.component";
@@ -10,7 +11,6 @@ import { RegisterComponent } from "./components/register/register.component";
 import { EditMovieFormComponent } from "./components/edit-movie-form/edit-movie-form.component";
 import { LoginComponent } from "./components/login/login.component";
 import { UserProfileComponent } from "./components/user-profile/user-profile.component";
-
 import { AuthGuard } from "./components/auth/auth.guard";
 
 const routes: Routes = [
@@ -18,11 +18,11 @@ const routes: Routes = [
     path: "home",
     component: HomeComponent
   },
-  {
-    path: "",
-    redirectTo: "/home",
-    pathMatch: "full"
-  },
+  // {
+  //   path: "",
+  //   redirectTo: "/home",
+  //   pathMatch: "full"
+  // },
   {
     path: "genre",
     component: GenreComponent
@@ -57,6 +57,10 @@ const routes: Routes = [
     component: EditMovieFormComponent
   },
   {
+    path: "movie/:_id",
+    component: MovieComponent
+  },
+  {
     path: "**",
     component: NotFoundPageComponent
   }
@@ -66,4 +70,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class RoutingModule {}
+export class RoutingModule { }

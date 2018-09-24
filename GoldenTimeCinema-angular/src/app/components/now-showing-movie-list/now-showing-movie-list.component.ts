@@ -13,15 +13,9 @@ export class NowShowingMovieListComponent implements OnInit {
 
   ngOnInit() {
     this.service.getPosts().subscribe(response => {
-      this.movies = response.json();
+      this.movies = response.json()
+        .filter(movie => movie.status === 'nowShowing');
     });
   }
 
-  // getNowShowingMovie() {
-  //   for (let movie of this.movies) {
-  //     if (movie.status == "nowShowing") {
-  //       this.nowShowingMovies.push(movie);
-  //     }
-  //   }
-  // }
 }

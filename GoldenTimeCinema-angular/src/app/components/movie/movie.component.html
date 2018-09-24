@@ -1,17 +1,16 @@
-<div>
-  <label>{{name}}</label>
-  <br/>
-  <label>{{showtime}}</label>
-  <br/>
-  <label>{{runningTime}}</label>
-  <br/>
-  <label>{{director}}</label>
-  <br/>
-  <label>{{stars}}</label>
-  <br/>
-  <label>{{name}}</label>
-  <br/>
-  <label>{{storyline}}</label>
-  <br/>
-  <label>{{status}}</label>
+<div *ngFor="let property of movie">
+  <br />
+  <h2>{{property.name}}</h2>
+  <br />
+  <label>Sessions: {{property.showTime}}</label>
+  <br />
+  <label>Running time: {{property.runningTime}}</label>
+  <br />
+  <label>Director(s): {{property.directors}}</label>
+  <br />
+  <label>Cast: {{property.stars}}</label>
+  <br />
+  <label>Story: {{property.storyline}}</label>
+  <br />
+  <label>Status: {{property.status}}</label>
 </div>
