@@ -21,7 +21,7 @@ mongoose
 const app = express();
 
 //Middleware for CORS
-//app.use(cors());
+app.use(cors());
 
 //Middleware for bodyparsing using both json and urlencoding
 app.use(express.urlencoded({ extended: true }));

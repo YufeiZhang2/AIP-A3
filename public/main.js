@@ -406,7 +406,7 @@ var AddMovieFormComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#reminder{\n    color: red;\n}"
+module.exports = ""
 
 /***/ }),
 
@@ -417,7 +417,7 @@ module.exports = "#reminder{\n    color: red;\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngFor=\"let movie of movies; let i = index\" [attr.movieIndex]=\"i\">\n  <br />\n  <h2>{{movie.name}}</h2>\n  <button class=\"btn btn-primary\" (click)=\"onDelete(i)\">Delete</button>\n  <div id=\"reminder\">{{flag}}</div>\n  <br />\n  <label>Sessions time: {{movie.showTime}}</label>\n  <br />\n  <label>Sessions date: {{movie.showDate}}</label>\n  <br />\n  <label>Running time: {{movie.runningTime}}</label>\n  <br />\n  <label>Director(s): {{movie.directors}}</label>\n  <br />\n  <label>Cast: {{movie.stars}}</label>\n  <br />\n  <label>Story: {{movie.storyline}}</label>\n  <br />\n  <label>Genre: {{movie.genres}}</label>\n  <br />\n  <label>Status: {{movie.status}}</label>\n  <br />\n  <br />\n</div>"
+module.exports = "<div *ngFor=\"let movie of movies; let i = index\" [attr.movieIndex]=\"i\">\n  <br />\n  <h2>{{movie.name}}</h2>\n  <button class=\"btn btn-primary\" (click)=\"onDelete(i)\">Delete</button>\n  <br />\n  <label>Sessions time: {{movie.showTime}}</label>\n  <br />\n  <label>Sessions date: {{movie.showDate}}</label>\n  <br />\n  <label>Running time: {{movie.runningTime}}</label>\n  <br />\n  <label>Director(s): {{movie.directors}}</label>\n  <br />\n  <label>Cast: {{movie.stars}}</label>\n  <br />\n  <label>Story: {{movie.storyline}}</label>\n  <br />\n  <label>Genre: {{movie.genres}}</label>\n  <br />\n  <label>Status: {{movie.status}}</label>\n  <br />\n  <br />\n</div>"
 
 /***/ }),
 
@@ -431,8 +431,9 @@ module.exports = "<div *ngFor=\"let movie of movies; let i = index\" [attr.movie
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminComponent", function() { return AdminComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_post_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/post.service */ "./src/app/services/post.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_post_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/post.service */ "./src/app/services/post.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -444,10 +445,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var AdminComponent = /** @class */ (function () {
-    function AdminComponent(service) {
+    function AdminComponent(service, router) {
         this.service = service;
-        this.flag = null;
+        this.router = router;
     }
     AdminComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -455,24 +457,29 @@ var AdminComponent = /** @class */ (function () {
             _this.movies = response.json();
         });
     };
+    AdminComponent.prototype.ngOnChanges = function () {
+        this.onDelete(this.movieIndex);
+    };
+    //delete a movie based on its object id.
     AdminComponent.prototype.onDelete = function (movieIndex) {
-        var _this = this;
         var objectId;
         console.log(movieIndex);
+        //get the movie id based on the index of the movie
         objectId = this.movies[movieIndex]._id;
         console.log(objectId);
+        //delete the specific movie
         this.service.deletePosts(objectId).subscribe(function (response) {
             console.log(response.json());
-            _this.flag = "Delete Sccussfully!";
         });
+        // this.router.navigate(["/home"]);
     };
     AdminComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'admin',
             template: __webpack_require__(/*! ./admin.component.html */ "./src/app/components/admin/admin.component.html"),
             styles: [__webpack_require__(/*! ./admin.component.css */ "./src/app/components/admin/admin.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_post_service__WEBPACK_IMPORTED_MODULE_1__["PostService"]])
+        __metadata("design:paramtypes", [_services_post_service__WEBPACK_IMPORTED_MODULE_2__["PostService"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"]])
     ], AdminComponent);
     return AdminComponent;
 }());
@@ -2063,7 +2070,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var PostService = /** @class */ (function () {
     function PostService(http) {
         this.http = http;
-        this.url = '/api/movies';
+        this.url = 'http://localhost:3000/api/movies';
     }
     PostService.prototype.getPosts = function () {
         return this.http.get(this.url);

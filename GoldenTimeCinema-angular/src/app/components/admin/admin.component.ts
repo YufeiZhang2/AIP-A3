@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { PostService } from "../../services/post.service";
 
@@ -9,15 +10,18 @@ import { PostService } from "../../services/post.service";
 export class AdminComponent implements OnInit {
   movieIndex: number;
   movies: any[];
-  flag = null;
 
-  constructor(private service: PostService) {
+  constructor(private service: PostService, private router: Router) {
   }
 
   ngOnInit() {
     this.service.getPosts().subscribe(response => {
       this.movies = response.json();
     });
+  }
+
+  ngOnChanges() {
+    this.onDelete(this.movieIndex);
   }
 
   //delete a movie based on its object id.
@@ -32,8 +36,8 @@ export class AdminComponent implements OnInit {
     //delete the specific movie
     this.service.deletePosts(objectId).subscribe(response => {
       console.log(response.json());
-      this.flag = "Delete It Sccussfully."
     });
+    this.router.navigate(["/genre"]);
   }
 
 }

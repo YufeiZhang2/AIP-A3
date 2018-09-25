@@ -26,7 +26,7 @@ async function createMovies() {
 
   const forrestGump = new movieModel({
     name: "Forest Gump",
-    showDate: [new Date("2018-08-25"), new Date("2018-08-26"), new Date("2018-08-27")],
+    showDate: [new Date("2018,8,25"), new Date("2018,08,26"), new Date("2018,08,27")],
     showTime: ["10:00 - 12:22", "3:00 - 5:22", "19:00 - 9:22"],
     runningTime: 142,
     directors: "Robert Zemeckis",
@@ -38,7 +38,7 @@ async function createMovies() {
 
   const theLordOfRings = new movieModel({
     name: "The Lord of Rings",
-    showDate: [new Date("2018-08-25"), new Date("2018-08-26"), new Date("2018-08-27")],
+    showDate: [new Date("2018,8,25"), new Date("2018,8,26"), new Date("2018,08,27")],
     showTime: ["12:30 - 15:30", "16:00 - 19:00", "20:00 - 23:00"],
     runningTime: 180,
     directors: "Peter Jackson",
@@ -50,7 +50,7 @@ async function createMovies() {
 
   const theMatrix = new movieModel({
     name: "The Matrix",
-    showDate: [new Date("2018-09-25"), new Date("2018-09-26"), new Date("2018-09-27")],
+    showDate: [new Date("2018,9,25"), new Date("2018,9,26"), new Date("2018,9,27")],
     showTime: ["12:30 - 15:30", "16:00 - 19:00", "20:00 - 23:00"],
     runningTime: 180,
     directors: "The Wachowski Brothers",

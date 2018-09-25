@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PostService {
-  private url = '/api/movies';
+  private url = 'http://localhost:3000/api/movies';
 
   constructor(private http: Http) { }
 
