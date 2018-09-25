@@ -406,7 +406,7 @@ var AddMovieFormComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "#reminder{\n    color: red;\n}"
 
 /***/ }),
 
@@ -417,7 +417,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngFor=\"let movie of movies\">\n  <br />\n  <h2>{{movie.name}}</h2>\n  <br />\n  <label>Sessions time: {{movie.showTime}}</label>\n  <br />\n  <label>Sessions date: {{movie.showDate}}</label>\n  <br />\n  <label>Running time: {{movie.runningTime}}</label>\n  <br />\n  <label>Director(s): {{movie.directors}}</label>\n  <br />\n  <label>Cast: {{movie.stars}}</label>\n  <br />\n  <label>Story: {{movie.storyline}}</label>\n  <br />\n  <label>Genre: {{movie.genres}}</label>\n  <br />\n  <label>Status: {{movie.status}}</label>\n  <br />\n  <br />\n</div>"
+module.exports = "<div *ngFor=\"let movie of movies; let i = index\" [attr.movieIndex]=\"i\">\n  <br />\n  <h2>{{movie.name}}</h2>\n  <button class=\"btn btn-primary\" (click)=\"onDelete(i)\">Delete</button>\n  <div id=\"reminder\">{{flag}}</div>\n  <br />\n  <label>Sessions time: {{movie.showTime}}</label>\n  <br />\n  <label>Sessions date: {{movie.showDate}}</label>\n  <br />\n  <label>Running time: {{movie.runningTime}}</label>\n  <br />\n  <label>Director(s): {{movie.directors}}</label>\n  <br />\n  <label>Cast: {{movie.stars}}</label>\n  <br />\n  <label>Story: {{movie.storyline}}</label>\n  <br />\n  <label>Genre: {{movie.genres}}</label>\n  <br />\n  <label>Status: {{movie.status}}</label>\n  <br />\n  <br />\n</div>"
 
 /***/ }),
 
@@ -447,11 +447,23 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var AdminComponent = /** @class */ (function () {
     function AdminComponent(service) {
         this.service = service;
+        this.flag = null;
     }
     AdminComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.service.getPosts().subscribe(function (response) {
             _this.movies = response.json();
+        });
+    };
+    AdminComponent.prototype.onDelete = function (movieIndex) {
+        var _this = this;
+        var objectId;
+        console.log(movieIndex);
+        objectId = this.movies[movieIndex]._id;
+        console.log(objectId);
+        this.service.deletePosts(objectId).subscribe(function (response) {
+            console.log(response.json());
+            _this.flag = "Delete Sccussfully!";
         });
     };
     AdminComponent = __decorate([
@@ -2065,8 +2077,8 @@ var PostService = /** @class */ (function () {
     PostService.prototype.updatePosts = function (post) {
         return this.http.put(this.url + '/' + post.id, JSON.stringify(post));
     };
-    PostService.prototype.deletePosts = function (id) {
-        return this.http.delete(this.url + '/' + id);
+    PostService.prototype.deletePosts = function (_id) {
+        return this.http.delete(this.url + '/' + _id);
     };
     PostService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({

@@ -25,15 +25,28 @@ router.get("/:_id", async (req, res) => {
 });
 
 //delete a movie by its objectId
-router.delete("/delete/:_id", [auth, admin], async (req, res) => {
+router.delete("/:_id", async (req, res) => {
   try {
     console.log("my test:", req.params._id);
-    const result = await movieModel.deleteOne({ _id: req.params._id });
+    const result = await movieModel.findByIdAndRemove({ _id: req.params._id });
     res.send(result);
   } catch (err) {
     //404 object not found
     res.status(404).send("The movie with the given ID was not found.");
   }
 });
+
+// router.delete("/:_id", [auth, admin], async (req, res) => {
+//   try {
+//     console.log("my test:", req.params._id);
+//     const result = await movieModel.findByIdAndRemove({ _id: req.params._id });
+//     res.send(result);
+//   } catch (err) {
+//     //404 object not found
+//     res.status(404).send("The movie with the given ID was not found.");
+//   }
+// });
+
+
 
 module.exports = router;

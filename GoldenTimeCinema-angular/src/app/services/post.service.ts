@@ -25,7 +25,7 @@ export class PostService {
     return this.http.put(this.url + '/' + post.id, JSON.stringify(post));
   }
 
-  deletePosts(id) {
-    return this.http.delete(this.url + '/' + id);
+  deletePosts(_id) {
+    return this.http.delete(this.url + '/' + _id);
   }
 }
