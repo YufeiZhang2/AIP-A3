@@ -1,3 +1,4 @@
+import { MessageComponent } from './components/message/message.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { NgModule } from "@angular/core";
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path: "movie/:_id",
     component: MovieComponent
+  },
+  {
+    path: "message",
+    component: MessageComponent
   },
   {
     path: "**",

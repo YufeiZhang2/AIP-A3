@@ -28,6 +28,7 @@ import { MovieComponent } from "./components/movie/movie.component";
 import { AuthenticationComponent } from "./components/auth/authentication.component";
 import { LogoutComponent } from "./components/auth/logout.component";
 import { AdminComponent } from './components/admin/admin.component';
+import { MessageComponent } from './components/message/message.component';
 
 // Service imports
 import { PostService } from "./services/post.service";
@@ -40,6 +41,7 @@ import { UserProfileComponent } from "./components/user-profile/user-profile.com
 // Other imports
 import { AuthGuard } from "./components/auth/auth.guard";
 import { AuthInterceptor } from "./components/auth/auth.interceptor";
+
 
 
 @NgModule({
@@ -64,7 +66,8 @@ import { AuthInterceptor } from "./components/auth/auth.interceptor";
     AuthenticationComponent,
     LogoutComponent,
     UserProfileComponent,
-    AdminComponent
+    AdminComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,

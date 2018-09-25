@@ -37,7 +37,7 @@ export class AdminComponent implements OnInit {
     this.service.deletePosts(objectId).subscribe(response => {
       console.log(response.json());
     });
-    this.router.navigate(["/genre"]);
+    this.router.navigate(["/message"]);
   }
 
 }
