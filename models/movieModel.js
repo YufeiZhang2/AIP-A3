@@ -5,8 +5,7 @@ const movieModel = mongoose.model(
     "movie",
     new mongoose.Schema({
         name: { type: String, minlength: 1, maxlength: 100, unique: true, required: true },
-        showDate: { type: [Date], required: true },
-        showTime: { type: [String], minlength: 5, maxlength: 100 },
+        showTime: { type: [Date], required: true },
         runningTime: { type: Number, min: 1, max: 500, required: true },
         genres: { type: [String], minlength: 3, maxlength: 30, required: true },
         directors: { type: String, minlength: 3, maxlength: 50 },

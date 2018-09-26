@@ -1,6 +1,4 @@
 // Built-in imports
-import { ComingSoonMoviesService } from "./services/coming-soon-movies.service";
-import { NowShowingMoviesService } from "./services/now-showing-movies.service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
@@ -84,8 +82,6 @@ import { AuthInterceptor } from "./components/auth/auth.interceptor";
       multi: true
     },
     PostService,
-    NowShowingMoviesService,
-    ComingSoonMoviesService,
     AuthenticationService,
     AuthGuard
   ],

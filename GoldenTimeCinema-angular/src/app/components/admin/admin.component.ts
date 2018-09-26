@@ -10,6 +10,7 @@ import { PostService } from "../../services/post.service";
 export class AdminComponent implements OnInit {
   movieIndex: number;
   movies: any[];
+  today: number = Date.now();
 
   constructor(private service: PostService, private router: Router) {
   }
@@ -20,9 +21,6 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  ngOnChanges() {
-    this.onDelete(this.movieIndex);
-  }
 
   //delete a movie based on its object id.
   onDelete(movieIndex) {

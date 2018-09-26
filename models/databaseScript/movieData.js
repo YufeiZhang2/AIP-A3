@@ -10,8 +10,7 @@ const movieModel = mongoose.model(
   "movie",
   new mongoose.Schema({
     name: { type: String, minlength: 1, maxlength: 100, unique: true, required: true },
-    showDate: { type: [Date], required: true },
-    showTime: { type: [String], minlength: 5, maxlength: 100 },
+    showTime: { type: [Date], required: true },
     runningTime: { type: Number, min: 1, max: 500, required: true },
     genres: { type: [String], minlength: 3, maxlength: 30, required: true },
     directors: { type: String, minlength: 3, maxlength: 50 },
@@ -26,8 +25,8 @@ async function createMovies() {
 
   const forrestGump = new movieModel({
     name: "Forest Gump",
-    showDate: [new Date("2018,8,25"), new Date("2018,08,26"), new Date("2018,08,27")],
-    showTime: ["10:00 - 12:22", "3:00 - 5:22", "19:00 - 9:22"],
+    showTime: [new Date("2018-08-25T12:00:00"), new Date("2018-08-25T16:00:00"), new Date("2018-08-25T21:00:00"),
+    new Date("2018-08-26T10:00:00"), new Date("2018-08-26T17:00:00"), new Date("2018-08-27T20:00:00")],
     runningTime: 142,
     directors: "Robert Zemeckis",
     genres: ["drama", "comedy"],
@@ -38,8 +37,8 @@ async function createMovies() {
 
   const theLordOfRings = new movieModel({
     name: "The Lord of Rings",
-    showDate: [new Date("2018,8,25"), new Date("2018,8,26"), new Date("2018,08,27")],
-    showTime: ["12:30 - 15:30", "16:00 - 19:00", "20:00 - 23:00"],
+    showTime: [new Date("2018-08-25T10:00:00"), new Date("2018-08-25T14:00:00"), new Date("2018-08-25T20:00:00"),
+    new Date("2018-08-26T10:00:00"), new Date("2018-08-26T17:00:00"), new Date("2018-08-27T20:00:00")],
     runningTime: 180,
     directors: "Peter Jackson",
     genres: ["adventure", "fantasy"],
@@ -50,8 +49,8 @@ async function createMovies() {
 
   const theMatrix = new movieModel({
     name: "The Matrix",
-    showDate: [new Date("2018,9,25"), new Date("2018,9,26"), new Date("2018,9,27")],
-    showTime: ["12:30 - 15:30", "16:00 - 19:00", "20:00 - 23:00"],
+    showTime: [new Date("2018-09-25T10:00:00"), new Date("2018-09-25T14:00:00"), new Date("2018-09-25T20:00:00"),
+    new Date("2018-09-26T10:00:00"), new Date("2018-09-26T17:00:00"), new Date("2018-09-27T20:00:00")],
     runningTime: 180,
     directors: "The Wachowski Brothers",
     genres: ["adventure", "fantasy"],
