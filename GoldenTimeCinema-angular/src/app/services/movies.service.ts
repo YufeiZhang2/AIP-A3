@@ -1,32 +1,33 @@
-import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PostService {
+export class MoviesService {
+
   private url = 'http://localhost:3000/api/movies';
 
   constructor(private http: Http) { }
 
-  getPosts() {
+  getMovies() {
     return this.http.get(this.url);
   }
 
-  getPostsById(_id) {
+  getMoviesById(_id) {
     return this.http.get(this.url + '/' + _id);
   }
 
-  createPosts(post) {
-    return this.http.post(this.url, JSON.stringify(post));
+  createMovies(movie) {
+    return this.http.post(this.url, JSON.stringify(movie));
   }
 
-  updatePosts(movie) {
+  updateMovies(movie) {
     console.log("in service put", movie);
     return this.http.put(this.url + '/' + movie._id, movie);
   }
 
-  deletePosts(_id) {
+  deleteMovies(_id) {
     return this.http.delete(this.url + '/' + _id);
   }
 }

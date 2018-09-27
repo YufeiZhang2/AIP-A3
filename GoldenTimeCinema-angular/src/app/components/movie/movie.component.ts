@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { PostService } from "../../services/post.service";
+import { MoviesService } from '../../services/movies.service';
 
 @Component({
   selector: 'app-movie',
@@ -11,7 +11,7 @@ export class MovieComponent implements OnInit {
 
   movie: any[];
 
-  constructor(private route: ActivatedRoute, private service: PostService) { }
+  constructor(private route: ActivatedRoute, private service: MoviesService) { }
 
   ngOnInit() {
     //get the router parameter that is the object id of a movie.
@@ -21,7 +21,7 @@ export class MovieComponent implements OnInit {
         console.log(_id);
 
         //get a specific movie object by its object id
-        this.service.getPostsById(_id).subscribe(response => {
+        this.service.getMoviesById(_id).subscribe(response => {
           this.movie = response.json();
           console.log(this.movie);
         })

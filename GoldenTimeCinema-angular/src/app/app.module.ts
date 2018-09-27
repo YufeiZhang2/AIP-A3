@@ -21,7 +21,6 @@ import { AddMovieFormComponent } from "./components/add-movie-form/add-movie-for
 import { LoginComponent } from "./components/login/login.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { EditMovieFormComponent } from "./components/edit-movie-form/edit-movie-form.component";
-import { PostsComponent } from "./components/posts/posts.component";
 import { MovieComponent } from "./components/movie/movie.component";
 import { AuthenticationComponent } from "./components/auth/authentication.component";
 import { LogoutComponent } from "./components/auth/logout.component";
@@ -29,8 +28,8 @@ import { AdminComponent } from './components/admin/admin.component';
 import { MessageComponent } from './components/message/message.component';
 
 // Service imports
-import { PostService } from "./services/post.service";
 import { AuthenticationService } from "./services/authentication.service";
+import { MoviesService } from './services/movies.service';
 
 // Route imports
 import { RoutingModule } from "./app.routing";
@@ -59,7 +58,6 @@ import { AuthInterceptor } from "./components/auth/auth.interceptor";
     LoginComponent,
     RegisterComponent,
     EditMovieFormComponent,
-    PostsComponent,
     MovieComponent,
     AuthenticationComponent,
     LogoutComponent,
@@ -81,9 +79,9 @@ import { AuthInterceptor } from "./components/auth/auth.interceptor";
       useClass: AuthInterceptor,
       multi: true
     },
-    PostService,
     AuthenticationService,
-    AuthGuard
+    AuthGuard,
+    MoviesService
   ],
   bootstrap: [AppComponent]
 })

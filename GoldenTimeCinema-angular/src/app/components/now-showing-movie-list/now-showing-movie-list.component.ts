@@ -1,5 +1,5 @@
+import { MoviesService } from './../../services/movies.service';
 import { Component, OnInit } from "@angular/core";
-import { PostService } from "../../services/post.service";
 
 @Component({
   selector: "now-showing-movie-list",
@@ -9,10 +9,10 @@ import { PostService } from "../../services/post.service";
 export class NowShowingMovieListComponent implements OnInit {
   movies: any[];
   nowShowingMovies: any[];
-  constructor(private service: PostService) { }
+  constructor(private service: MoviesService) { }
 
   ngOnInit() {
-    this.service.getPosts().subscribe(response => {
+    this.service.getMovies().subscribe(response => {
       this.movies = response.json()
         .filter(movie => movie.status === 'nowShowing');
     });

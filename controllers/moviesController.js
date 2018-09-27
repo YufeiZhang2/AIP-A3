@@ -39,7 +39,8 @@ router.delete("/:_id", async (req, res) => {
 //update the status of a movie
 router.put("/:_id", async (req, res) => {
   console.log("my test for updating:", req.params._id, req.body);
-  // const movie = await movieModel.findById(req.params._id);
+
+  //find  the movie by object id and update the status of it
   const movie =
     await movieModel.findByIdAndUpdate({ _id: req.params._id }, { status: req.body.status }, { new: true },
       (err, result) => {
@@ -47,14 +48,6 @@ router.put("/:_id", async (req, res) => {
         res.send(result);
       });
   console.log("my test for updating:", movie);
-
-  // const { error } = validate(req.body);
-  // if (error) return res.status(400).send(error.details[0].message);
-
-  // movie.set({ status: req.body.status });
-
-  //movie.save();
-  //res.send(movie);
 })
 
 //function validateMovie(movie) { }
@@ -69,7 +62,5 @@ router.put("/:_id", async (req, res) => {
 //     res.status(404).send("The movie with the given ID was not found.");
 //   }
 // });
-
-
 
 module.exports = router;

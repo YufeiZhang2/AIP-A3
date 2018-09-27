@@ -1,6 +1,6 @@
+import { MoviesService } from './../../services/movies.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { PostService } from "../../services/post.service";
 
 @Component({
   selector: 'admin',
@@ -11,12 +11,12 @@ export class AdminComponent implements OnInit {
   movies: any[];
 
   //initialize movie service and router
-  constructor(private service: PostService, private router: Router) {
+  constructor(private service: MoviesService, private router: Router) {
   }
 
   ngOnInit() {
     //get all movies
-    this.service.getPosts().subscribe(response => {
+    this.service.getMovies().subscribe(response => {
       this.movies = response.json();
     });
   }
@@ -31,7 +31,7 @@ export class AdminComponent implements OnInit {
     console.log(objectId);
 
     //delete the specific movie
-    this.service.deletePosts(objectId).subscribe(response => {
+    this.service.deleteMovies(objectId).subscribe(response => {
       console.log(response.json());
     });
 
@@ -51,7 +51,7 @@ export class AdminComponent implements OnInit {
     console.log("before update", movie);
 
     //update the status of the specific movie
-    this.service.updatePosts(movie).subscribe(response => {
+    this.service.updateMovies(movie).subscribe(response => {
       console.log("response from update:", response.json());
     });
   }
