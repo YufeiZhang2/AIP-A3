@@ -8,21 +8,20 @@ import { PostService } from "../../services/post.service";
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  movieIndex: number;
   movies: any[];
-  today: number = Date.now();
 
+  //initialize movie service and router
   constructor(private service: PostService, private router: Router) {
   }
 
   ngOnInit() {
+    //get all movies
     this.service.getPosts().subscribe(response => {
       this.movies = response.json();
     });
   }
 
-
-  //delete a movie based on its object id.
+  //delete a movie
   onDelete(movieIndex) {
     let objectId: number;
     console.log(movieIndex);
@@ -35,7 +34,25 @@ export class AdminComponent implements OnInit {
     this.service.deletePosts(objectId).subscribe(response => {
       console.log(response.json());
     });
+
+    //give a prompt of sucessful operation to admin
     this.router.navigate(["/message"]);
   }
 
+  //update the status of a movie
+  onUpdate(movieIndex) {
+
+    // update the status of a movie
+    this.movies[movieIndex].status === "nowShowing" ?
+      this.movies[movieIndex].status = "comingSoon" : this.movies[movieIndex].status = "nowShowing";
+
+    //get the current movie
+    const movie = this.movies[movieIndex];
+    console.log("before update", movie);
+
+    //update the status of the specific movie
+    this.service.updatePosts(movie).subscribe(response => {
+      console.log("response from update:", response.json());
+    });
+  }
 }

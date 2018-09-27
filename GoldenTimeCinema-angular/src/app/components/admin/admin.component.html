@@ -2,7 +2,7 @@
   <br />
   <h2>{{movie.name}}</h2>
   <button class="btn btn-primary" (click)="onDelete(i)">Delete</button>
-  <button class="btn btn-primary" (click)="onUpdate(i)">Update</button>
+  <button class="btn btn-primary" (click)="onUpdate(i)">Update Status</button>
   <br />
   <label>Session time:<p></p>
     <p *ngFor="let showTime of movie.showTime">{{showTime | date:'short'}}</p>

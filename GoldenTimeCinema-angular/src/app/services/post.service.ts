@@ -21,8 +21,9 @@ export class PostService {
     return this.http.post(this.url, JSON.stringify(post));
   }
 
-  updatePosts(post) {
-    return this.http.put(this.url + '/' + post.id, JSON.stringify(post));
+  updatePosts(movie) {
+    console.log("in service put", movie);
+    return this.http.put(this.url + '/' + movie._id, movie);
   }
 
   deletePosts(_id) {

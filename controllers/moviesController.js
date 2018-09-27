@@ -36,6 +36,29 @@ router.delete("/:_id", async (req, res) => {
   }
 });
 
+//update the status of a movie
+router.put("/:_id", async (req, res) => {
+  console.log("my test for updating:", req.params._id, req.body);
+  // const movie = await movieModel.findById(req.params._id);
+  const movie =
+    await movieModel.findByIdAndUpdate({ _id: req.params._id }, { status: req.body.status }, { new: true },
+      (err, result) => {
+        if (err) return res.send(err);
+        res.send(result);
+      });
+  console.log("my test for updating:", movie);
+
+  // const { error } = validate(req.body);
+  // if (error) return res.status(400).send(error.details[0].message);
+
+  // movie.set({ status: req.body.status });
+
+  //movie.save();
+  //res.send(movie);
+})
+
+//function validateMovie(movie) { }
+
 // router.delete("/:_id", [auth, admin], async (req, res) => {
 //   try {
 //     console.log("my test:", req.params._id);
