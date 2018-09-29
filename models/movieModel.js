@@ -8,7 +8,7 @@ const movieModel = mongoose.model(
         showTime: { type: [Date], required: true },
         runningTime: { type: Number, min: 1, max: 500, required: true },
         genres: { type: [String], minlength: 3, maxlength: 30, required: true },
-        directors: { type: String, minlength: 3, maxlength: 50 },
+        director: { type: String, minlength: 3, maxlength: 50 },
         stars: { type: [String], minlength: 3, maxlength: 50, required: true },
         storyline: { type: String, minlength: 10, maxlength: 1000, required: true },
         status: { type: String, enum: ["nowShowing", "comingSoon"], required: true }

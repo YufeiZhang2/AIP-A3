@@ -2,11 +2,12 @@
   <br />
   <h2>{{property.name}}</h2>
   <br />
-  <label>Sessions: {{property.showTime}}</label>
+  <label>Sessions: </label>
+  <p *ngFor="let showtime of property.showTime">{{showtime | date:'short'}}</p>
   <br />
   <label>Running time: {{property.runningTime}}</label>
   <br />
-  <label>Director(s): {{property.directors}}</label>
+  <label>Director: {{property.directors}}</label>
   <br />
   <label>Cast: {{property.stars}}</label>
   <br />

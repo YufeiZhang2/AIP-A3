@@ -55,4 +55,8 @@ export class AdminComponent implements OnInit {
       console.log("response from update:", response.json());
     });
   }
+
+  clickToAddMovie() {
+    this.router.navigate(["/addMovieForm"]);
+  }
 }

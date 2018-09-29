@@ -38,6 +38,7 @@ import { UserProfileComponent } from "./components/user-profile/user-profile.com
 // Other imports
 import { AuthGuard } from "./components/auth/auth.guard";
 import { AuthInterceptor } from "./components/auth/auth.interceptor";
+import { MyDatePickerModule } from 'mydatepicker';
 
 
 
@@ -71,7 +72,8 @@ import { AuthInterceptor } from "./components/auth/auth.interceptor";
     HttpModule,
     RoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MyDatePickerModule
   ],
   providers: [
     {

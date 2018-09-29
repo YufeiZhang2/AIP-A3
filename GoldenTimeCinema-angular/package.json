@@ -27,6 +27,7 @@
     "express": "^4.16.3",
     "joi": "^13.6.0",
     "mongoose": "^5.0.1",
+    "mydatepicker": "^2.6.6",
     "nodemon": "^1.18.3",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.3.1",

@@ -19,7 +19,7 @@ export class MoviesService {
   }
 
   createMovies(movie) {
-    return this.http.post(this.url, JSON.stringify(movie));
+    return this.http.post(this.url, movie);
   }
 
   updateMovies(movie) {
