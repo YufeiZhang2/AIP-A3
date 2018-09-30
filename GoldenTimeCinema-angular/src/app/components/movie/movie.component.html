@@ -1,19 +1,31 @@
-<div *ngFor="let property of movie">
+<div *ngFor="let property of movie" id="movie">
   <br />
-  <h2>{{property.name}}</h2>
   <br />
-  <label>Sessions: </label>
-  <p *ngFor="let showtime of property.showTime">{{showtime | date:'short'}}</p>
   <br />
-  <label>Running time: {{property.runningTime}}</label>
+  <h3>{{property.name}}</h3>
   <br />
-  <label>Director: {{property.directors}}</label>
   <br />
-  <label>Cast: {{property.stars}}</label>
   <br />
-  <label>Story: {{property.storyline}}</label>
+  <label> <span>Sessions: </span></label>
+  <div *ngFor="let showtime of property.showTime">{{showtime | date:'short'}}<br /></div>
   <br />
-  <label>Genre: {{property.genres}}</label>
+
+  <label><span>Running time: </span>{{property.runningTime}}</label>
   <br />
-  <label>Status: {{property.status}}</label>
+  <br />
+  <label><span>Director: </span>{{property.director}}</label>
+  <br />
+  <br />
+  <label><span>Cast: </span>{{property.stars}}</label>
+  <br />
+  <br />
+  <label><span>Story: </span> {{property.storyline}}</label>
+  <br />
+  <br />
+  <label><span>Genre: </span>{{property.genres}}</label>
+  <br />
+  <br />
+  <label><span>Status: </span>{{property.status}}</label>
+  <br />
+  <br />
 </div>

@@ -1,34 +1,45 @@
 <br />
 <br />
 <br />
-<button class="btn btn-primary" (click)="clickToAddMovie()">Add Movies</button>
-<br />
-<br />
-<div *ngFor="let movie of movies; let i = index" [attr.movieIndex]="i">
-  <br />
-  <h3>{{movie.name}}</h3>
-  <br />
-  <button class="btn btn-secondary" (click)="onDelete(i)">Delete movie </button>
+<div id="admin">
+  <button class="btn btn-primary" (click)="clickToAddMovie()">Add Movies</button>
   <br />
   <br />
-  <button class="btn btn-secondary" (click)="onUpdate(i)">Update Status</button>
-  <br />
-  <br />
-  <label>Session time:<p></p>
-    <p *ngFor="let showTime of movie.showTime">{{showTime | date:'short'}}</p>
-  </label>
-  <br />
-  <label>Running time: {{movie.runningTime}}</label>
-  <br />
-  <label>Director: {{movie.directors}}</label>
-  <br />
-  <label>Cast: {{movie.stars}}</label>
-  <br />
-  <label>Story: {{movie.storyline}}</label>
-  <br />
-  <label>Genre: {{movie.genres}}</label>
-  <br />
-  <label>Status: {{movie.status}}</label>
-  <br />
-  <br />
+  <div *ngFor="let movie of movies; let i = index" [attr.movieIndex]="i">
+    <br />
+    <h3>{{movie.name}}</h3>
+    <br />
+    <br />
+    <button class="btn btn-secondary" (click)="onDelete(i)">Delete movie </button>
+    <br />
+    <br />
+    <button class="btn btn-secondary" (click)="onUpdate(i)">Update Status</button>
+    <br />
+    <br />
+    <label><span>Session time: </span>
+      <br />
+      <br />
+      <div *ngFor="let showTime of movie.showTime">{{showTime | date:'short'}}<br /></div>
+    </label>
+    <br />
+    <br />
+    <label><span>Running time: </span> {{movie.runningTime}}</label>
+    <br />
+    <br />
+    <label><span>Director: </span>{{movie.director}}</label>
+    <br />
+    <br />
+    <label><span>Cast: </span>{{movie.stars}}</label>
+    <br />
+    <br />
+    <label><span>Storyline: </span> {{movie.storyline}}</label>
+    <br />
+    <br />
+    <label><span>Genre: </span>{{movie.genres}}</label>
+    <br />
+    <br />
+    <label><span>Status: </span>{{movie.status}}</label>
+    <br />
+    <br />
+  </div>
 </div>
