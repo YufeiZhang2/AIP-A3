@@ -1,3 +1,4 @@
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { MessageComponent } from './components/message/message.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { MovieComponent } from './components/movie/movie.component';
@@ -63,6 +64,10 @@ const routes: Routes = [
   {
     path: "message",
     component: MessageComponent
+  },
+  {
+    path: "search",
+    component: SearchBarComponent
   },
   {
     path: "**",

@@ -1,10 +1,18 @@
 <br />
-<p><button class="btn btn-primary" (click)="clickToAddMovie()">Add Movies</button></p>
+<br />
+<br />
+<button class="btn btn-primary" (click)="clickToAddMovie()">Add Movies</button>
+<br />
+<br />
 <div *ngFor="let movie of movies; let i = index" [attr.movieIndex]="i">
   <br />
-  <h2>{{movie.name}}</h2>
-  <button class="btn btn-primary" (click)="onDelete(i)">Delete</button>
-  <button class="btn btn-primary" (click)="onUpdate(i)">Update Status</button>
+  <h3>{{movie.name}}</h3>
+  <br />
+  <button class="btn btn-secondary" (click)="onDelete(i)">Delete movie </button>
+  <br />
+  <br />
+  <button class="btn btn-secondary" (click)="onUpdate(i)">Update Status</button>
+  <br />
   <br />
   <label>Session time:<p></p>
     <p *ngFor="let showTime of movie.showTime">{{showTime | date:'short'}}</p>

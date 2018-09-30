@@ -1,9 +1,9 @@
-<div class="nowShowingBlock">
-  <h2>Now Showing Movies</h2>
-  <ul>
-    <li *ngFor="let movie of movies">
-      <a [routerLink]="['../movie', movie._id]">{{movie.name}}</a>
+<div class="nowShowingBlock border-bottom">
+  <div>Now Showing</div>
+  <br />
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let movie of movies">
+      <a [routerLink]="['../movie', movie._id]" id="list">{{movie.name}}</a>
     </li>
   </ul>
-
 </div>

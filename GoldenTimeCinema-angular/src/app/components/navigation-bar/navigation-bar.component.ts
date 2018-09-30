@@ -14,6 +14,7 @@ export class NavigationBarComponent implements OnInit {
   admin = "Admin";
   companyInformation = "About us";
   profile = "Profile";
+  search = "Search";
 
   constructor(private authService: AuthenticationService) { }
 

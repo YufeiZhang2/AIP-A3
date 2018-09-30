@@ -1,2 +1,21 @@
-<input type="text" value={{defaultText}}>
-<button class="btn btn-primary">{{buttonName}}</button>
+<br />
+<br />
+<div id="searchBar">
+    <form [formGroup]="form">
+        <div class="input-group">
+            <input formControlName="movieName" type="text" placeholder="please search here" class="form-control">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit" [disabled]="!form.valid" (click)="onSubmit()">search</button>
+            </div>
+
+            <div *ngIf="movieName.invalid">
+                <div *ngIf="movieName.errors.minlength">Name requires at least
+                    {{movieName.errors.minlength.requiredLength}}
+                    charaters.</div>
+                <div *ngIf="movieName.errors.maxlength">Name requires at most
+                    {{movieName.errors.maxlength.requiredLength}}
+                    charaters.</div>
+            </div>
+        </div>
+    </form>
+</div>
