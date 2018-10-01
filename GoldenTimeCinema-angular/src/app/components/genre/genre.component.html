@@ -1,2 +1,41 @@
-<p>Gerne page is in progress.</p>
-<div></div>
+<br />
+<br />
+<br />
+<div id="genres" class="list-group">
+    <a (click)="findGenre(dramas)" class="list-group-item list-group-item-action list-group-item-light">Dramas</a>
+    <a (click)="findGenre(action)" class="list-group-item list-group-item-action list-group-item-dark">Action</a>
+    <a (click)="findGenre(crime)" class="list-group-item list-group-item-action list-group-item-light">Crime</a>
+    <a (click)="findGenre(horror)" class="list-group-item list-group-item-action list-group-item-dark">Horror</a>
+    <a (click)="findGenre(comedies)" class="list-group-item list-group-item-action list-group-item-light">Comedies</a>
+    <a (click)="findGenre(fantasy)" class="list-group-item list-group-item-action list-group-item-dark">Fantasy</a>
+    <a (click)="findGenre(romance)" class="list-group-item list-group-item-action list-group-item-light">Romance</a>
+</div>
+<br />
+<br />
+<div *ngFor="let property of movieResult" id="movie">
+    <h3>{{property.name}}</h3>
+    <br />
+    <br />
+    <br />
+    <label> <span>Sessions: </span></label>
+    <div *ngFor="let showtime of property.showTime">{{showtime | date:'short'}}<br /></div>
+    <br />
+    <label><span>Running time: </span>{{property.runningTime}}</label>
+    <br />
+    <br />
+    <label><span>Director: </span>{{property.director}}</label>
+    <br />
+    <br />
+    <label><span>Cast: </span>{{property.stars}}</label>
+    <br />
+    <br />
+    <label><span>Story: </span> {{property.storyline}}</label>
+    <br />
+    <br />
+    <label><span>Genre: </span>{{property.genres}}</label>
+    <br />
+    <br />
+    <label><span>Status: </span>{{property.status}}</label>
+    <br />
+    <br />
+</div>
