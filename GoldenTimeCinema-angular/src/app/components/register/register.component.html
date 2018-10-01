@@ -1,13 +1,13 @@
-<h2>Create an account</h2>
-
+<br />
+<br />
 <div class="col-md-8-col-md-offset-2">
     <!-- Registration form -->
     <form #registerForm="ngForm" (ngSubmit)="registerForm.valid && onRegister(registerForm)">
         <!-- Firstname input for user registration -->
         <div class="form-group">
             <label for="firstName">First Name</label>
-            <input type="text" #firstName="ngModel" [(ngModel)]="authService.selectedUser.firstName" name="firstName" placeholder="First Name"
-                class="form-control" required [ngClass]="{ 'ng-invalid': registerForm.submitted && !firstName.valid }">
+            <input type="text" #firstName="ngModel" [(ngModel)]="authService.selectedUser.firstName" name="firstName"
+                placeholder="First Name" class="form-control" required [ngClass]="{ 'ng-invalid': registerForm.submitted && !firstName.valid }">
             <!-- Display of Validation for firstname input -->
             <div *ngIf="registerForm.submitted && firstName.errors">
                 <label *ngIf="firstName.errors.required" class="validation-message">First name is required.</label>
@@ -17,8 +17,8 @@
         <!-- Lastname input for user registration -->
         <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input type="text" #lastName="ngModel" [(ngModel)]="authService.selectedUser.lastName" name="lastName" placeholder="Last Name"
-                class="form-control" required [ngClass]="{ 'ng-invalid': registerForm.submitted && !lastName.valid }">
+            <input type="text" #lastName="ngModel" [(ngModel)]="authService.selectedUser.lastName" name="lastName"
+                placeholder="Last Name" class="form-control" required [ngClass]="{ 'ng-invalid': registerForm.submitted && !lastName.valid }">
             <!-- Display of Validation for lastname input -->
             <div *ngIf="registerForm.submitted && lastName.errors">
                 <label *ngIf="lastName.errors.required" class="validation-message">Last name is required.</label>
@@ -28,8 +28,8 @@
         <!-- Email input for user registration -->
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" #email="ngModel" [(ngModel)]="authService.selectedUser.email" name="email" placeholder="Email" class="form-control"
-                required [pattern]="emailRegex" [ngClass]="{ 'ng-invalid': registerForm.submitted && !email.valid }">
+            <input type="text" #email="ngModel" [(ngModel)]="authService.selectedUser.email" name="email" placeholder="Email"
+                class="form-control" required [pattern]="emailRegex" [ngClass]="{ 'ng-invalid': registerForm.submitted && !email.valid }">
             <!-- Display of Validation for email input -->
             <div *ngIf="registerForm.submitted && email.errors">
                 <label *ngIf="email.errors.required" class="validation-message">Email is required.</label>
@@ -40,20 +40,21 @@
         <!-- Password input for user registration -->
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" #password="ngModel" [(ngModel)]="authService.selectedUser.password" name="password" placeholder="Password"
-                class="form-control" minlength="4" required [ngClass]="{ 'ng-invalid': registerForm.submitted && !password.valid }">
+            <input type="password" #password="ngModel" [(ngModel)]="authService.selectedUser.password" name="password"
+                placeholder="Password" class="form-control" minlength="4" required [ngClass]="{ 'ng-invalid': registerForm.submitted && !password.valid }">
             <!-- Display of Validation for password input -->
             <div *ngIf="registerForm.submitted && password.errors">
                 <label *ngIf="password.errors.required" class="validation-message">Password is required.</label>
-                <label *ngIf="password.errors.minlength" class="validation-message">Password must have at least 4 characters.</label>
+                <label *ngIf="password.errors.minlength" class="validation-message">Password must have at least 4
+                    characters.</label>
             </div>
         </div>
 
         <!-- Gender input for user registration -->
         <div class="form-group">
             <label for="gender">Gender</label>
-            <select #gender="ngModel" [(ngModel)]="authService.selectedUser.gender" name="gender" placeholder="Gender" class="form-control"
-                required [ngClass]="{ 'ng-invalid': registerForm.submitted && !gender.valid }">
+            <select #gender="ngModel" [(ngModel)]="authService.selectedUser.gender" name="gender" placeholder="Gender"
+                class="form-control" required [ngClass]="{ 'ng-invalid': registerForm.submitted && !gender.valid }">
                 <option [ngValue]="null" disabled>Select gender</option>
                 <option *ngFor="let gender of genders" [ngValue]="gender">
                     {{ gender}}
@@ -68,8 +69,8 @@
         <!-- Date of birth input for user registration -->
         <div class="form-group">
             <label for="dob">Date of birth</label>
-            <input type="date" #dob="ngModel" [(ngModel)]="authService.selectedUser.dob" name="dob" placeholder="Date of Birth" class="form-control"
-                required [ngClass]="{ 'ng-invalid': registerForm.submitted && !dob.valid }">
+            <input type="date" #dob="ngModel" [(ngModel)]="authService.selectedUser.dob" name="dob" placeholder="Date of Birth"
+                class="form-control" required [ngClass]="{ 'ng-invalid': registerForm.submitted && !dob.valid }">
             <!-- Display of Validation for lastname input -->
             <div *ngIf="registerForm.submitted && dob.errors">
                 <label *ngIf="dob.errors.required" class="validation-message">Date of birth is required.</label>
@@ -83,12 +84,12 @@
 
 
 <!-- Success message -->
-<div class="success" *ngIf="successMessage">
+<div class="success" *ngIf="successMessage" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
     Registration is completed
 </div>
 
 
 <!-- Error message -->
-<div class="alert" *ngIf="errorMessages">
+<div class="alert" *ngIf="errorMessages" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
     {{errorMessages}}
 </div>

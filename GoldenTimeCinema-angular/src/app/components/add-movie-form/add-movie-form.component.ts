@@ -28,6 +28,7 @@ export class AddMovieFormComponent implements OnInit {
     'storyline': new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(1000)]),
     'showtime': new FormArray([]),
     'genres': new FormArray([]),
+    'price': new FormControl('', [Validators.required, Validators.min(1), Validators.max(10000)]),
     'status': new FormControl('', Validators.required)
   });
 
@@ -64,6 +65,10 @@ export class AddMovieFormComponent implements OnInit {
   //accesser for the FormControl storyline
   get status() {
     return this.form.get('status');
+  }
+  //accesser for the FormConrol runningTime
+  get price() {
+    return this.form.get('price');
   }
 
   constructor(private router: Router, private service: MoviesService) { }

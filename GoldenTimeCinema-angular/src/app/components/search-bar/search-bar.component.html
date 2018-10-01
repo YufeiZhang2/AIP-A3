@@ -7,15 +7,53 @@
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="submit" [disabled]="!form.valid" (click)="onSubmit()">search</button>
             </div>
-
-            <div *ngIf="movieName.invalid">
-                <div *ngIf="movieName.errors.minlength">Name requires at least
-                    {{movieName.errors.minlength.requiredLength}}
-                    charaters.</div>
-                <div *ngIf="movieName.errors.maxlength">Name requires at most
-                    {{movieName.errors.maxlength.requiredLength}}
-                    charaters.</div>
+        </div>
+        <br />
+        <div *ngIf="movieName.invalid">
+            <div *ngIf="movieName.errors.minlength">Name requires at least
+                {{movieName.errors.minlength.requiredLength}}
+                charaters.
+            </div>
+            <div *ngIf="movieName.errors.maxlength">Name requires at most
+                {{movieName.errors.maxlength.requiredLength}}
+                charaters.
             </div>
         </div>
     </form>
+</div>
+<div *ngIf="flag">
+    <div *ngFor="let property of movieResult" id="movie">
+        <br />
+        <br />
+        <h3>{{property.name}}</h3>
+        <br />
+        <br />
+        <br />
+        <label> <span>Sessions: </span></label>
+        <div *ngFor="let showtime of property.showTime">{{showtime | date:'short'}}<br /></div>
+        <br />
+
+        <label><span>Running time: </span>{{property.runningTime}}</label>
+        <br />
+        <br />
+        <label><span>Director: </span>{{property.director}}</label>
+        <br />
+        <br />
+        <label><span>Cast: </span>{{property.stars}}</label>
+        <br />
+        <br />
+        <label><span>Story: </span> {{property.storyline}}</label>
+        <br />
+        <br />
+        <label><span>Genre: </span>{{property.genres}}</label>
+        <br />
+        <br />
+        <label><span>Status: </span>{{property.status}}</label>
+        <br />
+        <br />
+    </div>
+</div>
+
+<div *ngIf="!flag&&flag!=null">
+    sorry, result not found.
 </div>

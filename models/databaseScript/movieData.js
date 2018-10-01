@@ -16,6 +16,7 @@ const movieModel = mongoose.model(
     director: { type: String, minlength: 3, maxlength: 50, required: true },
     stars: { type: [String], minlength: 3, maxlength: 50, required: true },
     storyline: { type: String, minlength: 10, maxlength: 1000, required: true },
+    price: { type: Number, min: 1, max: 10000, required: true },
     status: { type: String, enum: ["nowShowing", "comingSoon"], required: true }
   })
 );
@@ -31,6 +32,7 @@ async function createMovies() {
     genres: ["drama", "comedy"],
     stars: ["Tom Hanks", "Robin Wright", "Gary Sinise"],
     storyline: `Forrest Gump is a simple man with a low I.Q. but good intentions. He is running through childhood with his best and only friend Jenny. His 'mama' teaches him the ways of life and leaves him to choose his destiny. Forrest joins the army for service in Vietnam, finding new friends called Dan and Bubba, he wins medals, creates a famous shrimp fishing fleet, inspires people to jog, starts a ping-pong craze, creates the smiley, writes bumper stickers and songs, donates to people and meets the president several times. However, this is all irrelevant to Forrest who can only think of his childhood sweetheart Jenny Curran, who has messed up her life. Although in the end all he wants to prove is that anyone can love anyone.`,
+    price: 25,
     status: "nowShowing"
   });
 
@@ -43,6 +45,7 @@ async function createMovies() {
     genres: ["adventure", "fantasy"],
     stars: ["Elijah Wood", "Ian McKellen", "Orlando Bloom"],
     storyline: `An ancient Ring thought lost for centuries has been found, and through a strange twist in fate has been given to a small Hobbit named Frodo. When Gandalf discovers the Ring is in fact the One Ring of the Dark Lord Sauron, Frodo must make an epic quest to the Cracks of Doom in order to destroy it! However he does not go alone. He is joined by Gandalf, Legolas the elf, Gimli the Dwarf, Aragorn, Boromir and his three Hobbit friends Merry, Pippin and Samwise. Through mountains, snow, darkness, forests, rivers and plains, facing evil and danger at every corner the Fellowship of the Ring must go. Their quest to destroy the One Ring is the only hope for the end of the Dark Lords reign!`,
+    price: 25,
     status: "nowShowing"
   });
 
@@ -55,6 +58,7 @@ async function createMovies() {
     genres: ["adventure", "fantasy"],
     stars: ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
     storyline: `test summary`,
+    price: 25,
     status: "comingSoon"
   });
 
