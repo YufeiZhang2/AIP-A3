@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Semi|Cormorant SC');
+
+
+
+#information{
+    font-family: 'Cormorant SC', sans-serif;
+    font-size: 25px;
+    color: black;
+    overflow-wrap: break-word;
+    width: 55em;
+}
+

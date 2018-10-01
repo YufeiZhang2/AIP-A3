@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');
+@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');
+
+
+#message{
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Semi-Bold', sans-serif;
+    font-size: 20px;
+  
+}

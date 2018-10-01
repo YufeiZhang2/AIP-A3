@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');
+
 .comingSoonBlock {
   background-color:white;
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Cormorant SC', sans-serif;
+  font-family: 'Bold', sans-serif;
   font-size: 35px;
   color: gray;
   }
@@ -9,5 +12,5 @@
   #list{
     color: grey;
     font-size: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Cormorant SC', sans-serif;
   }

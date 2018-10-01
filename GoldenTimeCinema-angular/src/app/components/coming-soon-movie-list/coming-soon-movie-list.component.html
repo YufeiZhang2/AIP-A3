@@ -1,10 +1,13 @@
-<div class="comingSoonBlock border-bottom">
-  <div class="list-group">Coming Soon<div>
-
-      <br />
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item" *ngFor="let movie of movies">
-          <a [routerLink]="['../movie', movie._id]" id="list" id="list">{{movie.name}}</a>
-        </li>
-      </ul>
+<br />
+<div class="comingSoonBlock">
+  <div class="list-group">
+    <div class="border border-light">
+      Coming Soon
     </div>
+    <ul if="list" class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let movie of movies">
+        <a [routerLink]="['../movie', movie._id]" id="list">{{movie.name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>

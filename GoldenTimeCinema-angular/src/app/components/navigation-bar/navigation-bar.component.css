@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Cormorant SC');
+
 .navigationBar {
   display: block;
   background-color: whitesmoke;
 }
 
 a {
+  font-family: 'Cormorant SC', sans-serif;
+  font-family: 'Semi-Bold', sans-serif;
   text-decoration: none;
   color:gray;
   padding-right: 50px;

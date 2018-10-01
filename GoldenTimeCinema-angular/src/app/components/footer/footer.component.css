@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');
+@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');
+
+
 .footer {
-  background-color: whitesmoke;
+  background-color: white;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   color: black;
   text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Semi-Bold', sans-serif;
+  font-size: 15px;
 }
