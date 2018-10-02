@@ -7,14 +7,14 @@ import { AuthenticationService } from "../../services/authentication.service";
   styleUrls: ["./navigation-bar.component.css"]
 })
 export class NavigationBarComponent implements OnInit {
-  logIn = "Log In";
-  home = "Home";
-  register = "Register";
-  genre = "Genre";
-  admin = "Admin";
-  companyInformation = "About us";
-  profile = "Profile";
-  search = "Search";
+  logIn = "LOG IN";
+  home = "HOME";
+  register = "REGISTER";
+  genre = "GENRES";
+  admin = "ADMIN";
+  companyInformation = "ABOUT US";
+  profile = "PROFILE";
+  search = "SEARCH";
 
   constructor(private authService: AuthenticationService) { }
 

@@ -1,3 +1,4 @@
+import { Component } from '@angular/core';
 // Built-in imports
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -26,6 +27,7 @@ import { AuthenticationComponent } from "./components/auth/authentication.compon
 import { LogoutComponent } from "./components/auth/logout.component";
 import { AdminComponent } from './components/admin/admin.component';
 import { MessageComponent } from './components/message/message.component';
+import { BookMoviesComponent } from './components/book-movies/book-movies.component';
 
 // Service imports
 import { AuthenticationService } from "./services/authentication.service";
@@ -39,6 +41,7 @@ import { UserProfileComponent } from "./components/user-profile/user-profile.com
 import { AuthGuard } from "./components/auth/auth.guard";
 import { AuthInterceptor } from "./components/auth/auth.interceptor";
 import { MyDatePickerModule } from 'mydatepicker';
+
 
 
 
@@ -64,7 +67,8 @@ import { MyDatePickerModule } from 'mydatepicker';
     LogoutComponent,
     UserProfileComponent,
     AdminComponent,
-    MessageComponent
+    MessageComponent,
+    BookMoviesComponent
   ],
   imports: [
     BrowserModule,

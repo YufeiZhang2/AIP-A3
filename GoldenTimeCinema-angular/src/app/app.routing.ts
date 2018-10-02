@@ -1,3 +1,4 @@
+import { BookMoviesComponent } from './components/book-movies/book-movies.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { MessageComponent } from './components/message/message.component';
 import { AdminComponent } from './components/admin/admin.component';
@@ -68,6 +69,18 @@ const routes: Routes = [
   {
     path: "search",
     component: SearchBarComponent
+  },
+  {
+    path: "movie/:showtime/:_id",
+    component: BookMoviesComponent
+  },
+  {
+    path: "genre/:showtime/:_id",
+    component: BookMoviesComponent
+  },
+  {
+    path: "search/:showtime/:_id",
+    component: BookMoviesComponent
   },
   {
     path: "**",

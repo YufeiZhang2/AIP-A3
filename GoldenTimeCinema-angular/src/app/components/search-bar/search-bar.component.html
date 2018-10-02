@@ -30,7 +30,9 @@
         <br />
         <br />
         <label> <span>Sessions: </span></label>
-        <div *ngFor="let showtime of property.showTime">{{showtime | date:'short'}}<br /></div>
+        <div *ngFor="let showtime of property.showTime" class="list-group-item list-group-item-action list-group-item-light"
+            [routerLink]="['../search', showtime,property._id]">{{showtime
+            | date:'short'}}<br /></div>
         <br />
 
         <label><span>Running time: </span>{{property.runningTime}}</label>
