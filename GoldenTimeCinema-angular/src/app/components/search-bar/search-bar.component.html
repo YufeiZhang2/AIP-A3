@@ -21,7 +21,7 @@
         </div>
     </form>
 </div>
-<div *ngIf="flag">
+<div>
     <div *ngFor="let property of movieResult" id="movie">
         <br />
         <br />
@@ -52,8 +52,4 @@
         <br />
         <br />
     </div>
-</div>
-
-<div *ngIf="!flag&&flag!=null">
-    sorry, result not found.
 </div>

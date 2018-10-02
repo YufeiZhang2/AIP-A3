@@ -2,17 +2,17 @@
 <br />
 <br />
 <div id="genres" class="list-group">
-    <a (click)="findGenre(dramas)" class="list-group-item list-group-item-action list-group-item-light">Dramas</a>
-    <a (click)="findGenre(action)" class="list-group-item list-group-item-action list-group-item-dark">Action</a>
-    <a (click)="findGenre(crime)" class="list-group-item list-group-item-action list-group-item-light">Crime</a>
-    <a (click)="findGenre(horror)" class="list-group-item list-group-item-action list-group-item-dark">Horror</a>
-    <a (click)="findGenre(comedies)" class="list-group-item list-group-item-action list-group-item-light">Comedies</a>
-    <a (click)="findGenre(fantasy)" class="list-group-item list-group-item-action list-group-item-dark">Fantasy</a>
-    <a (click)="findGenre(romance)" class="list-group-item list-group-item-action list-group-item-light">Romance</a>
+    <a (click)="findMoviesByGenre(dramas)" class="list-group-item list-group-item-action list-group-item-light">Dramas</a>
+    <a (click)="findMoviesByGenre(action)" class="list-group-item list-group-item-action list-group-item-dark">Action</a>
+    <a (click)="findMoviesByGenre(crime)" class="list-group-item list-group-item-action list-group-item-light">Crime</a>
+    <a (click)="findMoviesByGenre(horror)" class="list-group-item list-group-item-action list-group-item-dark">Horror</a>
+    <a (click)="findMoviesByGenre(comedies)" class="list-group-item list-group-item-action list-group-item-light">Comedies</a>
+    <a (click)="findMoviesByGenre(fantasy)" class="list-group-item list-group-item-action list-group-item-dark">Fantasy</a>
+    <a (click)="findMoviesByGenre(romance)" class="list-group-item list-group-item-action list-group-item-light">Romance</a>
 </div>
 <br />
 <br />
-<div *ngFor="let property of movieResult" id="movie">
+<div *ngFor="let property of movies" id="movie">
     <h3>{{property.name}}</h3>
     <br />
     <br />

@@ -15,42 +15,22 @@ export class GenreComponent implements OnInit {
   fantasy = "fantasy";
   romance = "romance";
   movies: any[];
-  movieResult: any[];
 
   constructor(private service: MoviesService) { }
 
   ngOnInit() { }
 
-  findGenre(value) {
-    console.log(value);
+  findMoviesByGenre(inputValue) {
+    console.log(inputValue);
     this.service.getMovies().subscribe(response => {
-      this.movies = response.json();
-
-      for (let movie of this.movies)
-        for (let genre of movie.genres) {
-
-          if (this.CompareWithWords(genre, value)) {
-            //find all the movies with the same genre
-            console.log(movie._id, movie.name);
-            this.service.getMoviesById(movie._id).subscribe(response => {
-              //get the movies matched by genres
-              this.movieResult = response.json();
-            })
-
-          }
-        }
-
-
+      //get movies by genres
+      this.movies = response.json()
+        .filter(movies => {
+          for (let genre of movies.genres)
+            if (genre === inputValue) return movies;
+        });
+      console.log("movies retrived by genres", this.movies);
     })
-  }
-
-  //method for verifying if two words match without whitespace
-  CompareWithWords(firstWord, secondWord) {
-    //remove all the whitespace of strings
-    const firstResult = firstWord.toString().toLowerCase().trim().replace(/ /g, '');
-    const secondResult = secondWord.toString().toLowerCase().trim().replace(/ /g, '');
-
-    return firstResult === secondResult ? true : false;
   }
 }
 

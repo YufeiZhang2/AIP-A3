@@ -11,7 +11,6 @@ export class SearchBarComponent implements OnInit {
   searchResultId;
   movies: any[];
   movieResult: any[];
-  flag = null;
 
   form = new FormGroup({
     'movieName': new FormControl('', [Validators.minLength(2), Validators.maxLength(60)])
@@ -43,11 +42,8 @@ export class SearchBarComponent implements OnInit {
           this.service.getMoviesById(this.searchResultId).subscribe(response => {
             this.movieResult = response.json();
             console.log('i got the movie!', this.movieResult);
-            this.flag = true;
-            console.log(this.flag);
           })
         }
-        else return this.flag = false;
       }
     })
   }
