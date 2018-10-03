@@ -91,39 +91,39 @@ var AppComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
-/* harmony import */ var _services_coming_soon_movies_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/coming-soon-movies.service */ "./src/app/services/coming-soon-movies.service.ts");
-/* harmony import */ var _services_now_showing_movies_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./services/now-showing-movies.service */ "./src/app/services/now-showing-movies.service.ts");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _components_search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/search-bar/search-bar.component */ "./src/app/components/search-bar/search-bar.component.ts");
-/* harmony import */ var _components_navigation_bar_navigation_bar_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/navigation-bar/navigation-bar.component */ "./src/app/components/navigation-bar/navigation-bar.component.ts");
-/* harmony import */ var _components_now_showing_movie_list_now_showing_movie_list_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/now-showing-movie-list/now-showing-movie-list.component */ "./src/app/components/now-showing-movie-list/now-showing-movie-list.component.ts");
-/* harmony import */ var _components_coming_soon_movie_list_coming_soon_movie_list_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/coming-soon-movie-list/coming-soon-movie-list.component */ "./src/app/components/coming-soon-movie-list/coming-soon-movie-list.component.ts");
-/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
-/* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/components/header/header.component.ts");
-/* harmony import */ var _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/genre/genre.component */ "./src/app/components/genre/genre.component.ts");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/company-information/company-information.component */ "./src/app/components/company-information/company-information.component.ts");
-/* harmony import */ var _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/not-found-page/not-found-page.component */ "./src/app/components/not-found-page/not-found-page.component.ts");
-/* harmony import */ var _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/add-movie-form/add-movie-form.component */ "./src/app/components/add-movie-form/add-movie-form.component.ts");
-/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
-/* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
-/* harmony import */ var _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/edit-movie-form/edit-movie-form.component */ "./src/app/components/edit-movie-form/edit-movie-form.component.ts");
-/* harmony import */ var _components_posts_posts_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/posts/posts.component */ "./src/app/components/posts/posts.component.ts");
-/* harmony import */ var _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/movie/movie.component */ "./src/app/components/movie/movie.component.ts");
-/* harmony import */ var _components_auth_authentication_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/auth/authentication.component */ "./src/app/components/auth/authentication.component.ts");
-/* harmony import */ var _components_auth_logout_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/auth/logout.component */ "./src/app/components/auth/logout.component.ts");
-/* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
-/* harmony import */ var _services_post_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/post.service */ "./src/app/services/post.service.ts");
-/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
-/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
-/* harmony import */ var _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/user-profile/user-profile.component */ "./src/app/components/user-profile/user-profile.component.ts");
-/* harmony import */ var _components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/auth/auth.guard */ "./src/app/components/auth/auth.guard.ts");
-/* harmony import */ var _components_auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./components/auth/auth.interceptor */ "./src/app/components/auth/auth.interceptor.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/search-bar/search-bar.component */ "./src/app/components/search-bar/search-bar.component.ts");
+/* harmony import */ var _components_navigation_bar_navigation_bar_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/navigation-bar/navigation-bar.component */ "./src/app/components/navigation-bar/navigation-bar.component.ts");
+/* harmony import */ var _components_now_showing_movie_list_now_showing_movie_list_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/now-showing-movie-list/now-showing-movie-list.component */ "./src/app/components/now-showing-movie-list/now-showing-movie-list.component.ts");
+/* harmony import */ var _components_coming_soon_movie_list_coming_soon_movie_list_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/coming-soon-movie-list/coming-soon-movie-list.component */ "./src/app/components/coming-soon-movie-list/coming-soon-movie-list.component.ts");
+/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
+/* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/components/header/header.component.ts");
+/* harmony import */ var _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/genre/genre.component */ "./src/app/components/genre/genre.component.ts");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
+/* harmony import */ var _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/company-information/company-information.component */ "./src/app/components/company-information/company-information.component.ts");
+/* harmony import */ var _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/not-found-page/not-found-page.component */ "./src/app/components/not-found-page/not-found-page.component.ts");
+/* harmony import */ var _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/add-movie-form/add-movie-form.component */ "./src/app/components/add-movie-form/add-movie-form.component.ts");
+/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
+/* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
+/* harmony import */ var _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/edit-movie-form/edit-movie-form.component */ "./src/app/components/edit-movie-form/edit-movie-form.component.ts");
+/* harmony import */ var _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/movie/movie.component */ "./src/app/components/movie/movie.component.ts");
+/* harmony import */ var _components_auth_authentication_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/auth/authentication.component */ "./src/app/components/auth/authentication.component.ts");
+/* harmony import */ var _components_auth_logout_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/auth/logout.component */ "./src/app/components/auth/logout.component.ts");
+/* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
+/* harmony import */ var _components_message_message_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/message/message.component */ "./src/app/components/message/message.component.ts");
+/* harmony import */ var _components_book_movies_book_movies_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/book-movies/book-movies.component */ "./src/app/components/book-movies/book-movies.component.ts");
+/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
+/* harmony import */ var _services_movies_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/movies.service */ "./src/app/services/movies.service.ts");
+/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
+/* harmony import */ var _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/user-profile/user-profile.component */ "./src/app/components/user-profile/user-profile.component.ts");
+/* harmony import */ var _components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/auth/auth.guard */ "./src/app/components/auth/auth.guard.ts");
+/* harmony import */ var _components_auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/auth/auth.interceptor */ "./src/app/components/auth/auth.interceptor.ts");
+/* harmony import */ var mydatepicker__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! mydatepicker */ "./node_modules/mydatepicker/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -136,9 +136,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
-
 // Component imports
+
 
 
 
@@ -168,55 +167,56 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 // Other imports
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
-                _components_search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_8__["SearchBarComponent"],
-                _components_navigation_bar_navigation_bar_component__WEBPACK_IMPORTED_MODULE_9__["NavigationBarComponent"],
-                _components_now_showing_movie_list_now_showing_movie_list_component__WEBPACK_IMPORTED_MODULE_10__["NowShowingMovieListComponent"],
-                _components_coming_soon_movie_list_coming_soon_movie_list_component__WEBPACK_IMPORTED_MODULE_11__["ComingSoonMovieListComponent"],
-                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_12__["FooterComponent"],
-                _components_header_header_component__WEBPACK_IMPORTED_MODULE_13__["HeaderComponent"],
-                _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_14__["GenreComponent"],
-                _components_home_home_component__WEBPACK_IMPORTED_MODULE_15__["HomeComponent"],
-                _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_16__["CompanyInformationComponent"],
-                _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_18__["AddMovieFormComponent"],
-                _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_17__["NotFoundPageComponent"],
-                _components_login_login_component__WEBPACK_IMPORTED_MODULE_19__["LoginComponent"],
-                _components_register_register_component__WEBPACK_IMPORTED_MODULE_20__["RegisterComponent"],
-                _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_21__["EditMovieFormComponent"],
-                _components_posts_posts_component__WEBPACK_IMPORTED_MODULE_22__["PostsComponent"],
-                _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_23__["MovieComponent"],
-                _components_auth_authentication_component__WEBPACK_IMPORTED_MODULE_24__["AuthenticationComponent"],
-                _components_auth_logout_component__WEBPACK_IMPORTED_MODULE_25__["LogoutComponent"],
-                _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_30__["UserProfileComponent"],
-                _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_26__["AdminComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _components_search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_6__["SearchBarComponent"],
+                _components_navigation_bar_navigation_bar_component__WEBPACK_IMPORTED_MODULE_7__["NavigationBarComponent"],
+                _components_now_showing_movie_list_now_showing_movie_list_component__WEBPACK_IMPORTED_MODULE_8__["NowShowingMovieListComponent"],
+                _components_coming_soon_movie_list_coming_soon_movie_list_component__WEBPACK_IMPORTED_MODULE_9__["ComingSoonMovieListComponent"],
+                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_10__["FooterComponent"],
+                _components_header_header_component__WEBPACK_IMPORTED_MODULE_11__["HeaderComponent"],
+                _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_12__["GenreComponent"],
+                _components_home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"],
+                _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_14__["CompanyInformationComponent"],
+                _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_16__["AddMovieFormComponent"],
+                _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_15__["NotFoundPageComponent"],
+                _components_login_login_component__WEBPACK_IMPORTED_MODULE_17__["LoginComponent"],
+                _components_register_register_component__WEBPACK_IMPORTED_MODULE_18__["RegisterComponent"],
+                _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_19__["EditMovieFormComponent"],
+                _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_20__["MovieComponent"],
+                _components_auth_authentication_component__WEBPACK_IMPORTED_MODULE_21__["AuthenticationComponent"],
+                _components_auth_logout_component__WEBPACK_IMPORTED_MODULE_22__["LogoutComponent"],
+                _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_29__["UserProfileComponent"],
+                _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_23__["AdminComponent"],
+                _components_message_message_component__WEBPACK_IMPORTED_MODULE_24__["MessageComponent"],
+                _components_book_movies_book_movies_component__WEBPACK_IMPORTED_MODULE_25__["BookMoviesComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-                _angular_http__WEBPACK_IMPORTED_MODULE_5__["HttpModule"],
-                _app_routing__WEBPACK_IMPORTED_MODULE_29__["RoutingModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
+                _angular_http__WEBPACK_IMPORTED_MODULE_3__["HttpModule"],
+                _app_routing__WEBPACK_IMPORTED_MODULE_28__["RoutingModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
+                mydatepicker__WEBPACK_IMPORTED_MODULE_32__["MyDatePickerModule"]
             ],
             providers: [
                 {
-                    provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HTTP_INTERCEPTORS"],
-                    useClass: _components_auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_32__["AuthInterceptor"],
+                    provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HTTP_INTERCEPTORS"],
+                    useClass: _components_auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_31__["AuthInterceptor"],
                     multi: true
                 },
-                _services_post_service__WEBPACK_IMPORTED_MODULE_27__["PostService"],
-                _services_now_showing_movies_service__WEBPACK_IMPORTED_MODULE_1__["NowShowingMoviesService"],
-                _services_coming_soon_movies_service__WEBPACK_IMPORTED_MODULE_0__["ComingSoonMoviesService"],
-                _services_authentication_service__WEBPACK_IMPORTED_MODULE_28__["AuthenticationService"],
-                _components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_31__["AuthGuard"]
+                _services_authentication_service__WEBPACK_IMPORTED_MODULE_26__["AuthenticationService"],
+                _components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_30__["AuthGuard"],
+                _services_movies_service__WEBPACK_IMPORTED_MODULE_27__["MoviesService"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -236,26 +236,32 @@ var AppModule = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoutingModule", function() { return RoutingModule; });
-/* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
-/* harmony import */ var _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/movie/movie.component */ "./src/app/components/movie/movie.component.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/genre/genre.component */ "./src/app/components/genre/genre.component.ts");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/company-information/company-information.component */ "./src/app/components/company-information/company-information.component.ts");
-/* harmony import */ var _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/not-found-page/not-found-page.component */ "./src/app/components/not-found-page/not-found-page.component.ts");
-/* harmony import */ var _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/add-movie-form/add-movie-form.component */ "./src/app/components/add-movie-form/add-movie-form.component.ts");
-/* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
-/* harmony import */ var _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/edit-movie-form/edit-movie-form.component */ "./src/app/components/edit-movie-form/edit-movie-form.component.ts");
-/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
-/* harmony import */ var _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/user-profile/user-profile.component */ "./src/app/components/user-profile/user-profile.component.ts");
-/* harmony import */ var _components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/auth/auth.guard */ "./src/app/components/auth/auth.guard.ts");
+/* harmony import */ var _components_book_movies_book_movies_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/book-movies/book-movies.component */ "./src/app/components/book-movies/book-movies.component.ts");
+/* harmony import */ var _components_search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/search-bar/search-bar.component */ "./src/app/components/search-bar/search-bar.component.ts");
+/* harmony import */ var _components_message_message_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/message/message.component */ "./src/app/components/message/message.component.ts");
+/* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
+/* harmony import */ var _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/movie/movie.component */ "./src/app/components/movie/movie.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/genre/genre.component */ "./src/app/components/genre/genre.component.ts");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
+/* harmony import */ var _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/company-information/company-information.component */ "./src/app/components/company-information/company-information.component.ts");
+/* harmony import */ var _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/not-found-page/not-found-page.component */ "./src/app/components/not-found-page/not-found-page.component.ts");
+/* harmony import */ var _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/add-movie-form/add-movie-form.component */ "./src/app/components/add-movie-form/add-movie-form.component.ts");
+/* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
+/* harmony import */ var _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/edit-movie-form/edit-movie-form.component */ "./src/app/components/edit-movie-form/edit-movie-form.component.ts");
+/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
+/* harmony import */ var _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/user-profile/user-profile.component */ "./src/app/components/user-profile/user-profile.component.ts");
+/* harmony import */ var _components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/auth/auth.guard */ "./src/app/components/auth/auth.guard.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -273,61 +279,81 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var routes = [
     {
         path: "",
-        component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"]
+        component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"]
     },
-    // {
-    //   path: "home",
-    //   component: HomeComponent
-    // },
+    {
+        path: "home",
+        component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"]
+    },
     {
         path: "genre",
-        component: _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_4__["GenreComponent"]
+        component: _components_genre_genre_component__WEBPACK_IMPORTED_MODULE_7__["GenreComponent"]
     },
     {
         path: "admin",
-        component: _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_0__["AdminComponent"]
+        component: _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"]
     },
     {
         path: "companyInformation",
-        component: _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_6__["CompanyInformationComponent"]
+        component: _components_company_information_company_information_component__WEBPACK_IMPORTED_MODULE_9__["CompanyInformationComponent"]
     },
     {
         path: "addMovieForm",
-        component: _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_8__["AddMovieFormComponent"]
+        component: _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_11__["AddMovieFormComponent"]
     },
     {
         path: "login",
-        component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"]
+        component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"]
     },
     {
         path: "register",
-        component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_9__["RegisterComponent"]
+        component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_12__["RegisterComponent"]
     },
     {
         path: "userprofile",
-        component: _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_12__["UserProfileComponent"],
-        canActivate: [_components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]]
+        component: _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_15__["UserProfileComponent"],
+        canActivate: [_components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]]
     },
     {
         path: "editMovieForm",
-        component: _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_10__["EditMovieFormComponent"]
+        component: _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_13__["EditMovieFormComponent"]
     },
     {
         path: "movie/:_id",
-        component: _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_1__["MovieComponent"]
+        component: _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_4__["MovieComponent"]
+    },
+    {
+        path: "message",
+        component: _components_message_message_component__WEBPACK_IMPORTED_MODULE_2__["MessageComponent"]
+    },
+    {
+        path: "search",
+        component: _components_search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_1__["SearchBarComponent"]
+    },
+    {
+        path: "movie/:showtime/:_id",
+        component: _components_book_movies_book_movies_component__WEBPACK_IMPORTED_MODULE_0__["BookMoviesComponent"]
+    },
+    {
+        path: "genre/:showtime/:_id",
+        component: _components_book_movies_book_movies_component__WEBPACK_IMPORTED_MODULE_0__["BookMoviesComponent"]
+    },
+    {
+        path: "search/:showtime/:_id",
+        component: _components_book_movies_book_movies_component__WEBPACK_IMPORTED_MODULE_0__["BookMoviesComponent"]
     },
     {
         path: "**",
-        component: _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_7__["NotFoundPageComponent"]
+        component: _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_10__["NotFoundPageComponent"]
     }
 ];
 var RoutingModule = /** @class */ (function () {
     function RoutingModule() {
     }
     RoutingModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(routes)],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]]
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_5__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"]]
         })
     ], RoutingModule);
     return RoutingModule;
@@ -344,7 +370,7 @@ var RoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n#form{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-size: 20px;\n    color: grey;\n}\nspan{\n   font-size: 25px;\n   color: black;\n   font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nbutton{\n    font-family: 'Source Sans Pro', sans-serif;\n    width:5cm;\n    height: 1cm;;\n}"
 
 /***/ }),
 
@@ -355,7 +381,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Add new movie</h2>\n\n<form>\n    <div class=\"form-group\">\n        <label>Movie Name</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Year</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Director(s)</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Actors</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Summary</label>\n        <textarea class=\"form-control\"></textarea>\n    </div>\n\n    <div class=\"form-group\">\n        <label>Session</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <button class=\"btn btn-primary\">Submit</button>\n</form>"
+module.exports = "<br />\n<br />\n<br />\n<button class=\"btn btn-secondary\" (click)=\"ClickToAdmin()\">Back to admin</button>\n<br />\n<br />\n<br />\n<form [formGroup]=\"form\" id=\"form\">\n\n    <div class=\"form-group\">\n        <label for=\"name\">Movie Name</label>\n        <input formControlName=\"name\" id=\"name\" type=\"text\" class=\"form-control\">\n        <div *ngIf=\"name.touched && name.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"name.errors.required\">Name is required</div>\n            <div *ngIf=\"name.errors.minlength\">Name requires at least {{name.errors.minlength.requiredLength}}\n                charaters.</div>\n            <div *ngIf=\"name.errors.maxlength\">Name requires at most {{name.errors.maxlength.requiredLength}}\n                charaters.</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"runningTime\">Running time</label>\n        <input formControlName=\"runningTime\" id=\"runningTime\" type=\"number\" class=\"form-control\">\n        <div *ngIf=\"runningTime.touched && runningTime.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"runningTime.errors.required\">Running time is required.</div>\n            <div *ngIf=\"runningTime.errors.min\">Running time requires at least greater than or equal 1.</div>\n            <div *ngIf=\"runningTime.errors.max\">Running time requires less than or equal 500.</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"director\">Director</label>\n        <input formControlName=\"director\" id=\"director\" type=\"text\" class=\"form-control\">\n        <div *ngIf=\"director.touched && director.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"director.errors.required\">Director name is required</div>\n            <div *ngIf=\"director.errors.minlength\">Director name requires at least\n                {{director.errors.minlength.requiredLength}} charaters.</div>\n            <div *ngIf=\"director.errors.maxlength\">Director name requires at most\n                {{director.errors.maxlength.requiredLength}} charaters.</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"stars\">Stars (please enter the name one by one; delete the name by clicking it) </label>\n        <input formArrayName=\"stars\" id=\"stars\" type=\"text\" (keyup.enter)=\"addStar(star)\" #star class=\"form-control\"\n            required>\n        <ul class=\"list-group\">\n            <li *ngFor=\"let star of stars.controls\" (click)=\"removeStar(star)\" class=\"list-group-item\">\n                {{star.value}}\n            </li>\n        </ul>\n        <!-- <div class=\"alert alert-danger\" *ngIf=\"star.errors.required\">Stars name is required</div>\n        <div class=\"alert alert-danger\" *ngIf=\"star.errors.minlength\">Stars name requires at least\n            {{star.errors.minlength.requiredLength}} charaters.</div>\n        <div class=\"alert alert-danger\" *ngIf=\"star.errors.maxlength\">Stars name requires at most\n            {{star.errors.maxlength.requiredLength}} charaters.</div> -->\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"storyline\">Storyline</label>\n        <textarea formControlName=\"storyline\" id=\"storyline\" clos=\"30\" rows=\"10 \" class=\"form-control\"></textarea>\n        <div *ngIf=\"storyline.touched && storyline.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"storyline.errors.required\">Storyline is required</div>\n            <div *ngIf=\"storyline.errors.minlength\">Storyline requires at least\n                {{storyline.errors.minlength.requiredLength}}\n                charaters.</div>\n            <div *ngIf=\"storyline.errors.maxlength\">Storyline requires at most\n                {{storyline.errors.maxlength.requiredLength}}\n                charaters.</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"showtime\">Session (please enter the datetime one by one)</label>\n        <input formArrayName=\"showtime\" id=\"showtime\" type=\"datetime-local\" (keyup.enter)=\"addShowtime(showtimeItem)\"\n            #showtimeItem class=\"form-control\" pattern=\"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}\" required>\n        <ul class=\"list-group\">\n            <li *ngFor=\"let showtimeItem of showtime.controls , let i = index\" (click)=\"\n                removeShowtime(showtimeItem)\"\n                class=\"list-group-item\">\n                {{showtime.value[i]}}\n            </li>\n        </ul>\n        <!-- <div *ngIf=\"showtime.touched && showtime.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"showtime.errors.required\">showtime is required</div>\n            <div *ngIf=\"showtime.errors.minlength\">showtime requires at least\n                {{showtime.errors.minlength.requiredLength}}\n                charaters.</div>\n            <div *ngIf=\"showtime.errors.maxlength\">showtime requires at most\n                {{showtime.errors.maxlength.requiredLength}}\n                charaters.</div>\n        </div> -->\n    </div>\n\n\n    <div class=\"form-group\">\n        <label for=\"genres\">Genres (please enter the genre one by one)</label>\n        <input formArrayName=\"genres\" id=\"genres\" type=\"text\" (keyup.enter)=\"addGenre(genre)\" #genre class=\"form-control\">\n        <ul class=\"list-group\">\n            <li *ngFor=\"let genre of genres.controls\" (click)=\"removeGenre(genre)\" class=\"list-group-item\">\n                {{genre.value}}\n            </li>\n        </ul>\n        <!-- <div *ngIf=\"genres.touched && genres.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"genres.errors.required\">showtime is required</div>\n            <div *ngIf=\"genres.errors.minlength\">showtime requires at least\n                {{showtime.errors.minlength.requiredLength}}\n                charaters.</div>\n            <div *ngIf=\"genres.errors.maxlength\">showtime requires at most\n                {{showtime.errors.maxlength.requiredLength}}\n                charaters.</div>\n        </div> -->\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"Price\">Price</label>\n        <input formControlName=\"price\" id=\"price\" type=\"number\" class=\"form-control\">\n        <div *ngIf=\"price.touched && price.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"price.errors.required\">Running time is required.</div>\n            <div *ngIf=\"price.errors.min\">Running time requires at least greater than or equal 1.</div>\n            <div *ngIf=\"price.errors.max\">Running time requires less than or equal 10000.</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label>Status</label>\n        <br>\n        <label for=\"nowShowing\">Now Showing: </label>\n        <input formControlName=\"status\" id=\"nowShowing\" type=\"radio\" class=\"form-control\" value=\"nowShowing\">\n\n        <label for=\"comingSoon\">Coming Soon:</label>\n        <input formControlName=\"status\" id=\"comingSoon\" type=\"radio\" class=\"form-control\" value=\"comingSoon\">\n    </div>\n\n    <button type=\"submit\" [disabled]=\"!form.valid\" (click)=\"onSubmit()\" class=\"btn btn-primary\">Submit</button>\n    <div *ngIf=\"form.valid\">This form is valid right now.</div>\n\n</form>\n<br />"
 
 /***/ }),
 
@@ -369,7 +395,10 @@ module.exports = "<h2>Add new movie</h2>\n\n<form>\n    <div class=\"form-group\
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddMovieFormComponent", function() { return AddMovieFormComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_movies_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../services/movies.service */ "./src/app/services/movies.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -380,17 +409,159 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var AddMovieFormComponent = /** @class */ (function () {
-    function AddMovieFormComponent() {
+    function AddMovieFormComponent(router, service) {
+        this.router = router;
+        this.service = service;
+        // form = new FormGroup({
+        //   'name': new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(60)]),
+        //   'runningTime': new FormControl('', [Validators.required, Validators.min(1), Validators.max(500)]),
+        //   'director': new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(50)]),
+        //   'stars': new FormArray([], { validators: [Validators.required, Validators.minLength(2), Validators.maxLength(50)] }),
+        //   'storyline': new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(1000)]),
+        //   'showtime': new FormArray([], { validators: Validators.required }),
+        //   'genres': new FormArray([], { validators: [Validators.required, Validators.minLength(3), Validators.maxLength(30)] }),
+        //   'status': new FormControl('', Validators.required)
+        // });
+        this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroup"]({
+            'name': new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(1), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(60)]),
+            'runningTime': new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].min(1), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].max(500)]),
+            'director': new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(1), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(50)]),
+            'stars': new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormArray"]([]),
+            'storyline': new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(10), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(1000)]),
+            'showtime': new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormArray"]([]),
+            'genres': new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormArray"]([]),
+            'price': new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].min(1), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].max(10000)]),
+            'status': new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required)
+        });
     }
+    Object.defineProperty(AddMovieFormComponent.prototype, "name", {
+        //accesser for the FormConrol name
+        get: function () {
+            return this.form.get('name');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AddMovieFormComponent.prototype, "runningTime", {
+        //accesser for the FormConrol runningTime
+        get: function () {
+            return this.form.get('runningTime');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AddMovieFormComponent.prototype, "director", {
+        //accesser for the FormControl director
+        get: function () {
+            return this.form.get('director');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AddMovieFormComponent.prototype, "stars", {
+        //accesser for the FormArray stars
+        get: function () {
+            return this.form.get('stars');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AddMovieFormComponent.prototype, "storyline", {
+        //accesser for the FormControl storyline
+        get: function () {
+            return this.form.get('storyline');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AddMovieFormComponent.prototype, "showtime", {
+        //accesser for the FormArray showtime
+        get: function () {
+            return this.form.get('showtime');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AddMovieFormComponent.prototype, "genres", {
+        //accesser for the FormArray genres
+        get: function () {
+            return this.form.get('genres');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AddMovieFormComponent.prototype, "status", {
+        //accesser for the FormControl storyline
+        get: function () {
+            return this.form.get('status');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AddMovieFormComponent.prototype, "price", {
+        //accesser for the FormConrol runningTime
+        get: function () {
+            return this.form.get('price');
+        },
+        enumerable: true,
+        configurable: true
+    });
     AddMovieFormComponent.prototype.ngOnInit = function () { };
+    //add star name in the stars array
+    AddMovieFormComponent.prototype.addStar = function (star) {
+        this.stars.push(new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](star.value));
+        //clear the enter field
+        star.value = '';
+    };
+    //delete a star name in the stars array
+    AddMovieFormComponent.prototype.removeStar = function (star) {
+        var index = this.stars.controls.indexOf(star);
+        this.stars.removeAt(index);
+    };
+    //add showtime in the stars array
+    AddMovieFormComponent.prototype.addShowtime = function (showtimeItem) {
+        this.showtime.push(new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](showtimeItem.value));
+        //clear the enter field
+        showtimeItem.value = '';
+    };
+    //delete a star name in the stars array
+    AddMovieFormComponent.prototype.removeShowtime = function (showtimeItem) {
+        var index = this.stars.controls.indexOf(showtimeItem);
+        this.showtime.removeAt(index);
+    };
+    //add star name in the stars array
+    AddMovieFormComponent.prototype.addGenre = function (genre) {
+        this.genres.push(new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](genre.value));
+        //clear the enter field
+        genre.value = '';
+    };
+    //delete a star name in the stars array
+    AddMovieFormComponent.prototype.removeGenre = function (genre) {
+        var index = this.genres.controls.indexOf(genre);
+        this.genres.removeAt(index);
+    };
+    //submit the form
+    AddMovieFormComponent.prototype.onSubmit = function () {
+        //console.log(this.form.value);
+        this.service.createMovies(this.form.value).subscribe(function (response) {
+            console.log(response.json());
+        });
+    };
+    //button back to admin page 
+    AddMovieFormComponent.prototype.ClickToAdmin = function () {
+        this.router.navigate(["/admin"]);
+    };
     AddMovieFormComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: "add-movie-form",
             template: __webpack_require__(/*! ./add-movie-form.component.html */ "./src/app/components/add-movie-form/add-movie-form.component.html"),
             styles: [__webpack_require__(/*! ./add-movie-form.component.css */ "./src/app/components/add-movie-form/add-movie-form.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _services_movies_service__WEBPACK_IMPORTED_MODULE_0__["MoviesService"]])
     ], AddMovieFormComponent);
     return AddMovieFormComponent;
 }());
@@ -406,7 +577,7 @@ var AddMovieFormComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\nbutton{\n    width: 5cm;\n    height: 1cm;\n}\n#admin{\n\n    font-size: 20px;\n    color: grey;\n    font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nspan{\n   font-size: 25px;\n   color: black;\n   font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nh3{\n    text-align: center;\n    color: black;\n    font-family: 'Cormorant SC', sans-serif;\n    font-family: 'Bold', sans-serif;\n}"
 
 /***/ }),
 
@@ -417,7 +588,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngFor=\"let movie of movies; let i = index\" [attr.movieIndex]=\"i\">\n  <br />\n  <h2>{{movie.name}}</h2>\n  <button class=\"btn btn-primary\" (click)=\"onDelete(i)\">Delete</button>\n  <br />\n  <label>Sessions time: {{movie.showTime}}</label>\n  <br />\n  <label>Sessions date: {{movie.showDate}}</label>\n  <br />\n  <label>Running time: {{movie.runningTime}}</label>\n  <br />\n  <label>Director(s): {{movie.directors}}</label>\n  <br />\n  <label>Cast: {{movie.stars}}</label>\n  <br />\n  <label>Story: {{movie.storyline}}</label>\n  <br />\n  <label>Genre: {{movie.genres}}</label>\n  <br />\n  <label>Status: {{movie.status}}</label>\n  <br />\n  <br />\n</div>"
+module.exports = "<br />\n<br />\n<br />\n<div id=\"admin\">\n  <button class=\"btn btn-primary\" (click)=\"clickToAddMovie()\">Add Movies</button>\n  <br />\n  <br />\n  <div *ngFor=\"let movie of movies; let i = index\" [attr.movieIndex]=\"i\">\n    <br />\n    <h3>{{movie.name}}</h3>\n    <br />\n    <br />\n    <button class=\"btn btn-secondary\" (click)=\"onDelete(i)\">Delete movie </button>\n    <br />\n    <br />\n    <button class=\"btn btn-secondary\" (click)=\"onUpdate(i)\">Update Status</button>\n    <br />\n    <br />\n    <label><span>Session time: </span>\n      <br />\n      <br />\n      <div *ngFor=\"let showTime of movie.showTime\">{{showTime | date:'short'}}<br /></div>\n    </label>\n    <br />\n    <br />\n    <label><span>Running time: </span> {{movie.runningTime}}</label>\n    <br />\n    <br />\n    <label><span>Director: </span>{{movie.director}}</label>\n    <br />\n    <br />\n    <label><span>Cast: </span>{{movie.stars}}</label>\n    <br />\n    <br />\n    <label><span>Storyline: </span> {{movie.storyline}}</label>\n    <br />\n    <br />\n    <label><span>Genre: </span>{{movie.genres}}</label>\n    <br />\n    <br />\n    <label><span>Price: </span> {{movie.price | currency:'AUD':true:'1.2-2'}} </label>\n    <br />\n    <br />\n    <label><span>Status: </span>{{movie.status}}</label>\n    <br />\n    <br />\n  </div>\n</div>"
 
 /***/ }),
 
@@ -431,9 +602,9 @@ module.exports = "<div *ngFor=\"let movie of movies; let i = index\" [attr.movie
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminComponent", function() { return AdminComponent; });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_post_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/post.service */ "./src/app/services/post.service.ts");
+/* harmony import */ var _services_movies_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../services/movies.service */ "./src/app/services/movies.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -447,20 +618,19 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var AdminComponent = /** @class */ (function () {
+    //initialize movie service and router
     function AdminComponent(service, router) {
         this.service = service;
         this.router = router;
     }
     AdminComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.service.getPosts().subscribe(function (response) {
+        //get all movies
+        this.service.getMovies().subscribe(function (response) {
             _this.movies = response.json();
         });
     };
-    AdminComponent.prototype.ngOnChanges = function () {
-        this.onDelete(this.movieIndex);
-    };
-    //delete a movie based on its object id.
+    //delete a movie
     AdminComponent.prototype.onDelete = function (movieIndex) {
         var objectId;
         console.log(movieIndex);
@@ -468,18 +638,35 @@ var AdminComponent = /** @class */ (function () {
         objectId = this.movies[movieIndex]._id;
         console.log(objectId);
         //delete the specific movie
-        this.service.deletePosts(objectId).subscribe(function (response) {
+        this.service.deleteMovies(objectId).subscribe(function (response) {
             console.log(response.json());
         });
-        // this.router.navigate(["/home"]);
+        //give a prompt of sucessful operation to admin
+        this.router.navigate(["/message"]);
+    };
+    //update the status of a movie
+    AdminComponent.prototype.onUpdate = function (movieIndex) {
+        // update the status of a movie
+        this.movies[movieIndex].status === "nowShowing" ?
+            this.movies[movieIndex].status = "comingSoon" : this.movies[movieIndex].status = "nowShowing";
+        //get the current movie
+        var movie = this.movies[movieIndex];
+        console.log("before update", movie);
+        //update the status of the specific movie
+        this.service.updateMovies(movie).subscribe(function (response) {
+            console.log("response from update:", response.json());
+        });
+    };
+    AdminComponent.prototype.clickToAddMovie = function () {
+        this.router.navigate(["/addMovieForm"]);
     };
     AdminComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'admin',
             template: __webpack_require__(/*! ./admin.component.html */ "./src/app/components/admin/admin.component.html"),
             styles: [__webpack_require__(/*! ./admin.component.css */ "./src/app/components/admin/admin.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_post_service__WEBPACK_IMPORTED_MODULE_2__["PostService"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"]])
+        __metadata("design:paramtypes", [_services_movies_service__WEBPACK_IMPORTED_MODULE_0__["MoviesService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], AdminComponent);
     return AdminComponent;
 }());
@@ -701,6 +888,99 @@ var LogoutComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/book-movies/book-movies.component.css":
+/*!******************************************************************!*\
+  !*** ./src/app/components/book-movies/book-movies.component.css ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Fredericka the Great');\n#movie{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-size: 20px;\n    color: grey;\n}\nspan{\n   font-size: 20px;\n   color: black;\n   font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nh2{\n    text-align: left;\n    color: grey;\n    font-family: 'Cormorant SC', sans-serif;\n    font-family: 'Bold', sans-serif;\n}\nh3{\n    text-align: left;\n    color: black;\n    font-family: 'Fredericka the Great', sans-serif;\n}\nlabel{\n    font-size: 20px;\n    color: black;\n    font-family: 'Source Sans Pro', sans-serif;\n}\nbutton{\n    font-family: 'Source Sans Pro', sans-serif;\n    width:5cm;\n    height: 1cm;;\n}"
+
+/***/ }),
+
+/***/ "./src/app/components/book-movies/book-movies.component.html":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/book-movies/book-movies.component.html ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<br />\n<br />\n<button class=\"btn btn-secondary\" (click)=\"backToHome()\">Home Page</button>\n<br />\n<br />\n<br />\n<h2>Booking:</h2>\n<div *ngFor=\"let property of movie\" id=\"movie\">\n  <br />\n  <h3>{{property.name}}</h3>\n  <br />\n\n  <label> <span>Sessions: </span></label>\n  <div>{{bookingTime\n    |\n    date:'short'}}<br /></div>\n  <br />\n  <label><span>Price: </span>{{property.price | currency:'AUD':true:'1.2-2'}}</label>\n  <br />\n  <br />\n</div>\n\n<div *ngIf=\"!flag\" id=\"movie\">\n  <br />\n  <br />\n  <label>This movie is coming soon. Please stay tune.</label>\n</div>\n<div *ngIf=\"flag\" id=\"movie\">\n  <form id=\"form\">\n    <label>Please enter your email: </label><input id=\"email\" type=\"text\" class=\"form-control\">\n    <br />\n    <button class=\"btn btn-primary\" type=\"submit\">Confirm booking</button>\n  </form>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/book-movies/book-movies.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/book-movies/book-movies.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: BookMoviesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookMoviesComponent", function() { return BookMoviesComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_movies_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../services/movies.service */ "./src/app/services/movies.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var BookMoviesComponent = /** @class */ (function () {
+    function BookMoviesComponent(route, router, service) {
+        this.route = route;
+        this.router = router;
+        this.service = service;
+        this.flag = false;
+    }
+    BookMoviesComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.paramMap
+            .subscribe(function (params) {
+            _this.bookingTime = params.get('showtime');
+            console.log(_this.bookingTime);
+            var _id = params.get('_id');
+            console.log(_id);
+            _this.service.getMoviesById(_id).subscribe(function (response) {
+                _this.movie = response.json()
+                    .filter(function (movie) {
+                    if (movie.status === "nowShowing") {
+                        console.log('flag before:', _this.flag);
+                        _this.flag = true;
+                        console.log('flag after:', _this.flag);
+                        return movie;
+                    }
+                });
+            });
+        });
+    };
+    BookMoviesComponent.prototype.backToHome = function () {
+        this.router.navigate(["/home"]);
+    };
+    BookMoviesComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'book-movies',
+            template: __webpack_require__(/*! ./book-movies.component.html */ "./src/app/components/book-movies/book-movies.component.html"),
+            styles: [__webpack_require__(/*! ./book-movies.component.css */ "./src/app/components/book-movies/book-movies.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _services_movies_service__WEBPACK_IMPORTED_MODULE_1__["MoviesService"]])
+    ], BookMoviesComponent);
+    return BookMoviesComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/coming-soon-movie-list/coming-soon-movie-list.component.css":
 /*!****************************************************************************************!*\
   !*** ./src/app/components/coming-soon-movie-list/coming-soon-movie-list.component.css ***!
@@ -708,7 +988,7 @@ var LogoutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".comingSoonBlock {\n    border-style: solid;\n    background-color: whitesmoke;\n  }\n  \n  h2 {\n    text-align: center;\n  }\n  "
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n\n.comingSoonBlock {\n  background-color:white;\n  text-align: center;\n  font-family: 'Cormorant SC', sans-serif;\n  font-family: 'Bold', sans-serif;\n  font-size: 35px;\n  color: gray;\n  }\n\n#list{\n    color: grey;\n    font-size: 20px;\n    font-family: 'Cormorant SC', sans-serif;\n  }"
 
 /***/ }),
 
@@ -719,7 +999,7 @@ module.exports = ".comingSoonBlock {\n    border-style: solid;\n    background-c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"comingSoonBlock\">\n  <h2>Coming Soon Movies</h2>\n  <ul>\n    <li *ngFor=\"let movie of movies\">\n      <a [routerLink]=\"['../movie', movie._id]\">{{movie.name}}</a>\n    </li>\n  </ul>\n</div>"
+module.exports = "<br />\n<div class=\"comingSoonBlock\">\n  <div class=\"list-group\">\n    <div class=\"border border-light\">\n      COMING SOON\n    </div>\n    <ul if=\"list\" class=\"list-group list-group-flush\">\n      <li class=\"list-group-item\" *ngFor=\"let movie of movies\">\n        <a [routerLink]=\"['../movie', movie._id]\" id=\"list\">{{movie.name}}</a>\n      </li>\n    </ul>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -734,7 +1014,7 @@ module.exports = "<div class=\"comingSoonBlock\">\n  <h2>Coming Soon Movies</h2>
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComingSoonMovieListComponent", function() { return ComingSoonMovieListComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_post_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/post.service */ "./src/app/services/post.service.ts");
+/* harmony import */ var _services_movies_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/movies.service */ "./src/app/services/movies.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -752,7 +1032,7 @@ var ComingSoonMovieListComponent = /** @class */ (function () {
     }
     ComingSoonMovieListComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.service.getPosts().subscribe(function (response) {
+        this.service.getMovies().subscribe(function (response) {
             _this.movies = response.json()
                 .filter(function (movie) { return movie.status === 'comingSoon'; });
         });
@@ -763,7 +1043,7 @@ var ComingSoonMovieListComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./coming-soon-movie-list.component.html */ "./src/app/components/coming-soon-movie-list/coming-soon-movie-list.component.html"),
             styles: [__webpack_require__(/*! ./coming-soon-movie-list.component.css */ "./src/app/components/coming-soon-movie-list/coming-soon-movie-list.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_post_service__WEBPACK_IMPORTED_MODULE_1__["PostService"]])
+        __metadata("design:paramtypes", [_services_movies_service__WEBPACK_IMPORTED_MODULE_1__["MoviesService"]])
     ], ComingSoonMovieListComponent);
     return ComingSoonMovieListComponent;
 }());
@@ -779,7 +1059,7 @@ var ComingSoonMovieListComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi|Cormorant SC');\n\n\n\n#information{\n    font-family: 'Cormorant SC', sans-serif;\n    font-size: 25px;\n    color: black;\n    overflow-wrap: break-word;\n    width: 70em;\n}\n\n"
 
 /***/ }),
 
@@ -790,7 +1070,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>About us</h2>\n<p>About us page is in progress.</p>"
+module.exports = "<br />\n<br />\n<br />\n<br />\n<div id=\"information\">\n    Golden Time Cinema is for movie lovers to enjoy the classis movies anytime. Our cinema contains\n    more than ten movie rooms with cozy enviroment. We hope audience can have the best experince and travel with time\n    machine to the\n    classic movies they love. Feel free to contact us if you have any question. Our team is here to help you\n    responsively.\n</div>"
 
 /***/ }),
 
@@ -903,7 +1183,7 @@ var EditMovieFormComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".footer {\n  background-color: whitesmoke;\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  color: black;\n  text-align: center;\n}\n"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n.footer {\n  background-color: white;\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  color: black;\n  text-align: center;\n  font-family: 'Source Sans Pro', sans-serif;\n  font-family: 'Semi-Bold', sans-serif;\n  font-size: 15px;\n}\n"
 
 /***/ }),
 
@@ -914,7 +1194,7 @@ module.exports = ".footer {\n  background-color: whitesmoke;\n  position: fixed;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"footer\">\n  {{companyName}}\n</div>"
+module.exports = "<div class=\"footer border-top\">\n  {{companyName}}\n</div>"
 
 /***/ }),
 
@@ -966,7 +1246,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n#movie{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-size: 20px;\n    color: grey;\n}\nspan{\n   font-size: 25px;\n   color: black;\n   font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nh3{\n    text-align: center;\n    color: black;\n    font-family: 'Cormorant SC', sans-serif;\n    font-family: 'Bold', sans-serif;\n}\na{\n    text-align: center;\n}"
 
 /***/ }),
 
@@ -977,7 +1257,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Gerne</h2>\n<p>Gerne page is in progress.</p>"
+module.exports = "<br />\n<br />\n<br />\n<div id=\"genres\" class=\"list-group\">\n    <a (click)=\"findMoviesByGenre(dramas)\" class=\"list-group-item list-group-item-action list-group-item-light\">Dramas</a>\n    <a (click)=\"findMoviesByGenre(action)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Action</a>\n    <a (click)=\"findMoviesByGenre(crime)\" class=\"list-group-item list-group-item-action list-group-item-light\">Crime</a>\n    <a (click)=\"findMoviesByGenre(horror)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Horror</a>\n    <a (click)=\"findMoviesByGenre(comedies)\" class=\"list-group-item list-group-item-action list-group-item-light\">Comedies</a>\n    <a (click)=\"findMoviesByGenre(fantasy)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Fantasy</a>\n    <a (click)=\"findMoviesByGenre(romance)\" class=\"list-group-item list-group-item-action list-group-item-light\">Romance</a>\n</div>\n<br />\n<br />\n<div *ngFor=\"let property of movies\" id=\"movie\">\n    <h3>{{property.name}}</h3>\n    <br />\n    <br />\n    <br />\n    <label> <span>Sessions: </span></label>\n    <div *ngFor=\"let showtime of property.showTime\" class=\"list-group-item list-group-item-action list-group-item-light\"\n        [routerLink]=\"['../genre', showtime,property._id]\">{{showtime | date:'short'}}<br /></div>\n    <br />\n    <label><span>Running time: </span>{{property.runningTime}}</label>\n    <br />\n    <br />\n    <label><span>Director: </span>{{property.director}}</label>\n    <br />\n    <br />\n    <label><span>Cast: </span>{{property.stars}}</label>\n    <br />\n    <br />\n    <label><span>Story: </span> {{property.storyline}}</label>\n    <br />\n    <br />\n    <label><span>Genre: </span>{{property.genres}}</label>\n    <br />\n    <br />\n    <label><span>Status: </span>{{property.status}}</label>\n    <br />\n    <br />\n</div>"
 
 /***/ }),
 
@@ -991,7 +1271,8 @@ module.exports = "<h2>Gerne</h2>\n<p>Gerne page is in progress.</p>"
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GenreComponent", function() { return GenreComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_movies_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../services/movies.service */ "./src/app/services/movies.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1002,17 +1283,42 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var GenreComponent = /** @class */ (function () {
-    function GenreComponent() {
+    function GenreComponent(service) {
+        this.service = service;
+        this.dramas = "dramas";
+        this.action = "action";
+        this.crime = "crime";
+        this.horror = "horror";
+        this.comedies = "comedies";
+        this.fantasy = "fantasy";
+        this.romance = "romance";
     }
     GenreComponent.prototype.ngOnInit = function () { };
+    GenreComponent.prototype.findMoviesByGenre = function (inputValue) {
+        var _this = this;
+        console.log(inputValue);
+        this.service.getMovies().subscribe(function (response) {
+            //get movies by genres
+            _this.movies = response.json()
+                .filter(function (movies) {
+                for (var _i = 0, _a = movies.genres; _i < _a.length; _i++) {
+                    var genre = _a[_i];
+                    if (genre === inputValue)
+                        return movies;
+                }
+            });
+            console.log("movies retrived by genres", _this.movies);
+        });
+    };
     GenreComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: "genre",
             template: __webpack_require__(/*! ./genre.component.html */ "./src/app/components/genre/genre.component.html"),
             styles: [__webpack_require__(/*! ./genre.component.css */ "./src/app/components/genre/genre.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_movies_service__WEBPACK_IMPORTED_MODULE_0__["MoviesService"]])
     ], GenreComponent);
     return GenreComponent;
 }());
@@ -1028,7 +1334,7 @@ var GenreComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h1 {\n  text-align: center;\n  font: bold;\n}\n"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Fredericka the Great');\n\n\nh1 {\n  text-align: center;\n  font: bold;\n  font-family: 'Fredericka the Great', sans-serif;\n  color: rgb(209, 156, 21);\n    \n}\n"
 
 /***/ }),
 
@@ -1039,7 +1345,7 @@ module.exports = "h1 {\n  text-align: center;\n  font: bold;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <h1>{{title}}</h1>\n</div>"
+module.exports = "<div>\n  <h1 class=\"text-center\" style=\"font-size:50px\">{{title}}</h1>\n</div>\n<br />\n<br />"
 
 /***/ }),
 
@@ -1102,7 +1408,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<search-bar></search-bar>\n<br />\n<br />\n<now-showing-movie-list></now-showing-movie-list>\n<br />\n<coming-soon-movie-list></coming-soon-movie-list>\n<br />"
+module.exports = "<br />\n<br />\n<br />\n<now-showing-movie-list></now-showing-movie-list>\n<br />\n<br />\n<br />\n<coming-soon-movie-list></coming-soon-movie-list>\n<br />\n<br />"
 
 /***/ }),
 
@@ -1153,7 +1459,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n\nlabel{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-family: 'Semi-Bold', sans-serif;\n}"
 
 /***/ }),
 
@@ -1164,7 +1470,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Log in</h2>\n<div class=\"col-md-8-col-md-offset-2\">\n\n    <form #loginForm=\"ngForm\" (ngSubmit)=\"loginForm.valid && onLogin(loginForm)\">\n        <div class=\"form-group\">\n            <label for=\"email\">Email</label>\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\n                required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !email.valid }\">\n            <div *ngIf=\"loginForm.submitted && email.errors\">\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n            </div>\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"password\">Email</label>\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\" placeholder=\"Password\"\n                class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !password.valid }\">\n            <div *ngIf=\"loginForm.submitted && password.errors\">\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\n            </div>\n        </div>\n\n        <button class=\"btn btn-primary\" type=\"submit\">Login</button>\n    </form>\n\n</div>\n\n\n<!-- Error message -->\n<div class=\"alert\" *ngIf=\"errorMessages\">\n    {{errorMessages}}\n</div>"
+module.exports = "<br />\n<br />\n<div class=\"col-md-8-col-md-offset-2\">\n\n    <form #loginForm=\"ngForm\" (ngSubmit)=\"loginForm.valid && onLogin(loginForm)\">\n        <div class=\"form-group\">\n            <label for=\"email\">Email</label>\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\"\n                class=\"form-control\" required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !email.valid }\">\n            <div *ngIf=\"loginForm.submitted && email.errors\">\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n            </div>\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\"\n                placeholder=\"Password\" class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !password.valid }\">\n            <div *ngIf=\"loginForm.submitted && password.errors\">\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\n            </div>\n        </div>\n\n        <button class=\"btn btn-primary\" type=\"submit\">Login</button>\n    </form>\n\n</div>\n\n\n<!-- Error message -->\n<div class=\"alert\" *ngIf=\"errorMessages\" style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif\">\n    {{errorMessages}}\n</div>"
 
 /***/ }),
 
@@ -1239,6 +1545,76 @@ var LoginComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/message/message.component.css":
+/*!**********************************************************!*\
+  !*** ./src/app/components/message/message.component.css ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n#message{\n    text-align: center;\n    font-family: 'Source Sans Pro', sans-serif;\n    font-family: 'Semi-Bold', sans-serif;\n    font-size: 20px;\n  \n}\nbutton{\n    width: 5cm;\n    height: 1cm;\n}\n\n"
+
+/***/ }),
+
+/***/ "./src/app/components/message/message.component.html":
+/*!***********************************************************!*\
+  !*** ./src/app/components/message/message.component.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<br />\n<br />\n<button class=\"btn btn-secondary\" (click)=\"backToAdmin()\">back to admin</button>\n<div id=\"message\">\n  <br />\n  <br />\n  <br />\n  <br />\n  <p class=\"alert alert-success\" role=\"alert\">The operation is successful!</p>\n\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/message/message.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/components/message/message.component.ts ***!
+  \*********************************************************/
+/*! exports provided: MessageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MessageComponent", function() { return MessageComponent; });
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var MessageComponent = /** @class */ (function () {
+    function MessageComponent(router) {
+        this.router = router;
+    }
+    MessageComponent.prototype.ngOnInit = function () {
+    };
+    //button back to admin
+    MessageComponent.prototype.backToAdmin = function () {
+        this.router.navigate(["/admin"]);
+    };
+    MessageComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'message',
+            template: __webpack_require__(/*! ./message.component.html */ "./src/app/components/message/message.component.html"),
+            styles: [__webpack_require__(/*! ./message.component.css */ "./src/app/components/message/message.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"]])
+    ], MessageComponent);
+    return MessageComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/movie/movie.component.css":
 /*!******************************************************!*\
   !*** ./src/app/components/movie/movie.component.css ***!
@@ -1246,7 +1622,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n#movie{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-size: 20px;\n    color: grey;\n}\nspan{\n   font-size: 25px;\n   color: black;\n   font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nh3{\n    text-align: center;\n    color: black;\n    font-family: 'Cormorant SC', sans-serif;\n    font-family: 'Bold', sans-serif;\n}"
 
 /***/ }),
 
@@ -1257,7 +1633,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngFor=\"let property of movie\">\n  <br />\n  <h2>{{property.name}}</h2>\n  <br />\n  <label>Sessions: {{property.showTime}}</label>\n  <br />\n  <label>Running time: {{property.runningTime}}</label>\n  <br />\n  <label>Director(s): {{property.directors}}</label>\n  <br />\n  <label>Cast: {{property.stars}}</label>\n  <br />\n  <label>Story: {{property.storyline}}</label>\n  <br />\n  <label>Genre: {{property.genres}}</label>\n  <br />\n  <label>Status: {{property.status}}</label>\n</div>"
+module.exports = "<div *ngFor=\"let property of movie\" id=\"movie\">\n  <br />\n  <br />\n  <br />\n  <h3>{{property.name}}</h3>\n  <br />\n  <br />\n  <br />\n  <label> <span>Sessions: </span></label>\n  <div *ngFor=\"let showtime of property.showTime\"><a class=\"list-group-item list-group-item-action list-group-item-light\"\n      [routerLink]=\"['../', showtime,property._id]\">{{showtime\n      |\n      date:'short'}}</a><br /></div>\n  <br />\n  <label><span>Running time: </span>{{property.runningTime}}</label>\n  <br />\n  <br />\n  <label><span>Director: </span>{{property.director}}</label>\n  <br />\n  <br />\n  <label><span>Cast: </span>{{property.stars}}</label>\n  <br />\n  <br />\n  <label><span>Story: </span> {{property.storyline}}</label>\n  <br />\n  <br />\n  <label><span>Genre: </span>{{property.genres}}</label>\n  <br />\n  <br />\n  <label><span>Price: </span>{{property.price | currency:'AUD':true:'1.2-2'}}</label>\n  <br />\n  <br />\n  <label><span>Status: </span>{{property.status}}</label>\n  <br />\n  <br />\n</div>"
 
 /***/ }),
 
@@ -1273,7 +1649,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MovieComponent", function() { return MovieComponent; });
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_post_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/post.service */ "./src/app/services/post.service.ts");
+/* harmony import */ var _services_movies_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/movies.service */ "./src/app/services/movies.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1299,7 +1675,7 @@ var MovieComponent = /** @class */ (function () {
             var _id = params.get('_id');
             console.log(_id);
             //get a specific movie object by its object id
-            _this.service.getPostsById(_id).subscribe(function (response) {
+            _this.service.getMoviesById(_id).subscribe(function (response) {
                 _this.movie = response.json();
                 console.log(_this.movie);
             });
@@ -1311,7 +1687,7 @@ var MovieComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./movie.component.html */ "./src/app/components/movie/movie.component.html"),
             styles: [__webpack_require__(/*! ./movie.component.css */ "./src/app/components/movie/movie.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"], _services_post_service__WEBPACK_IMPORTED_MODULE_2__["PostService"]])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"], _services_movies_service__WEBPACK_IMPORTED_MODULE_2__["MoviesService"]])
     ], MovieComponent);
     return MovieComponent;
 }());
@@ -1327,7 +1703,7 @@ var MovieComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".navigationBar {\n  display: block;\n  background-color: whitesmoke;\n}\n\na {\n  text-decoration: none;\n  color: black;\n  padding-right: 50px;\n  padding-left: 50px;\n}\n"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Cormorant SC');\n\n.navigationBar {\n  display: block;\n  background-color: whitesmoke;\n}\n\na {\n  font-family: 'Cormorant SC', sans-serif;\n  font-family: 'Semi-Bold', sans-serif;\n  text-decoration: none;\n  color:gray;\n  padding-right: 50px;\n  padding-left: 50px;\n  font-size: 20px;\n}\n"
 
 /***/ }),
 
@@ -1338,7 +1714,7 @@ module.exports = ".navigationBar {\n  display: block;\n  background-color: white
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"col-md-10 col-md-offset-2\">\n  <ul class=\"nav nav-pills\">\n    <li routerLinkActive=\"active\">\n      <a routerLink=\"../\">{{home}}</a>\n    </li>\n    <li routerLinkActive=\"active\">\n      <a routerLink=\"../genre\">{{genre}}</a>\n    </li>\n    <li routerLinkActive=\"active\">\n      <a routerLink=\"../companyInformation\">{{companyInformation}}</a>\n    </li>\n    <li routerLinkActive=\"active\">\n      <a routerLink=\"../admin\">{{admin}}</a>\n    </li>\n    <!-- User authService.isLoggedIn directly here to solve problem of manually refreshing the page to see changes -->\n    <li *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../login\">{{logIn}}</a>\n    </li>\n    <li *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../register\">{{register}}</a>\n    </li>\n    <li *ngIf=\"authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../userprofile\">{{profile}}</a>\n    </li>\n  </ul>\n</nav>"
+module.exports = "<br />\n<nav>\n  <ul class=\"nav justify-content-center\">\n    <li class=\"nav-item\" routerLinkActive=\"active\">\n      <a routerLink=\"../\">{{home}}</a>\n    </li>\n    <li class=\"nav-item\" routerLinkActive=\"active\">\n      <a routerLink=\"../search\">{{search}}</a>\n    </li>\n    <li class=\"nav-item\" routerLinkActive=\"active\">\n      <a routerLink=\"../genre\">{{genre}}</a>\n    </li>\n    <li class=\"nav-item\" routerLinkActive=\"active\">\n      <a routerLink=\"../admin\">{{admin}}</a>\n    </li>\n    <!-- User authService.isLoggedIn directly here to solve problem of manually refreshing the page to see changes -->\n    <li class=\"nav-item\" *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../login\">{{logIn}}</a>\n    </li>\n    <li class=\"nav-item\" *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../register\">{{register}}</a>\n    </li>\n    <li class=\"nav-item\" *ngIf=\"authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../userprofile\">{{profile}}</a>\n    </li>\n    <li class=\"nav-item\" routerLinkActive=\"active\">\n      <a routerLink=\"../companyInformation\">{{companyInformation}}</a>\n    </li>\n  </ul>\n\n</nav>\n<br />\n<div class=\"border border-bottom border-light\"> </div>"
 
 /***/ }),
 
@@ -1368,13 +1744,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var NavigationBarComponent = /** @class */ (function () {
     function NavigationBarComponent(authService) {
         this.authService = authService;
-        this.logIn = "Log In";
-        this.home = "Home";
-        this.register = "Register";
-        this.genre = "Genre";
-        this.admin = "Admin";
-        this.companyInformation = "About us";
-        this.profile = "Profile";
+        this.logIn = "LOG IN";
+        this.home = "HOME";
+        this.register = "REGISTER";
+        this.genre = "GENRES";
+        this.admin = "ADMIN";
+        this.companyInformation = "ABOUT US";
+        this.profile = "PROFILE";
+        this.search = "SEARCH";
     }
     NavigationBarComponent.prototype.ngOnInit = function () { };
     NavigationBarComponent = __decorate([
@@ -1399,7 +1776,7 @@ var NavigationBarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n#message{\n    text-align: center;\n    font-family: 'Source Sans Pro', sans-serif;\n    font-family: 'Semi-Bold', sans-serif;\n    font-size: 20px;\n  \n}"
 
 /***/ }),
 
@@ -1410,7 +1787,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Sorry, the page has not been found!</p>\n<footer></footer>"
+module.exports = "<br />\n<br />\n<br />\n<div class=\"alert alert-warning\" id=\"message\">Sorry, the page has not been found!</div>\n<footer></footer>"
 
 /***/ }),
 
@@ -1461,7 +1838,7 @@ var NotFoundPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".nowShowingBlock {\n    border-style: solid;\n    background-color: whitesmoke;\n  }\n  \n  h2 {\n    text-align: center;\n  }\n  "
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n\n.nowShowingBlock {\n  background-color:white;\n  text-align: center;\n  font-family: 'Cormorant SC', sans-serif;\n  font-family: 'Bold', sans-serif;\n  font-size: 35px;\n  color: gray;\n  }\n\n#list{\n    color: grey;\n    font-size: 20px;\n    font-family: 'Cormorant SC', sans-serif;\n  }\n\n#alert{\n    text-align: center;\n    font-family: 'Cormorant SC', sans-serif;\n    font-size: 35px;\n    color: gray;\n  }\n\nul{\n    text-align: center;\n  }\n\n"
 
 /***/ }),
 
@@ -1472,7 +1849,7 @@ module.exports = ".nowShowingBlock {\n    border-style: solid;\n    background-c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"nowShowingBlock\">\n  <h2>Now Showing Movies</h2>\n  <ul>\n    <li *ngFor=\"let movie of movies\">\n      <a [routerLink]=\"['../movie', movie._id]\">{{movie.name}}</a>\n    </li>\n  </ul>\n\n</div>"
+module.exports = "<br />\n<div>\n  <div class=\"nowShowingBlock\">\n    <div class=\"border border-light\">NOW SHOWING</div>\n  </div>\n  <ul if=\"list\" class=\"list-group list-group-flush\">\n    <li class=\"list-group-item\" *ngFor=\"let movie of movies\">\n      <a [routerLink]=\"['../movie', movie._id]\" id=\"list\">{{movie.name}}</a>\n    </li>\n  </ul>\n</div>\n\n<!-- <div id=\"alert\">Please be patient, more movies are yet to come.</div> -->"
 
 /***/ }),
 
@@ -1486,8 +1863,8 @@ module.exports = "<div class=\"nowShowingBlock\">\n  <h2>Now Showing Movies</h2>
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NowShowingMovieListComponent", function() { return NowShowingMovieListComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_post_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/post.service */ "./src/app/services/post.service.ts");
+/* harmony import */ var _services_movies_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../services/movies.service */ "./src/app/services/movies.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1505,112 +1882,20 @@ var NowShowingMovieListComponent = /** @class */ (function () {
     }
     NowShowingMovieListComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.service.getPosts().subscribe(function (response) {
+        this.service.getMovies().subscribe(function (response) {
             _this.movies = response.json()
                 .filter(function (movie) { return movie.status === 'nowShowing'; });
         });
     };
     NowShowingMovieListComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: "now-showing-movie-list",
             template: __webpack_require__(/*! ./now-showing-movie-list.component.html */ "./src/app/components/now-showing-movie-list/now-showing-movie-list.component.html"),
             styles: [__webpack_require__(/*! ./now-showing-movie-list.component.css */ "./src/app/components/now-showing-movie-list/now-showing-movie-list.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_post_service__WEBPACK_IMPORTED_MODULE_1__["PostService"]])
+        __metadata("design:paramtypes", [_services_movies_service__WEBPACK_IMPORTED_MODULE_0__["MoviesService"]])
     ], NowShowingMovieListComponent);
     return NowShowingMovieListComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/components/posts/posts.component.css":
-/*!******************************************************!*\
-  !*** ./src/app/components/posts/posts.component.css ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/components/posts/posts.component.html":
-/*!*******************************************************!*\
-  !*** ./src/app/components/posts/posts.component.html ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<input (keyup.enter)=\"createPost(title)\" #title type=\"text\" class=\"form-control\">\n<ul class=\"list-group\">\n  <li *ngFor=\"let post of posts\" class=\"list-group-item\">\n    <button (click)=\"updatePost(post)\" btn btn-default btn-sm>Update</button>\n    <button (click)=\"deletePost(post)\" btn btn-default btn-sm>Delete</button>\n    {{post.title}}\n  </li>\n</ul>"
-
-/***/ }),
-
-/***/ "./src/app/components/posts/posts.component.ts":
-/*!*****************************************************!*\
-  !*** ./src/app/components/posts/posts.component.ts ***!
-  \*****************************************************/
-/*! exports provided: PostsComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostsComponent", function() { return PostsComponent; });
-/* harmony import */ var _services_post_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../services/post.service */ "./src/app/services/post.service.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var PostsComponent = /** @class */ (function () {
-    function PostsComponent(service) {
-        this.service = service;
-    }
-    PostsComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.service.getPosts().subscribe(function (response) {
-            _this.posts = response.json();
-        });
-    };
-    PostsComponent.prototype.createPost = function (input) {
-        var _this = this;
-        var post = { title: input.value };
-        input.value = "";
-        this.service.createPosts(post).subscribe(function (response) {
-            post["id"] = response.json().id;
-            _this.posts.splice(0, 0, post);
-        });
-    };
-    PostsComponent.prototype.updatePost = function (post) {
-        //this.http.patch(this.url, JSON.stringify({ isRead: true }))
-        this.service.updatePosts(post).subscribe(function (response) {
-            console.log(response.json());
-        });
-    };
-    PostsComponent.prototype.deletePost = function (post) {
-        var _this = this;
-        this.service.deletePosts(post.id).subscribe(function (response) {
-            var index = _this.posts.indexOf(post);
-            _this.posts.splice(index, 1);
-        });
-    };
-    PostsComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: "posts",
-            template: __webpack_require__(/*! ./posts.component.html */ "./src/app/components/posts/posts.component.html"),
-            styles: [__webpack_require__(/*! ./posts.component.css */ "./src/app/components/posts/posts.component.css")]
-        }),
-        __metadata("design:paramtypes", [_services_post_service__WEBPACK_IMPORTED_MODULE_0__["PostService"]])
-    ], PostsComponent);
-    return PostsComponent;
 }());
 
 
@@ -1624,7 +1909,7 @@ var PostsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n\nlabel{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-family: 'Semi-Bold', sans-serif;\n    font-size : 15px;\n}"
 
 /***/ }),
 
@@ -1635,7 +1920,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Create an account</h2>\n\n<div class=\"col-md-8-col-md-offset-2\">\n    <!-- Registration form -->\n    <form #registerForm=\"ngForm\" (ngSubmit)=\"registerForm.valid && onRegister(registerForm)\">\n        <!-- Firstname input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"firstName\">First Name</label>\n            <input type=\"text\" #firstName=\"ngModel\" [(ngModel)]=\"authService.selectedUser.firstName\" name=\"firstName\" placeholder=\"First Name\"\n                class=\"form-control\" required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !firstName.valid }\">\n            <!-- Display of Validation for firstname input -->\n            <div *ngIf=\"registerForm.submitted && firstName.errors\">\n                <label *ngIf=\"firstName.errors.required\" class=\"validation-message\">First name is required.</label>\n            </div>\n        </div>\n\n        <!-- Lastname input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"lastName\">Last Name</label>\n            <input type=\"text\" #lastName=\"ngModel\" [(ngModel)]=\"authService.selectedUser.lastName\" name=\"lastName\" placeholder=\"Last Name\"\n                class=\"form-control\" required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !lastName.valid }\">\n            <!-- Display of Validation for lastname input -->\n            <div *ngIf=\"registerForm.submitted && lastName.errors\">\n                <label *ngIf=\"lastName.errors.required\" class=\"validation-message\">Last name is required.</label>\n            </div>\n        </div>\n\n        <!-- Email input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"email\">Email</label>\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\n                required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !email.valid }\">\n            <!-- Display of Validation for email input -->\n            <div *ngIf=\"registerForm.submitted && email.errors\">\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n            </div>\n        </div>\n\n        <!-- Password input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\" placeholder=\"Password\"\n                class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !password.valid }\">\n            <!-- Display of Validation for password input -->\n            <div *ngIf=\"registerForm.submitted && password.errors\">\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\n                <label *ngIf=\"password.errors.minlength\" class=\"validation-message\">Password must have at least 4 characters.</label>\n            </div>\n        </div>\n\n        <!-- Gender input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"gender\">Gender</label>\n            <select #gender=\"ngModel\" [(ngModel)]=\"authService.selectedUser.gender\" name=\"gender\" placeholder=\"Gender\" class=\"form-control\"\n                required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !gender.valid }\">\n                <option [ngValue]=\"null\" disabled>Select gender</option>\n                <option *ngFor=\"let gender of genders\" [ngValue]=\"gender\">\n                    {{ gender}}\n                </option>\n            </select>\n            <!-- Display of Validation for lastname input -->\n            <div *ngIf=\"registerForm.submitted && gender.errors\">\n                <label *ngIf=\"gender.errors.required\" class=\"validation-message\">Gender is required.</label>\n            </div>\n        </div>\n\n        <!-- Date of birth input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"dob\">Date of birth</label>\n            <input type=\"date\" #dob=\"ngModel\" [(ngModel)]=\"authService.selectedUser.dob\" name=\"dob\" placeholder=\"Date of Birth\" class=\"form-control\"\n                required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !dob.valid }\">\n            <!-- Display of Validation for lastname input -->\n            <div *ngIf=\"registerForm.submitted && dob.errors\">\n                <label *ngIf=\"dob.errors.required\" class=\"validation-message\">Date of birth is required.</label>\n            </div>\n        </div>\n\n        <button class=\"btn btn-primary\" type=\"submit\">Register</button>\n    </form>\n\n</div>\n\n\n<!-- Success message -->\n<div class=\"success\" *ngIf=\"successMessage\">\n    Registration is completed\n</div>\n\n\n<!-- Error message -->\n<div class=\"alert\" *ngIf=\"errorMessages\">\n    {{errorMessages}}\n</div>"
+module.exports = "<br />\n<br />\n<div class=\"col-md-8-col-md-offset-2\">\n    <!-- Registration form -->\n    <form #registerForm=\"ngForm\" (ngSubmit)=\"registerForm.valid && onRegister(registerForm)\">\n        <!-- Firstname input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"firstName\">First Name</label>\n            <input type=\"text\" #firstName=\"ngModel\" [(ngModel)]=\"authService.selectedUser.firstName\" name=\"firstName\"\n                placeholder=\"First Name\" class=\"form-control\" required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !firstName.valid }\">\n            <!-- Display of Validation for firstname input -->\n            <div *ngIf=\"registerForm.submitted && firstName.errors\">\n                <label *ngIf=\"firstName.errors.required\" class=\"validation-message\">First name is required.</label>\n            </div>\n        </div>\n\n        <!-- Lastname input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"lastName\">Last Name</label>\n            <input type=\"text\" #lastName=\"ngModel\" [(ngModel)]=\"authService.selectedUser.lastName\" name=\"lastName\"\n                placeholder=\"Last Name\" class=\"form-control\" required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !lastName.valid }\">\n            <!-- Display of Validation for lastname input -->\n            <div *ngIf=\"registerForm.submitted && lastName.errors\">\n                <label *ngIf=\"lastName.errors.required\" class=\"validation-message\">Last name is required.</label>\n            </div>\n        </div>\n\n        <!-- Email input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"email\">Email</label>\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\"\n                class=\"form-control\" required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !email.valid }\">\n            <!-- Display of Validation for email input -->\n            <div *ngIf=\"registerForm.submitted && email.errors\">\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n            </div>\n        </div>\n\n        <!-- Password input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\"\n                placeholder=\"Password\" class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !password.valid }\">\n            <!-- Display of Validation for password input -->\n            <div *ngIf=\"registerForm.submitted && password.errors\">\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\n                <label *ngIf=\"password.errors.minlength\" class=\"validation-message\">Password must have at least 4\n                    characters.</label>\n            </div>\n        </div>\n\n        <!-- Gender input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"gender\">Gender</label>\n            <select #gender=\"ngModel\" [(ngModel)]=\"authService.selectedUser.gender\" name=\"gender\" placeholder=\"Gender\"\n                class=\"form-control\" required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !gender.valid }\">\n                <option [ngValue]=\"null\" disabled>Select gender</option>\n                <option *ngFor=\"let gender of genders\" [ngValue]=\"gender\">\n                    {{ gender}}\n                </option>\n            </select>\n            <!-- Display of Validation for lastname input -->\n            <div *ngIf=\"registerForm.submitted && gender.errors\">\n                <label *ngIf=\"gender.errors.required\" class=\"validation-message\">Gender is required.</label>\n            </div>\n        </div>\n\n        <!-- Date of birth input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"dob\">Date of birth</label>\n            <input type=\"date\" #dob=\"ngModel\" [(ngModel)]=\"authService.selectedUser.dob\" name=\"dob\" placeholder=\"Date of Birth\"\n                class=\"form-control\" required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !dob.valid }\">\n            <!-- Display of Validation for lastname input -->\n            <div *ngIf=\"registerForm.submitted && dob.errors\">\n                <label *ngIf=\"dob.errors.required\" class=\"validation-message\">Date of birth is required.</label>\n            </div>\n        </div>\n\n        <button class=\"btn btn-primary\" type=\"submit\">Register</button>\n    </form>\n</div>\n<br />\n\n<!-- Success message -->\n<div class=\"success\" *ngIf=\"successMessage\">\n    <label>Registration is completed</label>\n</div>\n\n<!-- Error message -->\n<div class=\"alert\" *ngIf=\"errorMessages\">\n    <label> {{errorMessages}}</label>\n</div>"
 
 /***/ }),
 
@@ -1732,7 +2017,7 @@ var RegisterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n#movie{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-size: 20px;\n    color: grey;\n}\nspan{\n   font-weight: bolder;\n   font-size: 25px;\n   color: black;\n   font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nh3{\n    text-align: center;\n    color: black;\n    font-family: 'Cormorant SC', sans-serif;\n    font-family: 'Bold', sans-serif;\n}"
 
 /***/ }),
 
@@ -1743,7 +2028,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<input type=\"text\" value={{defaultText}}>\n<button class=\"btn btn-primary\">{{buttonName}}</button>"
+module.exports = "<br />\n<br />\n<div id=\"searchBar\">\n    <form [formGroup]=\"form\">\n        <div class=\"input-group\">\n            <input formControlName=\"movieName\" type=\"text\" placeholder=\"please search here\" class=\"form-control\">\n            <div class=\"input-group-append\">\n                <button class=\"btn btn-outline-secondary\" type=\"submit\" [disabled]=\"!form.valid\" (click)=\"onSubmit()\">search</button>\n            </div>\n        </div>\n        <br />\n        <div *ngIf=\"movieName.invalid\">\n            <div *ngIf=\"movieName.errors.minlength\">Name requires at least\n                {{movieName.errors.minlength.requiredLength}}\n                charaters.\n            </div>\n            <div *ngIf=\"movieName.errors.maxlength\">Name requires at most\n                {{movieName.errors.maxlength.requiredLength}}\n                charaters.\n            </div>\n        </div>\n    </form>\n</div>\n<div>\n    <div *ngFor=\"let property of movieResult\" id=\"movie\">\n        <br />\n        <br />\n        <h3>{{property.name}}</h3>\n        <br />\n        <br />\n        <br />\n        <label> <span>Sessions: </span></label>\n        <div *ngFor=\"let showtime of property.showTime\" class=\"list-group-item list-group-item-action list-group-item-light\"\n            [routerLink]=\"['../search', showtime,property._id]\">{{showtime\n            | date:'short'}}<br /></div>\n        <br />\n\n        <label><span>Running time: </span>{{property.runningTime}}</label>\n        <br />\n        <br />\n        <label><span>Director: </span>{{property.director}}</label>\n        <br />\n        <br />\n        <label><span>Cast: </span>{{property.stars}}</label>\n        <br />\n        <br />\n        <label><span>Story: </span> {{property.storyline}}</label>\n        <br />\n        <br />\n        <label><span>Genre: </span>{{property.genres}}</label>\n        <br />\n        <br />\n        <label><span>Status: </span>{{property.status}}</label>\n        <br />\n        <br />\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1757,7 +2042,9 @@ module.exports = "<input type=\"text\" value={{defaultText}}>\n<button class=\"b
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchBarComponent", function() { return SearchBarComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_movies_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../services/movies.service */ "./src/app/services/movies.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1768,19 +2055,60 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var SearchBarComponent = /** @class */ (function () {
-    function SearchBarComponent() {
-        this.defaultText = "Plese enter here";
-        this.buttonName = "Search";
+    function SearchBarComponent(service) {
+        this.service = service;
+        this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
+            'movieName': new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].minLength(2), _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].maxLength(60)])
+        });
     }
     SearchBarComponent.prototype.ngOnInit = function () { };
+    Object.defineProperty(SearchBarComponent.prototype, "movieName", {
+        get: function () {
+            return this.form.get('movieName');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    SearchBarComponent.prototype.onSubmit = function () {
+        var _this = this;
+        console.log(this.form.value);
+        this.service.getMovies().subscribe(function (response) {
+            _this.movies = response.json();
+            console.log(_this.movies);
+            //find every movie in the database for matching user input
+            for (var _i = 0, _a = _this.movies; _i < _a.length; _i++) {
+                var movie = _a[_i];
+                console.log(movie.name);
+                //if words match, get the sepecific movie from database
+                if (_this.CompareWithWords(movie.name, _this.form.value.movieName)) {
+                    //get the object id of the matched movie
+                    _this.searchResultId = movie._id;
+                    console.log(_this.searchResultId);
+                    _this.service.getMoviesById(_this.searchResultId).subscribe(function (response) {
+                        _this.movieResult = response.json();
+                        console.log('i got the movie!', _this.movieResult);
+                    });
+                }
+            }
+        });
+    };
+    //method for verifying if two words match without whitespace
+    SearchBarComponent.prototype.CompareWithWords = function (firstWord, secondWord) {
+        //remove all the whitespace of strings
+        var firstResult = firstWord.toString().toLowerCase().trim().replace(/ /g, '');
+        var secondResult = secondWord.toString().toLowerCase().trim().replace(/ /g, '');
+        return firstResult === secondResult ? true : false;
+    };
     SearchBarComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: "search-bar",
             template: __webpack_require__(/*! ./search-bar.component.html */ "./src/app/components/search-bar/search-bar.component.html"),
             styles: [__webpack_require__(/*! ./search-bar.component.css */ "./src/app/components/search-bar/search-bar.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_movies_service__WEBPACK_IMPORTED_MODULE_0__["MoviesService"]])
     ], SearchBarComponent);
     return SearchBarComponent;
 }());
@@ -1796,7 +2124,7 @@ var SearchBarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n#userProfile{\n    font-family: 'Source Sans Pro', sans-serif;\n}\nh2{\n    font-family: 'Cormorant SC', sans-serif;\n    font-family: 'Bold', sans-serif;\n}\nspan{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-family: 'Semi-Bold', sans-serif;\n}"
 
 /***/ }),
 
@@ -1807,7 +2135,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table *ngIf=\"userDetails\">\n\n  <h2>User Profile</h2>\n\n  <div>\n    <p>First Name: {{userDetails.firstName}}</p>\n    <p>Last Name: {{userDetails.lastName}}</p>\n    <p>Email: {{userDetails.email}}</p>\n    <p>Gender: {{userDetails.gender}}</p>\n    <p>Date of birth: {{userDetails.dob}}</p>\n  </div>\n\n\n\n\n  <button (click)=\"onLogout()\">Logout</button>"
+module.exports = "<table *ngIf=\"userDetails\">\n\n  <h2>User Profile</h2>\n\n  <div id=\"userProfile\">\n    <p><span>First Name: </span>{{userDetails.firstName}}</p>\n    <p><span>Last Name: </span>{{userDetails.lastName}}</p>\n    <p><span>Email: </span>{{userDetails.email}}</p>\n    <p><span>Gender: </span>{{userDetails.gender}}</p>\n    <p><span>Date of birth: </span> {{userDetails.dob}}</p>\n  </div>\n\n\n\n\n  <button (click)=\"onLogout()\">Logout</button>"
 
 /***/ }),
 
@@ -1962,100 +2290,18 @@ var AuthenticationService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/services/coming-soon-movies.service.ts":
-/*!********************************************************!*\
-  !*** ./src/app/services/coming-soon-movies.service.ts ***!
-  \********************************************************/
-/*! exports provided: ComingSoonMoviesService */
+/***/ "./src/app/services/movies.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/services/movies.service.ts ***!
+  \********************************************/
+/*! exports provided: MoviesService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComingSoonMoviesService", function() { return ComingSoonMoviesService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MoviesService", function() { return MoviesService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var ComingSoonMoviesService = /** @class */ (function () {
-    function ComingSoonMoviesService() {
-    }
-    ComingSoonMoviesService.prototype.getUpcomingMovies = function () {
-        return [
-            "The Lord of Ring",
-            "Notting Hill",
-            "Harry Potter",
-            "American Hustles"
-        ];
-    };
-    ComingSoonMoviesService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
-            providedIn: "root"
-        })
-    ], ComingSoonMoviesService);
-    return ComingSoonMoviesService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/services/now-showing-movies.service.ts":
-/*!********************************************************!*\
-  !*** ./src/app/services/now-showing-movies.service.ts ***!
-  \********************************************************/
-/*! exports provided: NowShowingMoviesService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NowShowingMoviesService", function() { return NowShowingMoviesService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var NowShowingMoviesService = /** @class */ (function () {
-    function NowShowingMoviesService() {
-    }
-    NowShowingMoviesService.prototype.getShowingMovies = function () {
-        return [
-            "Good Will Hunting",
-            "Forest Gump",
-            "Catch Me If You Can",
-            "Terminal"
-        ];
-    };
-    NowShowingMoviesService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
-            providedIn: "root"
-        })
-    ], NowShowingMoviesService);
-    return NowShowingMoviesService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/services/post.service.ts":
-/*!******************************************!*\
-  !*** ./src/app/services/post.service.ts ***!
-  \******************************************/
-/*! exports provided: PostService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostService", function() { return PostService; });
-/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2067,33 +2313,34 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-var PostService = /** @class */ (function () {
-    function PostService(http) {
+var MoviesService = /** @class */ (function () {
+    function MoviesService(http) {
         this.http = http;
         this.url = 'http://localhost:3000/api/movies';
     }
-    PostService.prototype.getPosts = function () {
+    MoviesService.prototype.getMovies = function () {
         return this.http.get(this.url);
     };
-    PostService.prototype.getPostsById = function (_id) {
+    MoviesService.prototype.getMoviesById = function (_id) {
         return this.http.get(this.url + '/' + _id);
     };
-    PostService.prototype.createPosts = function (post) {
-        return this.http.post(this.url, JSON.stringify(post));
+    MoviesService.prototype.createMovies = function (movie) {
+        return this.http.post(this.url, movie);
     };
-    PostService.prototype.updatePosts = function (post) {
-        return this.http.put(this.url + '/' + post.id, JSON.stringify(post));
+    MoviesService.prototype.updateMovies = function (movie) {
+        console.log("in service put", movie);
+        return this.http.put(this.url + '/' + movie._id, movie);
     };
-    PostService.prototype.deletePosts = function (_id) {
+    MoviesService.prototype.deleteMovies = function (_id) {
         return this.http.delete(this.url + '/' + _id);
     };
-    PostService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+    MoviesService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_0__["Http"]])
-    ], PostService);
-    return PostService;
+        __metadata("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"]])
+    ], MoviesService);
+    return MoviesService;
 }());
 
 
