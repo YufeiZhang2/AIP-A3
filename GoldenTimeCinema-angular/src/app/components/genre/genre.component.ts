@@ -27,7 +27,7 @@ export class GenreComponent implements OnInit {
       this.movies = response.json()
         .filter(movies => {
           for (let genre of movies.genres)
-            if (genre === inputValue) return movies;
+            if (genre.toLowerCase() === inputValue.toLowerCase()) return movies;
         });
       console.log("movies retrived by genres", this.movies);
     })
