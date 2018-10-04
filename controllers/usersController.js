@@ -1,3 +1,9 @@
+const express = require("express");
+const router = express.Router();
+
+const userController = require("../controllers/usersController");
+const jwtHelper = require("../config/jwtHelper");
+
 const mongoose = require("mongoose");
 const passport = require("passport");
 const _ = require("lodash");
@@ -47,3 +53,13 @@ module.exports.userProfile = (req, res, next) => {
       });
   });
 };
+
+router.post("/register", userController.register);
+router.post("/authenticate", userController.authenticate);
+router.get(
+  "/userProfile",
+  jwtHelper.verifyJwtToken,
+  userController.userProfile
+);
+
+module.exports = router;

@@ -2,7 +2,6 @@ require("./models/userModel");
 require("./config/passportConfig");
 require("./config/config");
 
-const routesApp = require("./routes/appRouter");
 const passport = require("passport");
 const express = require("express");
 const path = require("path");
@@ -10,6 +9,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const dbConfig = require("./config/cinemaDb");
 const moviesController = require("./controllers/moviesController");
+const usersController = require("./controllers/usersController");
 
 // Connect mongoose to our database
 mongoose
@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // Set api routes
 app.use("/api/movies", moviesController);
 app.use("/api/movies/:_id", moviesController);
-app.use("/api", routesApp);
+app.use("/api", usersController);
 
 // Handle errors for validation
 app.use((err, req, res, next) => {
