@@ -10,7 +10,7 @@ const movieModel = mongoose.model(
   "movie",
   new mongoose.Schema({
     name: { type: String, minlength: 1, maxlength: 100, unique: true, required: true },
-    showTime: { type: [Date], required: true },
+    showtime: { type: [Date], required: true },
     runningTime: { type: Number, min: 1, max: 500, required: true },
     genres: { type: [String], minlength: 3, maxlength: 30, required: true },
     director: { type: String, minlength: 3, maxlength: 50, required: true },
@@ -26,7 +26,7 @@ async function createMovies() {
 
   const forrestGump = new movieModel({
     name: "Forest Gump",
-    showTime: ["2018-08-25T12:00:00", "2018-08-25T16:00:00", "2018-08-25T21:00:00", "2018-08-26T10:00:00", "2018-08-26T17:00:00", "2018-08-27T20:00:00"],
+    showtime: ["2018-08-25T12:00:00", "2018-08-25T16:00:00", "2018-08-25T21:00:00", "2018-08-26T10:00:00", "2018-08-26T17:00:00", "2018-08-27T20:00:00"],
     runningTime: 142,
     director: "Robert Zemeckis",
     genres: ["dramas", "comedies"],
@@ -38,7 +38,7 @@ async function createMovies() {
 
   const theLordOfRings = new movieModel({
     name: "The Lord of Rings",
-    showTime: [new Date("2018-08-25T10:00:00"), new Date("2018-08-25T14:00:00"), new Date("2018-08-25T20:00:00"),
+    showtime: [new Date("2018-08-25T10:00:00"), new Date("2018-08-25T14:00:00"), new Date("2018-08-25T20:00:00"),
     new Date("2018-08-26T10:00:00"), new Date("2018-08-26T17:00:00"), new Date("2018-08-27T20:00:00")],
     runningTime: 180,
     director: "Peter Jackson",
@@ -51,7 +51,7 @@ async function createMovies() {
 
   const theMatrix = new movieModel({
     name: "The Matrix",
-    showTime: [new Date("2018-09-25T10:00:00"), new Date("2018-09-25T14:00:00"), new Date("2018-09-25T20:00:00"),
+    showtime: [new Date("2018-09-25T10:00:00"), new Date("2018-09-25T14:00:00"), new Date("2018-09-25T20:00:00"),
     new Date("2018-09-26T10:00:00"), new Date("2018-09-26T17:00:00"), new Date("2018-09-27T20:00:00")],
     runningTime: 180,
     director: "The Wachowski Brothers",

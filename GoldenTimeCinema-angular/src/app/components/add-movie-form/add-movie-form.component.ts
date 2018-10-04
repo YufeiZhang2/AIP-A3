@@ -1,3 +1,5 @@
+import { MovieInfoValidators } from './../common/validators/movie.name.validators';
+import { FormArrayValidators } from '../common/validators/formArray.validators';
 import { MoviesService } from './../../services/movies.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from "@angular/core";
@@ -9,26 +11,17 @@ import { FormGroup, FormControl, FormArray, Validators, ReactiveFormsModule } fr
   styleUrls: ["./add-movie-form.component.css"]
 })
 export class AddMovieFormComponent implements OnInit {
-  // form = new FormGroup({
-  //   'name': new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(60)]),
-  //   'runningTime': new FormControl('', [Validators.required, Validators.min(1), Validators.max(500)]),
-  //   'director': new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(50)]),
-  //   'stars': new FormArray([], { validators: [Validators.required, Validators.minLength(2), Validators.maxLength(50)] }),
-  //   'storyline': new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(1000)]),
-  //   'showtime': new FormArray([], { validators: Validators.required }),
-  //   'genres': new FormArray([], { validators: [Validators.required, Validators.minLength(3), Validators.maxLength(30)] }),
-  //   'status': new FormControl('', Validators.required)
-  // });
 
   form = new FormGroup({
-    'name': new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(60)]),
-    'runningTime': new FormControl('', [Validators.required, Validators.min(1), Validators.max(500)]),
-    'director': new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(50)]),
-    'stars': new FormArray([]),
-    'storyline': new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(1000)]),
-    'showtime': new FormArray([]),
-    'genres': new FormArray([]),
-    'price': new FormControl('', [Validators.required, Validators.min(1), Validators.max(10000)]),
+    'name': new FormControl('',
+      Validators.compose([Validators.required, Validators.minLength(1), Validators.maxLength(60)]), MovieInfoValidators.shouldBeUnique(this.service)),
+    'runningTime': new FormControl('', Validators.compose([Validators.required, Validators.min(1), Validators.max(500)])),
+    'director': new FormControl('', Validators.compose([Validators.required, Validators.minLength(1), Validators.maxLength(50)])),
+    'stars': new FormArray([], FormArrayValidators.cannotBeNull),
+    'storyline': new FormControl('', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(1000)])),
+    'showtime': new FormArray([], FormArrayValidators.cannotBeNull),
+    'genres': new FormArray([], FormArrayValidators.cannotBeNull),
+    'price': new FormControl('', Validators.compose([Validators.required, Validators.min(1), Validators.max(10000)])),
     'status': new FormControl('', Validators.required)
   });
 
@@ -73,7 +66,9 @@ export class AddMovieFormComponent implements OnInit {
 
   constructor(private router: Router, private service: MoviesService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+
+  }
 
 
   //add star name in the stars array

@@ -61,11 +61,12 @@ router.post("/", async (req, res) => {
   try {
     const Newmovie = new movieModel({
       name: req.body.name,
-      showTime: req.body.showtime,
+      showtime: req.body.showtime,
       runningTime: req.body.runningTime,
       director: req.body.director,
       genres: req.body.genres,
       stars: req.body.stars,
+      price: req.body.price,
       storyline: req.body.storyline,
       status: req.body.status
 

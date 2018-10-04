@@ -19,29 +19,55 @@
     <label><span>Session time: </span>
       <br />
       <br />
-      <div *ngFor="let showTime of movie.showTime">{{showTime | date:'short'}}<br /></div>
+      <div *ngFor="let showtime of movie.showtime">{{showtime | date:'short'}}<br /></div>
     </label>
     <br />
     <br />
-    <label><span>Running time: </span> {{movie.runningTime}}</label>
+    <label><span>Running time:</span>
+      <br />
+      <br />
+      {{movie.runningTime}} </label>
     <br />
     <br />
-    <label><span>Director: </span>{{movie.director}}</label>
+    <label><span>Director: </span>
+      <br />
+      <br />
+      {{movie.director|uppercase}}</label>
     <br />
     <br />
-    <label><span>Cast: </span>{{movie.stars}}</label>
+    <span>Cast: </span>
     <br />
     <br />
-    <label><span>Storyline: </span> {{movie.storyline}}</label>
+    <div *ngFor="let star of movie.stars">
+      <label>{{star|uppercase}}</label>
+      <br />
+    </div>
+    <br />
+    <label><span>Storyline:</span>
+      <br />
+      <br />
+      {{movie.storyline}}</label>
     <br />
     <br />
-    <label><span>Genre: </span>{{movie.genres}}</label>
+    <span>Genre: </span>
     <br />
     <br />
-    <label><span>Price: </span> {{movie.price | currency:'AUD':true:'1.2-2'}} </label>
+    <div *ngFor="let genre of movie.genres">
+      <label>{{genre|uppercase}}</label>
+      <br />
+    </div>
     <br />
     <br />
-    <label><span>Status: </span>{{movie.status}}</label>
+    <label><span>Price: </span>
+      <br />
+      <br />
+      {{movie.price | currency:'AUD':true:'1.2-2'}} </label>
+    <br />
+    <br />
+    <label><span>Status:
+        <br />
+        <br />
+      </span>{{movie.status|uppercase}}</label>
     <br />
     <br />
   </div>
