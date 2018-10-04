@@ -5,27 +5,31 @@
   <br />
   <br />
   <br />
-  <label> <span>Sessions: </span></label>
+  <label>
+    <span>Sessions: </span>
+  </label>
   <br />
-  <div *ngFor="let showtime of property.showtime" class="list-group-item list-group-item-action list-group-item-light"
-    [routerLink]="['../genre', showtime,property._id]">{{showtime | date:'short'}}<br />
+  <div *ngFor="let showtime of property.showtime" class="list-group-item list-group-item-action list-group-item-light" [routerLink]="['../', showtime,property._id]">{{showtime | date:'short'}}
+    <br />
   </div>
   <br />
-  <label><span>Running time: </span>
+  <label>
+    <span>Running time: </span>
     <br />
-    <br />
-    {{property.runningTime}} mins
+    <br /> {{property.runningTime}} mins
   </label>
   <br />
   <br />
-  <label><span>Director: </span>
+  <label>
+    <span>Director: </span>
     <br />
-    <br />
-    {{property.director | uppercase}}
+    <br /> {{property.director | uppercase}}
   </label>
   <br />
   <br />
-  <label><span>Cast:</span></label>
+  <label>
+    <span>Cast:</span>
+  </label>
   <br />
   <div *ngFor="let star of property.stars">
     {{star|uppercase}}
@@ -33,23 +37,25 @@
   </div>
   <br />
   <br />
-  <label><span>Story: </span>
+  <label>
+    <span>Story: </span>
     <br />
-    <br />
-    {{property.storyline}}
+    <br /> {{property.storyline}}
   </label>
   <br />
   <br />
-  <label><span>Genre:</span></label>
+  <label>
+    <span>Genre:</span>
+  </label>
   <div *ngFor="let genre of property.genres">
     {{genre|uppercase}}
   </div>
   <br />
   <br />
-  <label><span>Status: </span>
+  <label>
+    <span>Status: </span>
     <br />
-    <br />
-    {{property.status | uppercase}}
+    <br /> {{property.status | uppercase}}
   </label>
   <br />
   <br />
