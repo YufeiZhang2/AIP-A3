@@ -13,6 +13,7 @@ export class BookMoviesComponent implements OnInit {
   movie: any[];
   bookingTime;
   flag: boolean = false;
+  emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   constructor(
     private route: ActivatedRoute,
@@ -46,8 +47,8 @@ export class BookMoviesComponent implements OnInit {
     this.router.navigate(["/home"]);
   }
 
-  sendEmail(form: NgForm) {
-    this.msgService.sendMessage().subscribe(response => {
+  onBook(form: NgForm) {
+    this.msgService.sendMessage(form.value).subscribe(response => {
       console.log(response.json());
     });
     //this.router.navigate(["/home"]);

@@ -6,9 +6,11 @@ import { Http } from "@angular/http";
   providedIn: "root"
 })
 export class MessagesService {
+  email = "";
+
   constructor(private http: Http) {}
 
-  sendMessage() {
-    return this.http.post(environment.apiBaseUrl + "/sendemail", "");
+  sendMessage(email) {
+    return this.http.post(environment.apiBaseUrl + "/sendemail", email);
   }
 }

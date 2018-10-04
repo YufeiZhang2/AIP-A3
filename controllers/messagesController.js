@@ -22,7 +22,7 @@ router.post("/sendemail", (req, res) => {
   });
 
   let messageTemplate = {
-    to: "crysbui.depon@gmail.com",
+    to: req.body.email,
     subject: "Test subject", //req.body.subject,
     text: "Test message"
     //html: req.body.content
