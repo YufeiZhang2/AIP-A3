@@ -10,12 +10,15 @@
   <h3>{{property.name}}</h3>
   <br />
 
-  <label> <span>Sessions: </span></label>
-  <div>{{bookingTime
-    |
-    date:'short'}}<br /></div>
+  <label>
+    <span>Sessions: </span>
+  </label>
+  <div>{{bookingTime | date:'short'}}
+    <br />
+  </div>
   <br />
-  <label><span>Price: </span>{{property.price | currency:'AUD':true:'1.2-2'}}</label>
+  <label>
+    <span>Price: </span>{{property.price | currency:'AUD':true:'1.2-2'}}</label>
   <br />
   <br />
 </div>
@@ -27,8 +30,9 @@
 </div>
 <div *ngIf="flag" id="movie">
   <form id="form">
-    <label>Please enter your email: </label><input id="email" type="text" class="form-control">
+    <label>Please enter your email: </label>
+    <input id="email" type="text" class="form-control">
     <br />
-    <button class="btn btn-primary" type="submit">Confirm booking</button>
+    <button class="btn btn-primary" type="submit" (click)="sendEmail()">Confirm booking</button>
   </form>
 </div>

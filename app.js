@@ -10,6 +10,7 @@ const mongoose = require("mongoose");
 const dbConfig = require("./config/cinemaDb");
 const moviesController = require("./controllers/moviesController");
 const usersController = require("./controllers/usersController");
+const messagesController = require("./controllers/messagesController");
 
 // Connect mongoose to our database
 mongoose
@@ -36,6 +37,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/api/movies", moviesController);
 app.use("/api/movies/:_id", moviesController);
 app.use("/api", usersController);
+app.use("/api", messagesController);
 
 // Handle errors for validation
 app.use((err, req, res, next) => {

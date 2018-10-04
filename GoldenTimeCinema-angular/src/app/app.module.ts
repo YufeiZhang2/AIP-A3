@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 // Built-in imports
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -25,13 +25,14 @@ import { EditMovieFormComponent } from "./components/edit-movie-form/edit-movie-
 import { MovieComponent } from "./components/movie/movie.component";
 import { AuthenticationComponent } from "./components/auth/authentication.component";
 import { LogoutComponent } from "./components/auth/logout.component";
-import { AdminComponent } from './components/admin/admin.component';
-import { MessageComponent } from './components/message/message.component';
-import { BookMoviesComponent } from './components/book-movies/book-movies.component';
+import { AdminComponent } from "./components/admin/admin.component";
+import { MessageComponent } from "./components/message/message.component";
+import { BookMoviesComponent } from "./components/book-movies/book-movies.component";
 
 // Service imports
 import { AuthenticationService } from "./services/authentication.service";
-import { MoviesService } from './services/movies.service';
+import { MoviesService } from "./services/movies.service";
+import { MessagesService } from "./services/messages.service";
 
 // Route imports
 import { RoutingModule } from "./app.routing";
@@ -40,10 +41,7 @@ import { UserProfileComponent } from "./components/user-profile/user-profile.com
 // Other imports
 import { AuthGuard } from "./components/auth/auth.guard";
 import { AuthInterceptor } from "./components/auth/auth.interceptor";
-import { MyDatePickerModule } from 'mydatepicker';
-
-
-
+import { MyDatePickerModule } from "mydatepicker";
 
 @NgModule({
   declarations: [
@@ -87,8 +85,9 @@ import { MyDatePickerModule } from 'mydatepicker';
     },
     AuthenticationService,
     AuthGuard,
-    MoviesService
+    MoviesService,
+    MessagesService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
