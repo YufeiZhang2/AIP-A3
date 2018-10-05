@@ -49,7 +49,14 @@ module.exports.userProfile = (req, res, next) => {
     else
       return res.status(200).json({
         status: true,
-        user: _.pick(user, ["firstName", "lastName", "email", "gender", "dob"])
+        user: _.pick(user, [
+          "firstName",
+          "lastName",
+          "email",
+          "gender",
+          "dob",
+          "isAdmin"
+        ])
       });
   });
 };

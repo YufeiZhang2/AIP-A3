@@ -29,6 +29,10 @@ var userSchema = new mongoose.Schema({
     type: Date,
     required: "Date of birth is required"
   },
+  isAdmin: {
+    type: Boolean,
+    default: false
+  },
   saltSecret: String
 });
 

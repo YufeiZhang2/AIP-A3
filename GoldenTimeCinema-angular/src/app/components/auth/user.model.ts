@@ -5,4 +5,5 @@ export class User {
   password: string;
   gender: string;
   dob: Date;
+  isAdmin: boolean;
 }

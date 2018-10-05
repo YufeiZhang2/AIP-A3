@@ -54,7 +54,8 @@ export class RegisterComponent implements OnInit {
       email: "",
       password: "",
       gender: "",
-      dob: null
+      dob: null,
+      isAdmin: false
     };
     form.resetForm();
     this.errorMessages = "";

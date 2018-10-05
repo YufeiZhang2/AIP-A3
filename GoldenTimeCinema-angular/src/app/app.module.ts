@@ -23,8 +23,6 @@ import { LoginComponent } from "./components/login/login.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { EditMovieFormComponent } from "./components/edit-movie-form/edit-movie-form.component";
 import { MovieComponent } from "./components/movie/movie.component";
-import { AuthenticationComponent } from "./components/auth/authentication.component";
-import { LogoutComponent } from "./components/auth/logout.component";
 import { AdminComponent } from "./components/admin/admin.component";
 import { MessageComponent } from "./components/message/message.component";
 import { BookMoviesComponent } from "./components/book-movies/book-movies.component";
@@ -40,6 +38,7 @@ import { RoutingModule } from "./app.routing";
 
 // Other imports
 import { AuthGuard } from "./components/auth/auth.guard";
+import { AdminGuard } from "./components/auth/admin.guard";
 import { AuthInterceptor } from "./components/auth/auth.interceptor";
 import { MyDatePickerModule } from "mydatepicker";
 
@@ -61,8 +60,6 @@ import { MyDatePickerModule } from "mydatepicker";
     RegisterComponent,
     EditMovieFormComponent,
     MovieComponent,
-    AuthenticationComponent,
-    LogoutComponent,
     UserProfileComponent,
     AdminComponent,
     MessageComponent,
@@ -85,6 +82,7 @@ import { MyDatePickerModule } from "mydatepicker";
     },
     AuthenticationService,
     AuthGuard,
+    AdminGuard,
     MoviesService,
     BookMovieService
   ],

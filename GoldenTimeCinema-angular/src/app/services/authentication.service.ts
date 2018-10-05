@@ -15,8 +15,11 @@ export class AuthenticationService {
     email: "",
     password: "",
     gender: "",
-    dob: null
+    dob: null,
+    isAdmin: false
   };
+
+  role;
 
   noAuthHeader = { headers: new HttpHeaders({ NoAuth: "True" }) };
 
@@ -43,6 +46,10 @@ export class AuthenticationService {
   // need jwt in the header
   getUserProfile() {
     return this.http.get(environment.apiBaseUrl + "/userprofile");
+  }
+
+  getAdmin() {
+    return this.http.get(environment.apiBaseUrl + "/isAdmin");
   }
 
   //Helper Methods
@@ -76,5 +83,15 @@ export class AuthenticationService {
     // check if jwt expiration time is over or not
     if (userPayload) return userPayload.exp > Date.now() / 1000;
     else return false;
+  }
+
+  isAdmin() {
+    this.getUserProfile().subscribe(res => {
+      this.role = res["user"].isAdmin;
+      console.log("service level: admin " + this.role);
+
+      return this.role;
+    });
+    return this.role;
   }
 }

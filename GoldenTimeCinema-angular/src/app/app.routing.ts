@@ -1,8 +1,8 @@
-import { BookMoviesComponent } from './components/book-movies/book-movies.component';
-import { SearchBarComponent } from './components/search-bar/search-bar.component';
-import { MessageComponent } from './components/message/message.component';
-import { AdminComponent } from './components/admin/admin.component';
-import { MovieComponent } from './components/movie/movie.component';
+import { BookMoviesComponent } from "./components/book-movies/book-movies.component";
+import { SearchBarComponent } from "./components/search-bar/search-bar.component";
+import { MessageComponent } from "./components/message/message.component";
+import { AdminComponent } from "./components/admin/admin.component";
+import { MovieComponent } from "./components/movie/movie.component";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { GenreComponent } from "./components/genre/genre.component";
@@ -15,6 +15,7 @@ import { EditMovieFormComponent } from "./components/edit-movie-form/edit-movie-
 import { LoginComponent } from "./components/login/login.component";
 import { UserProfileComponent } from "./components/user-profile/user-profile.component";
 import { AuthGuard } from "./components/auth/auth.guard";
+import { AdminGuard } from "./components/auth/admin.guard";
 
 const routes: Routes = [
   {
@@ -31,7 +32,8 @@ const routes: Routes = [
   },
   {
     path: "admin",
-    component: AdminComponent
+    component: AdminComponent,
+    canActivate: [AdminGuard]
   },
   {
     path: "companyInformation",
@@ -39,7 +41,8 @@ const routes: Routes = [
   },
   {
     path: "addMovieForm",
-    component: AddMovieFormComponent
+    component: AddMovieFormComponent,
+    canActivate: [AdminGuard]
   },
   {
     path: "login",
@@ -56,7 +59,8 @@ const routes: Routes = [
   },
   {
     path: "editMovieForm",
-    component: EditMovieFormComponent
+    component: EditMovieFormComponent,
+    canActivate: [AdminGuard]
   },
   {
     path: "movie/:_id",
@@ -92,4 +96,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class RoutingModule { }
+export class RoutingModule {}
