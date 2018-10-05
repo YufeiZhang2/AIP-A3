@@ -24,6 +24,10 @@ export class UserProfileComponent implements OnInit {
     );
   }
 
+  // getUserProfile() {
+  //   return this.http.get(environment.apiBaseUrl + "/userprofile");
+  // }
+
   // Method to logout: delete token and redirect user to login page
   onLogout() {
     this.authService.deleteToken();

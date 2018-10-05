@@ -11,7 +11,10 @@ import { NgForm } from "@angular/forms";
 })
 export class BookMoviesComponent implements OnInit {
   movie: any[];
+  movieId;
+  movieName;
   bookingTime;
+  email;
   flag: boolean = false;
   emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -28,10 +31,13 @@ export class BookMoviesComponent implements OnInit {
       console.log(this.bookingTime);
 
       let _id = params.get("_id");
+      this.movieId = _id;
       console.log(_id);
 
       this.movieService.getMoviesById(_id).subscribe(response => {
         this.movie = response.json().filter(movie => {
+          this.movieName = movie.name;
+          console.log(this.movieName);
           if (movie.status === "nowShowing") {
             console.log("flag before:", this.flag);
             this.flag = true;
@@ -48,9 +54,18 @@ export class BookMoviesComponent implements OnInit {
   }
 
   onBook(form: NgForm) {
-    this.msgService.sendMessage(form.value).subscribe(response => {
+    let bookingValue = {
+      movieName: this.movieName,
+      session: this.bookingTime,
+      price: 0,
+      email: form.value.email
+    };
+    this.msgService.bookMovie(bookingValue).subscribe(response => {
       console.log(response.json());
     });
+    // this.msgService.sendMessage(bookingValue).subscribe(response => {
+    //   console.log(response.json());
+    // });
     //this.router.navigate(["/home"]);
   }
 }

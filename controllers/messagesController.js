@@ -1,10 +1,28 @@
 const express = require("express");
+const mongoose = require("mongoose");
+
 const router = express.Router();
+const msgController = require("../controllers/messagesController");
 
 const nodeMailer = require("nodemailer");
 const clientSecret = require("./client_secret");
 
-router.post("/sendemail", (req, res) => {
+const Booking = mongoose.model("booking");
+
+module.exports.saveTicket = (req, res, next) => {
+  var ticket = new Booking();
+  ticket.email = req.body.email;
+  ticket.movieName = req.body.movieName;
+  ticket.session = req.body.session;
+  ticket.price = req.body.price;
+  ticket.save((err, doc) => {
+    if (!err) res.send(doc);
+    else {
+      console.log(err);
+      return next(err);
+    }
+  });
+
   let transporter = nodeMailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -22,8 +40,10 @@ router.post("/sendemail", (req, res) => {
   });
 
   let messageTemplate = {
-    to: req.body.email,
-    subject: "Test subject", //req.body.subject,
+    from: "Golden Time Cinema <crysbui.depon@gmail.com>",
+    to: ticket.email,
+    subject:
+      "Your booking confirmation for " + ticket.session + ticket.movieName, //req.body.subject,
     text: "Test message"
     //html: req.body.content
   };
@@ -32,14 +52,12 @@ router.post("/sendemail", (req, res) => {
   transporter.sendMail(messageTemplate, function(err, info) {
     if (err) {
       transporter.close();
-
       return res.json({
         status: "error",
-        msg: "Email sending failure"
+        msg: err
       });
     } else {
       transporter.close();
-
       console.log("Message %s sent: %s", info.messageId, info.response);
       return res.json({
         status: "ok",
@@ -47,6 +65,10 @@ router.post("/sendemail", (req, res) => {
       });
     }
   });
-});
+};
+
+// router.post("/sendemail", (req, res) => {});
+
+router.post("/book", msgController.saveTicket);
 
 module.exports = router;

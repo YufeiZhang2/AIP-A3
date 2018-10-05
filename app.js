@@ -1,4 +1,5 @@
 require("./models/userModel");
+require("./models/bookingModel");
 require("./config/passportConfig");
 require("./config/config");
 

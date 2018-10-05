@@ -28,6 +28,7 @@ import { LogoutComponent } from "./components/auth/logout.component";
 import { AdminComponent } from "./components/admin/admin.component";
 import { MessageComponent } from "./components/message/message.component";
 import { BookMoviesComponent } from "./components/book-movies/book-movies.component";
+import { UserProfileComponent } from "./components/user-profile/user-profile.component";
 
 // Service imports
 import { AuthenticationService } from "./services/authentication.service";
@@ -36,7 +37,6 @@ import { MessagesService } from "./services/messages.service";
 
 // Route imports
 import { RoutingModule } from "./app.routing";
-import { UserProfileComponent } from "./components/user-profile/user-profile.component";
 
 // Other imports
 import { AuthGuard } from "./components/auth/auth.guard";
