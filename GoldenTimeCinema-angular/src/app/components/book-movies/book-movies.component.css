@@ -35,6 +35,13 @@ label {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+label.success {
+  padding: 20px;
+  color: #249424;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
 button {
   font-family: "Source Sans Pro", sans-serif;
   width: 5cm;

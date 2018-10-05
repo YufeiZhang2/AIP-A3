@@ -3,11 +3,16 @@
   <h2>User Profile</h2>
 
   <div id="userProfile">
-    <p><span>First Name: </span>{{userDetails.firstName}}</p>
-    <p><span>Last Name: </span>{{userDetails.lastName}}</p>
-    <p><span>Email: </span>{{userDetails.email}}</p>
-    <p><span>Gender: </span>{{userDetails.gender}}</p>
-    <p><span>Date of birth: </span> {{userDetails.dob}}</p>
+    <p>
+      <span>First Name: </span>{{userDetails.firstName}}</p>
+    <p>
+      <span>Last Name: </span>{{userDetails.lastName}}</p>
+    <p>
+      <span>Email: </span>{{userDetails.email}}</p>
+    <p>
+      <span>Gender: </span>{{userDetails.gender}}</p>
+    <p>
+      <span>Date of birth: </span> {{userDetails.dob | date: 'longDate'}}</p>
   </div>
 
 

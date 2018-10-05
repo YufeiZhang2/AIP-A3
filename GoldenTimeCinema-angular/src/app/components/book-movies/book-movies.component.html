@@ -32,7 +32,7 @@
   <div *ngIf="flag" id="movie">
     <form #bookingForm="ngForm" (ngSubmit)="bookingForm.valid && onBook(bookingForm)">
       <label>Please enter your email: </label>
-      <input type="text" #email="ngModel" [(ngModel)]="msgService.email" name="email" placeholder="Email" class="form-control"
+      <input type="text" #email="ngModel" [(ngModel)]="bookingService.email" name="email" placeholder="Email" class="form-control"
         required [pattern]="emailRegex" [ngClass]="{ 'ng-invalid': bookingForm.submitted && !email.valid }">
       <!-- Display of Validation for email input -->
       <div *ngIf="bookingForm.submitted && email.errors">
@@ -42,6 +42,11 @@
       <br />
       <button class="btn btn-primary" type="submit">Confirm booking</button>
     </form>
+  </div>
+
+  <!-- If the movie has "coming soon" status -->
+  <div>
+    <label *ngIf="bookingComplete" class="success">Your ticket has been succesfully booked. Please check your email for more details.</label>
   </div>
 
 </div>

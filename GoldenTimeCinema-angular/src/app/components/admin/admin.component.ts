@@ -1,18 +1,17 @@
-import { MoviesService } from './../../services/movies.service';
-import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { MoviesService } from "../../services/movies.service";
+import { Router } from "@angular/router";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+  selector: "admin",
+  templateUrl: "./admin.component.html",
+  styleUrls: ["./admin.component.css"]
 })
 export class AdminComponent implements OnInit {
   movies: any[];
 
   //initialize movie service and router
-  constructor(private service: MoviesService, private router: Router) {
-  }
+  constructor(private service: MoviesService, private router: Router) {}
 
   ngOnInit() {
     //get all movies
@@ -41,10 +40,10 @@ export class AdminComponent implements OnInit {
 
   //update the status of a movie
   onUpdate(movieIndex) {
-
     // update the status of a movie
-    this.movies[movieIndex].status === "nowShowing" ?
-      this.movies[movieIndex].status = "comingSoon" : this.movies[movieIndex].status = "nowShowing";
+    this.movies[movieIndex].status === "nowShowing"
+      ? (this.movies[movieIndex].status = "comingSoon")
+      : (this.movies[movieIndex].status = "nowShowing");
 
     //get the current movie
     const movie = this.movies[movieIndex];

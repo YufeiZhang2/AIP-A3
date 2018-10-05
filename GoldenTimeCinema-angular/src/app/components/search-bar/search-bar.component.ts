@@ -1,6 +1,12 @@
-import { MoviesService } from './../../services/movies.service';
+import { MoviesService } from "../../services/movies.service";
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormControl, FormArray, Validators, ReactiveFormsModule } from "@angular/forms";
+import {
+  FormGroup,
+  FormControl,
+  FormArray,
+  Validators,
+  ReactiveFormsModule
+} from "@angular/forms";
 
 @Component({
   selector: "search-bar",
@@ -13,15 +19,18 @@ export class SearchBarComponent implements OnInit {
   movieResult: any[];
 
   form = new FormGroup({
-    'movieName': new FormControl('', [Validators.minLength(2), Validators.maxLength(60)])
+    movieName: new FormControl("", [
+      Validators.minLength(2),
+      Validators.maxLength(60)
+    ])
   });
 
-  constructor(private service: MoviesService) { }
+  constructor(private service: MoviesService) {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   get movieName() {
-    return this.form.get('movieName');
+    return this.form.get("movieName");
   }
 
   onSubmit() {
@@ -39,24 +48,31 @@ export class SearchBarComponent implements OnInit {
           //get the object id of the matched movie
           this.searchResultId = movie._id;
           console.log(this.searchResultId);
-          this.service.getMoviesById(this.searchResultId).subscribe(response => {
-            this.movieResult = response.json();
-            console.log('i got the movie!', this.movieResult);
-          })
+          this.service
+            .getMoviesById(this.searchResultId)
+            .subscribe(response => {
+              this.movieResult = response.json();
+              console.log("i got the movie!", this.movieResult);
+            });
         }
       }
-    })
+    });
   }
 
   //method for verifying if two words match without whitespace
   CompareWithWords(firstWord, secondWord) {
     //remove all the whitespace of strings
-    const firstResult = firstWord.toString().toLowerCase().trim().replace(/ /g, '');
-    const secondResult = secondWord.toString().toLowerCase().trim().replace(/ /g, '');
+    const firstResult = firstWord
+      .toString()
+      .toLowerCase()
+      .trim()
+      .replace(/ /g, "");
+    const secondResult = secondWord
+      .toString()
+      .toLowerCase()
+      .trim()
+      .replace(/ /g, "");
 
     return firstResult === secondResult ? true : false;
   }
 }
-
-
-

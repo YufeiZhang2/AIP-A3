@@ -1,6 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-
 const router = express.Router();
 const msgController = require("../controllers/messagesController");
 
@@ -9,6 +8,7 @@ const clientSecret = require("./client_secret");
 
 const Booking = mongoose.model("booking");
 
+// Save ticket details in database
 module.exports.saveTicket = (req, res, next) => {
   var ticket = new Booking();
   ticket.email = req.body.email;
@@ -23,6 +23,7 @@ module.exports.saveTicket = (req, res, next) => {
     }
   });
 
+  // Configure connection with gmail account using OAuth2
   let transporter = nodeMailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -39,13 +40,31 @@ module.exports.saveTicket = (req, res, next) => {
     }
   });
 
+  // Template of the email message
   let messageTemplate = {
-    from: "Golden Time Cinema <crysbui.depon@gmail.com>",
-    to: ticket.email,
-    subject:
-      "Your booking confirmation for " + ticket.session + ticket.movieName, //req.body.subject,
-    text: "Test message"
-    //html: req.body.content
+    from: "Golden Time Cinema <crysbui.depon@gmail.com>", // Display of sender
+    to: ticket.email, // receiver
+    subject: "Your " + ticket.movieName + " booking confirmation", // Subject of email
+    text: "Plain text message", // Plain text of content
+    // Content of email in html
+    html: ` 
+      <h2>GOLDEN TIME CINEMA</h2>
+      <h4>BOOKING DETAILS</h4>
+      <p>
+      Movie: ${ticket.movieName}
+      <br/>
+      Session: ${ticket.session.toLocaleString("en-US")}
+      <br/>
+      Price: A$${ticket.price.toFixed(2)}
+      <br/>
+      Location: Golden Time Cinema CBD, Sydney
+      </p>
+      <p>
+      We can't wait to see you at our cinema. Now all you need to do is print or present this confirmation email for admission.
+      <br/>
+      Enjoy your movie!
+      </p>
+      `
   };
 
   // Send email
@@ -66,8 +85,6 @@ module.exports.saveTicket = (req, res, next) => {
     }
   });
 };
-
-// router.post("/sendemail", (req, res) => {});
 
 router.post("/book", msgController.saveTicket);
 

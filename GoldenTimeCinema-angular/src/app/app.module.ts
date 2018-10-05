@@ -33,7 +33,7 @@ import { UserProfileComponent } from "./components/user-profile/user-profile.com
 // Service imports
 import { AuthenticationService } from "./services/authentication.service";
 import { MoviesService } from "./services/movies.service";
-import { MessagesService } from "./services/messages.service";
+import { BookMovieService } from "./services/book-movie.service";
 
 // Route imports
 import { RoutingModule } from "./app.routing";
@@ -86,7 +86,7 @@ import { MyDatePickerModule } from "mydatepicker";
     AuthenticationService,
     AuthGuard,
     MoviesService,
-    MessagesService
+    BookMovieService
   ],
   bootstrap: [AppComponent]
 })

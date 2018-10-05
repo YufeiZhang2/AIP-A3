@@ -4,7 +4,7 @@ const bookingModel = mongoose.model(
   "booking",
   new mongoose.Schema({
     movieName: { type: String },
-    session: { type: String },
+    session: { type: Date },
     price: { type: Number },
     email: { type: String }
   })

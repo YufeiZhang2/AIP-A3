@@ -1,6 +1,6 @@
 export class MovieBooking {
-  movieName: String;
-  session: String;
+  movieName: string;
+  session: Date;
   price: number;
-  email: String;
+  email: string;
 }
