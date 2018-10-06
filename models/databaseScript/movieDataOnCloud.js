@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 // Connect to the Movie database
 mongoose
-  .connect("mongodb://root:l52BdJYzDOiF@localhost/cinema")
+  .connect("mongodb://127.0.0.1:27017/cinema")
   .then(() => console.log("Connected to MongoDB...")) // Sucessfully connected
   .catch(err => console.log("Bad connection", err)); // Catch an error
 
