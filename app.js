@@ -13,12 +13,12 @@ const moviesController = require("./controllers/moviesController");
 const usersController = require("./controllers/usersController");
 
 // Connect mongoose to our database
-// mongoose
-//   .connect(dbConfigOnCloud)
-//   .then(() => console.log(`Connected to MongoDB ${dbConfigOnCloud}...`))
-//   .catch(err => console.log("bad connection"));
+mongoose
+  .connect(dbConfig)
+  .then(() => console.log(`Connected to MongoDB ${dbConfig}...`))
+  .catch(err => console.log("bad connection"));
 
-const cinemaDbOnCloud = mongoose.createConnection('mongodb:///opt/bitnami/mongodb/tmp/mongodb-27017.sock/local');
+// const cinemaDbOnCloud = mongoose.createConnection('mongodb:///opt/bitnami/mongodb/tmp/mongodb-27017.sock/local');
 
 
 //Initialize our app variable
