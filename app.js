@@ -7,19 +7,15 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const dbConfig = require("./config/cinemaDb");
-//const dbConfigOnCloud = require("./config/cinemaDbOnCloud");
 const moviesController = require("./controllers/moviesController");
 const usersController = require("./controllers/usersController");
+const dbConfig = require("./config/cinemaDb");
 
 // Connect mongoose to our database
 mongoose
   .connect(dbConfig, { auth: { authdb: "admin" } })
   .then(() => console.log(`Connected to MongoDB ${dbConfig}...`))
   .catch(err => console.log("bad connection"));
-
-// const cinemaDbOnCloud = mongoose.createConnection('mongodb:///opt/bitnami/mongodb/tmp/mongodb-27017.sock/local');
-
 
 //Initialize our app variable
 const app = express();
