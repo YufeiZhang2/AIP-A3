@@ -11,6 +11,7 @@ import decode from "jwt-decode";
 export class AuthenticationService {
   // Initialize a User object with empty email and password
   selectedUser: User = {
+    _id: "",
     firstName: "",
     lastName: "",
     email: "",
@@ -19,6 +20,8 @@ export class AuthenticationService {
     dob: null,
     isAdmin: false
   };
+
+  user: User;
 
   role;
 
@@ -47,6 +50,11 @@ export class AuthenticationService {
   // need jwt in the header
   getUserProfile() {
     return this.http.get(environment.apiBaseUrl + "/userprofile");
+  }
+
+  updateUser(user: User) {
+    console.log("in service put", user);
+    return this.http.put(environment.apiBaseUrl + "/editprofile", user);
   }
 
   getAdmin() {

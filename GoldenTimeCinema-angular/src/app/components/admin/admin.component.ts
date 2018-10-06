@@ -25,13 +25,6 @@ export class AdminComponent implements OnInit {
     this.movieService.getMovies().subscribe(response => {
       this.movies = response.json();
     });
-
-    // this.authService.getAdmin().subscribe(
-    //   res => {
-    //     this.userAdmin = res["user"].isAdmin;
-    //   },
-    //   err => {}
-    // );
   }
 
   //delete a movie

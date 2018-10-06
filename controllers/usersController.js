@@ -1,13 +1,10 @@
 const express = require("express");
 const router = express.Router();
-
 const userController = require("../controllers/usersController");
 const jwtHelper = require("../config/jwtHelper");
-
 const mongoose = require("mongoose");
 const passport = require("passport");
 const _ = require("lodash");
-
 const User = mongoose.model("user");
 
 module.exports.register = (req, res, next) => {
@@ -62,12 +59,43 @@ module.exports.userProfile = (req, res, next) => {
   });
 };
 
+module.exports.editUserProfile = (req, res, next) => {
+  var userNewData = {
+    lastName: req.body.lastName,
+    firstName: req.body.firstName,
+    email: req.body.email,
+    gender: req.body.gender,
+    dob: req.body.dob
+  };
+
+  User.findByIdAndUpdate(
+    { _id: req._id },
+    { $set: userNewData },
+    { new: true },
+    (err, doc) => {
+      if (!err) {
+        res.send(doc);
+      } else {
+        console.log(
+          "Error in User Update :" + JSON.stringify(err, undefined, 2)
+        );
+      }
+    }
+  );
+};
+
 router.post("/register", userController.register);
 router.post("/authenticate", userController.authenticate);
 router.get(
-  "/userProfile",
+  "/userprofile",
   jwtHelper.verifyJwtToken,
   userController.userProfile
+);
+
+router.put(
+  "/editprofile",
+  jwtHelper.verifyJwtToken,
+  userController.editUserProfile
 );
 
 module.exports = router;
