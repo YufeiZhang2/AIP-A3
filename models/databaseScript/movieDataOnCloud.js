@@ -2,10 +2,13 @@ const mongoose = require("mongoose");
 const dbConfigOnCloud = require("./config/cinemaDbOnCloud");
 
 // Connect to the Movie database
-mongoose
-  .connect(dbConfigOnCloud)
-  .then(() => console.log("Connected to MongoDB...")) // Sucessfully connected
-  .catch(err => console.log("Bad connection", err)); // Catch an error
+// mongoose
+//   .connect(dbConfigOnCloud)
+//   .then(() => console.log("Connected to MongoDB...")) // Sucessfully connected
+//   .catch(err => console.log("Bad connection", err)); // Catch an error
+
+var cinemaDbOnCloud = mongoose.createConnection('mongodb:///opt/bitnami/mongodb/tmp/mongodb-27017.sock/DATABASE');
+
 
 const movieModel = mongoose.model(
   "movie",
