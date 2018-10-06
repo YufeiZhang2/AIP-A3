@@ -1,2 +1,2 @@
-const cinemaDb = 'mongodb://root:l52BdJYzDOiF@localhost/local/cinema';
+const cinemaDb = 'mongodb://root:l52BdJYzDOiF@localhost/local';
 module.exports = cinemaDb;
