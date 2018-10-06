@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { MoviesService } from "../../services/movies.service";
 import { BookMovieService } from "../../services/book-movie.service";
+import { AuthenticationService } from "../../services/authentication.service";
+
 import { ActivatedRoute, Router } from "@angular/router";
 import { NgForm } from "@angular/forms";
 
@@ -15,15 +17,18 @@ export class BookMoviesComponent implements OnInit {
   bookingTime;
   price;
   email;
+  userDetails;
   flag: boolean = false;
   bookingComplete: boolean = false;
+  userFlag: boolean = this.authService.isLoggedIn();
   emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private movieService: MoviesService,
-    private bookingService: BookMovieService
+    private bookingService: BookMovieService,
+    private authService: AuthenticationService
   ) {}
 
   ngOnInit() {
@@ -47,6 +52,34 @@ export class BookMoviesComponent implements OnInit {
         });
       });
     });
+
+    // If user is logged in, get user information
+    if (this.userFlag) {
+      this.authService.getUserProfile().subscribe(
+        res => {
+          this.userDetails = res["user"];
+        },
+        err => {}
+      );
+    }
+  }
+
+  // If movie is "now showing" and user is not logged in
+  onlyMovie() {
+    if (this.flag && !this.userFlag) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  // If movie is "now showing" and user is logged in
+  bothMovieUser() {
+    if (this.flag && this.userFlag) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   backToHome() {
