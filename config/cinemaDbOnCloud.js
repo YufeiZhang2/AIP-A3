@@ -1,2 +1,2 @@
-const cinemaDbOnCloud = 'mongodb://root:l52BdJYzDOiF@localhost/cinema';
+const cinemaDbOnCloud = 'mongodb:///opt/bitnami/mongodb/tmp/mongodb-27017.sock/cinema';
 module.exports = cinemaDbOnCloud;
