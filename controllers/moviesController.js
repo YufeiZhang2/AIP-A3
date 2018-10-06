@@ -5,24 +5,6 @@ const express = require("express");
 const { movieModel } = require("../models/movieModel");
 const router = express.Router();
 
-// const sendmail = require('sendmail')({
-//   logger: {
-//     debug: console.log,
-//     info: console.info,
-//     warn: console.warn,
-//     error: console.error
-//   },
-//   silent: false,
-//   dkim: { // Default: False
-//     privateKey: fs.readFileSync('./dkim-private.pem', 'utf8'),
-//     keySelector: 'mydomainkey'
-//   },
-//   devPort: 1025, // Default: False
-//   devHost: 'localhost', // Default: localhost
-//   smtpPort: 2525, // Default: 25
-//   smtpHost: 'localhost' // Default: -1 - extra smtp host after resolveMX
-// })
-
 //read all the movies
 router.get("/", async (req, res) => {
   console.log(movieModel);
@@ -91,29 +73,5 @@ router.put("/:_id", async (req, res) => {
     });
   console.log("my test for updating:", movie);
 })
-
-// sendmail({
-//   from: 'no-reply@yourdomain.com',
-//   to: 'yufei.z222@gmail.com',
-//   subject: 'test sendmail',
-//   html: 'Mail of test sendmail ',
-// }, function (err, reply) {
-//   console.log(err && err.stack);
-//   console.dir(reply);
-// });
-
-
-//function validateMovie(movie) { }
-
-// router.delete("/:_id", [auth, admin], async (req, res) => {
-//   try {
-//     console.log("my test:", req.params._id);
-//     const result = await movieModel.findByIdAndRemove({ _id: req.params._id });
-//     res.send(result);
-//   } catch (err) {
-//     //404 object not found
-//     res.status(404).send("The movie with the given ID was not found.");
-//   }
-// });
 
 module.exports = router;

@@ -8,13 +8,14 @@ const path = require("path");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const dbConfig = require("./config/cinemaDb");
+const dbConfigOnCloud = require("./config/cinemaDbOnCloud");
 const moviesController = require("./controllers/moviesController");
 const usersController = require("./controllers/usersController");
 
 // Connect mongoose to our database
 mongoose
-  .connect(dbConfig)
-  .then(() => console.log("Connected to MongoDB..."))
+  .connect(dbConfigOnCloud)
+  .then(() => console.log(`Connected to MongoDB ${dbConfigOnCloud}...`))
   .catch(err => console.log("bad connection"));
 
 //Initialize our app variable
