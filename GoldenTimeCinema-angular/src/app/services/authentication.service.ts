@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import { environment } from "../../environments/environment";
 import { User } from "../components/auth/user.model";
+import decode from "jwt-decode";
 
 @Injectable({
   providedIn: "root"
@@ -49,7 +50,7 @@ export class AuthenticationService {
   }
 
   getAdmin() {
-    return this.http.get(environment.apiBaseUrl + "/isAdmin");
+    return this.http.get(environment.apiBaseUrl + "/admin");
   }
 
   //Helper Methods
@@ -69,6 +70,10 @@ export class AuthenticationService {
     localStorage.removeItem("token");
   }
 
+  // decode JWT token inside local storage
+  decodeToken() {
+    return decode(localStorage.getItem("token"));
+  }
   // Extract user payload from token
   getUserPayload() {
     var token = this.getToken();
@@ -86,12 +91,16 @@ export class AuthenticationService {
   }
 
   isAdmin() {
-    this.getUserProfile().subscribe(res => {
-      this.role = res["user"].isAdmin;
-      console.log("service level: admin " + this.role);
-
-      return this.role;
-    });
+    this.role = this.decodeToken().admin;
+    //console.log(this.role);
     return this.role;
+  }
+
+  displayAdmin() {
+    if (this.isLoggedIn() && this.isAdmin()) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

@@ -33,7 +33,8 @@ const routes: Routes = [
   {
     path: "admin",
     component: AdminComponent,
-    canActivate: [AdminGuard]
+    canActivate: [AuthGuard, AdminGuard],
+    data: { isAdmin: true }
   },
   {
     path: "companyInformation",
@@ -42,7 +43,8 @@ const routes: Routes = [
   {
     path: "addMovieForm",
     component: AddMovieFormComponent,
-    canActivate: [AdminGuard]
+    canActivate: [AuthGuard, AdminGuard],
+    data: { isAdmin: true }
   },
   {
     path: "login",
@@ -60,7 +62,8 @@ const routes: Routes = [
   {
     path: "editMovieForm",
     component: EditMovieFormComponent,
-    canActivate: [AdminGuard]
+    canActivate: [AuthGuard, AdminGuard],
+    data: { isAdmin: true }
   },
   {
     path: "movie/:_id",

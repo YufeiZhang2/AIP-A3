@@ -1,4 +1,6 @@
 import { MoviesService } from "../../services/movies.service";
+import { AuthenticationService } from "../../services/authentication.service";
+
 import { Router } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
 
@@ -9,15 +11,27 @@ import { Component, OnInit } from "@angular/core";
 })
 export class AdminComponent implements OnInit {
   movies: any[];
+  userAdmin: boolean;
 
   //initialize movie service and router
-  constructor(private service: MoviesService, private router: Router) {}
+  constructor(
+    private movieService: MoviesService,
+    private authService: AuthenticationService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     //get all movies
-    this.service.getMovies().subscribe(response => {
+    this.movieService.getMovies().subscribe(response => {
       this.movies = response.json();
     });
+
+    // this.authService.getAdmin().subscribe(
+    //   res => {
+    //     this.userAdmin = res["user"].isAdmin;
+    //   },
+    //   err => {}
+    // );
   }
 
   //delete a movie
@@ -30,7 +44,7 @@ export class AdminComponent implements OnInit {
     console.log(objectId);
 
     //delete the specific movie
-    this.service.deleteMovies(objectId).subscribe(response => {
+    this.movieService.deleteMovies(objectId).subscribe(response => {
       console.log(response.json());
     });
 
@@ -50,7 +64,7 @@ export class AdminComponent implements OnInit {
     console.log("before update", movie);
 
     //update the status of the specific movie
-    this.service.updateMovies(movie).subscribe(response => {
+    this.movieService.updateMovies(movie).subscribe(response => {
       console.log("response from update:", response.json());
     });
   }

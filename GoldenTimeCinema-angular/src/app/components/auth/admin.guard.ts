@@ -23,14 +23,15 @@ export class AdminGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
-    console.log("guard level: admin " + this.authService.isAdmin());
-    console.log("guard level: loggedIn " + this.authService.isLoggedIn());
+    // console.log("guard level: admin " + this.authService.isAdmin());
+    // console.log("next.data.isAdmin " + next.data.isAdmin);
 
-    if (!this.authService.isAdmin()) {
+    if (!this.authService.isAdmin() === next.data.isAdmin) {
       this.router.navigateByUrl("/login");
       this.authService.deleteToken();
       return false;
     }
+
     return true;
   }
 }
