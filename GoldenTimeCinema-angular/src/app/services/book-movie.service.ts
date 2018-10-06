@@ -12,4 +12,8 @@ export class BookMovieService {
   bookMovie(booking: MovieBooking) {
     return this.http.post(environment.apiBaseUrl + "/book", booking);
   }
+
+  getTickets() {
+    return this.http.get(environment.apiBaseUrl + "/tickets");
+  }
 }

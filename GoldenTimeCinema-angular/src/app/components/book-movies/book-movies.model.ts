@@ -3,4 +3,5 @@ export class MovieBooking {
   session: Date;
   price: number;
   email: string;
+  uId: string;
 }

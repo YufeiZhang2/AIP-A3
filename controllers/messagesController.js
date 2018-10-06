@@ -7,6 +7,7 @@ const nodeMailer = require("nodemailer");
 const clientSecret = require("./client_secret");
 
 const Booking = mongoose.model("booking");
+const { bookingModel } = require("../models/bookingModel");
 
 // Save ticket details in database
 module.exports.saveTicket = (req, res, next) => {
@@ -15,6 +16,7 @@ module.exports.saveTicket = (req, res, next) => {
   ticket.movieName = req.body.movieName;
   ticket.session = req.body.session;
   ticket.price = req.body.price;
+  ticket.userId = req.body.uId;
   ticket.save((err, doc) => {
     if (!err) res.send(doc);
     else {
@@ -88,4 +90,9 @@ module.exports.saveTicket = (req, res, next) => {
 
 router.post("/book", msgController.saveTicket);
 
+router.get("/tickets", async (req, res) => {
+  console.log(bookingModel);
+  const tickets = await bookingModel.find();
+  res.send(tickets);
+});
 module.exports = router;

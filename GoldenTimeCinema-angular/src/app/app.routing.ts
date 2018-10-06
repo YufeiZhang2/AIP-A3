@@ -14,6 +14,7 @@ import { RegisterComponent } from "./components/register/register.component";
 import { EditMovieFormComponent } from "./components/edit-movie-form/edit-movie-form.component";
 import { LoginComponent } from "./components/login/login.component";
 import { UserProfileComponent } from "./components/user-profile/user-profile.component";
+import { TicketComponent } from "./components/ticket/ticket.component";
 import { AuthGuard } from "./components/auth/auth.guard";
 import { AdminGuard } from "./components/auth/admin.guard";
 
@@ -57,6 +58,11 @@ const routes: Routes = [
   {
     path: "userprofile",
     component: UserProfileComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "tickets",
+    component: TicketComponent,
     canActivate: [AuthGuard]
   },
   {

@@ -55,25 +55,12 @@ module.exports.userProfile = (req, res, next) => {
           "email",
           "gender",
           "dob",
-          "isAdmin"
+          "isAdmin",
+          "_id"
         ])
       });
   });
 };
-
-// module.exports.userAdmin = (req, res, next) => {
-//   User.findOne({ _id: req._id }, (err, user) => {
-//     if (!user)
-//       return res
-//         .status(404)
-//         .json({ status: false, message: "User record not found." });
-//     else
-//       return res.status(200).json({
-//         status: true,
-//         user: _.pick(user, ["isAdmin"])
-//       });
-//   });
-// };
 
 router.post("/register", userController.register);
 router.post("/authenticate", userController.authenticate);
@@ -82,6 +69,5 @@ router.get(
   jwtHelper.verifyJwtToken,
   userController.userProfile
 );
-// router.get("/admin", jwtHelper.verifyJwtToken, userController.userAdmin);
 
 module.exports = router;

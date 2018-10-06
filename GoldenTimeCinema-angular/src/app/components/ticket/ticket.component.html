@@ -1,0 +1,25 @@
+<br />
+<div *ngIf="userDetails" class="border border-light">
+  YOUR TICKETS
+</div>
+<div *ngIf="tickets.length > 0">
+  <div class="list-group">
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let ticket of tickets">
+        <p>
+          <span>Movie: </span>{{ticket.movieName}}</p>
+        <p>
+          <span>Session: </span>{{ticket.session}}</p>
+        <p>
+          <span>Sent Email: </span>{{ticket.email}}</p>
+        <p>
+          <span>Price: </span>{{ticket.price}}</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="tickets.length == 0">
+  <label>You have no orders in the record</label>
+</div>

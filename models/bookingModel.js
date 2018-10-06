@@ -6,7 +6,8 @@ const bookingModel = mongoose.model(
     movieName: { type: String },
     session: { type: Date },
     price: { type: Number },
-    email: { type: String }
+    email: { type: String },
+    userId: { type: String }
   })
 );
 

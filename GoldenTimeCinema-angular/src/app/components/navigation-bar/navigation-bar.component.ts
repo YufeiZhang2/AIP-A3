@@ -14,9 +14,10 @@ export class NavigationBarComponent implements OnInit {
   admin = "ADMIN";
   companyInformation = "ABOUT US";
   profile = "PROFILE";
+  ticket = "ORDERS";
   search = "SEARCH";
 
-  constructor(private authService: AuthenticationService) { }
+  constructor(private authService: AuthenticationService) {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 }

@@ -18,6 +18,7 @@ export class BookMoviesComponent implements OnInit {
   price;
   email;
   userDetails;
+  uId: string = "anonymous";
   flag: boolean = false;
   bookingComplete: boolean = false;
   userFlag: boolean = this.authService.isLoggedIn();
@@ -58,6 +59,7 @@ export class BookMoviesComponent implements OnInit {
       this.authService.getUserProfile().subscribe(
         res => {
           this.userDetails = res["user"];
+          this.uId = this.userDetails._id;
         },
         err => {}
       );
@@ -91,7 +93,8 @@ export class BookMoviesComponent implements OnInit {
       movieName: this.movieName,
       session: this.bookingTime,
       price: this.price,
-      email: form.value.email
+      email: form.value.email,
+      uId: this.uId
     };
     this.bookingService.bookMovie(bookingValue).subscribe(response => {
       this.bookingComplete = true;

@@ -41,6 +41,7 @@ import { AuthGuard } from "./components/auth/auth.guard";
 import { AdminGuard } from "./components/auth/admin.guard";
 import { AuthInterceptor } from "./components/auth/auth.interceptor";
 import { MyDatePickerModule } from "mydatepicker";
+import { TicketComponent } from './components/ticket/ticket.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { MyDatePickerModule } from "mydatepicker";
     UserProfileComponent,
     AdminComponent,
     MessageComponent,
-    BookMoviesComponent
+    BookMoviesComponent,
+    TicketComponent
   ],
   imports: [
     BrowserModule,

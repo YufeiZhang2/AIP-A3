@@ -28,7 +28,7 @@ export class GenreComponent implements OnInit {
         for (let genre of movies.genres)
           if (genre.toLowerCase() === inputValue.toLowerCase()) return movies;
       });
-      console.log("movies retrived by genres", this.movies);
+      console.log("movies retrieved by genres", this.movies);
     });
   }
 }
