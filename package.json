@@ -22,12 +22,9 @@
     "pug": "^2.0.3",
     "sendmail": "^1.4.1"
   },
-  "devDependencies": {
-    "jest": "^23.6.0",
-    "winston": "^3.1.0"
-  },
+  "devDependencies": {},
   "scripts": {
-    "test": "jest",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app"
   },
   "repository": {
