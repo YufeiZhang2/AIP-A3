@@ -2386,7 +2386,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var MoviesService = /** @class */ (function () {
     function MoviesService(http) {
         this.http = http;
-        this.url = 'http://localhost:3000/api/movies';
+        this.url = 'ec2-18-236-193-77.us-west-2.compute.amazonaws.com:3000/api/movies';
     }
     MoviesService.prototype.getMovies = function () {
         return this.http.get(this.url);

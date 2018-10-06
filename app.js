@@ -8,7 +8,7 @@ const path = require("path");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const dbConfig = require("./config/cinemaDb");
-const dbConfigOnCloud = require("./config/cinemaDbOnCloud");
+//const dbConfigOnCloud = require("./config/cinemaDbOnCloud");
 const moviesController = require("./controllers/moviesController");
 const usersController = require("./controllers/usersController");
 
