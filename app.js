@@ -14,7 +14,7 @@ const usersController = require("./controllers/usersController");
 
 // Connect mongoose to our database
 mongoose
-  .connect(dbConfig)
+  .connect(dbConfig, { auth: { authdb: "admin" } })
   .then(() => console.log(`Connected to MongoDB ${dbConfig}...`))
   .catch(err => console.log("bad connection"));
 

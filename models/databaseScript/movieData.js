@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
+const dbConfig = require("../../config/cinemaDb");
 
 // Connect to the Movie database
 mongoose
-  .connect("mongodb://root:l52BdJYzDOiF@localhost/cinema")
+  .connect(dbConfig, { auth: { authdb: "admin" } })
   .then(() => console.log("Connected to MongoDB...")) // Sucessfully connected
   .catch(err => console.log("Bad connection", err)); // Catch an error
 
