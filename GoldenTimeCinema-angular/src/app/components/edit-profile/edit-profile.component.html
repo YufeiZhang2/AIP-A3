@@ -66,12 +66,11 @@
         <label *ngIf="dob.errors.required" class="validation-message">Date of birth is required.</label>
       </div>
     </div>
-
+    <button class="btn btn-secondary" (click)="backToProfile()">Back to Profile</button>
     <button class="btn btn-primary" type="submit">Update</button>
   </form>
 </div>
 
-<button class="btn btn-secondary" (click)="backToProfile()">Back to Profile</button>
 <br />
 
 <!-- Success message -->

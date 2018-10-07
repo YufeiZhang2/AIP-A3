@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Bold|Cormorant SC");
+
+h3 {
+  text-align: center;
+  color: black;
+  font-family: "Fredericka the Great", sans-serif;
+}
+
+label {
+  font-size: 16px;
+  color: black;
+  font-family: "Source Sans Pro", sans-serif;
+}

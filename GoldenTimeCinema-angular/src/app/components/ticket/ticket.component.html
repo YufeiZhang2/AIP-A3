@@ -1,27 +1,30 @@
 <br />
 <div *ngIf="userDetails" class="border border-light">
-  YOUR TICKETS
+  <h3> YOUR TICKETS</h3>
 </div>
-<div *ngIf="tickets.length > 0">
-  <div class="list-group">
-
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item" *ngFor="let ticket of tickets; let i = index" [attr.ticketId]="i">
-        <p>
-          <span>Movie: </span>{{ticket.movieName}}</p>
-        <p>
-          <span>Session: </span>{{ticket.session | date:'short'}}</p>
-        <p>
-          <span>Sent Email: </span>{{ticket.email}}</p>
-        <p>
-          <span>Price: </span>{{ticket.price | currency:'AUD':true:'1.2-2'}}</p>
+<div *ngIf="tickets.length > 0" class="card-group">
+  <li class="list-group-item" *ngFor="let ticket of tickets; let i = index" [attr.ticketId]="i">
+    <div class="card border-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Ticket {{i + 1}}</div>
+      <div class="card-body text-dark">
+        <h5 class="card-title">
+          <strong>{{ticket.movieName}}</strong>
+        </h5>
+        <p class="card-text">
+          <label>Session: </label> {{ticket.session | date:'short'}}
+          <br/>
+          <label>Email: </label> {{ticket.email}}
+          <br/>
+          <label>Price: </label> {{ticket.price | currency:'AUD':true:'1.2-2'}}
+          <br/>
+        </p>
         <button class="btn btn-secondary" (click)="onDelete(i)">Delete ticket </button>
+      </div>
+    </div>
+  </li>
 
-      </li>
-    </ul>
-  </div>
 </div>
 
-<div *ngIf="tickets.length == 0">
-  <label>You have no orders in the record</label>
+<div class="text-center" *ngIf="tickets.length == 0">
+  <label style="margin:50px">You have no orders in the record</label>
 </div>

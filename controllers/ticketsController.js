@@ -44,8 +44,8 @@ module.exports.saveTicket = (req, res, next) => {
   // Template of the email message
   let messageTemplate = {
     from: "Golden Time Cinema <crysbui.depon@gmail.com>", // Display of sender
-    to: ticket.email, // receiver
-    subject: "Your " + ticket.movieName + " booking confirmation", // Subject of email
+    to: ticket.email, // Receiver of email
+    subject: 'Your "' + ticket.movieName + '" booking confirmation', // Subject of email
     text: "Plain text message", // Plain text of content
     // Content of email in html
     html: ` 
