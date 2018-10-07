@@ -21,18 +21,20 @@ export class TicketComponent implements OnInit {
     this.authService.getUserProfile().subscribe(
       res => {
         this.userDetails = res["user"];
-
-        // Get tickets with the same user Id of this currrent logged in user
-        this.ticketService.getTickets().subscribe(response => {
-          this.tickets = response
-            .json()
-            .filter(ticket => ticket.userId === this.userDetails._id);
-        });
+        this.refreshTicketList();
       },
       err => {}
     );
   }
 
+  refreshTicketList() {
+    // Get tickets with the same user Id of this currrent logged in user
+    this.ticketService.getTickets().subscribe(response => {
+      this.tickets = response
+        .json()
+        .filter(ticket => ticket.userId === this.userDetails._id);
+    });
+  }
   //delete a movie
   onDelete(ticketId) {
     let objectId: number;
@@ -44,7 +46,11 @@ export class TicketComponent implements OnInit {
 
     //delete the specific ticket
     this.ticketService.deleteTicket(objectId).subscribe(response => {
-      console.log(response.json());
+      // Refresh the ticket list after deletion or changes will not be displayed without reloading the page
+      this.refreshTicketList();
+
+      // console.log("Ticket is removed");
+      // console.log(response.json());
     });
   }
 }
