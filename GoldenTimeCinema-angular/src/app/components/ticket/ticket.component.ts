@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { BookMovieService } from "../../services/book-movie.service";
+import { TicketService } from "../../services/ticket.service";
 import { AuthenticationService } from "../../services/authentication.service";
 
 @Component({
@@ -13,7 +13,7 @@ export class TicketComponent implements OnInit {
   userDetails;
 
   constructor(
-    private bookingService: BookMovieService,
+    private bookingService: TicketService,
     private authService: AuthenticationService
   ) {}
 

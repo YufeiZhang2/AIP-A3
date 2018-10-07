@@ -31,7 +31,7 @@ import { UserProfileComponent } from "./components/user-profile/user-profile.com
 // Service imports
 import { AuthenticationService } from "./services/authentication.service";
 import { MoviesService } from "./services/movies.service";
-import { BookMovieService } from "./services/book-movie.service";
+import { TicketService } from "./services/ticket.service";
 
 // Route imports
 import { RoutingModule } from "./app.routing";
@@ -41,8 +41,8 @@ import { AuthGuard } from "./components/auth/auth.guard";
 import { AdminGuard } from "./components/auth/admin.guard";
 import { AuthInterceptor } from "./components/auth/auth.interceptor";
 import { MyDatePickerModule } from "mydatepicker";
-import { TicketComponent } from './components/ticket/ticket.component';
-import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { TicketComponent } from "./components/ticket/ticket.component";
+import { EditProfileComponent } from "./components/edit-profile/edit-profile.component";
 
 @NgModule({
   declarations: [
@@ -88,7 +88,7 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
     AuthGuard,
     AdminGuard,
     MoviesService,
-    BookMovieService
+    TicketService
   ],
   bootstrap: [AppComponent]
 })

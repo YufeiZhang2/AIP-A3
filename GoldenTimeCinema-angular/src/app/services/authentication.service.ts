@@ -9,7 +9,7 @@ import decode from "jwt-decode";
   providedIn: "root"
 })
 export class AuthenticationService {
-  // Initialize a User object with empty email and password
+  // Initialize a User object with empty properties
   selectedUser: User = {
     _id: "",
     firstName: "",
@@ -53,7 +53,7 @@ export class AuthenticationService {
   }
 
   updateUser(user: User) {
-    console.log("in service put", user);
+    // console.log("in service put", user);
     return this.http.put(environment.apiBaseUrl + "/editprofile", user);
   }
 

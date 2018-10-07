@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { MoviesService } from "../../services/movies.service";
-import { BookMovieService } from "../../services/book-movie.service";
+import { TicketService } from "../../services/ticket.service";
 import { AuthenticationService } from "../../services/authentication.service";
 
 import { ActivatedRoute, Router } from "@angular/router";
@@ -28,7 +28,7 @@ export class BookMoviesComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private movieService: MoviesService,
-    private bookingService: BookMovieService,
+    private bookingService: TicketService,
     private authService: AuthenticationService
   ) {}
 

@@ -6,7 +6,7 @@ import { MovieBooking } from "../components/book-movies/book-movies.model";
 @Injectable({
   providedIn: "root"
 })
-export class BookMovieService {
+export class TicketService {
   constructor(private http: Http) {}
 
   bookMovie(booking: MovieBooking) {

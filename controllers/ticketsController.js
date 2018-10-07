@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const router = express.Router();
-const msgController = require("../controllers/messagesController");
+const ticketsController = require("../controllers/ticketsController");
 
 const nodeMailer = require("nodemailer");
 const clientSecret = require("./client_secret");
@@ -88,7 +88,7 @@ module.exports.saveTicket = (req, res, next) => {
   });
 };
 
-router.post("/book", msgController.saveTicket);
+router.post("/book", ticketsController.saveTicket);
 
 router.get("/tickets", async (req, res) => {
   console.log(bookingModel);
