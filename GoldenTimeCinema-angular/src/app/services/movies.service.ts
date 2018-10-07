@@ -6,7 +6,8 @@ import { Http } from '@angular/http';
 })
 export class MoviesService {
 
-  private url = 'http://ec2-18-236-193-77.us-west-2.compute.amazonaws.com:3000/api/movies';
+  // private url = 'http://ec2-18-236-193-77.us-west-2.compute.amazonaws.com:3000/api/movies';
+  private url = 'http://localhost:3000/api/movies';
 
   constructor(private http: Http) { }
 

@@ -20,7 +20,7 @@ export class AuthenticationService {
     dob: null,
     isAdmin: false
   };
-
+ 
   user: User;
 
   role;
