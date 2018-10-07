@@ -17,4 +17,8 @@ export class TicketService {
   getTickets() {
     return this.http.get(environment.apiBaseUrl + "/tickets");
   }
+
+  deleteTicket(_id) {
+    return this.http.delete(environment.apiBaseUrl + "/" + _id);
+  }
 }

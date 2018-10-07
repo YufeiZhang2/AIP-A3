@@ -7,7 +7,6 @@ const nodeMailer = require("nodemailer");
 const clientSecret = require("./client_secret");
 
 const Booking = mongoose.model("booking");
-const { bookingModel } = require("../models/bookingModel");
 
 // Save ticket details in database
 module.exports.saveTicket = (req, res, next) => {
@@ -90,15 +89,31 @@ module.exports.saveTicket = (req, res, next) => {
 
 router.post("/book", ticketsController.saveTicket);
 
+// Get all tickets
 router.get("/tickets", (req, res) => {
   Booking.find((err, docs) => {
     if (!err) {
       res.send(docs);
     } else {
       console.log(
-        "Error in Retriving Employees :" + JSON.stringify(err, undefined, 2)
+        "Error in Retriving Tickets :" + JSON.stringify(err, undefined, 2)
       );
     }
   });
 });
+
+// Delete a ticket by its id
+router.delete("/:_id", async (req, res) => {
+  try {
+    console.log("my test:", req.params._id);
+    const result = await Booking.findByIdAndRemove({
+      _id: req.params._id
+    });
+    res.send(result);
+  } catch (err) {
+    //404 object not found
+    res.status(404).send("The ticket with the given ID was not found.");
+  }
+});
+
 module.exports = router;

@@ -32,4 +32,19 @@ export class TicketComponent implements OnInit {
       err => {}
     );
   }
+
+  //delete a movie
+  onDelete(ticketId) {
+    let objectId: number;
+    console.log(ticketId);
+
+    //get the ticket id based on the index of the ticket
+    objectId = this.tickets[ticketId]._id;
+    console.log(objectId);
+
+    //delete the specific ticket
+    this.ticketService.deleteTicket(objectId).subscribe(response => {
+      console.log(response.json());
+    });
+  }
 }
