@@ -17,6 +17,7 @@ export class SearchBarComponent implements OnInit {
   searchResultId;
   movies: any[];
   movieResult: any[];
+  flag = false;
 
   form = new FormGroup({
     movieName: new FormControl("", [
@@ -25,9 +26,9 @@ export class SearchBarComponent implements OnInit {
     ])
   });
 
-  constructor(private service: MoviesService) {}
+  constructor(private service: MoviesService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   get movieName() {
     return this.form.get("movieName");
@@ -43,6 +44,8 @@ export class SearchBarComponent implements OnInit {
       for (let movie of this.movies) {
         console.log(movie.name);
 
+        //if the result is not found, the flag is true.
+        this.flag = true;
         //if words match, get the sepecific movie from database
         if (this.CompareWithWords(movie.name, this.form.value.movieName)) {
           //get the object id of the matched movie
@@ -51,6 +54,8 @@ export class SearchBarComponent implements OnInit {
           this.service
             .getMoviesById(this.searchResultId)
             .subscribe(response => {
+              //if the result is found, the flag is false
+              this.flag = false;
               this.movieResult = response.json();
               console.log("i got the movie!", this.movieResult);
             });

@@ -20,6 +20,11 @@
             </div>
         </div>
     </form>
+    <div *ngIf=flag>
+        <p class="alert alert-warning" role="alert">
+            Sorry, the result you are looking for has not been found.
+        </p>
+    </div>
 </div>
 <div>
     <div *ngFor="let property of movieResult" id="movie">

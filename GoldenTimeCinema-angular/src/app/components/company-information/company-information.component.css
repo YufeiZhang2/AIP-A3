@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Semi|Cormorant SC');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
 
 
 #information{
-    font-family: 'Cormorant SC', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    color: grey;
     font-size: 25px;
-    color: black;
     overflow-wrap: break-word;
-    width: 70em;
+    width: 45em;
+
 }
 

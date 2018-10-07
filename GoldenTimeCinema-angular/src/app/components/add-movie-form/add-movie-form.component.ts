@@ -102,9 +102,9 @@ export class AddMovieFormComponent implements OnInit {
     return this.form.get("price");
   }
 
-  constructor(private router: Router, private service: MoviesService) {}
+  constructor(private router: Router, private service: MoviesService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   //add star name in the stars array
   addStar(star: HTMLInputElement) {
@@ -148,6 +148,9 @@ export class AddMovieFormComponent implements OnInit {
     this.service.createMovies(this.form.value).subscribe(response => {
       console.log(response.json());
     });
+
+    //give a prompt of sucessful operation to admin
+    this.router.navigate(["/message"]);
   }
 
   //button back to admin page
