@@ -592,6 +592,8 @@ var AddMovieFormComponent = /** @class */ (function () {
         this.service.createMovies(this.form.value).subscribe(function (response) {
             console.log(response.json());
         });
+        //give a prompt of sucessful operation to admin
+        this.router.navigate(["/message"]);
     };
     //button back to admin page
     AddMovieFormComponent.prototype.ClickToAdmin = function () {
@@ -1201,7 +1203,7 @@ var MovieInfoValidators = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi|Cormorant SC');\n\n\n\n#information{\n    font-family: 'Cormorant SC', sans-serif;\n    font-size: 25px;\n    color: black;\n    overflow-wrap: break-word;\n    width: 70em;\n}\n\n"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Oswald');\n\n\n\n#information{\n    font-family: 'Oswald', sans-serif;\n    color: grey;\n    font-size: 25px;\n    overflow-wrap: break-word;\n    width: 45em;\n\n}\n\n"
 
 /***/ }),
 
@@ -1212,7 +1214,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi|Corm
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<br />\n<br />\n<div id=\"information\">\n    Golden Time Cinema is for movie lovers to enjoy the classis movies anytime. Our cinema contains\n    more than ten movie rooms with cozy enviroment. We hope audience can have the best experince and travel with time\n    machine to the\n    classic movies they love. Feel free to contact us if you have any question. Our team is here to help you\n    responsively.\n</div>"
+module.exports = "<br />\n<br />\n<br />\n<div id=\"information\" class=\"text-left text-md-left\">\n    Golden Time Cinema is for movie lovers to enjoy the classis movies anytime.\n    Our cinema contains\n    more than ten movie rooms with cozy enviroment. We hope audience can have the best experince and travel with\n    time\n    machine to the\n    classic movies they love. Feel free to contact us if you have any question. Our team is here to help you\n    responsively.\n</div>"
 
 /***/ }),
 
@@ -1709,7 +1711,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<div class=\"col-md-8-col-md-offset-2\">\n\n    <form #loginForm=\"ngForm\" (ngSubmit)=\"loginForm.valid && onLogin(loginForm)\">\n        <div class=\"form-group\">\n            <label for=\"email\">Email</label>\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\n                required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !email.valid }\">\n            <div *ngIf=\"loginForm.submitted && email.errors\">\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n            </div>\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"password\">Email</label>\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\" placeholder=\"Password\"\n                class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !password.valid }\">\n            <div *ngIf=\"loginForm.submitted && password.errors\">\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\n            </div>\n        </div>\n\n        <button class=\"btn btn-primary\" type=\"submit\">Login</button>\n    </form>\n\n</div>\n\n\n<!-- Error message -->\n<div class=\"alert\" *ngIf=\"errorMessages\" style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif\">\n    {{errorMessages}}\n</div>"
+module.exports = "<br />\n<br />\n<div class=\"col-md-8-col-md-offset-2\">\n\n    <form #loginForm=\"ngForm\" (ngSubmit)=\"loginForm.valid && onLogin(loginForm)\">\n        <div class=\"form-group\">\n            <label for=\"email\">Email</label>\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\"\n                class=\"form-control\" required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !email.valid }\">\n            <div *ngIf=\"loginForm.submitted && email.errors\">\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n            </div>\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\"\n                placeholder=\"Password\" class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !password.valid }\">\n            <div *ngIf=\"loginForm.submitted && password.errors\">\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\n            </div>\n        </div>\n\n        <button class=\"btn btn-primary\" type=\"submit\">Login</button>\n    </form>\n\n</div>\n\n\n<!-- Error message -->\n<div class=\"alert\" *ngIf=\"errorMessages\" style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif\">\n    {{errorMessages}}\n</div>"
 
 /***/ }),
 
@@ -1803,7 +1805,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Corm
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<button class=\"btn btn-secondary\" (click)=\"backToAdmin()\">back to admin</button>\n<div id=\"message\">\n  <br />\n  <br />\n  <br />\n  <br />\n  <p class=\"alert alert-success\" role=\"alert\">The operation is successful!</p>\n\n</div>"
+module.exports = "<br />\n<br />\n<button class=\"btn btn-secondary\" (click)=\"backToAdmin()\">back to admin</button>\n<div id=\"message\">\n  <br />\n  <br />\n  <br />\n  <br />\n  <p class=\"alert alert-success\" role=\"alert\">The Operation is Successful.</p>\n\n</div>"
 
 /***/ }),
 
@@ -2273,7 +2275,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Corm
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<div id=\"searchBar\">\n    <form [formGroup]=\"form\">\n        <div class=\"input-group\">\n            <input formControlName=\"movieName\" type=\"text\" placeholder=\"please search here\" class=\"form-control\">\n            <div class=\"input-group-append\">\n                <button class=\"btn btn-outline-secondary\" type=\"submit\" [disabled]=\"!form.valid\" (click)=\"onSubmit()\">search</button>\n            </div>\n        </div>\n        <br />\n        <div *ngIf=\"movieName.invalid\">\n            <div *ngIf=\"movieName.errors.minlength\">Name requires at least\n                {{movieName.errors.minlength.requiredLength}}\n                charaters.\n            </div>\n            <div *ngIf=\"movieName.errors.maxlength\">Name requires at most\n                {{movieName.errors.maxlength.requiredLength}}\n                charaters.\n            </div>\n        </div>\n    </form>\n</div>\n<div>\n    <div *ngFor=\"let property of movieResult\" id=\"movie\">\n        <h3>{{property.name}}</h3>\n        <br />\n        <br />\n        <br />\n        <label> <span>Sessions: </span></label>\n        <br />\n        <div *ngFor=\"let showtime of property.showtime\" class=\"list-group-item list-group-item-action list-group-item-light\"\n            [routerLink]=\"['../genre', showtime,property._id]\">{{showtime | date:'short'}}<br />\n        </div>\n        <br />\n        <label><span>Running time: </span>\n            <br />\n            <br />\n            {{property.runningTime}} mins\n        </label>\n        <br />\n        <br />\n        <label><span>Director: </span>\n            <br />\n            <br />\n            {{property.director | uppercase}}\n        </label>\n        <br />\n        <br />\n        <label><span>Cast:</span></label>\n        <br />\n        <div *ngFor=\"let star of property.stars\">\n            {{star|uppercase}}\n            <br />\n        </div>\n        <br />\n        <br />\n        <label><span>Story: </span>\n            <br />\n            <br />\n            {{property.storyline}}\n        </label>\n        <br />\n        <br />\n        <label><span>Genre:</span></label>\n        <div *ngFor=\"let genre of property.genres\">\n            {{genre|uppercase}}\n        </div>\n        <br />\n        <br />\n        <label><span>Status: </span>\n            <br />\n            <br />\n            {{property.status | uppercase}}\n        </label>\n        <br />\n        <br />\n    </div>"
+module.exports = "<br />\n<br />\n<div id=\"searchBar\">\n    <form [formGroup]=\"form\">\n        <div class=\"input-group\">\n            <input formControlName=\"movieName\" type=\"text\" placeholder=\"please search here\" class=\"form-control\">\n            <div class=\"input-group-append\">\n                <button class=\"btn btn-outline-secondary\" type=\"submit\" [disabled]=\"!form.valid\" (click)=\"onSubmit()\">search</button>\n            </div>\n        </div>\n        <br />\n        <div *ngIf=\"movieName.invalid\">\n            <div *ngIf=\"movieName.errors.minlength\">Name requires at least\n                {{movieName.errors.minlength.requiredLength}}\n                charaters.\n            </div>\n            <div *ngIf=\"movieName.errors.maxlength\">Name requires at most\n                {{movieName.errors.maxlength.requiredLength}}\n                charaters.\n            </div>\n        </div>\n    </form>\n    <div *ngIf=flag>\n        <p class=\"alert alert-warning\" role=\"alert\">\n            Sorry, the result you are looking for has not been found.\n        </p>\n    </div>\n</div>\n<div>\n    <div *ngFor=\"let property of movieResult\" id=\"movie\">\n        <h3>{{property.name}}</h3>\n        <br />\n        <br />\n        <br />\n        <label> <span>Sessions: </span></label>\n        <br />\n        <div *ngFor=\"let showtime of property.showtime\" class=\"list-group-item list-group-item-action list-group-item-light\"\n            [routerLink]=\"['../genre', showtime,property._id]\">{{showtime | date:'short'}}<br />\n        </div>\n        <br />\n        <label><span>Running time: </span>\n            <br />\n            <br />\n            {{property.runningTime}} mins\n        </label>\n        <br />\n        <br />\n        <label><span>Director: </span>\n            <br />\n            <br />\n            {{property.director | uppercase}}\n        </label>\n        <br />\n        <br />\n        <label><span>Cast:</span></label>\n        <br />\n        <div *ngFor=\"let star of property.stars\">\n            {{star|uppercase}}\n            <br />\n        </div>\n        <br />\n        <br />\n        <label><span>Story: </span>\n            <br />\n            <br />\n            {{property.storyline}}\n        </label>\n        <br />\n        <br />\n        <label><span>Genre:</span></label>\n        <div *ngFor=\"let genre of property.genres\">\n            {{genre|uppercase}}\n        </div>\n        <br />\n        <br />\n        <label><span>Status: </span>\n            <br />\n            <br />\n            {{property.status | uppercase}}\n        </label>\n        <br />\n        <br />\n    </div>"
 
 /***/ }),
 
@@ -2305,6 +2307,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var SearchBarComponent = /** @class */ (function () {
     function SearchBarComponent(service) {
         this.service = service;
+        this.flag = false;
         this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
             movieName: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]("", [
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].minLength(2),
@@ -2330,6 +2333,8 @@ var SearchBarComponent = /** @class */ (function () {
             for (var _i = 0, _a = _this.movies; _i < _a.length; _i++) {
                 var movie = _a[_i];
                 console.log(movie.name);
+                //if the result is not found, the flag is true.
+                _this.flag = true;
                 //if words match, get the sepecific movie from database
                 if (_this.CompareWithWords(movie.name, _this.form.value.movieName)) {
                     //get the object id of the matched movie
@@ -2338,6 +2343,8 @@ var SearchBarComponent = /** @class */ (function () {
                     _this.service
                         .getMoviesById(_this.searchResultId)
                         .subscribe(function (response) {
+                        //if the result is found, the flag is false
+                        _this.flag = false;
                         _this.movieResult = response.json();
                         console.log("i got the movie!", _this.movieResult);
                     });
