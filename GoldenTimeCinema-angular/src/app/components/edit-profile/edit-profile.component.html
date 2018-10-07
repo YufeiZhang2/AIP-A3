@@ -10,10 +10,13 @@
     <div class="form-group">
       <label for="firstName">First Name</label>
       <input type="text" #firstName="ngModel" [(ngModel)]="userDetails.firstName" name="firstName" placeholder="First Name" class="form-control"
-        required [ngClass]="{ 'ng-invalid': editProfileForm.submitted && !firstName.valid }">
+        required [pattern]="nameRegex" minlength="2" maxlength="30" [ngClass]="{ 'ng-invalid': editProfileForm.submitted && !firstName.valid }">
       <!-- Display of Validation for firstname input -->
       <div *ngIf="editProfileForm.submitted && firstName.errors">
         <label *ngIf="firstName.errors.required" class="validation-message">First name is required.</label>
+        <label *ngIf="firstName.errors.minlength" class="validation-message">First name must have at least 2 characters.</label>
+        <label *ngIf="firstName.errors.maxlength" class="validation-message">First name should not exceed 30 characters.</label>
+        <label *ngIf="firstName.errors.pattern" class="validation-message">Invalid name format.</label>
       </div>
     </div>
 
@@ -21,10 +24,13 @@
     <div class="form-group">
       <label for="lastName">Last Name</label>
       <input type="text" #lastName="ngModel" [(ngModel)]="userDetails.lastName" name="lastName" placeholder="Last Name" class="form-control"
-        required [ngClass]="{ 'ng-invalid': editProfileForm.submitted && !lastName.valid }">
+        required [pattern]="nameRegex" minlength="2" maxlength="30" [ngClass]="{ 'ng-invalid': editProfileForm.submitted && !lastName.valid }">
       <!-- Display of Validation for lastname input -->
       <div *ngIf="editProfileForm.submitted && lastName.errors">
         <label *ngIf="lastName.errors.required" class="validation-message">Last name is required.</label>
+        <label *ngIf="lastName.errors.minlength" class="validation-message">Last name must have at least 2 characters.</label>
+        <label *ngIf="lastName.errors.maxlength" class="validation-message">Last name should not exceed 30 characters.</label>
+        <label *ngIf="lastName.errors.pattern" class="validation-message">Invalid name format.</label>
       </div>
     </div>
 

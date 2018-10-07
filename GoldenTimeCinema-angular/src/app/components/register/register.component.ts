@@ -11,6 +11,7 @@ import { Router } from "@angular/router";
 export class RegisterComponent implements OnInit {
   // Email regular expression to validate email format
   emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  nameRegex = /^([a-zA-Z ]){2,30}$/;
   gender = null;
   genders = ["Female", "Male", "Other"];
   successMessage: boolean;
