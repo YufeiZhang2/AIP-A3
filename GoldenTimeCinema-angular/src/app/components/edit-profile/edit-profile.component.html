@@ -1,0 +1,90 @@
+<br />
+
+
+<br />
+<div *ngIf="userDetails" class="col-md-8-col-md-offset-2">
+  <!-- Edit Profile form -->
+  <form #editProfileForm="ngForm" (ngSubmit)="editProfileForm.valid && onUpdate(editProfileForm)">
+    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="userDetails._id">
+    <!-- Firstname input for user profile -->
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" #firstName="ngModel" [(ngModel)]="userDetails.firstName" name="firstName" placeholder="First Name" class="form-control"
+        required [pattern]="nameRegex" minlength="2" maxlength="30" [ngClass]="{ 'ng-invalid': editProfileForm.submitted && !firstName.valid }">
+      <!-- Display of Validation for firstname input -->
+      <div *ngIf="editProfileForm.submitted && firstName.errors">
+        <label *ngIf="firstName.errors.required" class="validation-message">First name is required.</label>
+        <label *ngIf="firstName.errors.minlength" class="validation-message">First name must have at least 2 characters.</label>
+        <label *ngIf="firstName.errors.maxlength" class="validation-message">First name should not exceed 30 characters.</label>
+        <label *ngIf="firstName.errors.pattern" class="validation-message">Invalid name format.</label>
+      </div>
+    </div>
+
+    <!-- Lastname input for user profile -->
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" #lastName="ngModel" [(ngModel)]="userDetails.lastName" name="lastName" placeholder="Last Name" class="form-control"
+        required [pattern]="nameRegex" minlength="2" maxlength="30" [ngClass]="{ 'ng-invalid': editProfileForm.submitted && !lastName.valid }">
+      <!-- Display of Validation for lastname input -->
+      <div *ngIf="editProfileForm.submitted && lastName.errors">
+        <label *ngIf="lastName.errors.required" class="validation-message">Last name is required.</label>
+        <label *ngIf="lastName.errors.minlength" class="validation-message">Last name must have at least 2 characters.</label>
+        <label *ngIf="lastName.errors.maxlength" class="validation-message">Last name should not exceed 30 characters.</label>
+        <label *ngIf="lastName.errors.pattern" class="validation-message">Invalid name format.</label>
+      </div>
+    </div>
+
+    <!-- Email input for user profile -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" #email="ngModel" [(ngModel)]="userDetails.email" name="email" placeholder="Email" class="form-control"
+        required [pattern]="emailRegex" [ngClass]="{ 'ng-invalid': editProfileForm.submitted && !email.valid }">
+      <!-- Display of Validation for email input -->
+      <div *ngIf="editProfileForm.submitted && email.errors">
+        <label *ngIf="email.errors.required" class="validation-message">Email is required.</label>
+        <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
+      </div>
+    </div>
+
+    <!-- Gender input for user profile -->
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select #gender="ngModel" [(ngModel)]="userDetails.gender" name="gender" placeholder="Gender" class="form-control" required
+        [ngClass]="{ 'ng-invalid': editProfileForm.submitted && !gender.valid }">
+        <option [ngValue]="null" disabled>Select gender</option>
+        <option *ngFor="let gender of genders" [ngValue]="gender">
+          {{ gender}}
+        </option>
+      </select>
+      <!-- Display of Validation for gender input -->
+      <div *ngIf="editProfileForm.submitted && gender.errors">
+        <label *ngIf="gender.errors.required" class="validation-message">Gender is required.</label>
+      </div>
+    </div>
+
+    <!-- Date of birth input for user profile -->
+    <div class="form-group">
+      <label for="dob">Date of birth</label>
+      <input type="date" #dob="ngModel" [(ngModel)]="userDetails.dob" name="dob" placeholder="Date of Birth" class="form-control"
+        required [ngClass]="{ 'ng-invalid': editProfileForm.submitted && !dob.valid }">
+      <!-- Display of Validation for date of birth input -->
+      <div *ngIf="editProfileForm.submitted && dob.errors">
+        <label *ngIf="dob.errors.required" class="validation-message">Date of birth is required.</label>
+      </div>
+    </div>
+    <button class="btn btn-secondary" (click)="backToProfile()">Back to Profile</button>
+    <button class="btn btn-primary" type="submit">Update</button>
+  </form>
+</div>
+
+<br />
+
+<!-- Success message -->
+<div class="success" *ngIf="successMessage">
+  <label>Update is successful</label>
+</div>
+
+<!-- Error message -->
+<div class="alert" *ngIf="errorMessages">
+  <label> {{errorMessages}}</label>
+</div>

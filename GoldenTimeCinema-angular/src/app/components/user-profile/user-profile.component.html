@@ -1,16 +1,27 @@
 <table *ngIf="userDetails">
-
-  <h2>User Profile</h2>
-
-  <div id="userProfile">
-    <p><span>First Name: </span>{{userDetails.firstName}}</p>
-    <p><span>Last Name: </span>{{userDetails.lastName}}</p>
-    <p><span>Email: </span>{{userDetails.email}}</p>
-    <p><span>Gender: </span>{{userDetails.gender}}</p>
-    <p><span>Date of birth: </span> {{userDetails.dob}}</p>
+  <div class="wrapper">
+    <div class="card">
+      <div class="card-header">
+        Welcome back, {{userDetails.firstName}} {{userDetails.lastName}}!
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">YOUR PROFILE</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <label>First Name: </label> {{userDetails.firstName}}</li>
+          <li class="list-group-item">
+            <label>Last Name: </label> {{userDetails.lastName}}</li>
+          <li class="list-group-item">
+            <label>Email: </label> {{userDetails.email}}</li>
+          <li class="list-group-item">
+            <label>Gender: </label> {{userDetails.gender}}</li>
+          <li class="list-group-item">
+            <label>Date of birth: </label> {{userDetails.dob | date: 'longDate'}}</li>
+        </ul>
+        <div class="button">
+          <button class="btn btn-secondary" (click)="onLogout()">Logout</button>
+          <button class="btn btn-primary" (click)="clickToEditProfile()">Edit Profile</button>
+        </div>
+      </div>
+    </div>
   </div>
-
-
-
-
-  <button (click)="onLogout()">Logout</button>

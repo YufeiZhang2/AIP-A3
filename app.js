@@ -1,4 +1,5 @@
 require("./models/userModel");
+require("./models/bookingModel");
 require("./config/passportConfig");
 require("./config/config");
 
@@ -10,10 +11,14 @@ const mongoose = require("mongoose");
 const moviesController = require("./controllers/moviesController");
 const usersController = require("./controllers/usersController");
 const dbConfig = require("./config/cinemaDb");
+const ticketsController = require("./controllers/ticketsController");
 
 // Connect mongoose to our database
 mongoose
-  .connect(dbConfig, { auth: { authdb: "admin" } })
+  .connect(
+    dbConfig,
+    { auth: { authdb: "admin" } }
+  )
   .then(() => console.log(`Connected to MongoDB ${dbConfig}...`))
   .catch(err => console.log("bad connection"));
 
@@ -36,6 +41,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/api/movies", moviesController);
 app.use("/api/movies/:_id", moviesController);
 app.use("/api", usersController);
+app.use("/api", ticketsController);
 
 // Handle errors for validation
 app.use((err, req, res, next) => {

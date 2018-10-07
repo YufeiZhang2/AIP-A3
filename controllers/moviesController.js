@@ -38,8 +38,6 @@ router.delete("/:_id", async (req, res) => {
 
 //create a movie in database
 router.post("/", async (req, res) => {
-
-
   try {
     const Newmovie = new movieModel({
       name: req.body.name,
@@ -51,7 +49,6 @@ router.post("/", async (req, res) => {
       price: req.body.price,
       storyline: req.body.storyline,
       status: req.body.status
-
     });
 
     console.log("In controller:", req.body);
@@ -59,19 +56,23 @@ router.post("/", async (req, res) => {
   } catch (err) {
     res.send(err);
   }
-})
+});
 
 //update the status of a movie
 router.put("/:_id", async (req, res) => {
   console.log("my test for updating:", req.params._id, req.body);
 
   //find  the movie by object id and update the status of it
-  const movie = await movieModel.findByIdAndUpdate({ _id: req.params._id }, { status: req.body.status }, { new: true },
+  const movie = await movieModel.findByIdAndUpdate(
+    { _id: req.params._id },
+    { status: req.body.status },
+    { new: true },
     (err, result) => {
       if (err) return res.send(err);
       res.send(result);
-    });
+    }
+  );
   console.log("my test for updating:", movie);
-})
+});
 
 module.exports = router;

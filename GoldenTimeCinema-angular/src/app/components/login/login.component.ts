@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
       // successful authentication
       res => {
         this.authService.setToken(res["token"]); // save token to local storage
+        //localStorage.setItem('admin',isAdmin)
         this.router.navigateByUrl("/userprofile"); // redirect to user profile page
       },
       // If errors occur

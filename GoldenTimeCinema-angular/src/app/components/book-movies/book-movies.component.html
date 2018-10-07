@@ -10,25 +10,59 @@
   <h3>{{property.name}}</h3>
   <br />
 
-  <label> <span>Sessions: </span></label>
-  <div>{{bookingTime
-    |
-    date:'short'}}<br /></div>
+  <label>
+    <span>Sessions: </span>
+  </label>
+  <div>{{bookingTime | date:'short'}}
+    <br />
+  </div>
   <br />
-  <label><span>Price: </span>{{property.price | currency:'AUD':true:'1.2-2'}}</label>
+  <label>
+    <span>Price: </span>{{property.price | currency:'AUD':true:'1.2-2'}}</label>
   <br />
   <br />
 </div>
 
+<!-- If the movie has "coming soon" status -->
 <div *ngIf="!flag" id="movie">
   <br />
   <br />
   <label>This movie is coming soon. Please stay tune.</label>
 </div>
-<div *ngIf="flag" id="movie">
-  <form id="form">
-    <label>Please enter your email: </label><input id="email" type="text" class="form-control">
+<!-- If the movie is "now showing", display the booking form without email provided before-->
+<div *ngIf="onlyMovie()" id="movie">
+  <form #bookingForm="ngForm" (ngSubmit)="bookingForm.valid && onBook(bookingForm)">
+    <label>Please enter your email: </label>
+    <input type="text" #email="ngModel" [(ngModel)]="bookingService.email" name="email" placeholder="Email" class="form-control"
+      required [pattern]="emailRegex" [ngClass]="{ 'ng-invalid': bookingForm.submitted && !email.valid }">
+    <!-- Display of Validation for email input -->
+    <div *ngIf="bookingForm.submitted && email.errors">
+      <label *ngIf="email.errors.required" class="validation-message">Email is required.</label>
+      <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
+    </div>
     <br />
     <button class="btn btn-primary" type="submit">Confirm booking</button>
   </form>
+</div>
+
+<!-- If the movie is "now showing" and user is logged in, display the booking form without user's email provided-->
+<!-- User can still change the email address to send the ticket to -->
+<div *ngIf="bothMovieUser() && userDetails" id="movie">
+  <form #bookingForm="ngForm" (ngSubmit)="bookingForm.valid && onBook(bookingForm)">
+    <label>Please check your email:</label>
+    <input type="text" #email="ngModel" [(ngModel)]="userDetails.email" name="email" placeholder="Email" class="form-control"
+      required [pattern]="emailRegex" [ngClass]="{ 'ng-invalid': bookingForm.submitted && !email.valid }">
+    <!-- Display of Validation for email input -->
+    <div *ngIf="bookingForm.submitted && email.errors">
+      <label *ngIf="email.errors.required" class="validation-message">Email is required.</label>
+      <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
+    </div>
+    <br />
+    <button class="btn btn-primary" type="submit">Confirm booking</button>
+  </form>
+</div>
+
+<!-- If the movie has "coming soon" status -->
+<div>
+  <label *ngIf="bookingComplete" class="success">Your ticket has been succesfully booked. Please check your email for more details.</label>
 </div>

@@ -1,17 +1,20 @@
 import { Component, OnInit } from "@angular/core";
-import { NgForm } from "@angular/forms";
 import { AuthenticationService } from "../../services/authentication.service";
 import { Router } from "@angular/router";
+import { NgForm } from "@angular/forms";
+import { User } from "../auth/user.model";
 
 @Component({
-  selector: "register",
-  templateUrl: "./register.component.html",
-  styleUrls: ["./register.component.css"]
+  selector: "edit-profile",
+  templateUrl: "./edit-profile.component.html",
+  styleUrls: ["./edit-profile.component.css"]
 })
-export class RegisterComponent implements OnInit {
+export class EditProfileComponent implements OnInit {
   // Email regular expression to validate email format
   emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   nameRegex = /^([a-zA-Z ]){2,30}$/;
+
+  userDetails;
   gender = null;
   genders = ["Female", "Male", "Other"];
   successMessage: boolean;
@@ -23,19 +26,19 @@ export class RegisterComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // If user is already logged in, redirect to user profile page
-    if (this.authService.isLoggedIn()) {
-      this.router.navigateByUrl("/userprofile");
-    }
-  }
-
-  onRegister(form: NgForm) {
-    this.authService.registerUser(form.value).subscribe(
-      // if registration is successfull
+    this.authService.getUserProfile().subscribe(
       res => {
-        this.successMessage = true;
-        setTimeout(() => (this.successMessage = false), 4000); // Success message dissapears after 4 seconds
-        this.resetForm(form);
+        this.userDetails = res["user"];
+      },
+      err => {}
+    );
+  }
+  onUpdate(form: NgForm) {
+    this.authService.updateUser(form.value).subscribe(
+      res => {
+        // this.successMessage = true;
+        // setTimeout(() => (this.successMessage = false), 4000); // Success message dissapears after 4 seconds
+        this.router.navigate(["/userprofile"]);
       },
 
       // if there are errors sent from server-side
@@ -48,18 +51,7 @@ export class RegisterComponent implements OnInit {
     );
   }
 
-  resetForm(form: NgForm) {
-    this.authService.selectedUser = {
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      gender: "",
-      dob: null,
-      isAdmin: false,
-      _id: ""
-    };
-    form.resetForm();
-    this.errorMessages = "";
+  backToProfile() {
+    this.router.navigate(["/userprofile"]);
   }
 }

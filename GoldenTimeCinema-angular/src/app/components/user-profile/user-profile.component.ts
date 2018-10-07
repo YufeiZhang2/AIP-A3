@@ -29,4 +29,8 @@ export class UserProfileComponent implements OnInit {
     this.authService.deleteToken();
     this.router.navigate(["/login"]);
   }
+
+  clickToEditProfile() {
+    this.router.navigate(["/editprofile"]);
+  }
 }

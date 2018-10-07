@@ -10,7 +10,8 @@
     <li class="nav-item" routerLinkActive="active">
       <a routerLink="../genre">{{genre}}</a>
     </li>
-    <li class="nav-item" routerLinkActive="active">
+    <!-- Only display admin tab for admin user -->
+    <li class="nav-item" *ngIf="authService.displayAdmin()" routerLinkActive="active">
       <a routerLink="../admin">{{admin}}</a>
     </li>
     <!-- User authService.isLoggedIn directly here to solve problem of manually refreshing the page to see changes -->
@@ -19,6 +20,9 @@
     </li>
     <li class="nav-item" *ngIf="!authService.isLoggedIn()" routerLinkActive="active">
       <a routerLink="../register">{{register}}</a>
+    </li>
+    <li class="nav-item" *ngIf="authService.isLoggedIn()" routerLinkActive="active">
+      <a routerLink="../tickets">{{ticket}}</a>
     </li>
     <li class="nav-item" *ngIf="authService.isLoggedIn()" routerLinkActive="active">
       <a routerLink="../userprofile">{{profile}}</a>

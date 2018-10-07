@@ -1,13 +1,10 @@
 const express = require("express");
 const router = express.Router();
-
 const userController = require("../controllers/usersController");
 const jwtHelper = require("../config/jwtHelper");
-
 const mongoose = require("mongoose");
 const passport = require("passport");
 const _ = require("lodash");
-
 const User = mongoose.model("user");
 
 module.exports.register = (req, res, next) => {
@@ -18,6 +15,10 @@ module.exports.register = (req, res, next) => {
   user.password = req.body.password;
   user.gender = req.body.gender;
   user.dob = req.body.dob;
+  // Set user as admin if the email is right
+  if (user.email === "admin@goldentimecinema.com") {
+    user.isAdmin = true;
+  }
   user.save((err, doc) => {
     if (!err) res.send(doc);
     else {
@@ -49,17 +50,56 @@ module.exports.userProfile = (req, res, next) => {
     else
       return res.status(200).json({
         status: true,
-        user: _.pick(user, ["firstName", "lastName", "email", "gender", "dob"])
+        user: _.pick(user, [
+          "firstName",
+          "lastName",
+          "email",
+          "gender",
+          "dob",
+          "isAdmin",
+          "_id"
+        ])
       });
   });
+};
+
+module.exports.editUserProfile = (req, res, next) => {
+  var userNewData = {
+    lastName: req.body.lastName,
+    firstName: req.body.firstName,
+    email: req.body.email,
+    gender: req.body.gender,
+    dob: req.body.dob
+  };
+
+  User.findByIdAndUpdate(
+    { _id: req._id },
+    { $set: userNewData },
+    { new: true },
+    (err, doc) => {
+      if (!err) {
+        res.send(doc);
+      } else {
+        console.log(
+          "Error in User Update :" + JSON.stringify(err, undefined, 2)
+        );
+      }
+    }
+  );
 };
 
 router.post("/register", userController.register);
 router.post("/authenticate", userController.authenticate);
 router.get(
-  "/userProfile",
+  "/userprofile",
   jwtHelper.verifyJwtToken,
   userController.userProfile
+);
+
+router.put(
+  "/editprofile",
+  jwtHelper.verifyJwtToken,
+  userController.editUserProfile
 );
 
 module.exports = router;

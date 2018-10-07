@@ -3,20 +3,27 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import { environment } from "../../environments/environment";
 import { User } from "../components/auth/user.model";
+import decode from "jwt-decode";
 
 @Injectable({
   providedIn: "root"
 })
 export class AuthenticationService {
-  // Initialize a User object with empty email and password
+  // Initialize a User object with empty properties
   selectedUser: User = {
+    _id: "",
     firstName: "",
     lastName: "",
     email: "",
     password: "",
     gender: "",
-    dob: null
+    dob: null,
+    isAdmin: false
   };
+
+  user: User;
+
+  role;
 
   noAuthHeader = { headers: new HttpHeaders({ NoAuth: "True" }) };
 
@@ -45,6 +52,15 @@ export class AuthenticationService {
     return this.http.get(environment.apiBaseUrl + "/userprofile");
   }
 
+  updateUser(user: User) {
+    // console.log("in service put", user);
+    return this.http.put(environment.apiBaseUrl + "/editprofile", user);
+  }
+
+  getAdmin() {
+    return this.http.get(environment.apiBaseUrl + "/admin");
+  }
+
   //Helper Methods
 
   // save token of current user inside local storage
@@ -62,6 +78,10 @@ export class AuthenticationService {
     localStorage.removeItem("token");
   }
 
+  // decode JWT token inside local storage
+  decodeToken() {
+    return decode(localStorage.getItem("token"));
+  }
   // Extract user payload from token
   getUserPayload() {
     var token = this.getToken();
@@ -76,5 +96,19 @@ export class AuthenticationService {
     // check if jwt expiration time is over or not
     if (userPayload) return userPayload.exp > Date.now() / 1000;
     else return false;
+  }
+
+  isAdmin() {
+    this.role = this.decodeToken().admin;
+    //console.log(this.role);
+    return this.role;
+  }
+
+  displayAdmin() {
+    if (this.isLoggedIn() && this.isAdmin()) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
