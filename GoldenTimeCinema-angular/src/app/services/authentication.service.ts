@@ -20,14 +20,14 @@ export class AuthenticationService {
     dob: null,
     isAdmin: false
   };
- 
+
   user: User;
 
   role;
 
   noAuthHeader = { headers: new HttpHeaders({ NoAuth: "True" }) };
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // httpMethods
 
