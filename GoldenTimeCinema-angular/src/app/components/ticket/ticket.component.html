@@ -10,11 +10,11 @@
         <p>
           <span>Movie: </span>{{ticket.movieName}}</p>
         <p>
-          <span>Session: </span>{{ticket.session}}</p>
+          <span>Session: </span>{{ticket.session | date:'short'}}</p>
         <p>
           <span>Sent Email: </span>{{ticket.email}}</p>
         <p>
-          <span>Price: </span>{{ticket.price}}</p>
+          <span>Price: </span>{{ticket.price | currency:'AUD':true:'1.2-2'}}</p>
       </li>
     </ul>
   </div>
