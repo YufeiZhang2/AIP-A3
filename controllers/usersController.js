@@ -15,6 +15,10 @@ module.exports.register = (req, res, next) => {
   user.password = req.body.password;
   user.gender = req.body.gender;
   user.dob = req.body.dob;
+  // Set user as admin if the email is right
+  if (user.email === "admin@goldentimecinema.com") {
+    user.isAdmin = true;
+  }
   user.save((err, doc) => {
     if (!err) res.send(doc);
     else {
