@@ -9,27 +9,27 @@ import { AuthenticationService } from "../../services/authentication.service";
 })
 export class TicketComponent implements OnInit {
   tickets: any[] = [];
-  userId = "";
   userDetails;
 
   constructor(
-    private bookingService: TicketService,
+    private ticketService: TicketService,
     private authService: AuthenticationService
   ) {}
 
   ngOnInit() {
+    // Get profile of current logged in user
     this.authService.getUserProfile().subscribe(
       res => {
         this.userDetails = res["user"];
-        this.userId = this.userDetails._id;
+
+        // Get tickets with the same user Id of this currrent logged in user
+        this.ticketService.getTickets().subscribe(response => {
+          this.tickets = response
+            .json()
+            .filter(ticket => ticket.userId === this.userDetails._id);
+        });
       },
       err => {}
     );
-
-    this.bookingService.getTickets().subscribe(response => {
-      this.tickets = response
-        .json()
-        .filter(ticket => ticket.userId === this.userId);
-    });
   }
 }

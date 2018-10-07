@@ -90,9 +90,15 @@ module.exports.saveTicket = (req, res, next) => {
 
 router.post("/book", ticketsController.saveTicket);
 
-router.get("/tickets", async (req, res) => {
-  console.log(bookingModel);
-  const tickets = await bookingModel.find();
-  res.send(tickets);
+router.get("/tickets", (req, res) => {
+  Booking.find((err, docs) => {
+    if (!err) {
+      res.send(docs);
+    } else {
+      console.log(
+        "Error in Retriving Employees :" + JSON.stringify(err, undefined, 2)
+      );
+    }
+  });
 });
 module.exports = router;

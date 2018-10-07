@@ -7,6 +7,7 @@ import { MovieBooking } from "../components/book-movies/book-movies.model";
   providedIn: "root"
 })
 export class TicketService {
+  tickets: MovieBooking[];
   constructor(private http: Http) {}
 
   bookMovie(booking: MovieBooking) {
