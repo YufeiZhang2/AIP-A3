@@ -14,11 +14,16 @@ const dbConfig = require("./config/cinemaDb");
 const ticketsController = require("./controllers/ticketsController");
 
 // Connect mongoose to our database
+// mongoose
+//   .connect(
+//     dbConfig,
+//     { auth: { authdb: "admin" } }
+//   )
+//   .then(() => console.log(`Connected to MongoDB ${dbConfig}...`))
+//   .catch(err => console.log("bad connection"));
+
 mongoose
-  .connect(
-    dbConfig,
-    { auth: { authdb: "admin" } }
-  )
+  .connect(dbConfig)
   .then(() => console.log(`Connected to MongoDB ${dbConfig}...`))
   .catch(err => console.log("bad connection"));
 
@@ -55,9 +60,14 @@ app.use((err, req, res, next) => {
 });
 
 //Handle errors when the api is not defined
-app.use("/", (req, res) => {
-  res.send("Invalid page");
+// app.use("/", (req, res) => {
+//   res.send("Invalid page");
+// });
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
 });
+
 
 //Listen to port local environment port or port 3000
 const port = process.env.PORT || 3000;
