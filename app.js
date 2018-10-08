@@ -14,16 +14,11 @@ const dbConfig = require("./config/cinemaDb");
 const ticketsController = require("./controllers/ticketsController");
 
 // Connect mongoose to our database
-// mongoose
-//   .connect(
-//     dbConfig,
-//     { auth: { authdb: "admin" } }
-//   )
-//   .then(() => console.log(`Connected to MongoDB ${dbConfig}...`))
-//   .catch(err => console.log("bad connection"));
-
 mongoose
-  .connect(dbConfig)
+  .connect(
+    dbConfig,
+    { auth: { authdb: "admin" } }
+  )
   .then(() => console.log(`Connected to MongoDB ${dbConfig}...`))
   .catch(err => console.log("bad connection"));
 
