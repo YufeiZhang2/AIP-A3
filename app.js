@@ -59,10 +59,11 @@ app.use((err, req, res, next) => {
 //   res.send("Invalid page");
 // });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
+// All other routes, lead back to index page
+// Fix problem of "invalid page" when reloading the page
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/index.html"));
 });
-
 
 //Listen to port local environment port or port 3000
 const port = process.env.PORT || 3000;
