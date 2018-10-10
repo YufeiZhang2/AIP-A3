@@ -1,36 +1,31 @@
 import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
+import { environment } from "../../environments/environment";
 
 @Injectable({
   providedIn: "root"
 })
 export class MoviesService {
-  // Run locally
-  private url = "http://localhost:3000/api/movies";
-
-  // Run in the cloud
-  // private url = 'http://ec2-18-236-193-77.us-west-2.compute.amazonaws.com:3000/api/movies';
-
   constructor(private http: Http) {}
 
   getMovies() {
-    return this.http.get(this.url);
+    return this.http.get(environment.apiBaseUrl);
   }
 
   getMoviesById(_id) {
-    return this.http.get(this.url + "/" + _id);
+    return this.http.get(environment.apiBaseUrl + "/" + _id);
   }
 
   createMovies(movie) {
-    return this.http.post(this.url, movie);
+    return this.http.post(environment.apiBaseUrl, movie);
   }
 
   updateMovies(movie) {
     console.log("in service put", movie);
-    return this.http.put(this.url + "/" + movie._id, movie);
+    return this.http.put(environment.apiBaseUrl + "/" + movie._id, movie);
   }
 
   deleteMovies(_id) {
-    return this.http.delete(this.url + "/" + _id);
+    return this.http.delete(environment.apiBaseUrl + "/" + _id);
   }
 }
