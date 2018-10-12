@@ -16,8 +16,8 @@ const ticketsController = require("./controllers/ticketsController");
 // Connect mongoose to our database
 mongoose
   .connect(
-    dbConfig,
-    { auth: { authdb: "admin" } }
+    dbConfig
+    // { auth: { authdb: "admin" } }
   )
   .then(() => console.log(`Connected to MongoDB ${dbConfig}...`))
   .catch(err => console.log("bad connection"));
