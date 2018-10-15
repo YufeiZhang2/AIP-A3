@@ -21,7 +21,6 @@ import { NotFoundPageComponent } from "./components/not-found-page/not-found-pag
 import { AddMovieFormComponent } from "./components/add-movie-form/add-movie-form.component";
 import { LoginComponent } from "./components/login/login.component";
 import { RegisterComponent } from "./components/register/register.component";
-import { EditMovieFormComponent } from "./components/edit-movie-form/edit-movie-form.component";
 import { MovieComponent } from "./components/movie/movie.component";
 import { AdminComponent } from "./components/admin/admin.component";
 import { MessageComponent } from "./components/message/message.component";
@@ -60,7 +59,6 @@ import { EditProfileComponent } from "./components/edit-profile/edit-profile.com
     NotFoundPageComponent,
     LoginComponent,
     RegisterComponent,
-    EditMovieFormComponent,
     MovieComponent,
     UserProfileComponent,
     AdminComponent,

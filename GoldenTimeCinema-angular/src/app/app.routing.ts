@@ -11,7 +11,6 @@ import { CompanyInformationComponent } from "./components/company-information/co
 import { NotFoundPageComponent } from "./components/not-found-page/not-found-page.component";
 import { AddMovieFormComponent } from "./components/add-movie-form/add-movie-form.component";
 import { RegisterComponent } from "./components/register/register.component";
-import { EditMovieFormComponent } from "./components/edit-movie-form/edit-movie-form.component";
 import { LoginComponent } from "./components/login/login.component";
 import { UserProfileComponent } from "./components/user-profile/user-profile.component";
 import { EditProfileComponent } from "./components/edit-profile/edit-profile.component";
@@ -70,12 +69,6 @@ const routes: Routes = [
     path: "tickets",
     component: TicketComponent,
     canActivate: [AuthGuard]
-  },
-  {
-    path: "editMovieForm",
-    component: EditMovieFormComponent,
-    canActivate: [AuthGuard, AdminGuard],
-    data: { isAdmin: true }
   },
   {
     path: "movie/:_id",
