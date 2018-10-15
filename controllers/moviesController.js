@@ -1,6 +1,3 @@
-const auth = require("../middleware/auth");
-const admin = require("../middleware/admin");
-
 const express = require("express");
 const { movieModel } = require("../models/movieModel");
 const router = express.Router();
