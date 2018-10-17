@@ -10,6 +10,10 @@ export class TicketService {
   tickets: MovieBooking[];
   constructor(private http: Http) {}
 
+  // When user book a ticket,
+  // ticket information is saved to the database
+  // a notification message is sent to user's email
+  // Link to api in ticketController
   bookMovie(booking: MovieBooking) {
     return this.http.post(environment.apiBaseUrl + "/book", booking);
   }
