@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header></header>\n<navigation-bar></navigation-bar>\n<router-outlet></router-outlet>\n<footer></footer>"
+module.exports = "<header></header>\r\n<navigation-bar></navigation-bar>\r\n<router-outlet></router-outlet>\r\n<footer></footer>"
 
 /***/ }),
 
@@ -110,22 +110,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/add-movie-form/add-movie-form.component */ "./src/app/components/add-movie-form/add-movie-form.component.ts");
 /* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
 /* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
-/* harmony import */ var _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/edit-movie-form/edit-movie-form.component */ "./src/app/components/edit-movie-form/edit-movie-form.component.ts");
-/* harmony import */ var _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/movie/movie.component */ "./src/app/components/movie/movie.component.ts");
-/* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
-/* harmony import */ var _components_message_message_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/message/message.component */ "./src/app/components/message/message.component.ts");
-/* harmony import */ var _components_book_movies_book_movies_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/book-movies/book-movies.component */ "./src/app/components/book-movies/book-movies.component.ts");
-/* harmony import */ var _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/user-profile/user-profile.component */ "./src/app/components/user-profile/user-profile.component.ts");
-/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
-/* harmony import */ var _services_movies_service__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./services/movies.service */ "./src/app/services/movies.service.ts");
-/* harmony import */ var _services_ticket_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/ticket.service */ "./src/app/services/ticket.service.ts");
-/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
-/* harmony import */ var _components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/auth/auth.guard */ "./src/app/components/auth/auth.guard.ts");
-/* harmony import */ var _components_auth_admin_guard__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/auth/admin.guard */ "./src/app/components/auth/admin.guard.ts");
-/* harmony import */ var _components_auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/auth/auth.interceptor */ "./src/app/components/auth/auth.interceptor.ts");
-/* harmony import */ var mydatepicker__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! mydatepicker */ "./node_modules/mydatepicker/index.js");
-/* harmony import */ var _components_ticket_ticket_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./components/ticket/ticket.component */ "./src/app/components/ticket/ticket.component.ts");
-/* harmony import */ var _components_edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./components/edit-profile/edit-profile.component */ "./src/app/components/edit-profile/edit-profile.component.ts");
+/* harmony import */ var _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/movie/movie.component */ "./src/app/components/movie/movie.component.ts");
+/* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
+/* harmony import */ var _components_message_message_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/message/message.component */ "./src/app/components/message/message.component.ts");
+/* harmony import */ var _components_book_movies_book_movies_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/book-movies/book-movies.component */ "./src/app/components/book-movies/book-movies.component.ts");
+/* harmony import */ var _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/user-profile/user-profile.component */ "./src/app/components/user-profile/user-profile.component.ts");
+/* harmony import */ var _components_ticket_ticket_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/ticket/ticket.component */ "./src/app/components/ticket/ticket.component.ts");
+/* harmony import */ var _components_edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/edit-profile/edit-profile.component */ "./src/app/components/edit-profile/edit-profile.component.ts");
+/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
+/* harmony import */ var _services_movies_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/movies.service */ "./src/app/services/movies.service.ts");
+/* harmony import */ var _services_ticket_service__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./services/ticket.service */ "./src/app/services/ticket.service.ts");
+/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
+/* harmony import */ var _auth_auth_guard__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./auth/auth.guard */ "./src/app/auth/auth.guard.ts");
+/* harmony import */ var _auth_admin_guard__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./auth/admin.guard */ "./src/app/auth/admin.guard.ts");
+/* harmony import */ var _auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./auth/auth.interceptor */ "./src/app/auth/auth.interceptor.ts");
+/* harmony import */ var mydatepicker__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! mydatepicker */ "./node_modules/mydatepicker/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -159,6 +158,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 // Service imports
 
 
@@ -166,8 +166,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 // Route imports
 
 // Other imports
-
-
 
 
 
@@ -192,35 +190,34 @@ var AppModule = /** @class */ (function () {
                 _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_15__["NotFoundPageComponent"],
                 _components_login_login_component__WEBPACK_IMPORTED_MODULE_17__["LoginComponent"],
                 _components_register_register_component__WEBPACK_IMPORTED_MODULE_18__["RegisterComponent"],
-                _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_19__["EditMovieFormComponent"],
-                _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_20__["MovieComponent"],
-                _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_24__["UserProfileComponent"],
-                _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_21__["AdminComponent"],
-                _components_message_message_component__WEBPACK_IMPORTED_MODULE_22__["MessageComponent"],
-                _components_book_movies_book_movies_component__WEBPACK_IMPORTED_MODULE_23__["BookMoviesComponent"],
-                _components_ticket_ticket_component__WEBPACK_IMPORTED_MODULE_33__["TicketComponent"],
-                _components_edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_34__["EditProfileComponent"]
+                _components_movie_movie_component__WEBPACK_IMPORTED_MODULE_19__["MovieComponent"],
+                _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_23__["UserProfileComponent"],
+                _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_20__["AdminComponent"],
+                _components_message_message_component__WEBPACK_IMPORTED_MODULE_21__["MessageComponent"],
+                _components_book_movies_book_movies_component__WEBPACK_IMPORTED_MODULE_22__["BookMoviesComponent"],
+                _components_ticket_ticket_component__WEBPACK_IMPORTED_MODULE_24__["TicketComponent"],
+                _components_edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_25__["EditProfileComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_3__["HttpModule"],
-                _app_routing__WEBPACK_IMPORTED_MODULE_28__["RoutingModule"],
+                _app_routing__WEBPACK_IMPORTED_MODULE_29__["RoutingModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
-                mydatepicker__WEBPACK_IMPORTED_MODULE_32__["MyDatePickerModule"]
+                mydatepicker__WEBPACK_IMPORTED_MODULE_33__["MyDatePickerModule"]
             ],
             providers: [
                 {
                     provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HTTP_INTERCEPTORS"],
-                    useClass: _components_auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_31__["AuthInterceptor"],
+                    useClass: _auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_32__["AuthInterceptor"],
                     multi: true
                 },
-                _services_authentication_service__WEBPACK_IMPORTED_MODULE_25__["AuthenticationService"],
-                _components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_29__["AuthGuard"],
-                _components_auth_admin_guard__WEBPACK_IMPORTED_MODULE_30__["AdminGuard"],
-                _services_movies_service__WEBPACK_IMPORTED_MODULE_26__["MoviesService"],
-                _services_ticket_service__WEBPACK_IMPORTED_MODULE_27__["TicketService"]
+                _services_authentication_service__WEBPACK_IMPORTED_MODULE_26__["AuthenticationService"],
+                _auth_auth_guard__WEBPACK_IMPORTED_MODULE_30__["AuthGuard"],
+                _auth_admin_guard__WEBPACK_IMPORTED_MODULE_31__["AdminGuard"],
+                _services_movies_service__WEBPACK_IMPORTED_MODULE_27__["MoviesService"],
+                _services_ticket_service__WEBPACK_IMPORTED_MODULE_28__["TicketService"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
@@ -255,20 +252,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_not_found_page_not_found_page_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/not-found-page/not-found-page.component */ "./src/app/components/not-found-page/not-found-page.component.ts");
 /* harmony import */ var _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/add-movie-form/add-movie-form.component */ "./src/app/components/add-movie-form/add-movie-form.component.ts");
 /* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
-/* harmony import */ var _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/edit-movie-form/edit-movie-form.component */ "./src/app/components/edit-movie-form/edit-movie-form.component.ts");
-/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
-/* harmony import */ var _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/user-profile/user-profile.component */ "./src/app/components/user-profile/user-profile.component.ts");
-/* harmony import */ var _components_edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/edit-profile/edit-profile.component */ "./src/app/components/edit-profile/edit-profile.component.ts");
-/* harmony import */ var _components_ticket_ticket_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/ticket/ticket.component */ "./src/app/components/ticket/ticket.component.ts");
-/* harmony import */ var _components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/auth/auth.guard */ "./src/app/components/auth/auth.guard.ts");
-/* harmony import */ var _components_auth_admin_guard__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/auth/admin.guard */ "./src/app/components/auth/admin.guard.ts");
+/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
+/* harmony import */ var _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/user-profile/user-profile.component */ "./src/app/components/user-profile/user-profile.component.ts");
+/* harmony import */ var _components_edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/edit-profile/edit-profile.component */ "./src/app/components/edit-profile/edit-profile.component.ts");
+/* harmony import */ var _components_ticket_ticket_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/ticket/ticket.component */ "./src/app/components/ticket/ticket.component.ts");
+/* harmony import */ var _auth_auth_guard__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./auth/auth.guard */ "./src/app/auth/auth.guard.ts");
+/* harmony import */ var _auth_admin_guard__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./auth/admin.guard */ "./src/app/auth/admin.guard.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -304,7 +299,7 @@ var routes = [
     {
         path: "admin",
         component: _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"],
-        canActivate: [_components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_18__["AuthGuard"], _components_auth_admin_guard__WEBPACK_IMPORTED_MODULE_19__["AdminGuard"]],
+        canActivate: [_auth_auth_guard__WEBPACK_IMPORTED_MODULE_17__["AuthGuard"], _auth_admin_guard__WEBPACK_IMPORTED_MODULE_18__["AdminGuard"]],
         data: { isAdmin: true }
     },
     {
@@ -314,12 +309,12 @@ var routes = [
     {
         path: "addMovieForm",
         component: _components_add_movie_form_add_movie_form_component__WEBPACK_IMPORTED_MODULE_11__["AddMovieFormComponent"],
-        canActivate: [_components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_18__["AuthGuard"], _components_auth_admin_guard__WEBPACK_IMPORTED_MODULE_19__["AdminGuard"]],
+        canActivate: [_auth_auth_guard__WEBPACK_IMPORTED_MODULE_17__["AuthGuard"], _auth_admin_guard__WEBPACK_IMPORTED_MODULE_18__["AdminGuard"]],
         data: { isAdmin: true }
     },
     {
         path: "login",
-        component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"]
+        component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_13__["LoginComponent"]
     },
     {
         path: "register",
@@ -327,24 +322,18 @@ var routes = [
     },
     {
         path: "userprofile",
-        component: _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_15__["UserProfileComponent"],
-        canActivate: [_components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_18__["AuthGuard"]]
+        component: _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_14__["UserProfileComponent"],
+        canActivate: [_auth_auth_guard__WEBPACK_IMPORTED_MODULE_17__["AuthGuard"]]
     },
     {
         path: "editprofile",
-        component: _components_edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_16__["EditProfileComponent"],
-        canActivate: [_components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_18__["AuthGuard"]]
+        component: _components_edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_15__["EditProfileComponent"],
+        canActivate: [_auth_auth_guard__WEBPACK_IMPORTED_MODULE_17__["AuthGuard"]]
     },
     {
         path: "tickets",
-        component: _components_ticket_ticket_component__WEBPACK_IMPORTED_MODULE_17__["TicketComponent"],
-        canActivate: [_components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_18__["AuthGuard"]]
-    },
-    {
-        path: "editMovieForm",
-        component: _components_edit_movie_form_edit_movie_form_component__WEBPACK_IMPORTED_MODULE_13__["EditMovieFormComponent"],
-        canActivate: [_components_auth_auth_guard__WEBPACK_IMPORTED_MODULE_18__["AuthGuard"], _components_auth_admin_guard__WEBPACK_IMPORTED_MODULE_19__["AdminGuard"]],
-        data: { isAdmin: true }
+        component: _components_ticket_ticket_component__WEBPACK_IMPORTED_MODULE_16__["TicketComponent"],
+        canActivate: [_auth_auth_guard__WEBPACK_IMPORTED_MODULE_17__["AuthGuard"]]
     },
     {
         path: "movie/:_id",
@@ -391,6 +380,176 @@ var RoutingModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/auth/admin.guard.ts":
+/*!*************************************!*\
+  !*** ./src/app/auth/admin.guard.ts ***!
+  \*************************************/
+/*! exports provided: AdminGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminGuard", function() { return AdminGuard; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/authentication.service */ "./src/app/services/authentication.service.ts");
+/* harmony import */ var rxjs_add_operator_switchMap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/add/operator/switchMap */ "./node_modules/rxjs-compat/_esm5/add/operator/switchMap.js");
+/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var AdminGuard = /** @class */ (function () {
+    function AdminGuard(authService, router) {
+        this.authService = authService;
+        this.router = router;
+    }
+    AdminGuard.prototype.canActivate = function (next, state) {
+        // console.log("guard level: admin " + this.authService.isAdmin());
+        // console.log("next.data.isAdmin " + next.data.isAdmin);
+        if (!this.authService.isAdmin() === next.data.isAdmin) {
+            this.router.navigateByUrl("/login");
+            this.authService.deleteToken();
+            return false;
+        }
+        return true;
+    };
+    AdminGuard = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: "root"
+        }),
+        __metadata("design:paramtypes", [_services_authentication_service__WEBPACK_IMPORTED_MODULE_2__["AuthenticationService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], AdminGuard);
+    return AdminGuard;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/auth/auth.guard.ts":
+/*!************************************!*\
+  !*** ./src/app/auth/auth.guard.ts ***!
+  \************************************/
+/*! exports provided: AuthGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/authentication.service */ "./src/app/services/authentication.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AuthGuard = /** @class */ (function () {
+    function AuthGuard(authService, router) {
+        this.authService = authService;
+        this.router = router;
+    }
+    AuthGuard.prototype.canActivate = function (next, state) {
+        // If user is not logged in, redirect to login page and delete token in local storage
+        if (!this.authService.isLoggedIn()) {
+            this.router.navigateByUrl("/login");
+            this.authService.deleteToken();
+            return false;
+        }
+        return true;
+    };
+    AuthGuard = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: "root"
+        }),
+        __metadata("design:paramtypes", [_services_authentication_service__WEBPACK_IMPORTED_MODULE_2__["AuthenticationService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], AuthGuard);
+    return AuthGuard;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/auth/auth.interceptor.ts":
+/*!******************************************!*\
+  !*** ./src/app/auth/auth.interceptor.ts ***!
+  \******************************************/
+/*! exports provided: AuthInterceptor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthInterceptor", function() { return AuthInterceptor; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/authentication.service */ "./src/app/services/authentication.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var AuthInterceptor = /** @class */ (function () {
+    function AuthInterceptor(authService, router) {
+        this.authService = authService;
+        this.router = router;
+    }
+    AuthInterceptor.prototype.intercept = function (req, next) {
+        var _this = this;
+        if (req.headers.get("noauth"))
+            return next.handle(req.clone());
+        else {
+            var clonedReq = req.clone({
+                headers: req.headers.set("Authorization", "Bearer " + this.authService.getToken())
+            });
+            return next.handle(clonedReq).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["tap"])(function (event) { }, function (err) {
+                if (err.error.auth == false) {
+                    _this.router.navigateByUrl("/login");
+                }
+            }));
+        }
+    };
+    AuthInterceptor = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_services_authentication_service__WEBPACK_IMPORTED_MODULE_3__["AuthenticationService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    ], AuthInterceptor);
+    return AuthInterceptor;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/add-movie-form/add-movie-form.component.css":
 /*!************************************************************************!*\
   !*** ./src/app/components/add-movie-form/add-movie-form.component.css ***!
@@ -398,7 +557,7 @@ var RoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Bold|Source Sans Pro');\n#form{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-size: 20px;\n    color: grey;\n}\n#genres{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-size: 20px;\n    color:black;\n}\nspan{\n   font-size: 25px;\n   color: black;\n   font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nbutton{\n    font-family: 'Source Sans Pro', sans-serif;\n    width:5cm;\n    height: 1cm;;\n}"
+module.exports = ""
 
 /***/ }),
 
@@ -409,7 +568,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Corm
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<br />\n<button class=\"btn btn-secondary\" (click)=\"ClickToAdmin()\">Back to admin</button>\n<br />\n<br />\n<br />\n<form [formGroup]=\"form\" id=\"form\">\n\n    <div class=\"form-group\">\n        <label for=\"name\">Movie Name</label>\n        <input formControlName=\"name\" id=\"name\" type=\"text\" class=\"form-control\">\n        <div *ngIf=\"name.touched && name.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"name.errors.required\">Name is required</div>\n            <div *ngIf=\"name.errors.minlength\">Name requires at least {{name.errors.minlength.requiredLength}}\n                charaters.</div>\n            <div *ngIf=\"name.errors.maxlength\">Name requires at most {{name.errors.maxlength.requiredLength}}\n                charaters.</div>\n            <div *ngIf=\"name.errors.shouldBeUnique\">Name should be unique.</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"runningTime\">Running time</label>\n        <input formControlName=\"runningTime\" id=\"runningTime\" type=\"number\" class=\"form-control\">\n        <div *ngIf=\"runningTime.touched && runningTime.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"runningTime.errors.required\">Running time is required.</div>\n            <div *ngIf=\"runningTime.errors.min\">Running time requires at least greater than or equal 1.</div>\n            <div *ngIf=\"runningTime.errors.max\">Running time requires less than or equal 500.</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"showtime\">Session <br />(please press enter for the datetime one by one and delete the datetime by\n            clicking it)</label>\n        <input formArrayName=\"showtime\" id=\"showtime\" type=\"datetime-local\" (keyup.enter)=\"addShowtime(showtimeItem)\"\n            #showtimeItem class=\"form-control\">\n        <ul class=\"list-group\">\n            <li *ngFor=\"let showtimeItem of showtime.controls , let i = index\" (click)=\"\n                    removeShowtime(showtimeItem)\"\n                class=\"list-group-item\">\n                {{showtime.value[i]}}\n            </li>\n        </ul>\n        <!-- <div *ngIf=\"showtime.touched && showtime.invalid\" class=\"alert alert-danger\">\n                <div *ngIf=\"showtime.errors.required\">showtime is required</div>\n                <div *ngIf=\"showtime.errors.minlength\">showtime requires at least\n                    {{showtime.errors.minlength.requiredLength}}\n                    charaters.</div>\n                <div *ngIf=\"showtime.errors.maxlength\">showtime requires at most\n                    {{showtime.errors.maxlength.requiredLength}}\n                    charaters.</div>\n            </div> -->\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"stars\">Stars <br />(please press enter for the name one by one and delete the name by\n            clicking it) </label>\n        <input formArrayName=\"stars\" id=\"stars\" type=\"text\" (keyup.enter)=\"addStar(star)\" #star class=\"form-control\">\n        <ul class=\"list-group\">\n            <li *ngFor=\"let star of stars.controls\" (click)=\"removeStar(star)\" class=\"list-group-item\">\n                {{star.value}}\n            </li>\n        </ul>\n        <div *ngIf=\"stars.touched && stars.invalid\" class=\"alert alert-danger\">\n            <div class=\"alert alert-danger\" *ngIf=\"stars.errors.cannotBeNull\">Stars name is required</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"genres\">Genres <br />(please press enter for the genre one by one and delete the genre by\n            clicking it)</label>\n        <input formArrayName=\"genres\" id=\"genres\" type=\"text\" (keyup.enter)=\"addGenre(genre)\" #genre placeholder=\"Please enter dramas/ action/ crime/ horror/ comedies/ fantasy/ romance\"\n            class=\"form-control\">\n        <ul class=\"list-group\">\n            <li *ngFor=\"let genre of genres.controls\" (click)=\"removeGenre(genre)\" class=\"list-group-item\">\n                {{genre.value}}\n            </li>\n        </ul>\n        <!-- <div *ngIf=\"genres.touched && genres.invalid\" class=\"alert alert-danger\">\n                <div *ngIf=\"genres.errors.required\">showtime is required</div>\n                <div *ngIf=\"genres.errors.minlength\">showtime requires at least\n                    {{showtime.errors.minlength.requiredLength}}\n                    charaters.</div>\n                <div *ngIf=\"genres.errors.maxlength\">showtime requires at most\n                    {{showtime.errors.maxlength.requiredLength}}\n                    charaters.</div>\n            </div> -->\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"director\">Director</label>\n        <input formControlName=\"director\" id=\"director\" type=\"text\" class=\"form-control\">\n        <div *ngIf=\"director.touched && director.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"director.errors.required\">Director name is required</div>\n            <div *ngIf=\"director.errors.minlength\">Director name requires at least\n                {{director.errors.minlength.requiredLength}} charaters.</div>\n            <div *ngIf=\"director.errors.maxlength\">Director name requires at most\n                {{director.errors.maxlength.requiredLength}} charaters.</div>\n        </div>\n    </div>\n\n\n\n    <div class=\"form-group\">\n        <label for=\"storyline\">Storyline</label>\n        <textarea formControlName=\"storyline\" id=\"storyline\" clos=\"30\" rows=\"10 \" class=\"form-control\"></textarea>\n        <div *ngIf=\"storyline.touched && storyline.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"storyline.errors.required\">Storyline is required</div>\n            <div *ngIf=\"storyline.errors.minlength\">Storyline requires at least\n                {{storyline.errors.minlength.requiredLength}}\n                charaters.</div>\n            <div *ngIf=\"storyline.errors.maxlength\">Storyline requires at most\n                {{storyline.errors.maxlength.requiredLength}}\n                charaters.</div>\n        </div>\n    </div>\n\n\n    <div class=\"form-group\">\n        <label for=\"Price\">Price</label>\n        <input formControlName=\"price\" id=\"price\" type=\"number\" class=\"form-control\">\n        <div *ngIf=\"price.touched && price.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"price.errors.required\">Price is required.</div>\n            <div *ngIf=\"price.errors.min\">Price requires at least greater than or equal 1.</div>\n            <div *ngIf=\"price.errors.max\">price requires less than or equal 10000.</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label>Status</label>\n        <br>\n        <label for=\"nowShowing\">Now Showing: </label>\n        <input formControlName=\"status\" id=\"nowShowing\" type=\"radio\" class=\"form-control\" value=\"nowShowing\">\n\n        <label for=\"comingSoon\">Coming Soon:</label>\n        <input formControlName=\"status\" id=\"comingSoon\" type=\"radio\" class=\"form-control\" value=\"comingSoon\">\n    </div>\n\n    <button type=\"submit\" [disabled]=\"!form.valid\" (click)=\"onSubmit()\" class=\"btn btn-primary\">Submit</button>\n    <br />\n    <br />\n    <div class=\"alert alert-info\" role=\"alert\" *ngIf=\"!form.valid\">\n        <label>Please complete all the information, thanks!</label>\n    </div>\n    <div class=\"alert alert-success\" role=\"alert\" *ngIf=\"form.valid\">\n        <label>You can submit the movie now.</label>\n    </div>\n\n</form>\n<br />"
+module.exports = "<br />\r\n<br />\r\n<br />\r\n<button class=\"btn btn-secondary\" (click)=\"ClickToAdmin()\">Back to admin</button>\r\n<br />\r\n<br />\r\n<br />\r\n<form [formGroup]=\"form\" id=\"form\">\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"name\">Movie Name</label>\r\n        <input formControlName=\"name\" id=\"name\" type=\"text\" class=\"form-control\">\r\n        <div *ngIf=\"name.touched && name.invalid\" class=\"alert alert-danger\">\r\n            <div *ngIf=\"name.errors.required\">Name is required</div>\r\n            <div *ngIf=\"name.errors.minlength\">Name requires at least {{name.errors.minlength.requiredLength}}\r\n                charaters.</div>\r\n            <div *ngIf=\"name.errors.maxlength\">Name requires at most {{name.errors.maxlength.requiredLength}}\r\n                charaters.</div>\r\n            <div *ngIf=\"name.errors.shouldBeUnique\">Name should be unique.</div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"runningTime\">Running time</label>\r\n        <input formControlName=\"runningTime\" id=\"runningTime\" type=\"number\" class=\"form-control\">\r\n        <div *ngIf=\"runningTime.touched && runningTime.invalid\" class=\"alert alert-danger\">\r\n            <div *ngIf=\"runningTime.errors.required\">Running time is required.</div>\r\n            <div *ngIf=\"runningTime.errors.min\">Running time requires at least greater than or equal 1.</div>\r\n            <div *ngIf=\"runningTime.errors.max\">Running time requires less than or equal 500.</div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"showtime\">Session <br />(please press enter for the datetime one by one and delete the datetime by\r\n            clicking it)</label>\r\n        <input formArrayName=\"showtime\" id=\"showtime\" type=\"datetime-local\" (keyup.enter)=\"addShowtime(showtimeItem)\"\r\n            #showtimeItem class=\"form-control\">\r\n        <ul class=\"list-group\">\r\n            <li *ngFor=\"let showtimeItem of showtime.controls , let i = index\" (click)=\"\r\n                    removeShowtime(showtimeItem)\"\r\n                class=\"list-group-item\">\r\n                {{showtime.value[i]}}\r\n            </li>\r\n        </ul>\r\n        <!-- <div *ngIf=\"showtime.touched && showtime.invalid\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"showtime.errors.required\">showtime is required</div>\r\n                <div *ngIf=\"showtime.errors.minlength\">showtime requires at least\r\n                    {{showtime.errors.minlength.requiredLength}}\r\n                    charaters.</div>\r\n                <div *ngIf=\"showtime.errors.maxlength\">showtime requires at most\r\n                    {{showtime.errors.maxlength.requiredLength}}\r\n                    charaters.</div>\r\n            </div> -->\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"stars\">Stars <br />(please press enter for the name one by one and delete the name by\r\n            clicking it) </label>\r\n        <input formArrayName=\"stars\" id=\"stars\" type=\"text\" (keyup.enter)=\"addStar(star)\" #star class=\"form-control\">\r\n        <ul class=\"list-group\">\r\n            <li *ngFor=\"let star of stars.controls\" (click)=\"removeStar(star)\" class=\"list-group-item\">\r\n                {{star.value}}\r\n            </li>\r\n        </ul>\r\n        <div *ngIf=\"stars.touched && stars.invalid\" class=\"alert alert-danger\">\r\n            <div class=\"alert alert-danger\" *ngIf=\"stars.errors.cannotBeNull\">Stars name is required</div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"genres\">Genres <br />(please press enter for the genre one by one and delete the genre by\r\n            clicking it)</label>\r\n        <input formArrayName=\"genres\" id=\"genres\" type=\"text\" (keyup.enter)=\"addGenre(genre)\" #genre placeholder=\"Please enter dramas/ action/ crime/ horror/ comedies/ fantasy/ romance\"\r\n            class=\"form-control\">\r\n        <ul class=\"list-group\">\r\n            <li *ngFor=\"let genre of genres.controls\" (click)=\"removeGenre(genre)\" class=\"list-group-item\">\r\n                {{genre.value}}\r\n            </li>\r\n        </ul>\r\n        <!-- <div *ngIf=\"genres.touched && genres.invalid\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"genres.errors.required\">showtime is required</div>\r\n                <div *ngIf=\"genres.errors.minlength\">showtime requires at least\r\n                    {{showtime.errors.minlength.requiredLength}}\r\n                    charaters.</div>\r\n                <div *ngIf=\"genres.errors.maxlength\">showtime requires at most\r\n                    {{showtime.errors.maxlength.requiredLength}}\r\n                    charaters.</div>\r\n            </div> -->\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"director\">Director</label>\r\n        <input formControlName=\"director\" id=\"director\" type=\"text\" class=\"form-control\">\r\n        <div *ngIf=\"director.touched && director.invalid\" class=\"alert alert-danger\">\r\n            <div *ngIf=\"director.errors.required\">Director name is required</div>\r\n            <div *ngIf=\"director.errors.minlength\">Director name requires at least\r\n                {{director.errors.minlength.requiredLength}} charaters.</div>\r\n            <div *ngIf=\"director.errors.maxlength\">Director name requires at most\r\n                {{director.errors.maxlength.requiredLength}} charaters.</div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"storyline\">Storyline</label>\r\n        <textarea formControlName=\"storyline\" id=\"storyline\" clos=\"30\" rows=\"10 \" class=\"form-control\"></textarea>\r\n        <div *ngIf=\"storyline.touched && storyline.invalid\" class=\"alert alert-danger\">\r\n            <div *ngIf=\"storyline.errors.required\">Storyline is required</div>\r\n            <div *ngIf=\"storyline.errors.minlength\">Storyline requires at least\r\n                {{storyline.errors.minlength.requiredLength}}\r\n                charaters.</div>\r\n            <div *ngIf=\"storyline.errors.maxlength\">Storyline requires at most\r\n                {{storyline.errors.maxlength.requiredLength}}\r\n                charaters.</div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"Price\">Price</label>\r\n        <input formControlName=\"price\" id=\"price\" type=\"number\" class=\"form-control\">\r\n        <div *ngIf=\"price.touched && price.invalid\" class=\"alert alert-danger\">\r\n            <div *ngIf=\"price.errors.required\">Price is required.</div>\r\n            <div *ngIf=\"price.errors.min\">Price requires at least greater than or equal 1.</div>\r\n            <div *ngIf=\"price.errors.max\">price requires less than or equal 10000.</div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label>Status</label>\r\n        <br>\r\n        <label for=\"nowShowing\">Now Showing: </label>\r\n        <input formControlName=\"status\" id=\"nowShowing\" type=\"radio\" class=\"form-control\" value=\"nowShowing\">\r\n\r\n        <label for=\"comingSoon\">Coming Soon:</label>\r\n        <input formControlName=\"status\" id=\"comingSoon\" type=\"radio\" class=\"form-control\" value=\"comingSoon\">\r\n    </div>\r\n\r\n    <button type=\"submit\" [disabled]=\"!form.valid\" (click)=\"onSubmit()\" class=\"btn btn-primary\">Submit</button>\r\n    <br />\r\n    <br />\r\n    <div class=\"alert alert-info\" role=\"alert\" *ngIf=\"!form.valid\">\r\n        <label>Please complete all the information, thanks!</label>\r\n    </div>\r\n    <div class=\"alert alert-success\" role=\"alert\" *ngIf=\"form.valid\">\r\n        <label>You can submit the movie now.</label>\r\n    </div>\r\n\r\n</form>\r\n<br />"
 
 /***/ }),
 
@@ -621,7 +780,7 @@ var AddMovieFormComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\nbutton{\n    width: 5cm;\n    height: 1cm;\n}\n#admin{\n\n    font-size: 20px;\n    color: grey;\n    font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nspan{\n   font-size: 25px;\n   color: black;\n   font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nh3{\n    text-align: center;\n    color: black;\n    font-family: 'Cormorant SC', sans-serif;\n    font-family: 'Bold', sans-serif;\n}"
+module.exports = ""
 
 /***/ }),
 
@@ -632,7 +791,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Corm
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<br />\n<div id=\"admin\">\n  <button class=\"btn btn-primary\" (click)=\"clickToAddMovie()\">Add Movies</button>\n  <br />\n  <br />\n  <div *ngFor=\"let movie of movies; let i = index\" [attr.movieIndex]=\"i\">\n    <br />\n    <h3>{{movie.name}}</h3>\n    <br />\n    <br />\n    <button class=\"btn btn-secondary\" (click)=\"onDelete(i)\">Delete movie </button>\n    <br />\n    <br />\n    <button class=\"btn btn-secondary\" (click)=\"onUpdate(i)\">Update Status</button>\n    <br />\n    <br />\n    <label><span>Session time: </span>\n      <br />\n      <br />\n      <div *ngFor=\"let showtime of movie.showtime\">{{showtime | date:'short'}}<br /></div>\n    </label>\n    <br />\n    <br />\n    <label><span>Running time:</span>\n      <br />\n      <br />\n      {{movie.runningTime}} </label>\n    <br />\n    <br />\n    <label><span>Director: </span>\n      <br />\n      <br />\n      {{movie.director|uppercase}}</label>\n    <br />\n    <br />\n    <span>Cast: </span>\n    <br />\n    <br />\n    <div *ngFor=\"let star of movie.stars\">\n      <label>{{star|uppercase}}</label>\n      <br />\n    </div>\n    <br />\n    <label><span>Storyline:</span>\n      <br />\n      <br />\n      {{movie.storyline}}</label>\n    <br />\n    <br />\n    <span>Genre: </span>\n    <br />\n    <br />\n    <div *ngFor=\"let genre of movie.genres\">\n      <label>{{genre|uppercase}}</label>\n      <br />\n    </div>\n    <br />\n    <br />\n    <label><span>Price: </span>\n      <br />\n      <br />\n      {{movie.price | currency:'AUD':true:'1.2-2'}} </label>\n    <br />\n    <br />\n    <label><span>Status:\n        <br />\n        <br />\n      </span>{{movie.status|uppercase}}</label>\n    <br />\n    <br />\n  </div>\n</div>"
+module.exports = "<br />\r\n<br />\r\n<br />\r\n<div id=\"admin\">\r\n  <button class=\"btn btn-primary\" (click)=\"clickToAddMovie()\">Add Movies</button>\r\n  <br />\r\n  <br />\r\n  <div *ngFor=\"let movie of movies; let i = index\" [attr.movieIndex]=\"i\">\r\n    <br />\r\n    <h3>{{movie.name}}</h3>\r\n    <br />\r\n    <br />\r\n    <button class=\"btn btn-secondary\" (click)=\"onDelete(i)\">Delete movie </button>\r\n    <br />\r\n    <br />\r\n    <button class=\"btn btn-secondary\" (click)=\"onUpdate(i)\">Update Status</button>\r\n    <br />\r\n    <br />\r\n    <label><span>Session time: </span>\r\n      <br />\r\n      <br />\r\n      <div *ngFor=\"let showtime of movie.showtime\">{{showtime | date:'short'}}<br /></div>\r\n    </label>\r\n    <br />\r\n    <br />\r\n    <label><span>Running time:</span>\r\n      <br />\r\n      <br />\r\n      {{movie.runningTime}} </label>\r\n    <br />\r\n    <br />\r\n    <label><span>Director: </span>\r\n      <br />\r\n      <br />\r\n      {{movie.director|uppercase}}</label>\r\n    <br />\r\n    <br />\r\n    <span>Cast: </span>\r\n    <br />\r\n    <br />\r\n    <div *ngFor=\"let star of movie.stars\">\r\n      <label>{{star|uppercase}}</label>\r\n      <br />\r\n    </div>\r\n    <br />\r\n    <label><span>Storyline:</span>\r\n      <br />\r\n      <br />\r\n      {{movie.storyline}}</label>\r\n    <br />\r\n    <br />\r\n    <span>Genre: </span>\r\n    <br />\r\n    <br />\r\n    <div *ngFor=\"let genre of movie.genres\">\r\n      <label>{{genre|uppercase}}</label>\r\n      <br />\r\n    </div>\r\n    <br />\r\n    <br />\r\n    <label><span>Price: </span>\r\n      <br />\r\n      <br />\r\n      {{movie.price | currency:'AUD':true:'1.2-2'}} </label>\r\n    <br />\r\n    <br />\r\n    <label><span>Status:\r\n        <br />\r\n        <br />\r\n      </span>{{movie.status|uppercase}}</label>\r\n    <br />\r\n    <br />\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -725,176 +884,6 @@ var AdminComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/auth/admin.guard.ts":
-/*!************************************************!*\
-  !*** ./src/app/components/auth/admin.guard.ts ***!
-  \************************************************/
-/*! exports provided: AdminGuard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminGuard", function() { return AdminGuard; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/authentication.service */ "./src/app/services/authentication.service.ts");
-/* harmony import */ var rxjs_add_operator_switchMap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/add/operator/switchMap */ "./node_modules/rxjs-compat/_esm5/add/operator/switchMap.js");
-/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var AdminGuard = /** @class */ (function () {
-    function AdminGuard(authService, router) {
-        this.authService = authService;
-        this.router = router;
-    }
-    AdminGuard.prototype.canActivate = function (next, state) {
-        // console.log("guard level: admin " + this.authService.isAdmin());
-        // console.log("next.data.isAdmin " + next.data.isAdmin);
-        if (!this.authService.isAdmin() === next.data.isAdmin) {
-            this.router.navigateByUrl("/login");
-            this.authService.deleteToken();
-            return false;
-        }
-        return true;
-    };
-    AdminGuard = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
-            providedIn: "root"
-        }),
-        __metadata("design:paramtypes", [_services_authentication_service__WEBPACK_IMPORTED_MODULE_2__["AuthenticationService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
-    ], AdminGuard);
-    return AdminGuard;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/components/auth/auth.guard.ts":
-/*!***********************************************!*\
-  !*** ./src/app/components/auth/auth.guard.ts ***!
-  \***********************************************/
-/*! exports provided: AuthGuard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/authentication.service */ "./src/app/services/authentication.service.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var AuthGuard = /** @class */ (function () {
-    function AuthGuard(authService, router) {
-        this.authService = authService;
-        this.router = router;
-    }
-    AuthGuard.prototype.canActivate = function (next, state) {
-        // If user is not logged in, redirect to login page and delete token in local storage
-        if (!this.authService.isLoggedIn()) {
-            this.router.navigateByUrl("/login");
-            this.authService.deleteToken();
-            return false;
-        }
-        return true;
-    };
-    AuthGuard = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
-            providedIn: "root"
-        }),
-        __metadata("design:paramtypes", [_services_authentication_service__WEBPACK_IMPORTED_MODULE_2__["AuthenticationService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
-    ], AuthGuard);
-    return AuthGuard;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/components/auth/auth.interceptor.ts":
-/*!*****************************************************!*\
-  !*** ./src/app/components/auth/auth.interceptor.ts ***!
-  \*****************************************************/
-/*! exports provided: AuthInterceptor */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthInterceptor", function() { return AuthInterceptor; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/authentication.service */ "./src/app/services/authentication.service.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var AuthInterceptor = /** @class */ (function () {
-    function AuthInterceptor(authService, router) {
-        this.authService = authService;
-        this.router = router;
-    }
-    AuthInterceptor.prototype.intercept = function (req, next) {
-        var _this = this;
-        if (req.headers.get("noauth"))
-            return next.handle(req.clone());
-        else {
-            var clonedReq = req.clone({
-                headers: req.headers.set("Authorization", "Bearer " + this.authService.getToken())
-            });
-            return next.handle(clonedReq).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["tap"])(function (event) { }, function (err) {
-                if (err.error.auth == false) {
-                    _this.router.navigateByUrl("/login");
-                }
-            }));
-        }
-    };
-    AuthInterceptor = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
-        __metadata("design:paramtypes", [_services_authentication_service__WEBPACK_IMPORTED_MODULE_3__["AuthenticationService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
-    ], AuthInterceptor);
-    return AuthInterceptor;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/components/book-movies/book-movies.component.css":
 /*!******************************************************************!*\
   !*** ./src/app/components/book-movies/book-movies.component.css ***!
@@ -902,7 +891,7 @@ var AuthInterceptor = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url(\"https://fonts.googleapis.com/css?family=Bold|Cormorant SC\");\n@import url(\"https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro\");\n@import url(\"https://fonts.googleapis.com/css?family=Source Sans Pro\");\n@import url(\"https://fonts.googleapis.com/css?family=Fredericka the Great\");\n#movie {\n  font-family: \"Source Sans Pro\", sans-serif;\n  font-size: 20px;\n  color: grey;\n}\nspan {\n  font-size: 20px;\n  color: black;\n  font-family: \"Source Sans Pro\", sans-serif;\n  font-family: \"Semi-Bold\", sans-serif;\n}\nh2 {\n  text-align: left;\n  color: grey;\n  font-family: \"Cormorant SC\", sans-serif;\n  font-family: \"Bold\", sans-serif;\n}\nh3 {\n  text-align: left;\n  color: black;\n  font-family: \"Fredericka the Great\", sans-serif;\n}\nlabel {\n  font-size: 20px;\n  color: black;\n  font-family: \"Source Sans Pro\", sans-serif;\n}\nlabel.success {\n  padding: 20px;\n  color: #249424;\n  margin-bottom: 15px;\n  font-size: 18px;\n}\nbutton {\n  font-family: \"Source Sans Pro\", sans-serif;\n  width: 5cm;\n  height: 1cm;\n}\nlabel.validation-message {\n  color: #ed5558;\n  font-size: 15px;\n}\n"
+module.exports = ""
 
 /***/ }),
 
@@ -913,7 +902,7 @@ module.exports = "@import url(\"https://fonts.googleapis.com/css?family=Bold|Cor
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<button class=\"btn btn-secondary\" (click)=\"backToHome()\">Home Page</button>\n<br />\n<br />\n<br />\n<h2>Booking:</h2>\n<div *ngFor=\"let property of movie\" id=\"movie\">\n  <br />\n  <h3>{{property.name}}</h3>\n  <br />\n\n  <label>\n    <span>Sessions: </span>\n  </label>\n  <div>{{bookingTime | date:'short'}}\n    <br />\n  </div>\n  <br />\n  <label>\n    <span>Price: </span>{{property.price | currency:'AUD':true:'1.2-2'}}</label>\n  <br />\n  <br />\n</div>\n\n<!-- If the movie has \"coming soon\" status -->\n<div *ngIf=\"!flag\" id=\"movie\">\n  <br />\n  <br />\n  <label>This movie is coming soon. Please stay tune.</label>\n</div>\n<!-- If the movie is \"now showing\", display the booking form without email provided before-->\n<div *ngIf=\"onlyMovie()\" id=\"movie\">\n  <form #bookingForm=\"ngForm\" (ngSubmit)=\"bookingForm.valid && onBook(bookingForm)\">\n    <label>Please enter your email: </label>\n    <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"bookingService.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\n      required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': bookingForm.submitted && !email.valid }\">\n    <!-- Display of Validation for email input -->\n    <div *ngIf=\"bookingForm.submitted && email.errors\">\n      <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n      <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n    </div>\n    <br />\n    <button class=\"btn btn-primary\" type=\"submit\">Confirm booking</button>\n  </form>\n</div>\n\n<!-- If the movie is \"now showing\" and user is logged in, display the booking form without user's email provided-->\n<!-- User can still change the email address to send the ticket to -->\n<div *ngIf=\"bothMovieUser() && userDetails\" id=\"movie\">\n  <form #bookingForm=\"ngForm\" (ngSubmit)=\"bookingForm.valid && onBook(bookingForm)\">\n    <label>Please check your email:</label>\n    <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"userDetails.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\n      required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': bookingForm.submitted && !email.valid }\">\n    <!-- Display of Validation for email input -->\n    <div *ngIf=\"bookingForm.submitted && email.errors\">\n      <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n      <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n    </div>\n    <br />\n    <button class=\"btn btn-primary\" type=\"submit\">Confirm booking</button>\n  </form>\n</div>\n\n<!-- If the movie has \"coming soon\" status -->\n<div>\n  <label *ngIf=\"bookingComplete\" class=\"success\">Your ticket has been succesfully booked. Please check your email for more details.</label>\n</div>"
+module.exports = "<br />\r\n<br />\r\n<button class=\"btn btn-secondary\" (click)=\"backToHome()\">Home Page</button>\r\n<br />\r\n<br />\r\n<br />\r\n<h2>Booking:</h2>\r\n<div *ngFor=\"let property of movie\" id=\"movie\">\r\n  <br />\r\n  <h3>{{property.name}}</h3>\r\n  <br />\r\n\r\n  <label>\r\n    <span>Sessions: </span>\r\n  </label>\r\n  <div>{{bookingTime | date:'short'}}\r\n    <br />\r\n  </div>\r\n  <br />\r\n  <label>\r\n    <span>Price: </span>{{property.price | currency:'AUD':true:'1.2-2'}}</label>\r\n  <br />\r\n  <br />\r\n</div>\r\n\r\n<!-- If the movie has \"coming soon\" status -->\r\n<div *ngIf=\"!flag\" id=\"movie\">\r\n  <br />\r\n  <br />\r\n  <label>This movie is coming soon. Please stay tune.</label>\r\n</div>\r\n<!-- If the movie is \"now showing\", display the booking form without email provided before-->\r\n<div *ngIf=\"onlyMovie()\" id=\"movie\">\r\n  <form #bookingForm=\"ngForm\" (ngSubmit)=\"bookingForm.valid && onBook(bookingForm)\">\r\n    <label>Please enter your email: </label>\r\n    <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"bookingService.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\r\n      required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': bookingForm.submitted && !email.valid }\">\r\n    <!-- Display of Validation for email input -->\r\n    <div *ngIf=\"bookingForm.submitted && email.errors\">\r\n      <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\r\n      <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\r\n    </div>\r\n    <br />\r\n    <button class=\"btn btn-primary\" type=\"submit\">Confirm booking</button>\r\n  </form>\r\n</div>\r\n\r\n<!-- If the movie is \"now showing\" and user is logged in, display the booking form without user's email provided-->\r\n<!-- User can still change the email address to send the ticket to -->\r\n<div *ngIf=\"bothMovieUser() && userDetails\" id=\"movie\">\r\n  <form #bookingForm=\"ngForm\" (ngSubmit)=\"bookingForm.valid && onBook(bookingForm)\">\r\n    <label>Please check your email:</label>\r\n    <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"userDetails.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\r\n      required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': bookingForm.submitted && !email.valid }\">\r\n    <!-- Display of Validation for email input -->\r\n    <div *ngIf=\"bookingForm.submitted && email.errors\">\r\n      <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\r\n      <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\r\n    </div>\r\n    <br />\r\n    <button class=\"btn btn-primary\" type=\"submit\">Confirm booking</button>\r\n  </form>\r\n</div>\r\n\r\n<!-- If the movie has \"coming soon\" status -->\r\n<div>\r\n  <label *ngIf=\"bookingComplete\" class=\"success\">Your ticket has been succesfully booked. Please check your email for more details.</label>\r\n</div>"
 
 /***/ }),
 
@@ -1048,7 +1037,7 @@ var BookMoviesComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n\n.comingSoonBlock {\n  background-color:white;\n  text-align: center;\n  font-family: 'Cormorant SC', sans-serif;\n  font-family: 'Bold', sans-serif;\n  font-size: 35px;\n  color: gray;\n  }\n\n#list{\n    color: grey;\n    font-size: 20px;\n    font-family: 'Cormorant SC', sans-serif;\n  }"
+module.exports = ""
 
 /***/ }),
 
@@ -1059,7 +1048,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Corm
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<div class=\"comingSoonBlock\">\n  <div class=\"list-group\">\n    <div class=\"border border-light\">\n      COMING SOON\n    </div>\n    <ul if=\"list\" class=\"list-group list-group-flush\">\n      <li class=\"list-group-item\" *ngFor=\"let movie of movies\">\n        <a [routerLink]=\"['../movie', movie._id]\" id=\"list\">{{movie.name}}</a>\n      </li>\n    </ul>\n  </div>\n</div>"
+module.exports = "<br />\r\n<div class=\"comingSoonBlock\">\r\n  <div class=\"list-group\">\r\n    <div class=\"border border-light\">\r\n      COMING SOON\r\n    </div>\r\n    <ul if=\"list\" class=\"list-group list-group-flush\">\r\n      <li class=\"list-group-item\" *ngFor=\"let movie of movies\">\r\n        <a [routerLink]=\"['../movie', movie._id]\" id=\"list\">{{movie.name}}</a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -1203,7 +1192,7 @@ var MovieInfoValidators = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Oswald');\n\n\n\n#information{\n    font-family: 'Oswald', sans-serif;\n    color: grey;\n    font-size: 25px;\n    overflow-wrap: break-word;\n    width: 45em;\n\n}\n\n"
+module.exports = ""
 
 /***/ }),
 
@@ -1214,7 +1203,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Oswald');
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<br />\n<div id=\"information\" class=\"text-left text-md-left\">\n    Golden Time Cinema is for movie lovers to enjoy the classis movies anytime.\n    Our cinema contains\n    more than ten movie rooms with cozy enviroment. We hope audience can have the best experince and travel with\n    time\n    machine to the\n    classic movies they love. Feel free to contact us if you have any question. Our team is here to help you\n    responsively.\n</div>"
+module.exports = "<br />\r\n<br />\r\n<br />\r\n<div id=\"information\" class=\"text-left text-md-left\">\r\n    Golden Time Cinema is for movie lovers to enjoy the classis movies anytime.\r\n    Our cinema contains\r\n    more than ten movie rooms with cozy enviroment. We hope audience can have the best experince and travel with\r\n    time\r\n    machine to the\r\n    classic movies they love. Feel free to contact us if you have any question. Our team is here to help you\r\n    responsively.\r\n</div>"
 
 /***/ }),
 
@@ -1258,68 +1247,6 @@ var CompanyInformationComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/edit-movie-form/edit-movie-form.component.css":
-/*!**************************************************************************!*\
-  !*** ./src/app/components/edit-movie-form/edit-movie-form.component.css ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/components/edit-movie-form/edit-movie-form.component.html":
-/*!***************************************************************************!*\
-  !*** ./src/app/components/edit-movie-form/edit-movie-form.component.html ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2>Edit movie</h2>\n\n<form>\n    <div class=\"form-group\">\n        <label for=\"movieName\">Movie Name</label>\n        <input id=\"movieName\" type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Year</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Director(s)</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Actors</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <div class=\"form-group\">\n        <label>Summary</label>\n        <textarea class=\"form-control\"></textarea>\n    </div>\n\n    <div class=\"form-group\">\n        <label>Session</label>\n        <input type=\"text\" class=\"form-control\">\n    </div>\n\n    <button class=\"btn btn-primary\">Save changes</button>\n</form>"
-
-/***/ }),
-
-/***/ "./src/app/components/edit-movie-form/edit-movie-form.component.ts":
-/*!*************************************************************************!*\
-  !*** ./src/app/components/edit-movie-form/edit-movie-form.component.ts ***!
-  \*************************************************************************/
-/*! exports provided: EditMovieFormComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditMovieFormComponent", function() { return EditMovieFormComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var EditMovieFormComponent = /** @class */ (function () {
-    function EditMovieFormComponent() {
-    }
-    EditMovieFormComponent.prototype.ngOnInit = function () { };
-    EditMovieFormComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: "edit-movie-form",
-            template: __webpack_require__(/*! ./edit-movie-form.component.html */ "./src/app/components/edit-movie-form/edit-movie-form.component.html"),
-            styles: [__webpack_require__(/*! ./edit-movie-form.component.css */ "./src/app/components/edit-movie-form/edit-movie-form.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], EditMovieFormComponent);
-    return EditMovieFormComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/components/edit-profile/edit-profile.component.css":
 /*!********************************************************************!*\
   !*** ./src/app/components/edit-profile/edit-profile.component.css ***!
@@ -1327,7 +1254,7 @@ var EditMovieFormComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".btn {\n  margin: 10px;\n}\n"
+module.exports = ".btn {\r\n  margin: 10px;\r\n}\r\n"
 
 /***/ }),
 
@@ -1338,7 +1265,7 @@ module.exports = ".btn {\n  margin: 10px;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n\n\n<br />\n<div *ngIf=\"userDetails\" class=\"col-md-8-col-md-offset-2\">\n  <!-- Edit Profile form -->\n  <form #editProfileForm=\"ngForm\" (ngSubmit)=\"editProfileForm.valid && onUpdate(editProfileForm)\">\n    <input type=\"hidden\" name=\"_id\" #_id=\"ngModel\" [(ngModel)]=\"userDetails._id\">\n    <!-- Firstname input for user profile -->\n    <div class=\"form-group\">\n      <label for=\"firstName\">First Name</label>\n      <input type=\"text\" #firstName=\"ngModel\" [(ngModel)]=\"userDetails.firstName\" name=\"firstName\" placeholder=\"First Name\" class=\"form-control\"\n        required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !firstName.valid }\">\n      <!-- Display of Validation for firstname input -->\n      <div *ngIf=\"editProfileForm.submitted && firstName.errors\">\n        <label *ngIf=\"firstName.errors.required\" class=\"validation-message\">First name is required.</label>\n        <label *ngIf=\"firstName.errors.minlength\" class=\"validation-message\">First name must have at least 2 characters.</label>\n        <label *ngIf=\"firstName.errors.maxlength\" class=\"validation-message\">First name should not exceed 30 characters.</label>\n        <label *ngIf=\"firstName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\n      </div>\n    </div>\n\n    <!-- Lastname input for user profile -->\n    <div class=\"form-group\">\n      <label for=\"lastName\">Last Name</label>\n      <input type=\"text\" #lastName=\"ngModel\" [(ngModel)]=\"userDetails.lastName\" name=\"lastName\" placeholder=\"Last Name\" class=\"form-control\"\n        required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !lastName.valid }\">\n      <!-- Display of Validation for lastname input -->\n      <div *ngIf=\"editProfileForm.submitted && lastName.errors\">\n        <label *ngIf=\"lastName.errors.required\" class=\"validation-message\">Last name is required.</label>\n        <label *ngIf=\"lastName.errors.minlength\" class=\"validation-message\">Last name must have at least 2 characters.</label>\n        <label *ngIf=\"lastName.errors.maxlength\" class=\"validation-message\">Last name should not exceed 30 characters.</label>\n        <label *ngIf=\"lastName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\n      </div>\n    </div>\n\n    <!-- Email input for user profile -->\n    <div class=\"form-group\">\n      <label for=\"email\">Email</label>\n      <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"userDetails.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\n        required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !email.valid }\">\n      <!-- Display of Validation for email input -->\n      <div *ngIf=\"editProfileForm.submitted && email.errors\">\n        <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n        <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n      </div>\n    </div>\n\n    <!-- Gender input for user profile -->\n    <div class=\"form-group\">\n      <label for=\"gender\">Gender</label>\n      <select #gender=\"ngModel\" [(ngModel)]=\"userDetails.gender\" name=\"gender\" placeholder=\"Gender\" class=\"form-control\" required\n        [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !gender.valid }\">\n        <option [ngValue]=\"null\" disabled>Select gender</option>\n        <option *ngFor=\"let gender of genders\" [ngValue]=\"gender\">\n          {{ gender}}\n        </option>\n      </select>\n      <!-- Display of Validation for gender input -->\n      <div *ngIf=\"editProfileForm.submitted && gender.errors\">\n        <label *ngIf=\"gender.errors.required\" class=\"validation-message\">Gender is required.</label>\n      </div>\n    </div>\n\n    <!-- Date of birth input for user profile -->\n    <div class=\"form-group\">\n      <label for=\"dob\">Date of birth</label>\n      <input type=\"date\" #dob=\"ngModel\" [(ngModel)]=\"userDetails.dob\" name=\"dob\" placeholder=\"Date of Birth\" class=\"form-control\"\n        required [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !dob.valid }\">\n      <!-- Display of Validation for date of birth input -->\n      <div *ngIf=\"editProfileForm.submitted && dob.errors\">\n        <label *ngIf=\"dob.errors.required\" class=\"validation-message\">Date of birth is required.</label>\n      </div>\n    </div>\n    <button class=\"btn btn-secondary\" (click)=\"backToProfile()\">Back to Profile</button>\n    <button class=\"btn btn-primary\" type=\"submit\">Update</button>\n  </form>\n</div>\n\n<br />\n\n<!-- Success message -->\n<div class=\"success\" *ngIf=\"successMessage\">\n  <label>Update is successful</label>\n</div>\n\n<!-- Error message -->\n<div class=\"alert\" *ngIf=\"errorMessages\">\n  <label> {{errorMessages}}</label>\n</div>"
+module.exports = "<br />\r\n\r\n\r\n<br />\r\n<div *ngIf=\"userDetails\" class=\"col-md-8-col-md-offset-2\">\r\n  <!-- Edit Profile form -->\r\n  <form #editProfileForm=\"ngForm\" (ngSubmit)=\"editProfileForm.valid && onUpdate(editProfileForm)\">\r\n    <input type=\"hidden\" name=\"_id\" #_id=\"ngModel\" [(ngModel)]=\"userDetails._id\">\r\n    <!-- Firstname input for user profile -->\r\n    <div class=\"form-group\">\r\n      <label for=\"firstName\">First Name</label>\r\n      <input type=\"text\" #firstName=\"ngModel\" [(ngModel)]=\"userDetails.firstName\" name=\"firstName\" placeholder=\"First Name\" class=\"form-control\"\r\n        required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !firstName.valid }\">\r\n      <!-- Display of Validation for firstname input -->\r\n      <div *ngIf=\"editProfileForm.submitted && firstName.errors\">\r\n        <label *ngIf=\"firstName.errors.required\" class=\"validation-message\">First name is required.</label>\r\n        <label *ngIf=\"firstName.errors.minlength\" class=\"validation-message\">First name must have at least 2 characters.</label>\r\n        <label *ngIf=\"firstName.errors.maxlength\" class=\"validation-message\">First name should not exceed 30 characters.</label>\r\n        <label *ngIf=\"firstName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Lastname input for user profile -->\r\n    <div class=\"form-group\">\r\n      <label for=\"lastName\">Last Name</label>\r\n      <input type=\"text\" #lastName=\"ngModel\" [(ngModel)]=\"userDetails.lastName\" name=\"lastName\" placeholder=\"Last Name\" class=\"form-control\"\r\n        required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !lastName.valid }\">\r\n      <!-- Display of Validation for lastname input -->\r\n      <div *ngIf=\"editProfileForm.submitted && lastName.errors\">\r\n        <label *ngIf=\"lastName.errors.required\" class=\"validation-message\">Last name is required.</label>\r\n        <label *ngIf=\"lastName.errors.minlength\" class=\"validation-message\">Last name must have at least 2 characters.</label>\r\n        <label *ngIf=\"lastName.errors.maxlength\" class=\"validation-message\">Last name should not exceed 30 characters.</label>\r\n        <label *ngIf=\"lastName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Email input for user profile -->\r\n    <div class=\"form-group\">\r\n      <label for=\"email\">Email</label>\r\n      <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"userDetails.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\r\n        required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !email.valid }\">\r\n      <!-- Display of Validation for email input -->\r\n      <div *ngIf=\"editProfileForm.submitted && email.errors\">\r\n        <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\r\n        <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Gender input for user profile -->\r\n    <div class=\"form-group\">\r\n      <label for=\"gender\">Gender</label>\r\n      <select #gender=\"ngModel\" [(ngModel)]=\"userDetails.gender\" name=\"gender\" placeholder=\"Gender\" class=\"form-control\" required\r\n        [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !gender.valid }\">\r\n        <option [ngValue]=\"null\" disabled>Select gender</option>\r\n        <option *ngFor=\"let gender of genders\" [ngValue]=\"gender\">\r\n          {{ gender}}\r\n        </option>\r\n      </select>\r\n      <!-- Display of Validation for gender input -->\r\n      <div *ngIf=\"editProfileForm.submitted && gender.errors\">\r\n        <label *ngIf=\"gender.errors.required\" class=\"validation-message\">Gender is required.</label>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Date of birth input for user profile -->\r\n    <div class=\"form-group\">\r\n      <label for=\"dob\">Date of birth</label>\r\n      <input type=\"date\" #dob=\"ngModel\" [(ngModel)]=\"userDetails.dob\" name=\"dob\" placeholder=\"Date of Birth\" class=\"form-control\"\r\n        required [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !dob.valid }\">\r\n      <!-- Display of Validation for date of birth input -->\r\n      <div *ngIf=\"editProfileForm.submitted && dob.errors\">\r\n        <label *ngIf=\"dob.errors.required\" class=\"validation-message\">Date of birth is required.</label>\r\n      </div>\r\n    </div>\r\n    <button class=\"btn btn-secondary\" (click)=\"backToProfile()\">Back to Profile</button>\r\n    <button class=\"btn btn-primary\" type=\"submit\">Update</button>\r\n  </form>\r\n</div>\r\n\r\n<br />\r\n\r\n<!-- Success message -->\r\n<div class=\"success\" *ngIf=\"successMessage\">\r\n  <label>Update is successful</label>\r\n</div>\r\n\r\n<!-- Error message -->\r\n<div class=\"alert\" *ngIf=\"errorMessages\">\r\n  <label> {{errorMessages}}</label>\r\n</div>"
 
 /***/ }),
 
@@ -1425,7 +1352,7 @@ var EditProfileComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n.footer {\n  background-color: white;\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  color: black;\n  text-align: center;\n  font-family: 'Source Sans Pro', sans-serif;\n  font-family: 'Semi-Bold', sans-serif;\n  font-size: 15px;\n}\n"
+module.exports = ""
 
 /***/ }),
 
@@ -1436,7 +1363,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"footer border-top\">\n  {{companyName}}\n</div>"
+module.exports = "<div class=\"footer border-top\">\r\n  {{companyName}}\r\n</div>"
 
 /***/ }),
 
@@ -1488,7 +1415,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n#movie{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-size: 20px;\n    color: grey;\n}\nspan{\n   font-size: 25px;\n   color: black;\n   font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nh3{\n    text-align: center;\n    color: black;\n    font-family: 'Cormorant SC', sans-serif;\n    font-family: 'Bold', sans-serif;\n}\na{\n    text-align: center;\n}"
+module.exports = "a {\r\n  text-align: center;\r\n}\r\n"
 
 /***/ }),
 
@@ -1499,7 +1426,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Corm
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<br />\n<div id=\"genres\" class=\"list-group\">\n    <a (click)=\"findMoviesByGenre(dramas)\" class=\"list-group-item list-group-item-action list-group-item-light\">Dramas</a>\n    <a (click)=\"findMoviesByGenre(action)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Action</a>\n    <a (click)=\"findMoviesByGenre(crime)\" class=\"list-group-item list-group-item-action list-group-item-light\">Crime</a>\n    <a (click)=\"findMoviesByGenre(horror)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Horror</a>\n    <a (click)=\"findMoviesByGenre(comedies)\" class=\"list-group-item list-group-item-action list-group-item-light\">Comedies</a>\n    <a (click)=\"findMoviesByGenre(fantasy)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Fantasy</a>\n    <a (click)=\"findMoviesByGenre(romance)\" class=\"list-group-item list-group-item-action list-group-item-light\">Romance</a>\n</div>\n<br />\n<br />\n<div *ngFor=\"let property of movies\" id=\"movie\">\n    <h3>{{property.name}}</h3>\n    <br />\n    <br />\n    <br />\n    <label> <span>Sessions: </span></label>\n    <br />\n    <div *ngFor=\"let showtime of property.showtime\" class=\"list-group-item list-group-item-action list-group-item-light\"\n        [routerLink]=\"['../genre', showtime,property._id]\">{{showtime | date:'short'}}<br />\n    </div>\n    <br />\n    <label><span>Running time: </span>\n        <br />\n        <br />\n        {{property.runningTime}} mins\n    </label>\n    <br />\n    <br />\n    <label><span>Director: </span>\n        <br />\n        <br />\n        {{property.director | uppercase}}\n    </label>\n    <br />\n    <br />\n    <label><span>Cast:</span></label>\n    <br />\n    <div *ngFor=\"let star of property.stars\">\n        {{star|uppercase}}\n        <br />\n    </div>\n    <br />\n    <br />\n    <label><span>Story: </span>\n        <br />\n        <br />\n        {{property.storyline}}\n    </label>\n    <br />\n    <br />\n    <label><span>Genre:</span></label>\n    <div *ngFor=\"let genre of property.genres\">\n        {{genre|uppercase}}\n    </div>\n    <br />\n    <br />\n    <label><span>Status: </span>\n        <br />\n        <br />\n        {{property.status | uppercase}}\n    </label>\n    <br />\n    <br />\n</div>"
+module.exports = "<br />\r\n<br />\r\n<br />\r\n<div id=\"genres\" class=\"list-group\">\r\n    <a (click)=\"findMoviesByGenre(dramas)\" class=\"list-group-item list-group-item-action list-group-item-light\">Dramas</a>\r\n    <a (click)=\"findMoviesByGenre(action)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Action</a>\r\n    <a (click)=\"findMoviesByGenre(crime)\" class=\"list-group-item list-group-item-action list-group-item-light\">Crime</a>\r\n    <a (click)=\"findMoviesByGenre(horror)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Horror</a>\r\n    <a (click)=\"findMoviesByGenre(comedies)\" class=\"list-group-item list-group-item-action list-group-item-light\">Comedies</a>\r\n    <a (click)=\"findMoviesByGenre(fantasy)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Fantasy</a>\r\n    <a (click)=\"findMoviesByGenre(romance)\" class=\"list-group-item list-group-item-action list-group-item-light\">Romance</a>\r\n</div>\r\n<br />\r\n<br />\r\n<div *ngFor=\"let property of movies\" id=\"movie\">\r\n    <h3>{{property.name}}</h3>\r\n    <br />\r\n    <br />\r\n    <br />\r\n    <label> <span>Sessions: </span></label>\r\n    <br />\r\n    <div *ngFor=\"let showtime of property.showtime\" class=\"list-group-item list-group-item-action list-group-item-light\"\r\n        [routerLink]=\"['../genre', showtime,property._id]\">{{showtime | date:'short'}}<br />\r\n    </div>\r\n    <br />\r\n    <label><span>Running time: </span>\r\n        <br />\r\n        <br />\r\n        {{property.runningTime}} mins\r\n    </label>\r\n    <br />\r\n    <br />\r\n    <label><span>Director: </span>\r\n        <br />\r\n        <br />\r\n        {{property.director | uppercase}}\r\n    </label>\r\n    <br />\r\n    <br />\r\n    <label><span>Cast:</span></label>\r\n    <br />\r\n    <div *ngFor=\"let star of property.stars\">\r\n        {{star|uppercase}}\r\n        <br />\r\n    </div>\r\n    <br />\r\n    <br />\r\n    <label><span>Story: </span>\r\n        <br />\r\n        <br />\r\n        {{property.storyline}}\r\n    </label>\r\n    <br />\r\n    <br />\r\n    <label><span>Genre:</span></label>\r\n    <div *ngFor=\"let genre of property.genres\">\r\n        {{genre|uppercase}}\r\n    </div>\r\n    <br />\r\n    <br />\r\n    <label><span>Status: </span>\r\n        <br />\r\n        <br />\r\n        {{property.status | uppercase}}\r\n    </label>\r\n    <br />\r\n    <br />\r\n</div>"
 
 /***/ }),
 
@@ -1575,7 +1502,7 @@ var GenreComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Fredericka the Great');\n\n\nh1 {\n  text-align: center;\n  font: bold;\n  font-family: 'Fredericka the Great', sans-serif;\n  color: rgb(209, 156, 21);\n    \n}\n"
+module.exports = ""
 
 /***/ }),
 
@@ -1586,7 +1513,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Frederick
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <h1 class=\"text-center\" style=\"font-size:50px\">{{title}}</h1>\n</div>\n<br />\n<br />"
+module.exports = "<div>\r\n  <h1 class=\"text-center\" style=\"font-size:50px\">{{title}}</h1>\r\n</div>\r\n<br />\r\n<br />"
 
 /***/ }),
 
@@ -1649,7 +1576,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<br />\n<now-showing-movie-list></now-showing-movie-list>\n<br />\n<br />\n<br />\n<coming-soon-movie-list></coming-soon-movie-list>\n<br />\n<br />"
+module.exports = "<br />\r\n<br />\r\n<br />\r\n<now-showing-movie-list></now-showing-movie-list>\r\n<br />\r\n<br />\r\n<br />\r\n<coming-soon-movie-list></coming-soon-movie-list>\r\n<br />\r\n<br />"
 
 /***/ }),
 
@@ -1700,7 +1627,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n\nlabel{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-family: 'Semi-Bold', sans-serif;\n}"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\r\n\r\nlabel{\r\n    font-family: 'Source Sans Pro', sans-serif;\r\n    font-family: 'Semi-Bold', sans-serif;\r\n}"
 
 /***/ }),
 
@@ -1711,7 +1638,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<div class=\"col-md-8-col-md-offset-2\">\n\n    <form #loginForm=\"ngForm\" (ngSubmit)=\"loginForm.valid && onLogin(loginForm)\">\n        <div class=\"form-group\">\n            <label for=\"email\">Email</label>\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\"\n                class=\"form-control\" required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !email.valid }\">\n            <div *ngIf=\"loginForm.submitted && email.errors\">\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n            </div>\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\"\n                placeholder=\"Password\" class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !password.valid }\">\n            <div *ngIf=\"loginForm.submitted && password.errors\">\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\n            </div>\n        </div>\n\n        <button class=\"btn btn-primary\" type=\"submit\">Login</button>\n    </form>\n\n</div>\n\n\n<!-- Error message -->\n<div class=\"alert\" *ngIf=\"errorMessages\" style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif\">\n    {{errorMessages}}\n</div>"
+module.exports = "<br />\r\n<br />\r\n<div class=\"col-md-8-col-md-offset-2\">\r\n\r\n    <form #loginForm=\"ngForm\" (ngSubmit)=\"loginForm.valid && onLogin(loginForm)\">\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Email</label>\r\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\"\r\n                class=\"form-control\" required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !email.valid }\">\r\n            <div *ngIf=\"loginForm.submitted && email.errors\">\r\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\r\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Password</label>\r\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\"\r\n                placeholder=\"Password\" class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !password.valid }\">\r\n            <div *ngIf=\"loginForm.submitted && password.errors\">\r\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <button class=\"btn btn-primary\" type=\"submit\">Login</button>\r\n    </form>\r\n\r\n</div>\r\n\r\n\r\n<!-- Error message -->\r\n<div class=\"alert\" *ngIf=\"errorMessages\" style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif\">\r\n    {{errorMessages}}\r\n</div>"
 
 /***/ }),
 
@@ -1794,7 +1721,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n#message{\n    text-align: center;\n    font-family: 'Source Sans Pro', sans-serif;\n    font-family: 'Semi-Bold', sans-serif;\n    font-size: 20px;\n  \n}\nbutton{\n    width: 5cm;\n    height: 1cm;\n}\n\n"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\r\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\r\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\r\n#message{\r\n    text-align: center;\r\n    font-family: 'Source Sans Pro', sans-serif;\r\n    font-family: 'Semi-Bold', sans-serif;\r\n    font-size: 20px;\r\n  \r\n}\r\nbutton{\r\n    width: 5cm;\r\n    height: 1cm;\r\n}\r\n\r\n"
 
 /***/ }),
 
@@ -1805,7 +1732,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Corm
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<button class=\"btn btn-secondary\" (click)=\"backToAdmin()\">back to admin</button>\n<div id=\"message\">\n  <br />\n  <br />\n  <br />\n  <br />\n  <p class=\"alert alert-success\" role=\"alert\">The Operation is Successful.</p>\n\n</div>"
+module.exports = "<br />\r\n<br />\r\n<button class=\"btn btn-secondary\" (click)=\"backToAdmin()\">back to admin</button>\r\n<div id=\"message\">\r\n  <br />\r\n  <br />\r\n  <br />\r\n  <br />\r\n  <p class=\"alert alert-success\" role=\"alert\">The Operation is Successful.</p>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -1864,7 +1791,7 @@ var MessageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n#movie{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-size: 20px;\n    color: grey;\n}\nspan{\n   font-size: 25px;\n   color: black;\n   font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nh3{\n    text-align: center;\n    color: black;\n    font-family: 'Cormorant SC', sans-serif;\n    font-family: 'Bold', sans-serif;\n}"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\r\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\r\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\r\n#movie{\r\n    font-family: 'Source Sans Pro', sans-serif;\r\n    font-size: 20px;\r\n    color: grey;\r\n}\r\nspan{\r\n   font-size: 25px;\r\n   color: black;\r\n   font-family: 'Source Sans Pro', sans-serif;\r\n   font-family: 'Semi-Bold', sans-serif;\r\n}\r\nh3{\r\n    text-align: center;\r\n    color: black;\r\n    font-family: 'Cormorant SC', sans-serif;\r\n    font-family: 'Bold', sans-serif;\r\n}"
 
 /***/ }),
 
@@ -1875,7 +1802,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Corm
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<div *ngFor=\"let property of movie\" id=\"movie\">\n  <h3>{{property.name}}</h3>\n  <br />\n  <br />\n  <br />\n  <label>\n    <span>Sessions: </span>\n  </label>\n  <br />\n  <div *ngFor=\"let showtime of property.showtime\" class=\"list-group-item list-group-item-action list-group-item-light\" [routerLink]=\"['../', showtime,property._id]\">{{showtime | date:'short'}}\n    <br />\n  </div>\n  <br />\n  <label>\n    <span>Running time: </span>\n    <br />\n    <br /> {{property.runningTime}} mins\n  </label>\n  <br />\n  <br />\n  <label>\n    <span>Director: </span>\n    <br />\n    <br /> {{property.director | uppercase}}\n  </label>\n  <br />\n  <br />\n  <label>\n    <span>Cast:</span>\n  </label>\n  <br />\n  <div *ngFor=\"let star of property.stars\">\n    {{star|uppercase}}\n    <br />\n  </div>\n  <br />\n  <br />\n  <label>\n    <span>Story: </span>\n    <br />\n    <br /> {{property.storyline}}\n  </label>\n  <br />\n  <br />\n  <label>\n    <span>Genre:</span>\n  </label>\n  <div *ngFor=\"let genre of property.genres\">\n    {{genre|uppercase}}\n  </div>\n  <br />\n  <br />\n  <label>\n    <span>Status: </span>\n    <br />\n    <br /> {{property.status | uppercase}}\n  </label>\n  <br />\n  <br />\n</div>"
+module.exports = "<br />\r\n<br />\r\n<div *ngFor=\"let property of movie\" id=\"movie\">\r\n  <h3>{{property.name}}</h3>\r\n  <br />\r\n  <br />\r\n  <br />\r\n  <label>\r\n    <span>Sessions: </span>\r\n  </label>\r\n  <br />\r\n  <div *ngFor=\"let showtime of property.showtime\" class=\"list-group-item list-group-item-action list-group-item-light\" [routerLink]=\"['../', showtime,property._id]\">{{showtime | date:'short'}}\r\n    <br />\r\n  </div>\r\n  <br />\r\n  <label>\r\n    <span>Running time: </span>\r\n    <br />\r\n    <br /> {{property.runningTime}} mins\r\n  </label>\r\n  <br />\r\n  <br />\r\n  <label>\r\n    <span>Director: </span>\r\n    <br />\r\n    <br /> {{property.director | uppercase}}\r\n  </label>\r\n  <br />\r\n  <br />\r\n  <label>\r\n    <span>Cast:</span>\r\n  </label>\r\n  <br />\r\n  <div *ngFor=\"let star of property.stars\">\r\n    {{star|uppercase}}\r\n    <br />\r\n  </div>\r\n  <br />\r\n  <br />\r\n  <label>\r\n    <span>Story: </span>\r\n    <br />\r\n    <br /> {{property.storyline}}\r\n  </label>\r\n  <br />\r\n  <br />\r\n  <label>\r\n    <span>Genre:</span>\r\n  </label>\r\n  <div *ngFor=\"let genre of property.genres\">\r\n    {{genre|uppercase}}\r\n  </div>\r\n  <br />\r\n  <br />\r\n  <label>\r\n    <span>Status: </span>\r\n    <br />\r\n    <br /> {{property.status | uppercase}}\r\n  </label>\r\n  <br />\r\n  <br />\r\n</div>"
 
 /***/ }),
 
@@ -1945,7 +1872,7 @@ var MovieComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Cormorant SC');\n\n.navigationBar {\n  display: block;\n  background-color: whitesmoke;\n}\n\na {\n  font-family: 'Cormorant SC', sans-serif;\n  font-family: 'Semi-Bold', sans-serif;\n  text-decoration: none;\n  color:gray;\n  padding-right: 50px;\n  padding-left: 50px;\n  font-size: 15px;\n}\n"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Cormorant SC');\r\n\r\n.navigationBar {\r\n  display: block;\r\n  background-color: whitesmoke;\r\n}\r\n\r\na {\r\n  font-family: 'Cormorant SC', sans-serif;\r\n  font-family: 'Semi-Bold', sans-serif;\r\n  text-decoration: none;\r\n  color:gray;\r\n  padding-right: 50px;\r\n  padding-left: 50px;\r\n  font-size: 15px;\r\n}\r\n"
 
 /***/ }),
 
@@ -1956,7 +1883,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<nav>\n  <ul class=\"nav justify-content-center\">\n    <li class=\"nav-item\" routerLinkActive=\"active\">\n      <a routerLink=\"../\">{{home}}</a>\n    </li>\n    <li class=\"nav-item\" routerLinkActive=\"active\">\n      <a routerLink=\"../search\">{{search}}</a>\n    </li>\n    <li class=\"nav-item\" routerLinkActive=\"active\">\n      <a routerLink=\"../genre\">{{genre}}</a>\n    </li>\n    <!-- Only display admin tab for admin user -->\n    <li class=\"nav-item\" *ngIf=\"authService.displayAdmin()\" routerLinkActive=\"active\">\n      <a routerLink=\"../admin\">{{admin}}</a>\n    </li>\n    <!-- User authService.isLoggedIn directly here to solve problem of manually refreshing the page to see changes -->\n    <li class=\"nav-item\" *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../login\">{{logIn}}</a>\n    </li>\n    <li class=\"nav-item\" *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../register\">{{register}}</a>\n    </li>\n    <li class=\"nav-item\" *ngIf=\"authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../tickets\">{{ticket}}</a>\n    </li>\n    <li class=\"nav-item\" *ngIf=\"authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../userprofile\">{{profile}}</a>\n    </li>\n    <li class=\"nav-item\" routerLinkActive=\"active\">\n      <a routerLink=\"../companyInformation\">{{companyInformation}}</a>\n    </li>\n  </ul>\n\n</nav>\n<br />\n<div class=\"border border-bottom border-light\"> </div>"
+module.exports = "<br />\r\n<nav>\r\n  <ul class=\"nav justify-content-center\">\r\n    <li class=\"nav-item\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../\">{{home}}</a>\r\n    </li>\r\n    <li class=\"nav-item\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../search\">{{search}}</a>\r\n    </li>\r\n    <li class=\"nav-item\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../genre\">{{genre}}</a>\r\n    </li>\r\n    <!-- Only display admin tab for admin user -->\r\n    <li class=\"nav-item\" *ngIf=\"authService.displayAdmin()\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../admin\">{{admin}}</a>\r\n    </li>\r\n    <!-- User authService.isLoggedIn directly here to solve problem of manually refreshing the page to see changes -->\r\n    <li class=\"nav-item\" *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../login\">{{logIn}}</a>\r\n    </li>\r\n    <li class=\"nav-item\" *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../register\">{{register}}</a>\r\n    </li>\r\n    <li class=\"nav-item\" *ngIf=\"authService.isLoggedIn()\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../tickets\">{{ticket}}</a>\r\n    </li>\r\n    <li class=\"nav-item\" *ngIf=\"authService.isLoggedIn()\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../userprofile\">{{profile}}</a>\r\n    </li>\r\n    <li class=\"nav-item\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../companyInformation\">{{companyInformation}}</a>\r\n    </li>\r\n  </ul>\r\n\r\n</nav>\r\n<br />\r\n<div class=\"border border-bottom border-light\"> </div>"
 
 /***/ }),
 
@@ -2019,7 +1946,7 @@ var NavigationBarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n#message{\n    text-align: center;\n    font-family: 'Source Sans Pro', sans-serif;\n    font-family: 'Semi-Bold', sans-serif;\n    font-size: 20px;\n  \n}"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\r\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\r\n#message{\r\n    text-align: center;\r\n    font-family: 'Source Sans Pro', sans-serif;\r\n    font-family: 'Semi-Bold', sans-serif;\r\n    font-size: 20px;\r\n  \r\n}"
 
 /***/ }),
 
@@ -2030,7 +1957,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<br />\n<div class=\"alert alert-warning\" id=\"message\">Sorry, the page has not been found!</div>\n<footer></footer>"
+module.exports = "<br />\r\n<br />\r\n<br />\r\n<div class=\"alert alert-warning\" id=\"message\">Sorry, the page has not been found!</div>\r\n<footer></footer>"
 
 /***/ }),
 
@@ -2081,7 +2008,7 @@ var NotFoundPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n\n.nowShowingBlock {\n  background-color:white;\n  text-align: center;\n  font-family: 'Cormorant SC', sans-serif;\n  font-family: 'Bold', sans-serif;\n  font-size: 35px;\n  color: gray;\n  }\n\n#list{\n    color: grey;\n    font-size: 20px;\n    font-family: 'Cormorant SC', sans-serif;\n  }\n\n#alert{\n    text-align: center;\n    font-family: 'Cormorant SC', sans-serif;\n    font-size: 35px;\n    color: gray;\n  }\n\nul{\n    text-align: center;\n  }\n\n"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\r\n\r\n.nowShowingBlock {\r\n  background-color:white;\r\n  text-align: center;\r\n  font-family: 'Cormorant SC', sans-serif;\r\n  font-family: 'Bold', sans-serif;\r\n  font-size: 35px;\r\n  color: gray;\r\n  }\r\n\r\n#list{\r\n    color: grey;\r\n    font-size: 20px;\r\n    font-family: 'Cormorant SC', sans-serif;\r\n  }\r\n\r\n#alert{\r\n    text-align: center;\r\n    font-family: 'Cormorant SC', sans-serif;\r\n    font-size: 35px;\r\n    color: gray;\r\n  }\r\n\r\nul{\r\n    text-align: center;\r\n  }\r\n\r\n"
 
 /***/ }),
 
@@ -2092,7 +2019,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Corm
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<div>\n  <div class=\"nowShowingBlock\">\n    <div class=\"border border-light\">NOW SHOWING</div>\n  </div>\n  <ul if=\"list\" class=\"list-group list-group-flush\">\n    <li class=\"list-group-item\" *ngFor=\"let movie of movies\">\n      <a [routerLink]=\"['../movie', movie._id]\" id=\"list\">{{movie.name}}</a>\n    </li>\n  </ul>\n</div>\n\n<!-- <div id=\"alert\">Please be patient, more movies are yet to come.</div> -->"
+module.exports = "<br />\r\n<div>\r\n  <div class=\"nowShowingBlock\">\r\n    <div class=\"border border-light\">NOW SHOWING</div>\r\n  </div>\r\n  <ul if=\"list\" class=\"list-group list-group-flush\">\r\n    <li class=\"list-group-item\" *ngFor=\"let movie of movies\">\r\n      <a [routerLink]=\"['../movie', movie._id]\" id=\"list\">{{movie.name}}</a>\r\n    </li>\r\n  </ul>\r\n</div>\r\n\r\n<!-- <div id=\"alert\">Please be patient, more movies are yet to come.</div> -->"
 
 /***/ }),
 
@@ -2153,7 +2080,7 @@ var NowShowingMovieListComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n\nlabel{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-family: 'Semi-Bold', sans-serif;\n    font-size : 15px;\n}"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\r\n\r\nlabel{\r\n    font-family: 'Source Sans Pro', sans-serif;\r\n    font-family: 'Semi-Bold', sans-serif;\r\n    font-size : 15px;\r\n}"
 
 /***/ }),
 
@@ -2164,7 +2091,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Semi-Bold
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<div class=\"col-md-8-col-md-offset-2\">\n    <!-- Registration form -->\n    <form #registerForm=\"ngForm\" (ngSubmit)=\"registerForm.valid && onRegister(registerForm)\">\n        <!-- Firstname input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"firstName\">First Name</label>\n            <input type=\"text\" #firstName=\"ngModel\" [(ngModel)]=\"authService.selectedUser.firstName\" name=\"firstName\" placeholder=\"First Name\"\n                class=\"form-control\" required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !firstName.valid }\">\n            <!-- Display of Validation for firstname input -->\n            <div *ngIf=\"registerForm.submitted && firstName.errors\">\n                <label *ngIf=\"firstName.errors.required\" class=\"validation-message\">First name is required.</label>\n                <label *ngIf=\"firstName.errors.minlength\" class=\"validation-message\">First name must have at least 2 characters.</label>\n                <label *ngIf=\"firstName.errors.maxlength\" class=\"validation-message\">First name should not exceed 30 characters.</label>\n                <label *ngIf=\"firstName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\n\n            </div>\n        </div>\n\n        <!-- Lastname input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"lastName\">Last Name</label>\n            <input type=\"text\" #lastName=\"ngModel\" [(ngModel)]=\"authService.selectedUser.lastName\" name=\"lastName\" placeholder=\"Last Name\"\n                class=\"form-control\" required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !lastName.valid }\">\n            <!-- Display of Validation for lastname input -->\n            <div *ngIf=\"registerForm.submitted && lastName.errors\">\n                <label *ngIf=\"lastName.errors.required\" class=\"validation-message\">Last name is required.</label>\n                <label *ngIf=\"lastName.errors.minlength\" class=\"validation-message\">Last name must have at least 2 characters.</label>\n                <label *ngIf=\"lastName.errors.maxlength\" class=\"validation-message\">Last name should not exceed 30 characters.</label>\n                <label *ngIf=\"lastName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\n            </div>\n        </div>\n\n        <!-- Email input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"email\">Email</label>\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\n                required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !email.valid }\">\n            <!-- Display of Validation for email input -->\n            <div *ngIf=\"registerForm.submitted && email.errors\">\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n            </div>\n        </div>\n\n        <!-- Password input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\" placeholder=\"Password\"\n                class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !password.valid }\">\n            <!-- Display of Validation for password input -->\n            <div *ngIf=\"registerForm.submitted && password.errors\">\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\n                <label *ngIf=\"password.errors.minlength\" class=\"validation-message\">Password must have at least 4 characters.</label>\n            </div>\n        </div>\n\n        <!-- Gender input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"gender\">Gender</label>\n            <select #gender=\"ngModel\" [(ngModel)]=\"authService.selectedUser.gender\" name=\"gender\" placeholder=\"Gender\" class=\"form-control\"\n                required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !gender.valid }\">\n                <option [ngValue]=\"null\" disabled>Select gender</option>\n                <option *ngFor=\"let gender of genders\" [ngValue]=\"gender\">\n                    {{ gender}}\n                </option>\n            </select>\n            <!-- Display of Validation for gender input -->\n            <div *ngIf=\"registerForm.submitted && gender.errors\">\n                <label *ngIf=\"gender.errors.required\" class=\"validation-message\">Gender is required.</label>\n            </div>\n        </div>\n\n        <!-- Date of birth input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"dob\">Date of birth</label>\n            <input type=\"date\" #dob=\"ngModel\" [(ngModel)]=\"authService.selectedUser.dob\" name=\"dob\" placeholder=\"Date of Birth\" class=\"form-control\"\n                required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !dob.valid }\">\n            <!-- Display of Validation for date of birth input -->\n            <div *ngIf=\"registerForm.submitted && dob.errors\">\n                <label *ngIf=\"dob.errors.required\" class=\"validation-message\">Date of birth is required.</label>\n            </div>\n        </div>\n\n        <button class=\"btn btn-primary\" type=\"submit\">Register</button>\n    </form>\n</div>\n<br />\n\n<!-- Success message -->\n<div class=\"success\" *ngIf=\"successMessage\">\n    <label>Registration is completed. Please log into your account.</label>\n</div>\n\n<!-- Error message -->\n<div class=\"alert\" *ngIf=\"errorMessages\">\n    <label> {{errorMessages}}</label>\n</div>"
+module.exports = "<br />\r\n<br />\r\n<div class=\"col-md-8-col-md-offset-2\">\r\n    <!-- Registration form -->\r\n    <form #registerForm=\"ngForm\" (ngSubmit)=\"registerForm.valid && onRegister(registerForm)\">\r\n        <!-- Firstname input for user registration -->\r\n        <div class=\"form-group\">\r\n            <label for=\"firstName\">First Name</label>\r\n            <input type=\"text\" #firstName=\"ngModel\" [(ngModel)]=\"authService.selectedUser.firstName\" name=\"firstName\" placeholder=\"First Name\"\r\n                class=\"form-control\" required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !firstName.valid }\">\r\n            <!-- Display of Validation for firstname input -->\r\n            <div *ngIf=\"registerForm.submitted && firstName.errors\">\r\n                <label *ngIf=\"firstName.errors.required\" class=\"validation-message\">First name is required.</label>\r\n                <label *ngIf=\"firstName.errors.minlength\" class=\"validation-message\">First name must have at least 2 characters.</label>\r\n                <label *ngIf=\"firstName.errors.maxlength\" class=\"validation-message\">First name should not exceed 30 characters.</label>\r\n                <label *ngIf=\"firstName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\r\n\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Lastname input for user registration -->\r\n        <div class=\"form-group\">\r\n            <label for=\"lastName\">Last Name</label>\r\n            <input type=\"text\" #lastName=\"ngModel\" [(ngModel)]=\"authService.selectedUser.lastName\" name=\"lastName\" placeholder=\"Last Name\"\r\n                class=\"form-control\" required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !lastName.valid }\">\r\n            <!-- Display of Validation for lastname input -->\r\n            <div *ngIf=\"registerForm.submitted && lastName.errors\">\r\n                <label *ngIf=\"lastName.errors.required\" class=\"validation-message\">Last name is required.</label>\r\n                <label *ngIf=\"lastName.errors.minlength\" class=\"validation-message\">Last name must have at least 2 characters.</label>\r\n                <label *ngIf=\"lastName.errors.maxlength\" class=\"validation-message\">Last name should not exceed 30 characters.</label>\r\n                <label *ngIf=\"lastName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Email input for user registration -->\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Email</label>\r\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\r\n                required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !email.valid }\">\r\n            <!-- Display of Validation for email input -->\r\n            <div *ngIf=\"registerForm.submitted && email.errors\">\r\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\r\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Password input for user registration -->\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Password</label>\r\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\" placeholder=\"Password\"\r\n                class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !password.valid }\">\r\n            <!-- Display of Validation for password input -->\r\n            <div *ngIf=\"registerForm.submitted && password.errors\">\r\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\r\n                <label *ngIf=\"password.errors.minlength\" class=\"validation-message\">Password must have at least 4 characters.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Gender input for user registration -->\r\n        <div class=\"form-group\">\r\n            <label for=\"gender\">Gender</label>\r\n            <select #gender=\"ngModel\" [(ngModel)]=\"authService.selectedUser.gender\" name=\"gender\" placeholder=\"Gender\" class=\"form-control\"\r\n                required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !gender.valid }\">\r\n                <option [ngValue]=\"null\" disabled>Select gender</option>\r\n                <option *ngFor=\"let gender of genders\" [ngValue]=\"gender\">\r\n                    {{ gender}}\r\n                </option>\r\n            </select>\r\n            <!-- Display of Validation for gender input -->\r\n            <div *ngIf=\"registerForm.submitted && gender.errors\">\r\n                <label *ngIf=\"gender.errors.required\" class=\"validation-message\">Gender is required.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Date of birth input for user registration -->\r\n        <div class=\"form-group\">\r\n            <label for=\"dob\">Date of birth</label>\r\n            <input type=\"date\" #dob=\"ngModel\" [(ngModel)]=\"authService.selectedUser.dob\" name=\"dob\" placeholder=\"Date of Birth\" class=\"form-control\"\r\n                required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !dob.valid }\">\r\n            <!-- Display of Validation for date of birth input -->\r\n            <div *ngIf=\"registerForm.submitted && dob.errors\">\r\n                <label *ngIf=\"dob.errors.required\" class=\"validation-message\">Date of birth is required.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <button class=\"btn btn-primary\" type=\"submit\">Register</button>\r\n    </form>\r\n</div>\r\n<br />\r\n\r\n<!-- Success message -->\r\n<div class=\"success\" *ngIf=\"successMessage\">\r\n    <label>Registration is completed. Please log into your account.</label>\r\n</div>\r\n\r\n<!-- Error message -->\r\n<div class=\"alert\" *ngIf=\"errorMessages\">\r\n    <label> {{errorMessages}}</label>\r\n</div>"
 
 /***/ }),
 
@@ -2264,7 +2191,7 @@ var RegisterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n#movie{\n    font-family: 'Source Sans Pro', sans-serif;\n    font-size: 20px;\n    color: grey;\n}\nspan{\n   font-weight: bolder;\n   font-size: 25px;\n   color: black;\n   font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nh3{\n    text-align: center;\n    color: black;\n    font-family: 'Cormorant SC', sans-serif;\n    font-family: 'Bold', sans-serif;\n}"
+module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\r\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\r\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\r\n#movie{\r\n    font-family: 'Source Sans Pro', sans-serif;\r\n    font-size: 20px;\r\n    color: grey;\r\n}\r\nspan{\r\n   font-weight: bolder;\r\n   font-size: 25px;\r\n   color: black;\r\n   font-family: 'Source Sans Pro', sans-serif;\r\n   font-family: 'Semi-Bold', sans-serif;\r\n}\r\nh3{\r\n    text-align: center;\r\n    color: black;\r\n    font-family: 'Cormorant SC', sans-serif;\r\n    font-family: 'Bold', sans-serif;\r\n}"
 
 /***/ }),
 
@@ -2275,7 +2202,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Corm
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<div id=\"searchBar\">\n    <form [formGroup]=\"form\">\n        <div class=\"input-group\">\n            <input formControlName=\"movieName\" type=\"text\" placeholder=\"please search here\" class=\"form-control\">\n            <div class=\"input-group-append\">\n                <button class=\"btn btn-outline-secondary\" type=\"submit\" [disabled]=\"!form.valid\" (click)=\"onSubmit()\">search</button>\n            </div>\n        </div>\n        <br />\n        <div *ngIf=\"movieName.invalid\">\n            <div *ngIf=\"movieName.errors.minlength\">Name requires at least\n                {{movieName.errors.minlength.requiredLength}}\n                charaters.\n            </div>\n            <div *ngIf=\"movieName.errors.maxlength\">Name requires at most\n                {{movieName.errors.maxlength.requiredLength}}\n                charaters.\n            </div>\n        </div>\n    </form>\n    <div *ngIf=flag>\n        <p class=\"alert alert-warning\" role=\"alert\">\n            Sorry, the result you are looking for has not been found.\n        </p>\n    </div>\n</div>\n<div>\n    <div *ngFor=\"let property of movieResult\" id=\"movie\">\n        <h3>{{property.name}}</h3>\n        <br />\n        <br />\n        <br />\n        <label> <span>Sessions: </span></label>\n        <br />\n        <div *ngFor=\"let showtime of property.showtime\" class=\"list-group-item list-group-item-action list-group-item-light\"\n            [routerLink]=\"['../genre', showtime,property._id]\">{{showtime | date:'short'}}<br />\n        </div>\n        <br />\n        <label><span>Running time: </span>\n            <br />\n            <br />\n            {{property.runningTime}} mins\n        </label>\n        <br />\n        <br />\n        <label><span>Director: </span>\n            <br />\n            <br />\n            {{property.director | uppercase}}\n        </label>\n        <br />\n        <br />\n        <label><span>Cast:</span></label>\n        <br />\n        <div *ngFor=\"let star of property.stars\">\n            {{star|uppercase}}\n            <br />\n        </div>\n        <br />\n        <br />\n        <label><span>Story: </span>\n            <br />\n            <br />\n            {{property.storyline}}\n        </label>\n        <br />\n        <br />\n        <label><span>Genre:</span></label>\n        <div *ngFor=\"let genre of property.genres\">\n            {{genre|uppercase}}\n        </div>\n        <br />\n        <br />\n        <label><span>Status: </span>\n            <br />\n            <br />\n            {{property.status | uppercase}}\n        </label>\n        <br />\n        <br />\n    </div>"
+module.exports = "<br />\r\n<br />\r\n<div id=\"searchBar\">\r\n    <form [formGroup]=\"form\">\r\n        <div class=\"input-group\">\r\n            <input formControlName=\"movieName\" type=\"text\" placeholder=\"please search here\" class=\"form-control\">\r\n            <div class=\"input-group-append\">\r\n                <button class=\"btn btn-outline-secondary\" type=\"submit\" [disabled]=\"!form.valid\" (click)=\"onSubmit()\">search</button>\r\n            </div>\r\n        </div>\r\n        <br />\r\n        <div *ngIf=\"movieName.invalid\">\r\n            <div *ngIf=\"movieName.errors.minlength\">Name requires at least\r\n                {{movieName.errors.minlength.requiredLength}}\r\n                charaters.\r\n            </div>\r\n            <div *ngIf=\"movieName.errors.maxlength\">Name requires at most\r\n                {{movieName.errors.maxlength.requiredLength}}\r\n                charaters.\r\n            </div>\r\n        </div>\r\n    </form>\r\n    <div *ngIf=flag>\r\n        <p class=\"alert alert-warning\" role=\"alert\">\r\n            Sorry, the result you are looking for has not been found.\r\n        </p>\r\n    </div>\r\n</div>\r\n<div>\r\n    <div *ngFor=\"let property of movieResult\" id=\"movie\">\r\n        <h3>{{property.name}}</h3>\r\n        <br />\r\n        <br />\r\n        <br />\r\n        <label> <span>Sessions: </span></label>\r\n        <br />\r\n        <div *ngFor=\"let showtime of property.showtime\" class=\"list-group-item list-group-item-action list-group-item-light\"\r\n            [routerLink]=\"['../genre', showtime,property._id]\">{{showtime | date:'short'}}<br />\r\n        </div>\r\n        <br />\r\n        <label><span>Running time: </span>\r\n            <br />\r\n            <br />\r\n            {{property.runningTime}} mins\r\n        </label>\r\n        <br />\r\n        <br />\r\n        <label><span>Director: </span>\r\n            <br />\r\n            <br />\r\n            {{property.director | uppercase}}\r\n        </label>\r\n        <br />\r\n        <br />\r\n        <label><span>Cast:</span></label>\r\n        <br />\r\n        <div *ngFor=\"let star of property.stars\">\r\n            {{star|uppercase}}\r\n            <br />\r\n        </div>\r\n        <br />\r\n        <br />\r\n        <label><span>Story: </span>\r\n            <br />\r\n            <br />\r\n            {{property.storyline}}\r\n        </label>\r\n        <br />\r\n        <br />\r\n        <label><span>Genre:</span></label>\r\n        <div *ngFor=\"let genre of property.genres\">\r\n            {{genre|uppercase}}\r\n        </div>\r\n        <br />\r\n        <br />\r\n        <label><span>Status: </span>\r\n            <br />\r\n            <br />\r\n            {{property.status | uppercase}}\r\n        </label>\r\n        <br />\r\n        <br />\r\n    </div>"
 
 /***/ }),
 
@@ -2389,7 +2316,7 @@ var SearchBarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url(\"https://fonts.googleapis.com/css?family=Bold|Cormorant SC\");\n\nh3 {\n  text-align: center;\n  color: black;\n  font-family: \"Fredericka the Great\", sans-serif;\n}\n\nlabel {\n  font-size: 16px;\n  color: black;\n  font-family: \"Source Sans Pro\", sans-serif;\n}\n"
+module.exports = "@import url(\"https://fonts.googleapis.com/css?family=Bold|Cormorant SC\");\r\n\r\nh3 {\r\n  text-align: center;\r\n  color: black;\r\n  font-family: \"Fredericka the Great\", sans-serif;\r\n}\r\n\r\nlabel {\r\n  font-size: 16px;\r\n  color: black;\r\n  font-family: \"Source Sans Pro\", sans-serif;\r\n}\r\n"
 
 /***/ }),
 
@@ -2400,7 +2327,7 @@ module.exports = "@import url(\"https://fonts.googleapis.com/css?family=Bold|Cor
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<div *ngIf=\"userDetails\" class=\"border border-light\">\n  <h3> YOUR TICKETS</h3>\n</div>\n<div *ngIf=\"tickets.length > 0\" class=\"card-group\">\n  <li class=\"list-group-item\" *ngFor=\"let ticket of tickets; let i = index\" [attr.ticketId]=\"i\">\n    <div class=\"card border-dark mb-3\" style=\"max-width: 18rem;\">\n      <div class=\"card-header\">Ticket {{i + 1}}</div>\n      <div class=\"card-body text-dark\">\n        <h5 class=\"card-title\">\n          <strong>{{ticket.movieName}}</strong>\n        </h5>\n        <p class=\"card-text\">\n          <label>Session: </label> {{ticket.session | date:'short'}}\n          <br/>\n          <label>Email: </label> {{ticket.email}}\n          <br/>\n          <label>Price: </label> {{ticket.price | currency:'AUD':true:'1.2-2'}}\n          <br/>\n        </p>\n        <button class=\"btn btn-secondary\" (click)=\"onDelete(i)\">Delete ticket </button>\n      </div>\n    </div>\n  </li>\n\n</div>\n\n<div class=\"text-center\" *ngIf=\"tickets.length == 0\">\n  <label style=\"margin:50px\">You have no orders in the record</label>\n</div>"
+module.exports = "<br />\r\n<div *ngIf=\"userDetails\" class=\"border border-light\">\r\n  <h3> YOUR TICKETS</h3>\r\n</div>\r\n<div *ngIf=\"tickets.length > 0\" class=\"card-group\">\r\n  <li class=\"list-group-item\" *ngFor=\"let ticket of tickets; let i = index\" [attr.ticketId]=\"i\">\r\n    <div class=\"card border-dark mb-3\" style=\"max-width: 18rem;\">\r\n      <div class=\"card-header\">Ticket {{i + 1}}</div>\r\n      <div class=\"card-body text-dark\">\r\n        <h5 class=\"card-title\">\r\n          <strong>{{ticket.movieName}}</strong>\r\n        </h5>\r\n        <p class=\"card-text\">\r\n          <label>Session: </label> {{ticket.session | date:'short'}}\r\n          <br/>\r\n          <label>Email: </label> {{ticket.email}}\r\n          <br/>\r\n          <label>Price: </label> {{ticket.price | currency:'AUD':true:'1.2-2'}}\r\n          <br/>\r\n        </p>\r\n        <button class=\"btn btn-secondary\" (click)=\"onDelete(i)\">Delete ticket </button>\r\n      </div>\r\n    </div>\r\n  </li>\r\n\r\n</div>\r\n\r\n<div class=\"text-center\" *ngIf=\"tickets.length == 0\">\r\n  <label style=\"margin:50px\">You have no orders in the record</label>\r\n</div>"
 
 /***/ }),
 
@@ -2491,7 +2418,7 @@ var TicketComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url(\"https://fonts.googleapis.com/css?family=Bold|Cormorant SC\");\n\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\n\n#list {\n  color: grey;\n  font-size: 20px;\n  font-family: \"Cormorant SC\", sans-serif;\n}\n\nh2 {\n  text-align: left;\n  color: grey;\n  font-family: \"Cormorant SC\", sans-serif;\n  font-family: \"Bold\", sans-serif;\n}\n\nh3 {\n  text-align: center;\n  color: black;\n  font-family: \"Fredericka the Great\", sans-serif;\n}\n\nlabel {\n  font-size: 20px;\n  color: black;\n  font-family: \"Source Sans Pro\", sans-serif;\n  margin-right: 10px;\n}\n\n.btn {\n  margin: 10px;\n}\n\n.list-group-item {\n  font-family: \"Source Sans Pro\", sans-serif;\n  font-size: 20px;\n  color: grey;\n}\n"
+module.exports = ".btn {\r\n  margin: 10px;\r\n}\r\n"
 
 /***/ }),
 
@@ -2502,7 +2429,7 @@ module.exports = "@import url(\"https://fonts.googleapis.com/css?family=Bold|Cor
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table *ngIf=\"userDetails\">\n  <div class=\"wrapper\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Welcome back, {{userDetails.firstName}} {{userDetails.lastName}}!\n      </div>\n      <div class=\"card-body\">\n        <h3 class=\"card-title\">YOUR PROFILE</h3>\n        <ul class=\"list-group list-group-flush\">\n          <li class=\"list-group-item\">\n            <label>First Name: </label> {{userDetails.firstName}}</li>\n          <li class=\"list-group-item\">\n            <label>Last Name: </label> {{userDetails.lastName}}</li>\n          <li class=\"list-group-item\">\n            <label>Email: </label> {{userDetails.email}}</li>\n          <li class=\"list-group-item\">\n            <label>Gender: </label> {{userDetails.gender}}</li>\n          <li class=\"list-group-item\">\n            <label>Date of birth: </label> {{userDetails.dob | date: 'longDate'}}</li>\n        </ul>\n        <div class=\"button\">\n          <button class=\"btn btn-secondary\" (click)=\"onLogout()\">Logout</button>\n          <button class=\"btn btn-primary\" (click)=\"clickToEditProfile()\">Edit Profile</button>\n        </div>\n      </div>\n    </div>\n  </div>"
+module.exports = "<table *ngIf=\"userDetails\">\r\n  <div class=\"wrapper\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Welcome back, {{userDetails.firstName}} {{userDetails.lastName}}!\r\n      </div>\r\n      <div class=\"card-body\">\r\n        <h3 class=\"card-title\">YOUR PROFILE</h3>\r\n        <ul class=\"list-group list-group-flush\">\r\n          <li class=\"list-group-item\">\r\n            <label>First Name: </label> {{userDetails.firstName}}</li>\r\n          <li class=\"list-group-item\">\r\n            <label>Last Name: </label> {{userDetails.lastName}}</li>\r\n          <li class=\"list-group-item\">\r\n            <label>Email: </label> {{userDetails.email}}</li>\r\n          <li class=\"list-group-item\">\r\n            <label>Gender: </label> {{userDetails.gender}}</li>\r\n          <li class=\"list-group-item\">\r\n            <label>Date of birth: </label> {{userDetails.dob | date: 'longDate'}}</li>\r\n        </ul>\r\n        <div class=\"button\">\r\n          <button class=\"btn btn-secondary\" (click)=\"onLogout()\">Logout</button>\r\n          <button class=\"btn btn-primary\" (click)=\"clickToEditProfile()\">Edit Profile</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>"
 
 /***/ }),
 
@@ -2701,6 +2628,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MoviesService", function() { return MoviesService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2712,10 +2640,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var MoviesService = /** @class */ (function () {
     function MoviesService(http) {
         this.http = http;
-        this.url = "http://localhost:3000/api";
+        this.url = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiBaseUrl + "/movies";
     }
     MoviesService.prototype.getMovies = function () {
         return this.http.get(this.url);
@@ -2863,7 +2792,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/zhangyufei/Documents/IT/Github/Golden-Time-Cinema/GoldenTimeCinema-angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\CRYS\Golden-Time-Cinema\GoldenTimeCinema-angular\src\main.ts */"./src/main.ts");
 
 
 /***/ })

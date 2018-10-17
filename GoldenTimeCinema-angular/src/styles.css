@@ -17,14 +17,20 @@ label {
   color: black;
   font-family: "Source Sans Pro", sans-serif;
 }
+
 a {
-  color: #00b7ff;
-  cursor: pointer;
+  font-family: "Cormorant SC", sans-serif;
+  font-family: "Semi-Bold", sans-serif;
+  text-decoration: none;
+  color: gray;
+  padding-right: 50px;
+  padding-left: 50px;
+  font-size: 15px;
 }
 
 a:hover,
 a:active {
-  color: #00b7ff;
+  color: rgb(209, 156, 21);
   text-decoration: underline;
 }
 
@@ -83,6 +89,7 @@ label.validation-message {
 span {
   font-size: 20px;
   color: black;
+  font-weight: bolder;
   font-family: "Source Sans Pro", sans-serif;
   font-family: "Semi-Bold", sans-serif;
 }
@@ -102,7 +109,7 @@ h2 {
 }
 
 h3 {
-  text-align: left;
+  text-align: center;
   color: black;
   font-family: "Fredericka the Great", sans-serif;
 }
@@ -126,7 +133,8 @@ h3 {
   font-family: "Semi-Bold", sans-serif;
 }
 
-.comingSoonBlock {
+.comingSoonBlock,
+.nowShowingBlock {
   background-color: white;
   text-align: center;
   font-family: "Cormorant SC", sans-serif;
@@ -166,4 +174,16 @@ h3 {
   font-family: "Source Sans Pro", sans-serif;
   font-family: "Semi-Bold", sans-serif;
   font-size: 15px;
+}
+
+#message {
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Semi-Bold", sans-serif;
+  font-size: 20px;
+}
+
+.navigationBar {
+  display: block;
+  background-color: whitesmoke;
 }
