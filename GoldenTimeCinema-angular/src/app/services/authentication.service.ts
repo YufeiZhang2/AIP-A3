@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import { environment } from "../../environments/environment";
-import { User } from "../components/auth/user.model";
+import { User } from "../auth/user.model";
 import decode from "jwt-decode";
 
 @Injectable({
@@ -27,7 +27,7 @@ export class AuthenticationService {
 
   noAuthHeader = { headers: new HttpHeaders({ NoAuth: "True" }) };
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   // httpMethods
 

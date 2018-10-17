@@ -26,6 +26,8 @@ import { AdminComponent } from "./components/admin/admin.component";
 import { MessageComponent } from "./components/message/message.component";
 import { BookMoviesComponent } from "./components/book-movies/book-movies.component";
 import { UserProfileComponent } from "./components/user-profile/user-profile.component";
+import { TicketComponent } from "./components/ticket/ticket.component";
+import { EditProfileComponent } from "./components/edit-profile/edit-profile.component";
 
 // Service imports
 import { AuthenticationService } from "./services/authentication.service";
@@ -36,12 +38,10 @@ import { TicketService } from "./services/ticket.service";
 import { RoutingModule } from "./app.routing";
 
 // Other imports
-import { AuthGuard } from "./components/auth/auth.guard";
-import { AdminGuard } from "./components/auth/admin.guard";
-import { AuthInterceptor } from "./components/auth/auth.interceptor";
+import { AuthGuard } from "./auth/auth.guard";
+import { AdminGuard } from "./auth/admin.guard";
+import { AuthInterceptor } from "./auth/auth.interceptor";
 import { MyDatePickerModule } from "mydatepicker";
-import { TicketComponent } from "./components/ticket/ticket.component";
-import { EditProfileComponent } from "./components/edit-profile/edit-profile.component";
 
 @NgModule({
   declarations: [

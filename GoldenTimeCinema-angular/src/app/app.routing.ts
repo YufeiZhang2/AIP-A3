@@ -15,8 +15,8 @@ import { LoginComponent } from "./components/login/login.component";
 import { UserProfileComponent } from "./components/user-profile/user-profile.component";
 import { EditProfileComponent } from "./components/edit-profile/edit-profile.component";
 import { TicketComponent } from "./components/ticket/ticket.component";
-import { AuthGuard } from "./components/auth/auth.guard";
-import { AdminGuard } from "./components/auth/admin.guard";
+import { AuthGuard } from "./auth/auth.guard";
+import { AdminGuard } from "./auth/admin.guard";
 
 const routes: Routes = [
   {

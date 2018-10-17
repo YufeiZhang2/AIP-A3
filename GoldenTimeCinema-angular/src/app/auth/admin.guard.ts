@@ -6,7 +6,7 @@ import {
   Router
 } from "@angular/router";
 import { Observable } from "rxjs";
-import { AuthenticationService } from "../../services/authentication.service";
+import { AuthenticationService } from "../services/authentication.service";
 import "rxjs/add/operator/switchMap";
 import "rxjs/add/operator/map";
 
