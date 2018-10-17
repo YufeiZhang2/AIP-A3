@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// Create ticket model from ticket schema
 const bookingModel = mongoose.model(
   "booking",
   new mongoose.Schema({

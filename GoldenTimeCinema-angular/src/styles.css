@@ -57,6 +57,13 @@ a.danger {
 
 /* Form Elements */
 
+label.success {
+  padding: 20px;
+  color: #249424;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
 label {
   font-size: 20px;
   color: black;
@@ -76,19 +83,9 @@ input.ng-invalid.ng-touched {
 
 label.validation-message {
   color: #ed5558;
-}
-
-label.success {
-  padding: 20px;
-  color: #249424;
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-label.validation-message {
-  color: #ed5558;
   font-size: 15px;
 }
+
 button {
   font-family: "Source Sans Pro", sans-serif;
   width: 5cm;

@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
+// Create user schema
 var userSchema = new mongoose.Schema({
   firstName: {
     type: String,
@@ -60,6 +61,7 @@ userSchema.methods.verifyPassword = function(password) {
 };
 
 userSchema.methods.generateJwt = function() {
+  // Get user id and user role from token
   return jwt.sign(
     { _id: this._id, admin: this.isAdmin },
     process.env.jwtPrivateKey,
