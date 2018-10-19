@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 
-<<<<<<< HEAD
-//movie model
-=======
 // Create movie model from movie schema
->>>>>>> 861f4fb494cab87601f2b5606bb497880454c466
 const movieModel = mongoose.model(
   "movie",
   new mongoose.Schema({
