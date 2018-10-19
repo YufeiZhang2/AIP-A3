@@ -28,6 +28,10 @@ Golden Time Cinema is a web application platform providing services to movie lov
 
     • Edit movie status and Delete unnecessary movies
 
+    • To use the admin function, you can log into the admin account using this credentials (for testing purpose):
+        • Email: admin@goldentimecinema.com
+        • Password: 123456
+
 ## Build With (The MEAN Stack)
 
 • [MongoDB](https://www.mongodb.com/) - Document database, used by Back-end application to store data as JSON documents
@@ -117,6 +121,6 @@ Make sure you have installed all of the following pre-requisites on your develop
 
 ## Contributors
 
-    • Yufei Zhang (Ivan Zhang)
+• Yufei Zhang (Ivan Zhang)
 
-    • Bao Trang Bui (Crys Bui)
+• Bao Trang Bui (Crys Bui)
