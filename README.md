@@ -1,6 +1,30 @@
-# Advanced Internet Programming 2018_Assignmemt 3_The Golden Time Cinema Project
+# GOLDEN TIME CINEMA PROJECT
 
 This is a repository that provides the deliverable for assignment 3 for our group Web Three(two nerds now becuase one teammate dropped the subject).
+
+## Getting Started
+
+### Pre-Requisites
+
+Make sure you have installed all of the following pre-requisites on your development machine:
+
+    • Git - [Download & install Git](https://git-scm.com/downloads). OSX and Linux machines typically have this already installed.
+
+    • Node.js - [Download & install Node.js](https://nodejs.org/en/download/).
+
+    • MongoDB - [Download & install MongoDB](https://www.mongodb.com/download-center?initial=true), and make sure it runs on the default port (27017).
+
+### Installation
+
+Make sure you have installed all of the following pre-requisites on your development machine:
+
+    • Clone this repository into a specified folder on your local machine
+
+    • Run ```npm install``` in the root folder of your local repository to install node_modules for back-end development
+
+    • ```cd .\GoldenTimeCinema-angular\``` to change directory to front-end directory of Angular
+
+    • Run ```npm install``` to install node_modules for front-end development
 
 ## Principles of code style
 
