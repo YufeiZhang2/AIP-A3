@@ -6,10 +6,11 @@ import { environment } from "../../environments/environment";
   providedIn: "root"
 })
 export class MoviesService {
-  constructor(private http: Http) { }
+  constructor(private http: Http) {}
 
   private url = environment.apiBaseUrl + "/movies";
 
+  // Link to api in movieController
   getMovies() {
     return this.http.get(this.url);
   }

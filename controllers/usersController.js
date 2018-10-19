@@ -7,6 +7,7 @@ const passport = require("passport");
 const _ = require("lodash");
 const User = mongoose.model("user");
 
+// Register new user into the database
 module.exports.register = (req, res, next) => {
   var user = new User();
   user.firstName = req.body.firstName;
@@ -29,6 +30,7 @@ module.exports.register = (req, res, next) => {
   });
 };
 
+// Check user authentication during login
 module.exports.authenticate = (req, res, next) => {
   // call for passport authentication
   passport.authenticate("local", (err, user, info) => {
@@ -41,15 +43,19 @@ module.exports.authenticate = (req, res, next) => {
   })(req, res);
 };
 
+// Get user profile
 module.exports.userProfile = (req, res, next) => {
   User.findOne({ _id: req._id }, (err, user) => {
     if (!user)
+      // If cannot find user with specified Id
       return res
         .status(404)
         .json({ status: false, message: "User record not found." });
+    // If user with specified id is found
     else
       return res.status(200).json({
         status: true,
+        // only collect data from certain properties
         user: _.pick(user, [
           "firstName",
           "lastName",
@@ -63,7 +69,9 @@ module.exports.userProfile = (req, res, next) => {
   });
 };
 
+// Update user profile
 module.exports.editUserProfile = (req, res, next) => {
+  // Create new set of user data from the edit form input
   var userNewData = {
     lastName: req.body.lastName,
     firstName: req.body.firstName,
@@ -72,6 +80,7 @@ module.exports.editUserProfile = (req, res, next) => {
     dob: req.body.dob
   };
 
+  // Find user with specified id and update the new set of data
   User.findByIdAndUpdate(
     { _id: req._id },
     { $set: userNewData },

@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { AuthenticationService } from "../../services/authentication.service";
 import { Router } from "@angular/router";
 import { NgForm } from "@angular/forms";
-import { User } from "../auth/user.model";
+import { User } from "../../auth/user.model";
 
 @Component({
   selector: "edit-profile",

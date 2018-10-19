@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import { environment } from "../../environments/environment";
-import { User } from "../components/auth/user.model";
+import { User } from "../auth/user.model";
 import decode from "jwt-decode";
 
 @Injectable({
@@ -27,38 +27,40 @@ export class AuthenticationService {
 
   noAuthHeader = { headers: new HttpHeaders({ NoAuth: "True" }) };
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
+
+  private url = environment.apiBaseUrl;
 
   // httpMethods
 
+  // Register new user
+  // Link to api of register in userControl
   registerUser(user: User) {
-    return this.http.post(
-      environment.apiBaseUrl + "/register",
-      user,
-      this.noAuthHeader
-    );
+    return this.http.post(this.url + "/register", user, this.noAuthHeader);
   }
 
+  // Check user authentication
+  // Link to api authenticate in userControl
+  // require authentication credentials
   login(authCredentials) {
     return this.http.post(
-      environment.apiBaseUrl + "/authenticate",
+      this.url + "/authenticate",
       authCredentials,
       this.noAuthHeader
     );
   }
 
   // need jwt in the header
+  // Get profile details of the current user
+  // Link to api of userprofile in userController
   getUserProfile() {
-    return this.http.get(environment.apiBaseUrl + "/userprofile");
+    return this.http.get(this.url + "/userprofile");
   }
 
+  // Update profile details of the current user
+  // Link to api of editprofile in userController
   updateUser(user: User) {
-    // console.log("in service put", user);
-    return this.http.put(environment.apiBaseUrl + "/editprofile", user);
-  }
-
-  getAdmin() {
-    return this.http.get(environment.apiBaseUrl + "/admin");
+    return this.http.put(this.url + "/editprofile", user);
   }
 
   //Helper Methods
@@ -86,11 +88,13 @@ export class AuthenticationService {
   getUserPayload() {
     var token = this.getToken();
     if (token) {
+      // payload is the 2nd element (hence id = 1) in the array after splitting the token
       var userPayload = atob(token.split(".")[1]);
       return JSON.parse(userPayload);
     } else return null;
   }
 
+  // Check if current user is already logged in
   isLoggedIn() {
     var userPayload = this.getUserPayload();
     // check if jwt expiration time is over or not
@@ -98,12 +102,14 @@ export class AuthenticationService {
     else return false;
   }
 
+  // Check if the current user has role of admin
   isAdmin() {
     this.role = this.decodeToken().admin;
-    //console.log(this.role);
     return this.role;
   }
 
+  // Check the status of user role
+  // Purpose: display appropriate links in the navigation bar
   displayAdmin() {
     if (this.isLoggedIn() && this.isAdmin()) {
       return true;

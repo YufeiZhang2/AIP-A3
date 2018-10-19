@@ -2,10 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const router = express.Router();
 const ticketsController = require("../controllers/ticketsController");
-
 const nodeMailer = require("nodemailer");
 const clientSecret = require("./client_secret");
-
 const Booking = mongoose.model("booking");
 
 // Save ticket details in database
@@ -71,12 +69,14 @@ module.exports.saveTicket = (req, res, next) => {
   // Send email
   transporter.sendMail(messageTemplate, function(err, info) {
     if (err) {
+      // If message sending fails
       transporter.close();
       return res.json({
         status: "error",
         msg: err
       });
     } else {
+      // If message sending succeeds
       transporter.close();
       console.log("Message %s sent: %s", info.messageId, info.response);
       return res.json({

@@ -1,28 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');
-
-.nowShowingBlock {
-  background-color:white;
+ul {
   text-align: center;
-  font-family: 'Cormorant SC', sans-serif;
-  font-family: 'Bold', sans-serif;
-  font-size: 35px;
-  color: gray;
-  }
-  
-  #list{
-    color: grey;
-    font-size: 20px;
-    font-family: 'Cormorant SC', sans-serif;
-  }
-
-  #alert{
-    text-align: center;
-    font-family: 'Cormorant SC', sans-serif;
-    font-size: 35px;
-    color: gray;
-  }
-
-  ul{
-    text-align: center;
-  }
-
+}
