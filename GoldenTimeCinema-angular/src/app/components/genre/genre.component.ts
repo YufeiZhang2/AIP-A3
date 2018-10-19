@@ -6,7 +6,8 @@ import { Component, OnInit } from "@angular/core";
   templateUrl: "./genre.component.html",
   styleUrls: ["./genre.component.css"]
 })
-export class GenreComponent implements OnInit {
+export class GenreComponent {
+  //default genres input
   dramas = "dramas";
   action = "action";
   crime = "crime";
@@ -16,19 +17,17 @@ export class GenreComponent implements OnInit {
   romance = "romance";
   movies: any[];
 
-  constructor(private service: MoviesService) {}
+  //initiate movie service
+  constructor(private service: MoviesService) { }
 
-  ngOnInit() {}
-
-  findMoviesByGenre(inputValue) {
-    console.log(inputValue);
+  //get movies bt genres
+  findMoviesByGenre(genreInput) {
     this.service.getMovies().subscribe(response => {
-      //get movies by genres
+      //get the entire information of movies by genres
       this.movies = response.json().filter(movies => {
         for (let genre of movies.genres)
-          if (genre.toLowerCase() === inputValue.toLowerCase()) return movies;
+          if (genre.toLowerCase() === genreInput.toLowerCase()) return movies;
       });
-      console.log("movies retrieved by genres", this.movies);
     });
   }
 }
