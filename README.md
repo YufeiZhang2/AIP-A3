@@ -1,6 +1,32 @@
 # GOLDEN TIME CINEMA PROJECT
 
-This is a repository that provides the deliverable for assignment 3 for our group Web Three(two nerds now becuase one teammate dropped the subject).
+Golden Time Cinema is a web application platform providing services not people who have a passion for classic movies.
+
+## Functionalities
+
+### With this application, ordinary user (with no account) can:
+
+    • View list of "now-showing" and "coming-soon" movies
+
+    • Search for movies by name and genre
+
+    • Book movie ticket with notification message and confirmation ticket sent to their specified emails
+
+### Registered users can:
+
+    • Register and login with their accounts, and logout
+
+    • Edit user profile
+
+    • Book movie ticket with notification message and confirmation ticket sent to their registered or other emails
+
+    • View history of ticket orders in their account and delete tickets they find unnecessary
+
+### Users with admin role can:
+
+    • Add new movies to the database
+
+    • Edit movie status and Delete unnecessary movies
 
 ## Build With (The MEAN Stack)
 
