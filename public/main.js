@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header></header>\n<navigation-bar></navigation-bar>\n<router-outlet></router-outlet>\n<footer></footer>"
+module.exports = "<header></header>\r\n<navigation-bar></navigation-bar>\r\n<router-outlet></router-outlet>\r\n<footer></footer>"
 
 /***/ }),
 
@@ -568,7 +568,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<br />\n<button class=\"btn btn-secondary\" (click)=\"ClickToAdmin()\">Back to admin</button>\n<br />\n<br />\n<br />\n<form [formGroup]=\"form\" id=\"form\">\n    <div class=\"form-group\">\n        <label for=\"name\">Movie Name</label>\n        <input formControlName=\"name\" id=\"name\" type=\"text\" class=\"form-control\">\n        <div *ngIf=\"name.touched && name.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"name.errors.required\">Name is required</div>\n            <div *ngIf=\"name.errors.minlength\">Name requires at least {{name.errors.minlength.requiredLength}}\n                charaters.</div>\n            <div *ngIf=\"name.errors.maxlength\">Name requires at most {{name.errors.maxlength.requiredLength}}\n                charaters.</div>\n            <div *ngIf=\"name.errors.shouldBeUnique\">Name should be unique.</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"runningTime\">Running time</label>\n        <input formControlName=\"runningTime\" id=\"runningTime\" type=\"number\" class=\"form-control\">\n        <div *ngIf=\"runningTime.touched && runningTime.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"runningTime.errors.required\">Running time is required.</div>\n            <div *ngIf=\"runningTime.errors.min\">Running time requires at least greater than or equal 1.</div>\n            <div *ngIf=\"runningTime.errors.max\">Running time requires less than or equal 500.</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"showtime\">Session <br />(please press enter for the datetime one by one and delete the datetime by\n            clicking it)</label>\n        <input formArrayName=\"showtime\" id=\"showtime\" type=\"datetime-local\" (keyup.enter)=\"addShowtime(showtimeItem)\"\n            #showtimeItem class=\"form-control\">\n        <ul class=\"list-group\">\n            <li *ngFor=\"let showtimeItem of showtime.controls , let i = index\" (click)=\"\n                    removeShowtime(showtimeItem)\"\n                class=\"list-group-item\">\n                {{showtime.value[i]}}\n            </li>\n        </ul>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"stars\">Stars <br />(please press enter for the name one by one and delete the name by\n            clicking it) </label>\n        <input formArrayName=\"stars\" id=\"stars\" type=\"text\" (keyup.enter)=\"addStar(star)\" #star class=\"form-control\">\n        <ul class=\"list-group\">\n            <li *ngFor=\"let star of stars.controls\" (click)=\"removeStar(star)\" class=\"list-group-item\">\n                {{star.value}}\n            </li>\n        </ul>\n        <div *ngIf=\"stars.touched && stars.invalid\" class=\"alert alert-danger\">\n            <div class=\"alert alert-danger\" *ngIf=\"stars.errors.cannotBeNull\">Stars name is required</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"genres\">Genres <br />(please press enter for the genre one by one and delete the genre by\n            clicking it)</label>\n        <input formArrayName=\"genres\" id=\"genres\" type=\"text\" (keyup.enter)=\"addGenre(genre)\" #genre placeholder=\"Please enter dramas/ action/ crime/ horror/ comedies/ fantasy/ romance\"\n            class=\"form-control\">\n        <ul class=\"list-group\">\n            <li *ngFor=\"let genre of genres.controls\" (click)=\"removeGenre(genre)\" class=\"list-group-item\">\n                {{genre.value}}\n            </li>\n        </ul>\n\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"director\">Director</label>\n        <input formControlName=\"director\" id=\"director\" type=\"text\" class=\"form-control\">\n        <div *ngIf=\"director.touched && director.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"director.errors.required\">Director name is required</div>\n            <div *ngIf=\"director.errors.minlength\">Director name requires at least\n                {{director.errors.minlength.requiredLength}} charaters.</div>\n            <div *ngIf=\"director.errors.maxlength\">Director name requires at most\n                {{director.errors.maxlength.requiredLength}} charaters.</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"storyline\">Storyline</label>\n        <textarea formControlName=\"storyline\" id=\"storyline\" clos=\"30\" rows=\"10 \" class=\"form-control\"></textarea>\n        <div *ngIf=\"storyline.touched && storyline.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"storyline.errors.required\">Storyline is required</div>\n            <div *ngIf=\"storyline.errors.minlength\">Storyline requires at least\n                {{storyline.errors.minlength.requiredLength}}\n                charaters.</div>\n            <div *ngIf=\"storyline.errors.maxlength\">Storyline requires at most\n                {{storyline.errors.maxlength.requiredLength}}\n                charaters.</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"Price\">Price</label>\n        <input formControlName=\"price\" id=\"price\" type=\"number\" class=\"form-control\">\n        <div *ngIf=\"price.touched && price.invalid\" class=\"alert alert-danger\">\n            <div *ngIf=\"price.errors.required\">Price is required.</div>\n            <div *ngIf=\"price.errors.min\">Price requires at least greater than or equal 1.</div>\n            <div *ngIf=\"price.errors.max\">price requires less than or equal 10000.</div>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label>Status</label>\n        <br>\n        <label for=\"nowShowing\">Now Showing: </label>\n        <input formControlName=\"status\" id=\"nowShowing\" type=\"radio\" class=\"form-control\" value=\"nowShowing\">\n\n        <label for=\"comingSoon\">Coming Soon:</label>\n        <input formControlName=\"status\" id=\"comingSoon\" type=\"radio\" class=\"form-control\" value=\"comingSoon\">\n    </div>\n\n    <button type=\"submit\" [disabled]=\"!form.valid\" (click)=\"onSubmit()\" class=\"btn btn-primary\">Submit</button>\n    <br />\n    <br />\n    <div class=\"alert alert-info\" role=\"alert\" *ngIf=\"!form.valid\">\n        <label>Please complete all the information, thanks!</label>\n    </div>\n    <div class=\"alert alert-success\" role=\"alert\" *ngIf=\"form.valid\">\n        <label>You can submit the movie now.</label>\n    </div>\n</form>\n<br />"
+module.exports = "<br />\r\n<br />\r\n<br />\r\n<button class=\"btn btn-secondary\" (click)=\"ClickToAdmin()\">Back to admin</button>\r\n<br />\r\n<br />\r\n<br />\r\n\r\n<!-- Add movie form -->\r\n<form [formGroup]=\"form\" id=\"form\">\r\n    <!-- Movie Name input for adding new movie -->\r\n    <div class=\"form-group\">\r\n        <label for=\"name\">Movie Name</label>\r\n        <input formControlName=\"name\" id=\"name\" type=\"text\" class=\"form-control\">\r\n        <div *ngIf=\"name.touched && name.invalid\" class=\"alert alert-danger\">\r\n            <!-- Display of Validation message for Movie name input -->\r\n            <div *ngIf=\"name.errors.required\">Name is required</div>\r\n            <div *ngIf=\"name.errors.minlength\">Name requires at least {{name.errors.minlength.requiredLength}}\r\n                charaters.\r\n            </div>\r\n            <div *ngIf=\"name.errors.maxlength\">Name requires at most {{name.errors.maxlength.requiredLength}}\r\n                charaters.\r\n            </div>\r\n            <div *ngIf=\"name.errors.shouldBeUnique\">Name should be unique.</div>\r\n        </div>\r\n    </div>\r\n\r\n    <!-- Running time (minutes) input for adding new movie -->\r\n    <div class=\"form-group\">\r\n        <label for=\"runningTime\">Running time</label>\r\n        <input formControlName=\"runningTime\" id=\"runningTime\" type=\"number\" class=\"form-control\">\r\n        <!-- Display of Validation message for Running time input -->\r\n        <div *ngIf=\"runningTime.touched && runningTime.invalid\" class=\"alert alert-danger\">\r\n            <div *ngIf=\"runningTime.errors.required\">Running time is required.</div>\r\n            <div *ngIf=\"runningTime.errors.min\">Running time requires at least greater than or equal 1.</div>\r\n            <div *ngIf=\"runningTime.errors.max\">Running time requires less than or equal 500.</div>\r\n        </div>\r\n    </div>\r\n\r\n    <!-- Showtime (sessions) input for adding new movie -->\r\n    <div class=\"form-group\">\r\n        <label for=\"showtime\">Session\r\n            <!-- Instruction for user input of an array of showtime -->\r\n            <br />(please press enter for the datetime one by one and delete the datetime by clicking it)</label>\r\n        <input formArrayName=\"showtime\" id=\"showtime\" type=\"datetime-local\" (keyup.enter)=\"addShowtime(showtimeItem)\"\r\n            #showtimeItem class=\"form-control\">\r\n        <!-- Display of showtime list after user preses Enter -->\r\n        <!-- When clicked, the showtime element will be removed -->\r\n        <ul class=\"list-group\">\r\n            <li *ngFor=\"let showtimeItem of showtime.controls , let i = index\" (click)=\"\r\n                    removeShowtime(showtimeItem)\"\r\n                class=\"list-group-item\">\r\n                {{showtime.value[i]}}\r\n            </li>\r\n        </ul>\r\n    </div>\r\n\r\n    <!-- Stars (Actors/Actresses) input for adding new movie -->\r\n    <div class=\"form-group\">\r\n        <label for=\"stars\">Stars\r\n            <!-- Instruction for user input of an array of stars (actors/actresses) -->\r\n            <br />(please press enter for the name one by one and delete the name by clicking it) </label>\r\n        <input formArrayName=\"stars\" id=\"stars\" type=\"text\" (keyup.enter)=\"addStar(star)\" #star class=\"form-control\">\r\n        <!-- Display of stars (actors/actresses) list after user preses Enter -->\r\n        <!-- When clicked, the start element will be removed -->\r\n        <ul class=\"list-group\">\r\n            <li *ngFor=\"let star of stars.controls\" (click)=\"removeStar(star)\" class=\"list-group-item\">\r\n                {{star.value}}\r\n            </li>\r\n        </ul>\r\n        <!-- Display of Validation message for Stars (Actors/Actresses) input -->\r\n        <div *ngIf=\"stars.touched && stars.invalid\" class=\"alert alert-danger\">\r\n            <div class=\"alert alert-danger\" *ngIf=\"stars.errors.cannotBeNull\">Stars name is required</div>\r\n        </div>\r\n    </div>\r\n\r\n    <!-- Gernes input for adding new movie -->\r\n    <div class=\"form-group\">\r\n        <label for=\"genres\">Genres\r\n            <!-- Instruction for user input of an array of gernes  -->\r\n            <br />(please press enter for the genre one by one and delete the genre by clicking it)</label>\r\n        <input formArrayName=\"genres\" id=\"genres\" type=\"text\" (keyup.enter)=\"addGenre(genre)\" #genre placeholder=\"Please enter dramas/ action/ crime/ horror/ comedies/ fantasy/ romance\"\r\n            class=\"form-control\">\r\n        <!-- Display of gernes list after user preses Enter -->\r\n        <!-- When clicked, the gerne element will be removed -->\r\n        <ul class=\"list-group\">\r\n            <li *ngFor=\"let genre of genres.controls\" (click)=\"removeGenre(genre)\" class=\"list-group-item\">\r\n                {{genre.value}}\r\n            </li>\r\n        </ul>\r\n\r\n    </div>\r\n\r\n    <!-- Director input for adding new movie -->\r\n    <div class=\"form-group\">\r\n        <label for=\"director\">Director</label>\r\n        <input formControlName=\"director\" id=\"director\" type=\"text\" class=\"form-control\">\r\n        <!-- Display of Validation message for Director input -->\r\n        <div *ngIf=\"director.touched && director.invalid\" class=\"alert alert-danger\">\r\n            <div *ngIf=\"director.errors.required\">Director name is required</div>\r\n            <div *ngIf=\"director.errors.minlength\">Director name requires at least\r\n                {{director.errors.minlength.requiredLength}} charaters.</div>\r\n            <div *ngIf=\"director.errors.maxlength\">Director name requires at most\r\n                {{director.errors.maxlength.requiredLength}} charaters.</div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n    <!-- Storyline (Summary) textarea for adding new movie -->\r\n    <div class=\"form-group\">\r\n        <label for=\"storyline\">Storyline</label>\r\n        <textarea formControlName=\"storyline\" id=\"storyline\" clos=\"30\" rows=\"10 \" class=\"form-control\"></textarea>\r\n        <!-- Display of Validation message for Storyline (Summary) textarea -->\r\n        <div *ngIf=\"storyline.touched && storyline.invalid\" class=\"alert alert-danger\">\r\n            <div *ngIf=\"storyline.errors.required\">Storyline is required</div>\r\n            <div *ngIf=\"storyline.errors.minlength\">Storyline requires at least\r\n                {{storyline.errors.minlength.requiredLength}} charaters.\r\n            </div>\r\n            <div *ngIf=\"storyline.errors.maxlength\">Storyline requires at most\r\n                {{storyline.errors.maxlength.requiredLength}} charaters.\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <!-- Price input for adding new movie -->\r\n    <div class=\"form-group\">\r\n        <label for=\"Price\">Price</label>\r\n        <input formControlName=\"price\" id=\"price\" type=\"number\" class=\"form-control\">\r\n        <!-- Display of Validation message for Price input -->\r\n        <div *ngIf=\"price.touched && price.invalid\" class=\"alert alert-danger\">\r\n            <div *ngIf=\"price.errors.required\">Price is required.</div>\r\n            <div *ngIf=\"price.errors.min\">Price requires at least greater than or equal 1.</div>\r\n            <div *ngIf=\"price.errors.max\">price requires less than or equal 10000.</div>\r\n        </div>\r\n    </div>\r\n\r\n    <!-- Movie Status radio option for adding new movie -->\r\n    <div class=\"form-group\">\r\n        <label>Status</label>\r\n        <br>\r\n        <label for=\"nowShowing\">Now Showing: </label>\r\n        <input formControlName=\"status\" id=\"nowShowing\" type=\"radio\" class=\"form-control\" value=\"nowShowing\">\r\n\r\n        <label for=\"comingSoon\">Coming Soon:</label>\r\n        <input formControlName=\"status\" id=\"comingSoon\" type=\"radio\" class=\"form-control\" value=\"comingSoon\">\r\n    </div>\r\n\r\n    <!-- Button to submit Add movie form -->\r\n    <!-- Check form validation before allow submission -->\r\n    <button type=\"submit\" [disabled]=\"!form.valid\" (click)=\"onSubmit()\" class=\"btn btn-primary\">Submit</button>\r\n    <br />\r\n    <br />\r\n    <!-- Alert message: submit button is disabled -->\r\n    <div class=\"alert alert-info\" role=\"alert\" *ngIf=\"!form.valid\">\r\n        <label>Please complete all the information, thanks!</label>\r\n    </div>\r\n\r\n    <!-- Success message: submit button is enabled -->\r\n    <div class=\"alert alert-success\" role=\"alert\" *ngIf=\"form.valid\">\r\n        <label>You can submit the movie now.</label>\r\n    </div>\r\n</form>\r\n<br />"
 
 /***/ }),
 
@@ -781,7 +781,7 @@ var AddMovieFormComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Cormorant SC');\n@import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');\n@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');\n#admin{\n\n    font-size: 20px;\n    color: grey;\n    font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nspan{\n   font-size: 25px;\n   color: black;\n   font-family: 'Source Sans Pro', sans-serif;\n   font-family: 'Semi-Bold', sans-serif;\n}\nh3{\n    text-align: center;\n    color: black;\n    font-family: 'Cormorant SC', sans-serif;\n    font-family: 'Bold', sans-serif;\n}\nbutton{\n    width: 5cm;\n    height: 1cm;\n}\n"
+module.exports = ""
 
 /***/ }),
 
@@ -792,7 +792,7 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=Bold|Corm
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<br />\n<div id=\"admin\">\n  <button class=\"btn btn-primary\" (click)=\"clickToAddMovie()\">Add Movies</button>\n  <br />\n  <br />\n  <div *ngFor=\"let movie of movies; let i = index\" [attr.movieIndex]=\"i\">\n    <br />\n    <h3>{{movie.name}}</h3>\n    <br />\n    <br />\n    <button class=\"btn btn-secondary\" (click)=\"onDelete(i)\">Delete movie </button>\n    <br />\n    <br />\n    <button class=\"btn btn-secondary\" (click)=\"onUpdate(i)\">Update Status</button>\n    <br />\n    <br />\n    <label><span>Session time: </span>\n      <br />\n      <br />\n      <div *ngFor=\"let showtime of movie.showtime\">{{showtime | date:'short'}}<br /></div>\n    </label>\n    <br />\n    <br />\n    <label><span>Running time:</span>\n      <br />\n      <br />\n      {{movie.runningTime}} </label>\n    <br />\n    <br />\n    <label><span>Director: </span>\n      <br />\n      <br />\n      {{movie.director|uppercase}}</label>\n    <br />\n    <br />\n    <span>Cast: </span>\n    <br />\n    <br />\n    <div *ngFor=\"let star of movie.stars\">\n      <label>{{star|uppercase}}</label>\n      <br />\n    </div>\n    <br />\n    <label><span>Storyline:</span>\n      <br />\n      <br />\n      {{movie.storyline}}</label>\n    <br />\n    <br />\n    <span>Genre: </span>\n    <br />\n    <br />\n    <div *ngFor=\"let genre of movie.genres\">\n      <label>{{genre|uppercase}}</label>\n      <br />\n    </div>\n    <br />\n    <br />\n    <label><span>Price: </span>\n      <br />\n      <br />\n      {{movie.price | currency:'AUD':true:'1.2-2'}} </label>\n    <br />\n    <br />\n    <label><span>Status:\n        <br />\n        <br />\n      </span>{{movie.status|uppercase}}</label>\n    <br />\n    <br />\n  </div>\n</div>"
+module.exports = "<br />\r\n<br />\r\n<br />\r\n<div id=\"admin\">\r\n\r\n  <!-- Button leading to \"Add new movie\" page -->\r\n  <button class=\"btn btn-primary\" (click)=\"clickToAddMovie()\">Add Movies</button>\r\n  <br />\r\n  <br />\r\n  <!-- Display list of movies -->\r\n  <div *ngFor=\"let movie of movies; let i = index\" [attr.movieIndex]=\"i\">\r\n    <br />\r\n    <!-- Display movie name -->\r\n    <h3>{{movie.name}}</h3>\r\n    <br />\r\n    <br />\r\n    <button class=\"btn btn-secondary\" (click)=\"onDelete(i)\">Delete movie </button>\r\n    <br />\r\n    <br />\r\n    <button class=\"btn btn-secondary\" (click)=\"onUpdate(i)\">Update Status</button>\r\n    <br />\r\n    <br />\r\n\r\n    <!-- Display array of showtime/sessions for each movie, pipe into short date format-->\r\n    <label>\r\n      <span>Session time: </span>\r\n      <br />\r\n      <br />\r\n      <div *ngFor=\"let showtime of movie.showtime\">{{showtime | date:'short'}}\r\n        <br />\r\n      </div>\r\n    </label>\r\n    <br />\r\n    <br />\r\n\r\n    <!-- Display movie running time -->\r\n    <label>\r\n      <span>Running time:</span>\r\n      <br />\r\n      <br /> {{movie.runningTime}} </label>\r\n    <br />\r\n    <br />\r\n\r\n    <!-- Display movie director, pipe into uppercase -->\r\n    <label>\r\n      <span>Director: </span>\r\n      <br />\r\n      <br /> {{movie.director|uppercase}}\r\n    </label>\r\n    <br />\r\n    <br />\r\n\r\n    <!-- Display list of stars/actors/actresses for each movie -->\r\n    <span>Cast: </span>\r\n    <br />\r\n    <br />\r\n    <div *ngFor=\"let star of movie.stars\">\r\n      <label>{{star|uppercase}}</label>\r\n      <br />\r\n    </div>\r\n    <br />\r\n\r\n    <!-- Display movie storyline/summary -->\r\n    <label>\r\n      <span>Storyline:</span>\r\n      <br />\r\n      <br /> {{movie.storyline}}\r\n    </label>\r\n    <br />\r\n    <br />\r\n\r\n    <!-- Display list of movie genres, pipe into uppercase -->\r\n    <span>Genre: </span>\r\n    <br />\r\n    <br />\r\n    <div *ngFor=\"let genre of movie.genres\">\r\n      <label>{{genre|uppercase}}</label>\r\n      <br />\r\n    </div>\r\n    <br />\r\n    <br />\r\n\r\n    <!-- Display movie ticket price, pipe into AUD currency -->\r\n    <label>\r\n      <span>Price: </span>\r\n      <br />\r\n      <br /> {{movie.price | currency:'AUD':true:'1.2-2'}} </label>\r\n    <br />\r\n    <br />\r\n    <label>\r\n\r\n      <!-- Display movie showing status, pipe into uppercase -->\r\n      <span>Status:\r\n        <br />\r\n        <br />\r\n      </span>{{movie.status|uppercase}}</label>\r\n    <br />\r\n    <br />\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -865,6 +865,7 @@ var AdminComponent = /** @class */ (function () {
             console.log("response from update:", response.json());
         });
     };
+    // button for navigting to add movie page 
     AdminComponent.prototype.clickToAddMovie = function () {
         this.router.navigate(["/addMovieForm"]);
     };
@@ -903,7 +904,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<button class=\"btn btn-secondary\" (click)=\"backToHome()\">Home Page</button>\n<br />\n<br />\n<br />\n<h2>Booking:</h2>\n<div *ngFor=\"let property of movie\" id=\"movie\">\n  <br />\n  <h3>{{property.name}}</h3>\n  <br />\n  <label>\n    <span>Sessions: </span>\n  </label>\n  <div>{{bookingTime | date:'short'}}\n    <br />\n  </div>\n  <br />\n  <label>\n    <span>Price: </span>{{property.price | currency:'AUD':true:'1.2-2'}}</label>\n  <br />\n  <br />\n</div>\n\n<!-- If the movie has \"coming soon\" status -->\n<div *ngIf=\"!flag\" id=\"movie\">\n  <br />\n  <br />\n  <label>This movie is coming soon. Please stay tune.</label>\n</div>\n<!-- If the movie is \"now showing\", display the booking form without email provided before-->\n<div *ngIf=\"onlyMovie()\" id=\"movie\">\n  <form #bookingForm=\"ngForm\" (ngSubmit)=\"bookingForm.valid && onBook(bookingForm)\">\n    <label>Please enter your email: </label>\n    <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"bookingService.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\n      required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': bookingForm.submitted && !email.valid }\">\n    <!-- Display of Validation for email input -->\n    <div *ngIf=\"bookingForm.submitted && email.errors\">\n      <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n      <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n    </div>\n    <br />\n    <button class=\"btn btn-primary\" type=\"submit\">Confirm booking</button>\n  </form>\n</div>\n\n<!-- If the movie is \"now showing\" and user is logged in, display the booking form without user's email provided-->\n<!-- User can still change the email address to send the ticket to -->\n<div *ngIf=\"bothMovieUser() && userDetails\" id=\"movie\">\n  <form #bookingForm=\"ngForm\" (ngSubmit)=\"bookingForm.valid && onBook(bookingForm)\">\n    <label>Please check your email:</label>\n    <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"userDetails.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\n      required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': bookingForm.submitted && !email.valid }\">\n    <!-- Display of Validation for email input -->\n    <div *ngIf=\"bookingForm.submitted && email.errors\">\n      <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n      <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n    </div>\n    <br />\n    <button class=\"btn btn-primary\" type=\"submit\">Confirm booking</button>\n  </form>\n</div>\n\n<!-- If the movie has \"coming soon\" status -->\n<div>\n  <label *ngIf=\"bookingComplete\" class=\"success\">Your ticket has been succesfully booked. Please check your email for\n    more details.</label>\n</div>"
+module.exports = "<br />\r\n<br />\r\n\r\n<!-- Button leading to Home page -->\r\n<button class=\"btn btn-secondary\" (click)=\"backToHome()\">Home Page</button>\r\n<br />\r\n<br />\r\n<br />\r\n<h2>Booking:</h2>\r\n\r\n<!-- Display of selected movie with specified id -->\r\n<div *ngFor=\"let property of movie\" id=\"movie\">\r\n  <br />\r\n\r\n  <!-- Display movie name -->\r\n  <h3>{{property.name}}</h3>\r\n  <br />\r\n\r\n  <!-- Display movie showtime sessions -->\r\n  <label>\r\n    <span>Sessions: </span>\r\n  </label>\r\n  <div>{{bookingTime | date:'short'}}\r\n    <br />\r\n  </div>\r\n  <br />\r\n\r\n  <!-- Display movie ticket price -->\r\n  <label>\r\n    <span>Price: </span>{{property.price | currency:'AUD':true:'1.2-2'}}</label>\r\n  <br />\r\n  <br />\r\n</div>\r\n\r\n<!-- If the movie has \"coming soon\" status -->\r\n<div *ngIf=\"!flag\" id=\"movie\">\r\n  <br />\r\n  <br />\r\n  <label>This movie is coming soon. Please stay tune.</label>\r\n</div>\r\n<!-- If the movie is \"now showing\", display the booking form without email provided before-->\r\n<div *ngIf=\"onlyMovie()\" id=\"movie\">\r\n  <form #bookingForm=\"ngForm\" (ngSubmit)=\"bookingForm.valid && onBook(bookingForm)\">\r\n    <label>Please enter your email: </label>\r\n    <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"bookingService.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\r\n      required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': bookingForm.submitted && !email.valid }\">\r\n    <!-- Display of Validation message for email input -->\r\n    <div *ngIf=\"bookingForm.submitted && email.errors\">\r\n      <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\r\n      <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\r\n    </div>\r\n    <br />\r\n    <button class=\"btn btn-primary\" type=\"submit\">Confirm booking</button>\r\n  </form>\r\n</div>\r\n\r\n<!-- If the movie is \"now showing\" and user is logged in, display the booking form without user's email provided-->\r\n<!-- User can still change the email address to send the ticket to -->\r\n<div *ngIf=\"bothMovieUser() && userDetails\" id=\"movie\">\r\n  <form #bookingForm=\"ngForm\" (ngSubmit)=\"bookingForm.valid && onBook(bookingForm)\">\r\n    <label>Please check your email:</label>\r\n    <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"userDetails.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\r\n      required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': bookingForm.submitted && !email.valid }\">\r\n    <!-- Display of Validation message for email input -->\r\n    <div *ngIf=\"bookingForm.submitted && email.errors\">\r\n      <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\r\n      <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\r\n    </div>\r\n    <br />\r\n    <button class=\"btn btn-primary\" type=\"submit\">Confirm booking</button>\r\n  </form>\r\n</div>\r\n\r\n<!-- If the movie has \"coming soon\" status -->\r\n<div>\r\n  <label *ngIf=\"bookingComplete\" class=\"success\">Your ticket has been succesfully booked. Please check your email for more details.</label>\r\n</div>"
 
 /***/ }),
 
@@ -1038,7 +1039,7 @@ var BookMoviesComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ul {\n  text-align: center;\n}\n"
+module.exports = "ul {\r\n  text-align: center;\r\n}\r\n"
 
 /***/ }),
 
@@ -1049,7 +1050,7 @@ module.exports = "ul {\n  text-align: center;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<div class=\"comingSoonBlock\">\n  <div class=\"list-group\">\n    <div class=\"border border-light\">\n      COMING SOON\n    </div>\n    <ul if=\"list\" class=\"list-group list-group-flush\">\n      <li class=\"list-group-item\" *ngFor=\"let movie of movies\">\n        <a [routerLink]=\"['../movie', movie._id]\" id=\"list\">{{movie.name}}</a>\n      </li>\n    </ul>\n  </div>\n</div>"
+module.exports = "<br />\r\n\r\n<!-- Block of movies with \"Coming Soon\" status -->\r\n<div class=\"comingSoonBlock\">\r\n  <div class=\"list-group\">\r\n    <div class=\"border border-light\">\r\n      COMING SOON\r\n    </div>\r\n    <ul if=\"list\" class=\"list-group list-group-flush\">\r\n      <li class=\"list-group-item\" *ngFor=\"let movie of movies\">\r\n\r\n        <!-- Link to each \"Coming Soon\" movie details -->\r\n        <a [routerLink]=\"['../movie', movie._id]\" id=\"list\">{{movie.name}}</a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -1084,10 +1085,8 @@ var ComingSoonMovieListComponent = /** @class */ (function () {
     //get all the movies that are coming soon at initial stage 
     ComingSoonMovieListComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.service.getMovies().subscribe(function (response) {
-            _this.movies = response.json()
-                .filter(function (movie) { return movie.status === 'comingSoon'; });
-        });
+        this.service.getMovies().subscribe(function (response) { return _this.movies = response.json()
+            .filter(function (movie) { return movie.status === 'comingSoon'; }); });
     };
     ComingSoonMovieListComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1114,6 +1113,7 @@ var ComingSoonMovieListComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckWordsMatched", function() { return CheckWordsMatched; });
+//evaluate if two words match
 var CheckWordsMatched = /** @class */ (function () {
     function CheckWordsMatched() {
     }
@@ -1177,19 +1177,20 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var MovieInfoValidators = /** @class */ (function () {
     function MovieInfoValidators() {
     }
+    //evaluate if the new movie is already in the database
     MovieInfoValidators.shouldBeUnique = function (service) {
         return function (control) {
             return new Promise(function (resolve, reject) {
                 setTimeout(function () {
                     service.getMovies().subscribe(function (response) {
-                        console.log(response.json());
                         var movies = response.json();
                         for (var _i = 0, movies_1 = movies; _i < movies_1.length; _i++) {
                             var movie = movies_1[_i];
-                            console.log(movie);
+                            //iterate the movie list to check if the new movie being matches the movie's name in database
                             if (control.value.toString().toLowerCase().trim().replace(/ /g, "") === movie.name.toString().toLowerCase().trim().replace(/ /g, ""))
                                 return resolve({ shouldBeUnique: true });
                         }
+                        //valiadtion passes if the new movie is not in the movie database
                         return resolve(null);
                     });
                 }, 1000);
@@ -1224,7 +1225,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<br />\n<div id=\"information\" class=\"text-left text-md-left\">\n    Golden Time Cinema is for movie lovers to enjoy the classis movies anytime. Our cinema contains more than ten movie rooms\n    with cozy enviroment. We hope audience can have the best experince and travel with time machine to the classic movies\n    they love. Feel free to contact us if you have any question. Our team is here to help you responsively.\n</div>"
+module.exports = "<br />\r\n<br />\r\n<br />\r\n\r\n<!-- Display company information/About us section -->\r\n<div id=\"information\" class=\"text-left text-md-left\">\r\n    {{introduction}}\r\n</div>"
 
 /***/ }),
 
@@ -1245,21 +1246,17 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 var CompanyInformationComponent = /** @class */ (function () {
     function CompanyInformationComponent() {
+        this.introduction = "Golden Time Cinema is for movie lovers to enjoy the classis movies anytime. Our cinema contains more than ten movie rooms\n  with cozy enviroment. We hope audience can have the best experince and travel with time machine to the classic movies\n  they love. Feel free to contact us if you have any question. Our team is here to help you responsively.";
     }
-    CompanyInformationComponent.prototype.ngOnInit = function () { };
     CompanyInformationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "company-information",
             template: __webpack_require__(/*! ./company-information.component.html */ "./src/app/components/company-information/company-information.component.html"),
             styles: [__webpack_require__(/*! ./company-information.component.css */ "./src/app/components/company-information/company-information.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
+        })
     ], CompanyInformationComponent);
     return CompanyInformationComponent;
 }());
@@ -1275,7 +1272,7 @@ var CompanyInformationComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".btn {\n  margin: 10px;\n}\n"
+module.exports = ".btn {\r\n  margin: 10px;\r\n}\r\n"
 
 /***/ }),
 
@@ -1286,7 +1283,7 @@ module.exports = ".btn {\n  margin: 10px;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n\n\n<br />\n<div *ngIf=\"userDetails\" class=\"col-md-8-col-md-offset-2\">\n  <!-- Edit Profile form -->\n  <form #editProfileForm=\"ngForm\" (ngSubmit)=\"editProfileForm.valid && onUpdate(editProfileForm)\">\n    <input type=\"hidden\" name=\"_id\" #_id=\"ngModel\" [(ngModel)]=\"userDetails._id\">\n    <!-- Firstname input for user profile -->\n    <div class=\"form-group\">\n      <label for=\"firstName\">First Name</label>\n      <input type=\"text\" #firstName=\"ngModel\" [(ngModel)]=\"userDetails.firstName\" name=\"firstName\" placeholder=\"First Name\" class=\"form-control\"\n        required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !firstName.valid }\">\n      <!-- Display of Validation for firstname input -->\n      <div *ngIf=\"editProfileForm.submitted && firstName.errors\">\n        <label *ngIf=\"firstName.errors.required\" class=\"validation-message\">First name is required.</label>\n        <label *ngIf=\"firstName.errors.minlength\" class=\"validation-message\">First name must have at least 2 characters.</label>\n        <label *ngIf=\"firstName.errors.maxlength\" class=\"validation-message\">First name should not exceed 30 characters.</label>\n        <label *ngIf=\"firstName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\n      </div>\n    </div>\n\n    <!-- Lastname input for user profile -->\n    <div class=\"form-group\">\n      <label for=\"lastName\">Last Name</label>\n      <input type=\"text\" #lastName=\"ngModel\" [(ngModel)]=\"userDetails.lastName\" name=\"lastName\" placeholder=\"Last Name\" class=\"form-control\"\n        required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !lastName.valid }\">\n      <!-- Display of Validation for lastname input -->\n      <div *ngIf=\"editProfileForm.submitted && lastName.errors\">\n        <label *ngIf=\"lastName.errors.required\" class=\"validation-message\">Last name is required.</label>\n        <label *ngIf=\"lastName.errors.minlength\" class=\"validation-message\">Last name must have at least 2 characters.</label>\n        <label *ngIf=\"lastName.errors.maxlength\" class=\"validation-message\">Last name should not exceed 30 characters.</label>\n        <label *ngIf=\"lastName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\n      </div>\n    </div>\n\n    <!-- Email input for user profile -->\n    <div class=\"form-group\">\n      <label for=\"email\">Email</label>\n      <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"userDetails.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\n        required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !email.valid }\">\n      <!-- Display of Validation for email input -->\n      <div *ngIf=\"editProfileForm.submitted && email.errors\">\n        <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n        <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n      </div>\n    </div>\n\n    <!-- Gender input for user profile -->\n    <div class=\"form-group\">\n      <label for=\"gender\">Gender</label>\n      <select #gender=\"ngModel\" [(ngModel)]=\"userDetails.gender\" name=\"gender\" placeholder=\"Gender\" class=\"form-control\" required\n        [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !gender.valid }\">\n        <option [ngValue]=\"null\" disabled>Select gender</option>\n        <option *ngFor=\"let gender of genders\" [ngValue]=\"gender\">\n          {{ gender}}\n        </option>\n      </select>\n      <!-- Display of Validation for gender input -->\n      <div *ngIf=\"editProfileForm.submitted && gender.errors\">\n        <label *ngIf=\"gender.errors.required\" class=\"validation-message\">Gender is required.</label>\n      </div>\n    </div>\n\n    <!-- Date of birth input for user profile -->\n    <div class=\"form-group\">\n      <label for=\"dob\">Date of birth</label>\n      <input type=\"date\" #dob=\"ngModel\" [(ngModel)]=\"userDetails.dob\" name=\"dob\" placeholder=\"Date of Birth\" class=\"form-control\"\n        required [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !dob.valid }\">\n      <!-- Display of Validation for date of birth input -->\n      <div *ngIf=\"editProfileForm.submitted && dob.errors\">\n        <label *ngIf=\"dob.errors.required\" class=\"validation-message\">Date of birth is required.</label>\n      </div>\n    </div>\n    <button class=\"btn btn-secondary\" (click)=\"backToProfile()\">Back to Profile</button>\n    <button class=\"btn btn-primary\" type=\"submit\">Update</button>\n  </form>\n</div>\n\n<br />\n\n<!-- Success message -->\n<div class=\"success\" *ngIf=\"successMessage\">\n  <label>Update is successful</label>\n</div>\n\n<!-- Error message -->\n<div class=\"alert\" *ngIf=\"errorMessages\">\n  <label> {{errorMessages}}</label>\n</div>"
+module.exports = "<br />\r\n\r\n\r\n<br />\r\n<div *ngIf=\"userDetails\" class=\"col-md-8-col-md-offset-2\">\r\n  <!-- Edit Profile form -->\r\n  <form #editProfileForm=\"ngForm\" (ngSubmit)=\"editProfileForm.valid && onUpdate(editProfileForm)\">\r\n    <input type=\"hidden\" name=\"_id\" #_id=\"ngModel\" [(ngModel)]=\"userDetails._id\">\r\n    <!-- Firstname input for user profile -->\r\n    <div class=\"form-group\">\r\n      <label for=\"firstName\">First Name</label>\r\n      <input type=\"text\" #firstName=\"ngModel\" [(ngModel)]=\"userDetails.firstName\" name=\"firstName\" placeholder=\"First Name\" class=\"form-control\"\r\n        required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !firstName.valid }\">\r\n      <!-- Display of Validation message for firstname input -->\r\n      <div *ngIf=\"editProfileForm.submitted && firstName.errors\">\r\n        <label *ngIf=\"firstName.errors.required\" class=\"validation-message\">First name is required.</label>\r\n        <label *ngIf=\"firstName.errors.minlength\" class=\"validation-message\">First name must have at least 2 characters.</label>\r\n        <label *ngIf=\"firstName.errors.maxlength\" class=\"validation-message\">First name should not exceed 30 characters.</label>\r\n        <label *ngIf=\"firstName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Lastname input for user profile -->\r\n    <div class=\"form-group\">\r\n      <label for=\"lastName\">Last Name</label>\r\n      <input type=\"text\" #lastName=\"ngModel\" [(ngModel)]=\"userDetails.lastName\" name=\"lastName\" placeholder=\"Last Name\" class=\"form-control\"\r\n        required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !lastName.valid }\">\r\n      <!-- Display of Validation message for lastname input -->\r\n      <div *ngIf=\"editProfileForm.submitted && lastName.errors\">\r\n        <label *ngIf=\"lastName.errors.required\" class=\"validation-message\">Last name is required.</label>\r\n        <label *ngIf=\"lastName.errors.minlength\" class=\"validation-message\">Last name must have at least 2 characters.</label>\r\n        <label *ngIf=\"lastName.errors.maxlength\" class=\"validation-message\">Last name should not exceed 30 characters.</label>\r\n        <label *ngIf=\"lastName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Email input for user profile -->\r\n    <div class=\"form-group\">\r\n      <label for=\"email\">Email</label>\r\n      <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"userDetails.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\r\n        required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !email.valid }\">\r\n      <!-- Display of Validation message for email input -->\r\n      <div *ngIf=\"editProfileForm.submitted && email.errors\">\r\n        <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\r\n        <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Gender input for user profile -->\r\n    <div class=\"form-group\">\r\n      <label for=\"gender\">Gender</label>\r\n      <select #gender=\"ngModel\" [(ngModel)]=\"userDetails.gender\" name=\"gender\" placeholder=\"Gender\" class=\"form-control\" required\r\n        [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !gender.valid }\">\r\n        <option [ngValue]=\"null\" disabled>Select gender</option>\r\n        <option *ngFor=\"let gender of genders\" [ngValue]=\"gender\">\r\n          {{ gender}}\r\n        </option>\r\n      </select>\r\n      <!-- Display of Validation message for gender input -->\r\n      <div *ngIf=\"editProfileForm.submitted && gender.errors\">\r\n        <label *ngIf=\"gender.errors.required\" class=\"validation-message\">Gender is required.</label>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Date of birth input for user profile -->\r\n    <div class=\"form-group\">\r\n      <label for=\"dob\">Date of birth</label>\r\n      <input type=\"date\" #dob=\"ngModel\" [(ngModel)]=\"userDetails.dob\" name=\"dob\" placeholder=\"Date of Birth\" class=\"form-control\"\r\n        required [ngClass]=\"{ 'ng-invalid': editProfileForm.submitted && !dob.valid }\">\r\n      <!-- Display of Validation message for date of birth input -->\r\n      <div *ngIf=\"editProfileForm.submitted && dob.errors\">\r\n        <label *ngIf=\"dob.errors.required\" class=\"validation-message\">Date of birth is required.</label>\r\n      </div>\r\n    </div>\r\n    <!-- Button to go back to user profile -->\r\n    <button class=\"btn btn-secondary\" (click)=\"backToProfile()\">Back to Profile</button>\r\n    <!-- Button to submit the Edit Profile form -->\r\n    <button class=\"btn btn-primary\" type=\"submit\">Update</button>\r\n  </form>\r\n</div>\r\n\r\n<br />\r\n\r\n<!-- Success message -->\r\n<div class=\"success\" *ngIf=\"successMessage\">\r\n  <label>Update is successful</label>\r\n</div>\r\n\r\n<!-- Error message -->\r\n<div class=\"alert\" *ngIf=\"errorMessages\">\r\n  <label> {{errorMessages}}</label>\r\n</div>"
 
 /***/ }),
 
@@ -1384,7 +1381,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"footer border-top\">\n  {{companyName}}\n</div>"
+module.exports = "<!-- Display footer with company name -->\r\n<div class=\"footer border-top\">\r\n  {{companyName}}\r\n</div>"
 
 /***/ }),
 
@@ -1405,22 +1402,17 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 var FooterComponent = /** @class */ (function () {
     function FooterComponent() {
         this.companyName = "@Golden Time Cooperation";
     }
-    FooterComponent.prototype.ngOnInit = function () { };
     FooterComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "footer",
             template: __webpack_require__(/*! ./footer.component.html */ "./src/app/components/footer/footer.component.html"),
             styles: [__webpack_require__(/*! ./footer.component.css */ "./src/app/components/footer/footer.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
+        })
     ], FooterComponent);
     return FooterComponent;
 }());
@@ -1436,7 +1428,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a {\n  text-align: center;\n}\n"
+module.exports = "a {\r\n  text-align: center;\r\n}\r\n"
 
 /***/ }),
 
@@ -1447,7 +1439,7 @@ module.exports = "a {\n  text-align: center;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<br />\n<div id=\"genres\" class=\"list-group\">\n    <a (click)=\"findMoviesByGenre(dramas)\" class=\"list-group-item list-group-item-action list-group-item-light\">Dramas</a>\n    <a (click)=\"findMoviesByGenre(action)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Action</a>\n    <a (click)=\"findMoviesByGenre(crime)\" class=\"list-group-item list-group-item-action list-group-item-light\">Crime</a>\n    <a (click)=\"findMoviesByGenre(horror)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Horror</a>\n    <a (click)=\"findMoviesByGenre(comedies)\" class=\"list-group-item list-group-item-action list-group-item-light\">Comedies</a>\n    <a (click)=\"findMoviesByGenre(fantasy)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Fantasy</a>\n    <a (click)=\"findMoviesByGenre(romance)\" class=\"list-group-item list-group-item-action list-group-item-light\">Romance</a>\n</div>\n<br />\n<br />\n<div *ngFor=\"let property of movies\" id=\"movie\">\n    <h3>{{property.name}}</h3>\n    <br />\n    <br />\n    <br />\n    <label>\n        <span>Sessions: </span>\n    </label>\n    <br />\n    <div *ngFor=\"let showtime of property.showtime\" class=\"list-group-item list-group-item-action list-group-item-light\" [routerLink]=\"['../genre', showtime,property._id]\">{{showtime | date:'short'}}\n        <br />\n    </div>\n    <br />\n    <label>\n        <span>Running time: </span>\n        <br />\n        <br /> {{property.runningTime}} mins\n    </label>\n    <br />\n    <br />\n    <label>\n        <span>Director: </span>\n        <br />\n        <br /> {{property.director | uppercase}}\n    </label>\n    <br />\n    <br />\n    <label>\n        <span>Cast:</span>\n    </label>\n    <br />\n    <div *ngFor=\"let star of property.stars\">\n        {{star|uppercase}}\n        <br />\n    </div>\n    <br />\n    <br />\n    <label>\n        <span>Story: </span>\n        <br />\n        <br /> {{property.storyline}}\n    </label>\n    <br />\n    <br />\n    <label>\n        <span>Genre:</span>\n    </label>\n    <div *ngFor=\"let genre of property.genres\">\n        {{genre|uppercase}}\n    </div>\n    <br />\n    <br />\n    <label>\n        <span>Status: </span>\n        <br />\n        <br /> {{property.status | uppercase}}\n    </label>\n    <br />\n    <br />\n</div>"
+module.exports = "<br />\r\n<br />\r\n<br />\r\n\r\n<!-- List of genres to find movies by -->\r\n<div id=\"genres\" class=\"list-group\">\r\n    <a (click)=\"findMoviesByGenre(dramas)\" class=\"list-group-item list-group-item-action list-group-item-light\">Dramas</a>\r\n    <a (click)=\"findMoviesByGenre(action)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Action</a>\r\n    <a (click)=\"findMoviesByGenre(crime)\" class=\"list-group-item list-group-item-action list-group-item-light\">Crime</a>\r\n    <a (click)=\"findMoviesByGenre(horror)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Horror</a>\r\n    <a (click)=\"findMoviesByGenre(comedies)\" class=\"list-group-item list-group-item-action list-group-item-light\">Comedies</a>\r\n    <a (click)=\"findMoviesByGenre(fantasy)\" class=\"list-group-item list-group-item-action list-group-item-dark\">Fantasy</a>\r\n    <a (click)=\"findMoviesByGenre(romance)\" class=\"list-group-item list-group-item-action list-group-item-light\">Romance</a>\r\n</div>\r\n<br />\r\n<br />\r\n\r\n<!-- Display of movie result found -->\r\n<div *ngFor=\"let property of movies\" id=\"movie\">\r\n\r\n    <!-- Display movie name -->\r\n    <h3>{{property.name}}</h3>\r\n    <br />\r\n    <br />\r\n    <br />\r\n\r\n    <!-- Display list of movie showtime sessions -->\r\n    <label>\r\n        <span>Sessions: </span>\r\n    </label>\r\n    <br />\r\n    <div *ngFor=\"let showtime of property.showtime\" class=\"list-group-item list-group-item-action list-group-item-light\" [routerLink]=\"['../genre', showtime,property._id]\">{{showtime | date:'short'}}\r\n        <br />\r\n    </div>\r\n    <br />\r\n\r\n    <!-- Display movie running time -->\r\n    <label>\r\n        <span>Running time: </span>\r\n        <br />\r\n        <br /> {{property.runningTime}} mins\r\n    </label>\r\n    <br />\r\n    <br />\r\n\r\n    <!-- Display movie director, pipe into uppercase -->\r\n    <label>\r\n        <span>Director: </span>\r\n        <br />\r\n        <br /> {{property.director | uppercase}}\r\n    </label>\r\n    <br />\r\n    <br />\r\n\r\n    <!-- Display list of movie stars/actors/actresses, pipe into uppercase -->\r\n    <label>\r\n        <span>Cast:</span>\r\n    </label>\r\n    <br />\r\n    <div *ngFor=\"let star of property.stars\">\r\n        {{star|uppercase}}\r\n        <br />\r\n    </div>\r\n    <br />\r\n    <br />\r\n\r\n    <!-- Display movie storyline/summary -->\r\n    <label>\r\n        <span>Story: </span>\r\n        <br />\r\n        <br /> {{property.storyline}}\r\n    </label>\r\n    <br />\r\n    <br />\r\n\r\n    <!-- Display list of movie gernes, pipe into uppercase -->\r\n    <label>\r\n        <span>Genre:</span>\r\n    </label>\r\n    <div *ngFor=\"let genre of property.genres\">\r\n        {{genre|uppercase}}\r\n    </div>\r\n    <br />\r\n    <br />\r\n\r\n    <!-- Display movie status, pipe into uppercase -->\r\n    <label>\r\n        <span>Status: </span>\r\n        <br />\r\n        <br /> {{property.status | uppercase}}\r\n    </label>\r\n    <br />\r\n    <br />\r\n</div>"
 
 /***/ }),
 
@@ -1475,8 +1467,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var GenreComponent = /** @class */ (function () {
+    //initiate movie service
     function GenreComponent(service) {
         this.service = service;
+        //default genres input
         this.dramas = "dramas";
         this.action = "action";
         this.crime = "crime";
@@ -1485,20 +1479,18 @@ var GenreComponent = /** @class */ (function () {
         this.fantasy = "fantasy";
         this.romance = "romance";
     }
-    GenreComponent.prototype.ngOnInit = function () { };
-    GenreComponent.prototype.findMoviesByGenre = function (inputValue) {
+    //get movies bt genres
+    GenreComponent.prototype.findMoviesByGenre = function (genreInput) {
         var _this = this;
-        console.log(inputValue);
         this.service.getMovies().subscribe(function (response) {
-            //get movies by genres
+            //get the entire information of movies by genres
             _this.movies = response.json().filter(function (movies) {
                 for (var _i = 0, _a = movies.genres; _i < _a.length; _i++) {
                     var genre = _a[_i];
-                    if (genre.toLowerCase() === inputValue.toLowerCase())
+                    if (genre.toLowerCase() === genreInput.toLowerCase())
                         return movies;
                 }
             });
-            console.log("movies retrieved by genres", _this.movies);
         });
     };
     GenreComponent = __decorate([
@@ -1534,7 +1526,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <h1 class=\"text-center\" style=\"font-size:50px\">{{title}}</h1>\n</div>\n<br />\n<br />"
+module.exports = "<!-- Display Application Title -->\r\n<div>\r\n  <h1 class=\"text-center\" style=\"font-size:50px\">{{title}}</h1>\r\n</div>\r\n<br />\r\n<br />"
 
 /***/ }),
 
@@ -1555,22 +1547,17 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 var HeaderComponent = /** @class */ (function () {
     function HeaderComponent() {
         this.title = "Golden Time Cinema";
     }
-    HeaderComponent.prototype.ngOnInit = function () { };
     HeaderComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "header",
             template: __webpack_require__(/*! ./header.component.html */ "./src/app/components/header/header.component.html"),
             styles: [__webpack_require__(/*! ./header.component.css */ "./src/app/components/header/header.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
+        })
     ], HeaderComponent);
     return HeaderComponent;
 }());
@@ -1597,7 +1584,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<br />\n<now-showing-movie-list></now-showing-movie-list>\n<br />\n<br />\n<br />\n<coming-soon-movie-list></coming-soon-movie-list>\n<br />\n<br />"
+module.exports = "<br />\r\n<br />\r\n<br />\r\n<!-- Implement component of now showing movie list -->\r\n<now-showing-movie-list></now-showing-movie-list>\r\n<br />\r\n<br />\r\n<br />\r\n\r\n<!-- Implement component of coming soon movie list -->\r\n<coming-soon-movie-list></coming-soon-movie-list>\r\n<br />\r\n<br />"
 
 /***/ }),
 
@@ -1659,7 +1646,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<div class=\"col-md-8-col-md-offset-2\">\n\n    <form #loginForm=\"ngForm\" (ngSubmit)=\"loginForm.valid && onLogin(loginForm)\">\n        <div class=\"form-group\">\n            <label for=\"email\">Email</label>\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\n                required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !email.valid }\">\n            <div *ngIf=\"loginForm.submitted && email.errors\">\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n            </div>\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\" placeholder=\"Password\"\n                class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !password.valid }\">\n            <div *ngIf=\"loginForm.submitted && password.errors\">\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\n            </div>\n        </div>\n\n        <button class=\"btn btn-primary\" type=\"submit\">Login</button>\n    </form>\n\n</div>\n\n\n<!-- Error message -->\n<div class=\"alert\" *ngIf=\"errorMessages\">\n    {{errorMessages}}\n</div>"
+module.exports = "<br />\r\n<br />\r\n<div class=\"col-md-8-col-md-offset-2\">\r\n\r\n    <!-- Login form -->\r\n    <form #loginForm=\"ngForm\" (ngSubmit)=\"loginForm.valid && onLogin(loginForm)\">\r\n\r\n        <!-- Email input for user login -->\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Email</label>\r\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\r\n                required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !email.valid }\">\r\n            <!-- Display of Validation message for email input -->\r\n            <div *ngIf=\"loginForm.submitted && email.errors\">\r\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\r\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Password input for user login -->\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Password</label>\r\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\" placeholder=\"Password\"\r\n                class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': loginForm.submitted && !password.valid }\">\r\n            <!-- Display of Validation message for password input -->\r\n            <div *ngIf=\"loginForm.submitted && password.errors\">\r\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Button to submit login form -->\r\n        <button class=\"btn btn-primary\" type=\"submit\">Login</button>\r\n    </form>\r\n\r\n</div>\r\n\r\n\r\n<!-- Error message -->\r\n<div class=\"alert\" *ngIf=\"errorMessages\">\r\n    {{errorMessages}}\r\n</div>"
 
 /***/ }),
 
@@ -1742,7 +1729,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "#message{\r\n    color: red;\r\n}"
 
 /***/ }),
 
@@ -1753,7 +1740,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<button class=\"btn btn-secondary\" (click)=\"backToAdmin()\">back to admin</button>\n<div id=\"message\">\n  <br />\n  <br />\n  <br />\n  <br />\n  <p class=\"alert alert-success\" role=\"alert\">The Operation is Successful.</p>\n\n</div>"
+module.exports = "<br />\r\n<br />\r\n\r\n<!-- Button to go back to Admin page -->\r\n<button class=\"btn btn-secondary\" (click)=\"backToAdmin()\">back to admin</button>\r\n\r\n<!-- Success message -->\r\n<div id=\"message\">\r\n  <br />\r\n  <br />\r\n  <br />\r\n  <br />\r\n  <p class=\"alert alert-success\" role=\"alert\">{{message}}</p>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -1783,9 +1770,8 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var MessageComponent = /** @class */ (function () {
     function MessageComponent(router) {
         this.router = router;
+        this.message = "The operation is successful.";
     }
-    MessageComponent.prototype.ngOnInit = function () {
-    };
     //button back to admin
     MessageComponent.prototype.backToAdmin = function () {
         this.router.navigate(["/admin"]);
@@ -1812,7 +1798,7 @@ var MessageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h3 {\n  text-align: center;\n}\n"
+module.exports = "h3 {\r\n  text-align: center;\r\n}\r\n"
 
 /***/ }),
 
@@ -1823,7 +1809,7 @@ module.exports = "h3 {\n  text-align: center;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<div *ngFor=\"let property of movie\" id=\"movie\">\n  <h3>{{property.name}}</h3>\n  <br />\n  <br />\n  <br />\n  <label>\n    <span>Sessions: </span>\n  </label>\n  <br />\n  <div *ngFor=\"let showtime of property.showtime\" class=\"list-group-item list-group-item-action list-group-item-light\" [routerLink]=\"['../', showtime,property._id]\">{{showtime | date:'short'}}\n    <br />\n  </div>\n  <br />\n  <label>\n    <span>Running time: </span>\n    <br />\n    <br /> {{property.runningTime}} mins\n  </label>\n  <br />\n  <br />\n  <label>\n    <span>Director: </span>\n    <br />\n    <br /> {{property.director | uppercase}}\n  </label>\n  <br />\n  <br />\n  <label>\n    <span>Cast:</span>\n  </label>\n  <br />\n  <div *ngFor=\"let star of property.stars\">\n    {{star|uppercase}}\n    <br />\n  </div>\n  <br />\n  <br />\n  <label>\n    <span>Story: </span>\n    <br />\n    <br /> {{property.storyline}}\n  </label>\n  <br />\n  <br />\n  <label>\n    <span>Genre:</span>\n  </label>\n  <div *ngFor=\"let genre of property.genres\">\n    {{genre|uppercase}}\n  </div>\n  <br />\n  <br />\n  <label>\n    <span>Status: </span>\n    <br />\n    <br /> {{property.status | uppercase}}\n  </label>\n  <br />\n  <br />\n</div>"
+module.exports = "<br />\r\n<br />\r\n\r\n<!-- Display indvidual movie component with specified id -->\r\n<div *ngFor=\"let property of movie\" id=\"movie\">\r\n\r\n  <!-- Display movie name -->\r\n  <h3>{{property.name}}</h3>\r\n  <br />\r\n  <br />\r\n  <br />\r\n\r\n  <!-- Display list of movie showtime sessions -->\r\n  <label>\r\n    <span>Sessions: </span>\r\n  </label>\r\n  <br />\r\n  <div *ngFor=\"let showtime of property.showtime\" class=\"list-group-item list-group-item-action list-group-item-light\" [routerLink]=\"['../', showtime,property._id]\">{{showtime | date:'short'}}\r\n    <br />\r\n  </div>\r\n  <br />\r\n\r\n  <!-- Display movie running time -->\r\n  <label>\r\n    <span>Running time: </span>\r\n    <br />\r\n    <br /> {{property.runningTime}} mins\r\n  </label>\r\n  <br />\r\n  <br />\r\n\r\n  <!-- Display movie director, pipe into uppercase -->\r\n  <label>\r\n    <span>Director: </span>\r\n    <br />\r\n    <br /> {{property.director | uppercase}}\r\n  </label>\r\n  <br />\r\n  <br />\r\n\r\n  <!-- Display list of movie stars/actors/actresses, pipe into uppercase -->\r\n  <label>\r\n    <span>Cast:</span>\r\n  </label>\r\n  <br />\r\n  <div *ngFor=\"let star of property.stars\">\r\n    {{star|uppercase}}\r\n    <br />\r\n  </div>\r\n  <br />\r\n  <br />\r\n\r\n  <!-- Display movie storyline/summary -->\r\n  <label>\r\n    <span>Story: </span>\r\n    <br />\r\n    <br /> {{property.storyline}}\r\n  </label>\r\n  <br />\r\n  <br />\r\n\r\n  <!-- Display list of movie gernes, pipe into uppercase -->\r\n  <label>\r\n    <span>Genre:</span>\r\n  </label>\r\n  <div *ngFor=\"let genre of property.genres\">\r\n    {{genre|uppercase}}\r\n  </div>\r\n  <br />\r\n  <br />\r\n\r\n  <!-- Display movie status, pipe into uppercase -->\r\n  <label>\r\n    <span>Status: </span>\r\n    <br />\r\n    <br /> {{property.status | uppercase}}\r\n  </label>\r\n  <br />\r\n  <br />\r\n</div>"
 
 /***/ }),
 
@@ -1863,11 +1849,9 @@ var MovieComponent = /** @class */ (function () {
         this.route.paramMap
             .subscribe(function (params) {
             var _id = params.get('_id');
-            console.log(_id);
             //get a specific movie object by its object id
             _this.service.getMoviesById(_id).subscribe(function (response) {
                 _this.movie = response.json();
-                console.log(_this.movie);
             });
         });
     };
@@ -1904,7 +1888,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<nav>\n  <ul class=\"nav justify-content-center\">\n    <li class=\"nav-item\" routerLinkActive=\"active\">\n      <a routerLink=\"../\">{{home}}</a>\n    </li>\n    <li class=\"nav-item\" routerLinkActive=\"active\">\n      <a routerLink=\"../search\">{{search}}</a>\n    </li>\n    <li class=\"nav-item\" routerLinkActive=\"active\">\n      <a routerLink=\"../genre\">{{genre}}</a>\n    </li>\n    <!-- Only display admin tab for admin user -->\n    <li class=\"nav-item\" *ngIf=\"authService.displayAdmin()\" routerLinkActive=\"active\">\n      <a routerLink=\"../admin\">{{admin}}</a>\n    </li>\n    <!-- User authService.isLoggedIn directly here to solve problem of manually refreshing the page to see changes -->\n    <li class=\"nav-item\" *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../login\">{{logIn}}</a>\n    </li>\n    <li class=\"nav-item\" *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../register\">{{register}}</a>\n    </li>\n    <li class=\"nav-item\" *ngIf=\"authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../tickets\">{{ticket}}</a>\n    </li>\n    <li class=\"nav-item\" *ngIf=\"authService.isLoggedIn()\" routerLinkActive=\"active\">\n      <a routerLink=\"../userprofile\">{{profile}}</a>\n    </li>\n    <li class=\"nav-item\" routerLinkActive=\"active\">\n      <a routerLink=\"../companyInformation\">{{companyInformation}}</a>\n    </li>\n  </ul>\n\n</nav>\n<br />\n<div class=\"border border-bottom border-light\"> </div>"
+module.exports = "<br />\r\n<nav>\r\n  <!-- Display of navigation bar -->\r\n  <ul class=\"nav justify-content-center\">\r\n\r\n    <!-- Link to Home page -->\r\n    <li class=\"nav-item\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../\">{{home}}</a>\r\n    </li>\r\n\r\n    <!-- Link to Search page -->\r\n    <li class=\"nav-item\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../search\">{{search}}</a>\r\n    </li>\r\n\r\n    <!-- Link to Genres page -->\r\n    <li class=\"nav-item\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../genre\">{{genre}}</a>\r\n    </li>\r\n\r\n    <!-- Only display admin tab for admin user -->\r\n    <!-- Link to Admin page -->\r\n    <li class=\"nav-item\" *ngIf=\"authService.displayAdmin()\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../admin\">{{admin}}</a>\r\n    </li>\r\n\r\n\r\n    <!-- User authService.isLoggedIn directly here to solve problem of manually refreshing the page to see changes -->\r\n    <!-- Below link will only be displayed if the user is logged in-->\r\n\r\n    <!-- Link to Login page -->\r\n    <li class=\"nav-item\" *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../login\">{{logIn}}</a>\r\n    </li>\r\n\r\n    <!-- Link to Register page -->\r\n    <li class=\"nav-item\" *ngIf=\"!authService.isLoggedIn()\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../register\">{{register}}</a>\r\n    </li>\r\n\r\n    <!-- Link to Ticket Order page -->\r\n    <li class=\"nav-item\" *ngIf=\"authService.isLoggedIn()\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../tickets\">{{ticket}}</a>\r\n    </li>\r\n\r\n    <!-- Link to User Profile page -->\r\n    <li class=\"nav-item\" *ngIf=\"authService.isLoggedIn()\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../userprofile\">{{profile}}</a>\r\n    </li>\r\n\r\n    <!-- Link to About us page -->\r\n    <li class=\"nav-item\" routerLinkActive=\"active\">\r\n      <a routerLink=\"../companyInformation\">{{companyInformation}}</a>\r\n    </li>\r\n  </ul>\r\n\r\n</nav>\r\n<br />\r\n<div class=\"border border-bottom border-light\"> </div>"
 
 /***/ }),
 
@@ -1944,7 +1928,6 @@ var NavigationBarComponent = /** @class */ (function () {
         this.ticket = "ORDERS";
         this.search = "SEARCH";
     }
-    NavigationBarComponent.prototype.ngOnInit = function () { };
     NavigationBarComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "navigation-bar",
@@ -1978,7 +1961,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<br />\n<div class=\"alert alert-warning\" id=\"message\">Sorry, the page has not been found!</div>\n<footer></footer>"
+module.exports = "<br />\r\n<br />\r\n<br />\r\n<!-- Alert message: Page not found -->\r\n<div class=\"alert alert-warning\" id=\"message\">Sorry, the page has not been found!</div>\r\n<footer></footer>"
 
 /***/ }),
 
@@ -1999,21 +1982,16 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 var NotFoundPageComponent = /** @class */ (function () {
     function NotFoundPageComponent() {
     }
-    NotFoundPageComponent.prototype.ngOnInit = function () { };
     NotFoundPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "not-found-page",
             template: __webpack_require__(/*! ./not-found-page.component.html */ "./src/app/components/not-found-page/not-found-page.component.html"),
             styles: [__webpack_require__(/*! ./not-found-page.component.css */ "./src/app/components/not-found-page/not-found-page.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
+        })
     ], NotFoundPageComponent);
     return NotFoundPageComponent;
 }());
@@ -2029,7 +2007,7 @@ var NotFoundPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ul {\n  text-align: center;\n}\n"
+module.exports = "ul {\r\n  text-align: center;\r\n}\r\n"
 
 /***/ }),
 
@@ -2040,7 +2018,7 @@ module.exports = "ul {\n  text-align: center;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<div>\n  <div class=\"nowShowingBlock\">\n    <div class=\"border border-light\">NOW SHOWING</div>\n  </div>\n  <ul if=\"list\" class=\"list-group list-group-flush\">\n    <li class=\"list-group-item\" *ngFor=\"let movie of movies\">\n      <a [routerLink]=\"['../movie', movie._id]\" id=\"list\">{{movie.name}}</a>\n    </li>\n  </ul>\n</div>"
+module.exports = "<br />\r\n<div>\r\n\r\n  <!-- Block of movies with \"Now Showing\" status -->\r\n  <div class=\"nowShowingBlock\">\r\n    <div class=\"border border-light\">NOW SHOWING</div>\r\n  </div>\r\n  <ul if=\"list\" class=\"list-group list-group-flush\">\r\n    <li class=\"list-group-item\" *ngFor=\"let movie of movies\">\r\n\r\n      <!-- Link to each \"Now Showing\" movie details -->\r\n      <a [routerLink]=\"['../movie', movie._id]\" id=\"list\">{{movie.name}}</a>\r\n    </li>\r\n  </ul>\r\n</div>"
 
 /***/ }),
 
@@ -2073,11 +2051,9 @@ var NowShowingMovieListComponent = /** @class */ (function () {
     }
     NowShowingMovieListComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.service.getMovies().subscribe(function (response) {
-            _this.movies = response
-                .json()
-                .filter(function (movie) { return movie.status === "nowShowing"; });
-        });
+        //get the movies that are now showing
+        this.service.getMovies().subscribe(function (response) { return _this.movies = response.json()
+            .filter(function (movie) { return movie.status === "nowShowing"; }); });
     };
     NowShowingMovieListComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2112,7 +2088,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<div class=\"col-md-8-col-md-offset-2\">\n    <!-- Registration form -->\n    <form #registerForm=\"ngForm\" (ngSubmit)=\"registerForm.valid && onRegister(registerForm)\">\n        <!-- Firstname input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"firstName\">First Name</label>\n            <input type=\"text\" #firstName=\"ngModel\" [(ngModel)]=\"authService.selectedUser.firstName\" name=\"firstName\" placeholder=\"First Name\"\n                class=\"form-control\" required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !firstName.valid }\">\n            <!-- Display of Validation for firstname input -->\n            <div *ngIf=\"registerForm.submitted && firstName.errors\">\n                <label *ngIf=\"firstName.errors.required\" class=\"validation-message\">First name is required.</label>\n                <label *ngIf=\"firstName.errors.minlength\" class=\"validation-message\">First name must have at least 2 characters.</label>\n                <label *ngIf=\"firstName.errors.maxlength\" class=\"validation-message\">First name should not exceed 30 characters.</label>\n                <label *ngIf=\"firstName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\n\n            </div>\n        </div>\n\n        <!-- Lastname input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"lastName\">Last Name</label>\n            <input type=\"text\" #lastName=\"ngModel\" [(ngModel)]=\"authService.selectedUser.lastName\" name=\"lastName\" placeholder=\"Last Name\"\n                class=\"form-control\" required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !lastName.valid }\">\n            <!-- Display of Validation for lastname input -->\n            <div *ngIf=\"registerForm.submitted && lastName.errors\">\n                <label *ngIf=\"lastName.errors.required\" class=\"validation-message\">Last name is required.</label>\n                <label *ngIf=\"lastName.errors.minlength\" class=\"validation-message\">Last name must have at least 2 characters.</label>\n                <label *ngIf=\"lastName.errors.maxlength\" class=\"validation-message\">Last name should not exceed 30 characters.</label>\n                <label *ngIf=\"lastName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\n            </div>\n        </div>\n\n        <!-- Email input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"email\">Email</label>\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\n                required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !email.valid }\">\n            <!-- Display of Validation for email input -->\n            <div *ngIf=\"registerForm.submitted && email.errors\">\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n            </div>\n        </div>\n\n        <!-- Password input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\" placeholder=\"Password\"\n                class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !password.valid }\">\n            <!-- Display of Validation for password input -->\n            <div *ngIf=\"registerForm.submitted && password.errors\">\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\n                <label *ngIf=\"password.errors.minlength\" class=\"validation-message\">Password must have at least 4 characters.</label>\n            </div>\n        </div>\n\n        <!-- Gender input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"gender\">Gender</label>\n            <select #gender=\"ngModel\" [(ngModel)]=\"authService.selectedUser.gender\" name=\"gender\" placeholder=\"Gender\" class=\"form-control\"\n                required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !gender.valid }\">\n                <option [ngValue]=\"null\" disabled>Select gender</option>\n                <option *ngFor=\"let gender of genders\" [ngValue]=\"gender\">\n                    {{ gender}}\n                </option>\n            </select>\n            <!-- Display of Validation for gender input -->\n            <div *ngIf=\"registerForm.submitted && gender.errors\">\n                <label *ngIf=\"gender.errors.required\" class=\"validation-message\">Gender is required.</label>\n            </div>\n        </div>\n\n        <!-- Date of birth input for user registration -->\n        <div class=\"form-group\">\n            <label for=\"dob\">Date of birth</label>\n            <input type=\"date\" #dob=\"ngModel\" [(ngModel)]=\"authService.selectedUser.dob\" name=\"dob\" placeholder=\"Date of Birth\" class=\"form-control\"\n                required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !dob.valid }\">\n            <!-- Display of Validation for date of birth input -->\n            <div *ngIf=\"registerForm.submitted && dob.errors\">\n                <label *ngIf=\"dob.errors.required\" class=\"validation-message\">Date of birth is required.</label>\n            </div>\n        </div>\n\n        <button class=\"btn btn-primary\" type=\"submit\">Register</button>\n    </form>\n</div>\n<br />\n\n<!-- Success message -->\n<div class=\"success\" *ngIf=\"successMessage\">\n    Registration is completed. Please log into your account.\n</div>\n\n<!-- Error message -->\n<div class=\"alert\" *ngIf=\"errorMessages\">\n    {{errorMessages}}\n</div>"
+module.exports = "<br />\r\n<br />\r\n<div class=\"col-md-8-col-md-offset-2\">\r\n\r\n    <!-- Registration form -->\r\n    <form #registerForm=\"ngForm\" (ngSubmit)=\"registerForm.valid && onRegister(registerForm)\">\r\n        <!-- Firstname input for user registration -->\r\n        <div class=\"form-group\">\r\n            <label for=\"firstName\">First Name</label>\r\n            <input type=\"text\" #firstName=\"ngModel\" [(ngModel)]=\"authService.selectedUser.firstName\" name=\"firstName\" placeholder=\"First Name\"\r\n                class=\"form-control\" required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !firstName.valid }\">\r\n            <!-- Display of Validation message for firstname input -->\r\n            <div *ngIf=\"registerForm.submitted && firstName.errors\">\r\n                <label *ngIf=\"firstName.errors.required\" class=\"validation-message\">First name is required.</label>\r\n                <label *ngIf=\"firstName.errors.minlength\" class=\"validation-message\">First name must have at least 2 characters.</label>\r\n                <label *ngIf=\"firstName.errors.maxlength\" class=\"validation-message\">First name should not exceed 30 characters.</label>\r\n                <label *ngIf=\"firstName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\r\n\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Lastname input for user registration -->\r\n        <div class=\"form-group\">\r\n            <label for=\"lastName\">Last Name</label>\r\n            <input type=\"text\" #lastName=\"ngModel\" [(ngModel)]=\"authService.selectedUser.lastName\" name=\"lastName\" placeholder=\"Last Name\"\r\n                class=\"form-control\" required [pattern]=\"nameRegex\" minlength=\"2\" maxlength=\"30\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !lastName.valid }\">\r\n            <!-- Display of Validation message for lastname input -->\r\n            <div *ngIf=\"registerForm.submitted && lastName.errors\">\r\n                <label *ngIf=\"lastName.errors.required\" class=\"validation-message\">Last name is required.</label>\r\n                <label *ngIf=\"lastName.errors.minlength\" class=\"validation-message\">Last name must have at least 2 characters.</label>\r\n                <label *ngIf=\"lastName.errors.maxlength\" class=\"validation-message\">Last name should not exceed 30 characters.</label>\r\n                <label *ngIf=\"lastName.errors.pattern\" class=\"validation-message\">Invalid name format.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Email input for user registration -->\r\n        <div class=\"form-group\">\r\n            <label for=\"email\">Email</label>\r\n            <input type=\"text\" #email=\"ngModel\" [(ngModel)]=\"authService.selectedUser.email\" name=\"email\" placeholder=\"Email\" class=\"form-control\"\r\n                required [pattern]=\"emailRegex\" [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !email.valid }\">\r\n            <!-- Display of Validation message for email input -->\r\n            <div *ngIf=\"registerForm.submitted && email.errors\">\r\n                <label *ngIf=\"email.errors.required\" class=\"validation-message\">Email is required.</label>\r\n                <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Password input for user registration -->\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Password</label>\r\n            <input type=\"password\" #password=\"ngModel\" [(ngModel)]=\"authService.selectedUser.password\" name=\"password\" placeholder=\"Password\"\r\n                class=\"form-control\" minlength=\"4\" required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !password.valid }\">\r\n            <!-- Display of Validation message for password input -->\r\n            <div *ngIf=\"registerForm.submitted && password.errors\">\r\n                <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\r\n                <label *ngIf=\"password.errors.minlength\" class=\"validation-message\">Password must have at least 4 characters.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Gender input for user registration -->\r\n        <div class=\"form-group\">\r\n            <label for=\"gender\">Gender</label>\r\n            <select #gender=\"ngModel\" [(ngModel)]=\"authService.selectedUser.gender\" name=\"gender\" placeholder=\"Gender\" class=\"form-control\"\r\n                required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !gender.valid }\">\r\n                <option [ngValue]=\"null\" disabled>Select gender</option>\r\n                <option *ngFor=\"let gender of genders\" [ngValue]=\"gender\">\r\n                    {{ gender}}\r\n                </option>\r\n            </select>\r\n            <!-- Display of Validation message for gender input -->\r\n            <div *ngIf=\"registerForm.submitted && gender.errors\">\r\n                <label *ngIf=\"gender.errors.required\" class=\"validation-message\">Gender is required.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Date of birth input for user registration -->\r\n        <div class=\"form-group\">\r\n            <label for=\"dob\">Date of birth</label>\r\n            <input type=\"date\" #dob=\"ngModel\" [(ngModel)]=\"authService.selectedUser.dob\" name=\"dob\" placeholder=\"Date of Birth\" class=\"form-control\"\r\n                required [ngClass]=\"{ 'ng-invalid': registerForm.submitted && !dob.valid }\">\r\n            <!-- Display of Validation message for date of birth input -->\r\n            <div *ngIf=\"registerForm.submitted && dob.errors\">\r\n                <label *ngIf=\"dob.errors.required\" class=\"validation-message\">Date of birth is required.</label>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Button to submit register form -->\r\n        <button class=\"btn btn-primary\" type=\"submit\">Register</button>\r\n    </form>\r\n</div>\r\n<br />\r\n\r\n<!-- Success message -->\r\n<div class=\"success\" *ngIf=\"successMessage\">\r\n    Registration is completed. Please log into your account.\r\n</div>\r\n\r\n<!-- Error message -->\r\n<div class=\"alert\" *ngIf=\"errorMessages\">\r\n    {{errorMessages}}\r\n</div>"
 
 /***/ }),
 
@@ -2223,7 +2199,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<br />\n<div id=\"searchBar\">\n    <form [formGroup]=\"form\">\n        <div class=\"input-group\">\n            <input formControlName=\"movieName\" type=\"text\" placeholder=\"please search here\" class=\"form-control\">\n            <div class=\"input-group-append\">\n                <button class=\"btn btn-outline-secondary\" type=\"submit\" [disabled]=\"!form.valid\" (click)=\"onSubmit()\">search</button>\n            </div>\n        </div>\n        <br />\n        <div *ngIf=\"movieName.invalid\">\n            <div *ngIf=\"movieName.errors.minlength\">Name requires at least\n                {{movieName.errors.minlength.requiredLength}}\n                charaters.\n            </div>\n            <div *ngIf=\"movieName.errors.maxlength\">Name requires at most\n                {{movieName.errors.maxlength.requiredLength}}\n                charaters.\n            </div>\n        </div>\n    </form>\n    <div *ngIf=flag>\n        <p class=\"alert alert-warning\" role=\"alert\">\n            Sorry, the result you are looking for has not been found.\n        </p>\n    </div>\n</div>\n<div>\n    <div *ngFor=\"let property of movieResult\" id=\"movie\">\n        <h3>{{property.name}}</h3>\n        <br />\n        <br />\n        <br />\n        <label> <span>Sessions: </span></label>\n        <br />\n        <div *ngFor=\"let showtime of property.showtime\" class=\"list-group-item list-group-item-action list-group-item-light\"\n            [routerLink]=\"['../genre', showtime,property._id]\">{{showtime | date:'short'}}<br />\n        </div>\n        <br />\n        <label><span>Running time: </span>\n            <br />\n            <br />\n            {{property.runningTime}} mins\n        </label>\n        <br />\n        <br />\n        <label><span>Director: </span>\n            <br />\n            <br />\n            {{property.director | uppercase}}\n        </label>\n        <br />\n        <br />\n        <label><span>Cast:</span></label>\n        <br />\n        <div *ngFor=\"let star of property.stars\">\n            {{star|uppercase}}\n            <br />\n        </div>\n        <br />\n        <br />\n        <label><span>Story: </span>\n            <br />\n            <br />\n            {{property.storyline}}\n        </label>\n        <br />\n        <br />\n        <label><span>Genre:</span></label>\n        <div *ngFor=\"let genre of property.genres\">\n            {{genre|uppercase}}\n        </div>\n        <br />\n        <br />\n        <label><span>Status: </span>\n            <br />\n            <br />\n            {{property.status | uppercase}}\n        </label>\n        <br />\n        <br />\n    </div>"
+module.exports = "<br />\r\n<br />\r\n<div id=\"searchBar\">\r\n\r\n    <!-- Search movie form -->\r\n    <form [formGroup]=\"form\">\r\n        <div class=\"input-group\">\r\n            <!-- Movie name input for search form -->\r\n            <input formControlName=\"movieName\" type=\"text\" placeholder=\"please search here\" class=\"form-control\">\r\n            <div class=\"input-group-append\">\r\n                <button class=\"btn btn-outline-secondary\" type=\"submit\" [disabled]=\"!form.valid\" (click)=\"onSubmit()\">search</button>\r\n            </div>\r\n        </div>\r\n        <br />\r\n\r\n        <!-- Display of Validation message for search form -->\r\n        <div *ngIf=\"movieName.invalid\">\r\n            <div *ngIf=\"movieName.errors.minlength\">Name requires at least {{movieName.errors.minlength.requiredLength}} charaters.\r\n            </div>\r\n            <div *ngIf=\"movieName.errors.maxlength\">Name requires at most {{movieName.errors.maxlength.requiredLength}} charaters.\r\n            </div>\r\n        </div>\r\n    </form>\r\n\r\n    <!-- Alert message for not found results -->\r\n    <div *ngIf=flag>\r\n        <p class=\"alert alert-warning\" role=\"alert\">\r\n            Sorry, the result you are looking for has not been found.\r\n        </p>\r\n    </div>\r\n</div>\r\n<div>\r\n\r\n    <!-- Display of movie result found -->\r\n    <div *ngFor=\"let property of movieResult\" id=\"movie\">\r\n\r\n        <!-- Display movie name -->\r\n        <h3>{{property.name}}</h3>\r\n        <br />\r\n        <br />\r\n        <br />\r\n\r\n        <!-- Display list of movie showtime sessions -->\r\n        <label>\r\n            <span>Sessions: </span>\r\n        </label>\r\n        <br />\r\n        <div *ngFor=\"let showtime of property.showtime\" class=\"list-group-item list-group-item-action list-group-item-light\" [routerLink]=\"['../genre', showtime,property._id]\">{{showtime | date:'short'}}\r\n            <br />\r\n        </div>\r\n        <br />\r\n\r\n        <!-- Display movie running time -->\r\n        <label>\r\n            <span>Running time: </span>\r\n            <br />\r\n            <br /> {{property.runningTime}} mins\r\n        </label>\r\n        <br />\r\n        <br />\r\n\r\n        <!-- Display movie director, pipe into uppercase -->\r\n        <label>\r\n            <span>Director: </span>\r\n            <br />\r\n            <br /> {{property.director | uppercase}}\r\n        </label>\r\n        <br />\r\n        <br />\r\n\r\n        <!-- Display list of movie stars/actors/actresses, pipe into uppercase -->\r\n        <label>\r\n            <span>Cast:</span>\r\n        </label>\r\n        <br />\r\n        <div *ngFor=\"let star of property.stars\">\r\n            {{star|uppercase}}\r\n            <br />\r\n        </div>\r\n        <br />\r\n        <br />\r\n\r\n        <!-- Display movie storyline/summary -->\r\n        <label>\r\n            <span>Story: </span>\r\n            <br />\r\n            <br /> {{property.storyline}}\r\n        </label>\r\n        <br />\r\n        <br />\r\n\r\n        <!-- Display list of movie gernes, pipe into uppercase -->\r\n        <label>\r\n            <span>Genre:</span>\r\n        </label>\r\n        <div *ngFor=\"let genre of property.genres\">\r\n            {{genre|uppercase}}\r\n        </div>\r\n        <br />\r\n        <br />\r\n\r\n        <!-- Display movie status, pipe into uppercase -->\r\n        <label>\r\n            <span>Status: </span>\r\n            <br />\r\n            <br /> {{property.status | uppercase}}\r\n        </label>\r\n        <br />\r\n        <br />\r\n    </div>"
 
 /***/ }),
 
@@ -2259,6 +2235,7 @@ var SearchBarComponent = /** @class */ (function () {
         this.service = service;
         //flag for indicating if a error message is shown in search page
         this.flag = false;
+        //form for the search bar
         this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroup"]({
             movieName: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]("", [
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(2),
@@ -2266,7 +2243,6 @@ var SearchBarComponent = /** @class */ (function () {
             ])
         });
     }
-    SearchBarComponent.prototype.ngOnInit = function () { };
     Object.defineProperty(SearchBarComponent.prototype, "movieName", {
         get: function () {
             return this.form.get("movieName");
@@ -2276,27 +2252,23 @@ var SearchBarComponent = /** @class */ (function () {
     });
     SearchBarComponent.prototype.onSubmit = function () {
         var _this = this;
-        console.log(this.form.value);
         this.service.getMovies().subscribe(function (response) {
             _this.movies = response.json();
-            console.log(_this.movies);
             //find every movie in the database for matching user input
             for (var _i = 0, _a = _this.movies; _i < _a.length; _i++) {
                 var movie = _a[_i];
-                console.log(movie.name);
                 //if the result is not found, the flag is true.
                 _this.flag = true;
-                console.log(_common_checkWordsMatched__WEBPACK_IMPORTED_MODULE_2__["CheckWordsMatched"].prototype.CompareWithWords(movie.name, _this.form.value.movieName));
                 //if words match, get the sepecific movie from database
                 if (_common_checkWordsMatched__WEBPACK_IMPORTED_MODULE_2__["CheckWordsMatched"].prototype.CompareWithWords(movie.name, _this.form.value.movieName)) {
                     //get the object id of the matched movie
                     _this.searchResultId = movie._id;
-                    console.log(_this.searchResultId);
                     _this.service
                         .getMoviesById(_this.searchResultId)
                         .subscribe(function (response) {
                         //if the result is found, the flag is false
                         _this.flag = false;
+                        //get the specific movie searched by users
                         _this.movieResult = response.json();
                     });
                 }
@@ -2325,7 +2297,7 @@ var SearchBarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "label,\np {\n  font-size: 16px;\n}\n"
+module.exports = "label,\r\np {\r\n  font-size: 16px;\r\n}\r\n"
 
 /***/ }),
 
@@ -2336,7 +2308,7 @@ module.exports = "label,\np {\n  font-size: 16px;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br />\n<div *ngIf=\"userDetails\" class=\"border border-light\">\n  <h3> YOUR TICKETS</h3>\n</div>\n<div *ngIf=\"tickets.length > 0\" class=\"card-group\">\n  <li class=\"list-group-item\" *ngFor=\"let ticket of tickets; let i = index\" [attr.ticketId]=\"i\">\n    <div class=\"card border-dark mb-3\" style=\"max-width: 18rem;\">\n      <div class=\"card-header\">Ticket {{i + 1}}</div>\n      <div class=\"card-body text-dark\">\n        <h5 class=\"card-title\">\n          <strong>{{ticket.movieName}}</strong>\n        </h5>\n        <p class=\"card-text\">\n          <label>Session: </label> {{ticket.session | date:'short'}}\n          <br/>\n          <label>Email: </label> {{ticket.email}}\n          <br/>\n          <label>Price: </label> {{ticket.price | currency:'AUD':true:'1.2-2'}}\n          <br/>\n        </p>\n        <button class=\"btn btn-secondary\" (click)=\"onDelete(i)\">Delete ticket </button>\n      </div>\n    </div>\n  </li>\n\n</div>\n\n<div class=\"text-center\" *ngIf=\"tickets.length == 0\">\n  <label style=\"margin:50px\">You have no orders in the record</label>\n</div>"
+module.exports = "<br />\r\n\r\n<!-- Display of user's order history -->\r\n<div *ngIf=\"userDetails\" class=\"border border-light\">\r\n  <h3> YOUR TICKETS</h3>\r\n</div>\r\n\r\n<!-- If ticket records is not null, Display a list of tickets user has booked -->\r\n<div *ngIf=\"tickets.length > 0\" class=\"card-group\">\r\n\r\n  <!-- Display of individual ticket with specified id-->\r\n  <li class=\"list-group-item\" *ngFor=\"let ticket of tickets; let i = index\" [attr.ticketId]=\"i\">\r\n\r\n    <div class=\"card border-dark mb-3\" style=\"max-width: 18rem;\">\r\n      <!-- Display ticket order -->\r\n      <div class=\"card-header\">Ticket {{i + 1}}</div>\r\n      <div class=\"card-body text-dark\">\r\n\r\n        <!-- Display movie name of ticket -->\r\n        <h5 class=\"card-title\">\r\n          <strong>{{ticket.movieName}}</strong>\r\n        </h5>\r\n\r\n        <p class=\"card-text\">\r\n          <!-- Display ticket session you have booked -->\r\n          <label>Session: </label> {{ticket.session | date:'short'}}\r\n          <br/>\r\n          <!-- Display email to which ticket was sent -->\r\n          <label>Email: </label> {{ticket.email}}\r\n          <br/>\r\n          <!-- Display ticket price -->\r\n          <label>Price: </label> {{ticket.price | currency:'AUD':true:'1.2-2'}}\r\n          <br/>\r\n        </p>\r\n        <button class=\"btn btn-secondary\" (click)=\"onDelete(i)\">Delete ticket </button>\r\n      </div>\r\n    </div>\r\n  </li>\r\n\r\n</div>\r\n\r\n<!-- If no ticket record is found, Display this message -->\r\n<div class=\"text-center\" *ngIf=\"tickets.length == 0\">\r\n  <label style=\"margin:50px\">You have no orders in the record</label>\r\n</div>"
 
 /***/ }),
 
@@ -2427,7 +2399,7 @@ var TicketComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".btn {\n  margin: 10px;\n}\n"
+module.exports = ".btn {\r\n  margin: 10px;\r\n}\r\n"
 
 /***/ }),
 
@@ -2438,7 +2410,7 @@ module.exports = ".btn {\n  margin: 10px;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table *ngIf=\"userDetails\">\n  <div class=\"wrapper\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Welcome back, {{userDetails.firstName}} {{userDetails.lastName}}!\n      </div>\n      <div class=\"card-body\">\n        <h3 class=\"card-title\">YOUR PROFILE</h3>\n        <ul class=\"list-group list-group-flush\">\n          <li class=\"list-group-item\">\n            <label>First Name: </label> {{userDetails.firstName}}</li>\n          <li class=\"list-group-item\">\n            <label>Last Name: </label> {{userDetails.lastName}}</li>\n          <li class=\"list-group-item\">\n            <label>Email: </label> {{userDetails.email}}</li>\n          <li class=\"list-group-item\">\n            <label>Gender: </label> {{userDetails.gender}}</li>\n          <li class=\"list-group-item\">\n            <label>Date of birth: </label> {{userDetails.dob | date: 'longDate'}}</li>\n        </ul>\n        <div class=\"button\">\n          <button class=\"btn btn-secondary\" (click)=\"onLogout()\">Logout</button>\n          <button class=\"btn btn-primary\" (click)=\"clickToEditProfile()\">Edit Profile</button>\n        </div>\n      </div>\n    </div>\n  </div>"
+module.exports = "<table *ngIf=\"userDetails\">\r\n  <div class=\"wrapper\">\r\n    <div class=\"card\">\r\n\r\n      <!-- Welcoming message in card header -->\r\n      <div class=\"card-header\">\r\n        Welcome back, {{userDetails.firstName}} {{userDetails.lastName}}!\r\n      </div>\r\n      <div class=\"card-body\">\r\n        <h3 class=\"card-title\">YOUR PROFILE</h3>\r\n        <ul class=\"list-group list-group-flush\">\r\n\r\n          <!-- Display user firstname -->\r\n          <li class=\"list-group-item\">\r\n            <label>First Name: </label> {{userDetails.firstName}}</li>\r\n\r\n          <!-- Display user lastname -->\r\n          <li class=\"list-group-item\">\r\n            <label>Last Name: </label> {{userDetails.lastName}}</li>\r\n\r\n          <!-- Display user email -->\r\n          <li class=\"list-group-item\">\r\n            <label>Email: </label> {{userDetails.email}}</li>\r\n\r\n          <!-- Display user gender -->\r\n          <li class=\"list-group-item\">\r\n            <label>Gender: </label> {{userDetails.gender}}</li>\r\n\r\n          <!-- Display user date of birth, pipe into long date format -->\r\n          <li class=\"list-group-item\">\r\n            <label>Date of birth: </label> {{userDetails.dob | date: 'longDate'}}</li>\r\n        </ul>\r\n        <div class=\"button\">\r\n\r\n          <!-- Button to log user out of their account -->\r\n          <button class=\"btn btn-secondary\" (click)=\"onLogout()\">Logout</button>\r\n\r\n          <!-- Button leading to Edit User Profile page/form -->\r\n          <button class=\"btn btn-primary\" (click)=\"clickToEditProfile()\">Edit Profile</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>"
 
 /***/ }),
 
@@ -2665,20 +2637,23 @@ var MoviesService = /** @class */ (function () {
         this.http = http;
         this.url = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiBaseUrl + "/movies";
     }
-    // Link to api in movieController
+    // get all the movies 
     MoviesService.prototype.getMovies = function () {
         return this.http.get(this.url);
     };
+    // get the movie by its object id
     MoviesService.prototype.getMoviesById = function (_id) {
         return this.http.get(this.url + "/" + _id);
     };
+    //post a new movie
     MoviesService.prototype.createMovies = function (movie) {
         return this.http.post(this.url, movie);
     };
+    //update a movie's status
     MoviesService.prototype.updateMovies = function (movie) {
-        console.log("in service put", movie);
         return this.http.put(this.url + "/" + movie._id, movie);
     };
+    //delete a movie by its object id
     MoviesService.prototype.deleteMovies = function (_id) {
         return this.http.delete(this.url + "/" + _id);
     };
@@ -2816,7 +2791,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/zhangyufei/Documents/IT/Github/Golden-Time-Cinema/GoldenTimeCinema-angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\CRYS\Golden-Time-Cinema\GoldenTimeCinema-angular\src\main.ts */"./src/main.ts");
 
 
 /***/ })

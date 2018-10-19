@@ -36,6 +36,22 @@ Make sure you have installed all of the following pre-requisites on your develop
 
 • To update these packages of dependencies, run `npm update` in the either directories as specified above
 
+### Running The Application
+
+• Run Mongo daemon `mongod` in one terminal to start the Mongo server
+
+• Run Mongo shell `mongod` in another terminal to access data in MongoDB
+
+• `cd .\GoldenTimeCinema-angular\` to change directory to front-end directory of Angular
+
+• Run `ng build` to build the front-end project in Angular project folder
+
+• Navigate to the project root
+
+• Run `nodemon start` in the project root to start the application
+
+• The application should run on port 3000 with the development environment configuration, so in your browser just go to http://localhost:3000
+
 ## Principles of code style
 
     Code style:
