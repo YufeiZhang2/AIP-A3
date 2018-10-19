@@ -11,7 +11,6 @@ import { FormGroup, FormControl, FormArray, Validators } from "@angular/forms";
   styleUrls: ["./add-movie-form.component.css"]
 })
 export class AddMovieFormComponent implements OnInit {
-
   //create from group, form control and form array for user input for the infomation of a movie
   form = new FormGroup({
     name: new FormControl(
@@ -98,9 +97,9 @@ export class AddMovieFormComponent implements OnInit {
     return this.form.get("price");
   }
 
-  constructor(private router: Router, private service: MoviesService) { }
+  constructor(private router: Router, private service: MoviesService) {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   //add star name in the stars array
   addStar(star: HTMLInputElement) {

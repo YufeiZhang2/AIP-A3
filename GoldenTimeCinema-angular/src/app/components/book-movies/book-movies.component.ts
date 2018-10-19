@@ -34,12 +34,11 @@ export class BookMoviesComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
+      // get showtime sessions of movie
       this.bookingTime = params.get("showtime");
-      console.log(this.bookingTime);
-
       let _id = params.get("_id");
-      console.log(_id);
 
+      // get movie by id and its relevant parameters
       this.movieService.getMoviesById(_id).subscribe(response => {
         this.movie = response.json().filter(movie => {
           this.movieName = movie.name;
@@ -84,11 +83,14 @@ export class BookMoviesComponent implements OnInit {
     }
   }
 
+  // Navigate back to Home page
   backToHome() {
     this.router.navigate(["/home"]);
   }
 
+  // When movie booking Form is submitted
   onBook(form: NgForm) {
+    // create an object with submitted value from booking Form
     let bookingValue = {
       movieName: this.movieName,
       session: this.bookingTime,
@@ -98,7 +100,9 @@ export class BookMoviesComponent implements OnInit {
     };
     this.bookingService.bookMovie(bookingValue).subscribe(response => {
       this.bookingComplete = true;
-      setTimeout(() => (this.bookingComplete = false), 4000); // Success message for bookingComplete status dissapears after 4 seconds
+
+      // Success message for bookingComplete status dissapears after 4 seconds
+      setTimeout(() => (this.bookingComplete = false), 4000);
     });
   }
 }
