@@ -1,10 +1,16 @@
 <br />
 <br />
+
+<!-- Display indvidual movie component with specified id -->
 <div *ngFor="let property of movie" id="movie">
+
+  <!-- Display movie name -->
   <h3>{{property.name}}</h3>
   <br />
   <br />
   <br />
+
+  <!-- Display list of movie showtime sessions -->
   <label>
     <span>Sessions: </span>
   </label>
@@ -13,6 +19,8 @@
     <br />
   </div>
   <br />
+
+  <!-- Display movie running time -->
   <label>
     <span>Running time: </span>
     <br />
@@ -20,6 +28,8 @@
   </label>
   <br />
   <br />
+
+  <!-- Display movie director, pipe into uppercase -->
   <label>
     <span>Director: </span>
     <br />
@@ -27,6 +37,8 @@
   </label>
   <br />
   <br />
+
+  <!-- Display list of movie stars/actors/actresses, pipe into uppercase -->
   <label>
     <span>Cast:</span>
   </label>
@@ -37,6 +49,8 @@
   </div>
   <br />
   <br />
+
+  <!-- Display movie storyline/summary -->
   <label>
     <span>Story: </span>
     <br />
@@ -44,6 +58,8 @@
   </label>
   <br />
   <br />
+
+  <!-- Display list of movie gernes, pipe into uppercase -->
   <label>
     <span>Genre:</span>
   </label>
@@ -52,6 +68,8 @@
   </div>
   <br />
   <br />
+
+  <!-- Display movie status, pipe into uppercase -->
   <label>
     <span>Status: </span>
     <br />

@@ -1,25 +1,41 @@
 <table *ngIf="userDetails">
   <div class="wrapper">
     <div class="card">
+
+      <!-- Welcoming message in card header -->
       <div class="card-header">
         Welcome back, {{userDetails.firstName}} {{userDetails.lastName}}!
       </div>
       <div class="card-body">
         <h3 class="card-title">YOUR PROFILE</h3>
         <ul class="list-group list-group-flush">
+
+          <!-- Display user firstname -->
           <li class="list-group-item">
             <label>First Name: </label> {{userDetails.firstName}}</li>
+
+          <!-- Display user lastname -->
           <li class="list-group-item">
             <label>Last Name: </label> {{userDetails.lastName}}</li>
+
+          <!-- Display user email -->
           <li class="list-group-item">
             <label>Email: </label> {{userDetails.email}}</li>
+
+          <!-- Display user gender -->
           <li class="list-group-item">
             <label>Gender: </label> {{userDetails.gender}}</li>
+
+          <!-- Display user date of birth, pipe into long date format -->
           <li class="list-group-item">
             <label>Date of birth: </label> {{userDetails.dob | date: 'longDate'}}</li>
         </ul>
         <div class="button">
+
+          <!-- Button to log user out of their account -->
           <button class="btn btn-secondary" (click)="onLogout()">Logout</button>
+
+          <!-- Button leading to Edit User Profile page/form -->
           <button class="btn btn-primary" (click)="clickToEditProfile()">Edit Profile</button>
         </div>
       </div>
