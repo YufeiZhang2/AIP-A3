@@ -6,7 +6,7 @@ import { AuthenticationService } from "../../services/authentication.service";
   templateUrl: "./navigation-bar.component.html",
   styleUrls: ["./navigation-bar.component.css"]
 })
-export class NavigationBarComponent implements OnInit {
+export class NavigationBarComponent {
   logIn = "LOG IN";
   home = "HOME";
   register = "REGISTER";
@@ -17,7 +17,6 @@ export class NavigationBarComponent implements OnInit {
   ticket = "ORDERS";
   search = "SEARCH";
 
-  constructor(private authService: AuthenticationService) {}
+  constructor(private authService: AuthenticationService) { }
 
-  ngOnInit() {}
 }

@@ -15,9 +15,11 @@
         <div *ngIf="name.touched && name.invalid" class="alert alert-danger">
             <!-- Display of Validation message for Movie name input -->
             <div *ngIf="name.errors.required">Name is required</div>
-            <div *ngIf="name.errors.minlength">Name requires at least {{name.errors.minlength.requiredLength}} charaters.
+            <div *ngIf="name.errors.minlength">Name requires at least {{name.errors.minlength.requiredLength}}
+                charaters.
             </div>
-            <div *ngIf="name.errors.maxlength">Name requires at most {{name.errors.maxlength.requiredLength}} charaters.
+            <div *ngIf="name.errors.maxlength">Name requires at most {{name.errors.maxlength.requiredLength}}
+                charaters.
             </div>
             <div *ngIf="name.errors.shouldBeUnique">Name should be unique.</div>
         </div>
@@ -40,13 +42,14 @@
         <label for="showtime">Session
             <!-- Instruction for user input of an array of showtime -->
             <br />(please press enter for the datetime one by one and delete the datetime by clicking it)</label>
-        <input formArrayName="showtime" id="showtime" type="datetime-local" (keyup.enter)="addShowtime(showtimeItem)" #showtimeItem
-            class="form-control">
+        <input formArrayName="showtime" id="showtime" type="datetime-local" (keyup.enter)="addShowtime(showtimeItem)"
+            #showtimeItem class="form-control">
         <!-- Display of showtime list after user preses Enter -->
         <!-- When clicked, the showtime element will be removed -->
         <ul class="list-group">
             <li *ngFor="let showtimeItem of showtime.controls , let i = index" (click)="
-                    removeShowtime(showtimeItem)" class="list-group-item">
+                    removeShowtime(showtimeItem)"
+                class="list-group-item">
                 {{showtime.value[i]}}
             </li>
         </ul>
@@ -95,8 +98,10 @@
         <!-- Display of Validation message for Director input -->
         <div *ngIf="director.touched && director.invalid" class="alert alert-danger">
             <div *ngIf="director.errors.required">Director name is required</div>
-            <div *ngIf="director.errors.minlength">Director name requires at least {{director.errors.minlength.requiredLength}} charaters.</div>
-            <div *ngIf="director.errors.maxlength">Director name requires at most {{director.errors.maxlength.requiredLength}} charaters.</div>
+            <div *ngIf="director.errors.minlength">Director name requires at least
+                {{director.errors.minlength.requiredLength}} charaters.</div>
+            <div *ngIf="director.errors.maxlength">Director name requires at most
+                {{director.errors.maxlength.requiredLength}} charaters.</div>
         </div>
     </div>
 
@@ -108,9 +113,11 @@
         <!-- Display of Validation message for Storyline (Summary) textarea -->
         <div *ngIf="storyline.touched && storyline.invalid" class="alert alert-danger">
             <div *ngIf="storyline.errors.required">Storyline is required</div>
-            <div *ngIf="storyline.errors.minlength">Storyline requires at least {{storyline.errors.minlength.requiredLength}} charaters.
+            <div *ngIf="storyline.errors.minlength">Storyline requires at least
+                {{storyline.errors.minlength.requiredLength}} charaters.
             </div>
-            <div *ngIf="storyline.errors.maxlength">Storyline requires at most {{storyline.errors.maxlength.requiredLength}} charaters.
+            <div *ngIf="storyline.errors.maxlength">Storyline requires at most
+                {{storyline.errors.maxlength.requiredLength}} charaters.
             </div>
         </div>
     </div>

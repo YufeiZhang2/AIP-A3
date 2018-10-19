@@ -7,13 +7,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './message.component.html',
   styleUrls: ['./message.component.css']
 })
-export class MessageComponent implements OnInit {
-
+export class MessageComponent {
+  message: string = `The operation is successful.`;
   constructor(private router: Router) { }
-
-  ngOnInit() {
-  }
-
   //button back to admin
   backToAdmin() {
     this.router.navigate(["/admin"]);

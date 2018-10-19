@@ -14,10 +14,8 @@ export class ComingSoonMovieListComponent implements OnInit {
 
   //get all the movies that are coming soon at initial stage 
   ngOnInit() {
-    this.service.getMovies().subscribe(response => {
-      this.movies = response.json()
-        .filter(movie => movie.status === 'comingSoon');
-    });
+    this.service.getMovies().subscribe(response => this.movies = response.json()
+      .filter(movie => movie.status === 'comingSoon'));
   }
 }
 

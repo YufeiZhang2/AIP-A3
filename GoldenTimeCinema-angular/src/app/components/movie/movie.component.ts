@@ -18,14 +18,11 @@ export class MovieComponent implements OnInit {
     this.route.paramMap
       .subscribe(params => {
         let _id = params.get('_id');
-        console.log(_id);
 
         //get a specific movie object by its object id
         this.service.getMoviesById(_id).subscribe(response => {
           this.movie = response.json();
-          console.log(this.movie);
         })
       })
   }
-
 }

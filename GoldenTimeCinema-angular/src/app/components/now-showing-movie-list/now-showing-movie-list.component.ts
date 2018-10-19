@@ -9,13 +9,12 @@ import { Component, OnInit } from "@angular/core";
 export class NowShowingMovieListComponent implements OnInit {
   movies: any[];
 
-  constructor(private service: MoviesService) {}
+  constructor(private service: MoviesService) { }
 
   ngOnInit() {
-    this.service.getMovies().subscribe(response => {
-      this.movies = response
-        .json()
-        .filter(movie => movie.status === "nowShowing");
-    });
+    //get the movies that are now showing
+    this.service.getMovies().subscribe(response => this.movies = response.json()
+      .filter(movie => movie.status === "nowShowing")
+    );
   }
 }
