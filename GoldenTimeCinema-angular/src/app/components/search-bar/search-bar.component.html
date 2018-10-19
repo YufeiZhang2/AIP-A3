@@ -1,25 +1,28 @@
 <br />
 <br />
 <div id="searchBar">
+
+    <!-- Search movie form -->
     <form [formGroup]="form">
         <div class="input-group">
+            <!-- Movie name input for search form -->
             <input formControlName="movieName" type="text" placeholder="please search here" class="form-control">
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="submit" [disabled]="!form.valid" (click)="onSubmit()">search</button>
             </div>
         </div>
         <br />
+
+        <!-- Display of Validation message for search form -->
         <div *ngIf="movieName.invalid">
-            <div *ngIf="movieName.errors.minlength">Name requires at least
-                {{movieName.errors.minlength.requiredLength}}
-                charaters.
+            <div *ngIf="movieName.errors.minlength">Name requires at least {{movieName.errors.minlength.requiredLength}} charaters.
             </div>
-            <div *ngIf="movieName.errors.maxlength">Name requires at most
-                {{movieName.errors.maxlength.requiredLength}}
-                charaters.
+            <div *ngIf="movieName.errors.maxlength">Name requires at most {{movieName.errors.maxlength.requiredLength}} charaters.
             </div>
         </div>
     </form>
+
+    <!-- Alert message for not found results -->
     <div *ngIf=flag>
         <p class="alert alert-warning" role="alert">
             Sorry, the result you are looking for has not been found.
@@ -27,32 +30,48 @@
     </div>
 </div>
 <div>
+
+    <!-- Display of movie result found -->
     <div *ngFor="let property of movieResult" id="movie">
+
+        <!-- Display movie name -->
         <h3>{{property.name}}</h3>
         <br />
         <br />
         <br />
-        <label> <span>Sessions: </span></label>
+
+        <!-- Display list of movie showtime sessions -->
+        <label>
+            <span>Sessions: </span>
+        </label>
         <br />
-        <div *ngFor="let showtime of property.showtime" class="list-group-item list-group-item-action list-group-item-light"
-            [routerLink]="['../genre', showtime,property._id]">{{showtime | date:'short'}}<br />
+        <div *ngFor="let showtime of property.showtime" class="list-group-item list-group-item-action list-group-item-light" [routerLink]="['../genre', showtime,property._id]">{{showtime | date:'short'}}
+            <br />
         </div>
         <br />
-        <label><span>Running time: </span>
+
+        <!-- Display movie running time -->
+        <label>
+            <span>Running time: </span>
             <br />
-            <br />
-            {{property.runningTime}} mins
+            <br /> {{property.runningTime}} mins
         </label>
         <br />
         <br />
-        <label><span>Director: </span>
+
+        <!-- Display movie director -->
+        <label>
+            <span>Director: </span>
             <br />
-            <br />
-            {{property.director | uppercase}}
+            <br /> {{property.director | uppercase}}
         </label>
         <br />
         <br />
-        <label><span>Cast:</span></label>
+
+        <!-- Display list of movie stars/actors/actresses, pipe into uppercase -->
+        <label>
+            <span>Cast:</span>
+        </label>
         <br />
         <div *ngFor="let star of property.stars">
             {{star|uppercase}}
@@ -60,23 +79,31 @@
         </div>
         <br />
         <br />
-        <label><span>Story: </span>
+
+        <!-- Display movie storyline/summary -->
+        <label>
+            <span>Story: </span>
             <br />
-            <br />
-            {{property.storyline}}
+            <br /> {{property.storyline}}
         </label>
         <br />
         <br />
-        <label><span>Genre:</span></label>
+
+        <!-- Display list of movie gernes, pipe into uppercase -->
+        <label>
+            <span>Genre:</span>
+        </label>
         <div *ngFor="let genre of property.genres">
             {{genre|uppercase}}
         </div>
         <br />
         <br />
-        <label><span>Status: </span>
+
+        <!-- Display movie status, pipe into uppercase -->
+        <label>
+            <span>Status: </span>
             <br />
-            <br />
-            {{property.status | uppercase}}
+            <br /> {{property.status | uppercase}}
         </label>
         <br />
         <br />

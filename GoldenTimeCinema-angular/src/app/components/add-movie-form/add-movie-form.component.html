@@ -5,23 +5,29 @@
 <br />
 <br />
 <br />
+
+<!-- Add movie form -->
 <form [formGroup]="form" id="form">
+    <!-- Movie Name input for adding new movie -->
     <div class="form-group">
         <label for="name">Movie Name</label>
         <input formControlName="name" id="name" type="text" class="form-control">
         <div *ngIf="name.touched && name.invalid" class="alert alert-danger">
+            <!-- Display of Validation message for Movie name input -->
             <div *ngIf="name.errors.required">Name is required</div>
-            <div *ngIf="name.errors.minlength">Name requires at least {{name.errors.minlength.requiredLength}}
-                charaters.</div>
-            <div *ngIf="name.errors.maxlength">Name requires at most {{name.errors.maxlength.requiredLength}}
-                charaters.</div>
+            <div *ngIf="name.errors.minlength">Name requires at least {{name.errors.minlength.requiredLength}} charaters.
+            </div>
+            <div *ngIf="name.errors.maxlength">Name requires at most {{name.errors.maxlength.requiredLength}} charaters.
+            </div>
             <div *ngIf="name.errors.shouldBeUnique">Name should be unique.</div>
         </div>
     </div>
 
+    <!-- Running time (minutes) input for adding new movie -->
     <div class="form-group">
         <label for="runningTime">Running time</label>
         <input formControlName="runningTime" id="runningTime" type="number" class="form-control">
+        <!-- Display of Validation message for Running time input -->
         <div *ngIf="runningTime.touched && runningTime.invalid" class="alert alert-danger">
             <div *ngIf="runningTime.errors.required">Running time is required.</div>
             <div *ngIf="runningTime.errors.min">Running time requires at least greater than or equal 1.</div>
@@ -29,39 +35,51 @@
         </div>
     </div>
 
+    <!-- Showtime (sessions) input for adding new movie -->
     <div class="form-group">
-        <label for="showtime">Session <br />(please press enter for the datetime one by one and delete the datetime by
-            clicking it)</label>
-        <input formArrayName="showtime" id="showtime" type="datetime-local" (keyup.enter)="addShowtime(showtimeItem)"
-            #showtimeItem class="form-control">
+        <label for="showtime">Session
+            <!-- Instruction for user input of an array of showtime -->
+            <br />(please press enter for the datetime one by one and delete the datetime by clicking it)</label>
+        <input formArrayName="showtime" id="showtime" type="datetime-local" (keyup.enter)="addShowtime(showtimeItem)" #showtimeItem
+            class="form-control">
+        <!-- Display of showtime list after user preses Enter -->
+        <!-- When clicked, the showtime element will be removed -->
         <ul class="list-group">
             <li *ngFor="let showtimeItem of showtime.controls , let i = index" (click)="
-                    removeShowtime(showtimeItem)"
-                class="list-group-item">
+                    removeShowtime(showtimeItem)" class="list-group-item">
                 {{showtime.value[i]}}
             </li>
         </ul>
     </div>
 
+    <!-- Stars (Actors/Actresses) input for adding new movie -->
     <div class="form-group">
-        <label for="stars">Stars <br />(please press enter for the name one by one and delete the name by
-            clicking it) </label>
+        <label for="stars">Stars
+            <!-- Instruction for user input of an array of stars (actors/actresses) -->
+            <br />(please press enter for the name one by one and delete the name by clicking it) </label>
         <input formArrayName="stars" id="stars" type="text" (keyup.enter)="addStar(star)" #star class="form-control">
+        <!-- Display of stars (actors/actresses) list after user preses Enter -->
+        <!-- When clicked, the start element will be removed -->
         <ul class="list-group">
             <li *ngFor="let star of stars.controls" (click)="removeStar(star)" class="list-group-item">
                 {{star.value}}
             </li>
         </ul>
+        <!-- Display of Validation message for Stars (Actors/Actresses) input -->
         <div *ngIf="stars.touched && stars.invalid" class="alert alert-danger">
             <div class="alert alert-danger" *ngIf="stars.errors.cannotBeNull">Stars name is required</div>
         </div>
     </div>
 
+    <!-- Gernes input for adding new movie -->
     <div class="form-group">
-        <label for="genres">Genres <br />(please press enter for the genre one by one and delete the genre by
-            clicking it)</label>
+        <label for="genres">Genres
+            <!-- Instruction for user input of an array of gernes  -->
+            <br />(please press enter for the genre one by one and delete the genre by clicking it)</label>
         <input formArrayName="genres" id="genres" type="text" (keyup.enter)="addGenre(genre)" #genre placeholder="Please enter dramas/ action/ crime/ horror/ comedies/ fantasy/ romance"
             class="form-control">
+        <!-- Display of gernes list after user preses Enter -->
+        <!-- When clicked, the gerne element will be removed -->
         <ul class="list-group">
             <li *ngFor="let genre of genres.controls" (click)="removeGenre(genre)" class="list-group-item">
                 {{genre.value}}
@@ -70,35 +88,38 @@
 
     </div>
 
+    <!-- Director input for adding new movie -->
     <div class="form-group">
         <label for="director">Director</label>
         <input formControlName="director" id="director" type="text" class="form-control">
+        <!-- Display of Validation message for Director input -->
         <div *ngIf="director.touched && director.invalid" class="alert alert-danger">
             <div *ngIf="director.errors.required">Director name is required</div>
-            <div *ngIf="director.errors.minlength">Director name requires at least
-                {{director.errors.minlength.requiredLength}} charaters.</div>
-            <div *ngIf="director.errors.maxlength">Director name requires at most
-                {{director.errors.maxlength.requiredLength}} charaters.</div>
+            <div *ngIf="director.errors.minlength">Director name requires at least {{director.errors.minlength.requiredLength}} charaters.</div>
+            <div *ngIf="director.errors.maxlength">Director name requires at most {{director.errors.maxlength.requiredLength}} charaters.</div>
         </div>
     </div>
 
+
+    <!-- Storyline (Summary) textarea for adding new movie -->
     <div class="form-group">
         <label for="storyline">Storyline</label>
         <textarea formControlName="storyline" id="storyline" clos="30" rows="10 " class="form-control"></textarea>
+        <!-- Display of Validation message for Storyline (Summary) textarea -->
         <div *ngIf="storyline.touched && storyline.invalid" class="alert alert-danger">
             <div *ngIf="storyline.errors.required">Storyline is required</div>
-            <div *ngIf="storyline.errors.minlength">Storyline requires at least
-                {{storyline.errors.minlength.requiredLength}}
-                charaters.</div>
-            <div *ngIf="storyline.errors.maxlength">Storyline requires at most
-                {{storyline.errors.maxlength.requiredLength}}
-                charaters.</div>
+            <div *ngIf="storyline.errors.minlength">Storyline requires at least {{storyline.errors.minlength.requiredLength}} charaters.
+            </div>
+            <div *ngIf="storyline.errors.maxlength">Storyline requires at most {{storyline.errors.maxlength.requiredLength}} charaters.
+            </div>
         </div>
     </div>
 
+    <!-- Price input for adding new movie -->
     <div class="form-group">
         <label for="Price">Price</label>
         <input formControlName="price" id="price" type="number" class="form-control">
+        <!-- Display of Validation message for Price input -->
         <div *ngIf="price.touched && price.invalid" class="alert alert-danger">
             <div *ngIf="price.errors.required">Price is required.</div>
             <div *ngIf="price.errors.min">Price requires at least greater than or equal 1.</div>
@@ -106,6 +127,7 @@
         </div>
     </div>
 
+    <!-- Movie Status radio option for adding new movie -->
     <div class="form-group">
         <label>Status</label>
         <br>
@@ -116,12 +138,17 @@
         <input formControlName="status" id="comingSoon" type="radio" class="form-control" value="comingSoon">
     </div>
 
+    <!-- Button to submit Add movie form -->
+    <!-- Check form validation before allow submission -->
     <button type="submit" [disabled]="!form.valid" (click)="onSubmit()" class="btn btn-primary">Submit</button>
     <br />
     <br />
+    <!-- Alert message: submit button is disabled -->
     <div class="alert alert-info" role="alert" *ngIf="!form.valid">
         <label>Please complete all the information, thanks!</label>
     </div>
+
+    <!-- Success message: submit button is enabled -->
     <div class="alert alert-success" role="alert" *ngIf="form.valid">
         <label>You can submit the movie now.</label>
     </div>

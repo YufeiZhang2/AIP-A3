@@ -2,26 +2,33 @@
 <br />
 <div class="col-md-8-col-md-offset-2">
 
+    <!-- Login form -->
     <form #loginForm="ngForm" (ngSubmit)="loginForm.valid && onLogin(loginForm)">
+
+        <!-- Email input for user login -->
         <div class="form-group">
             <label for="email">Email</label>
             <input type="text" #email="ngModel" [(ngModel)]="authService.selectedUser.email" name="email" placeholder="Email" class="form-control"
                 required [pattern]="emailRegex" [ngClass]="{ 'ng-invalid': loginForm.submitted && !email.valid }">
+            <!-- Display of Validation message for email input -->
             <div *ngIf="loginForm.submitted && email.errors">
                 <label *ngIf="email.errors.required" class="validation-message">Email is required.</label>
                 <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
             </div>
         </div>
 
+        <!-- Password input for user login -->
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" #password="ngModel" [(ngModel)]="authService.selectedUser.password" name="password" placeholder="Password"
                 class="form-control" minlength="4" required [ngClass]="{ 'ng-invalid': loginForm.submitted && !password.valid }">
+            <!-- Display of Validation message for password input -->
             <div *ngIf="loginForm.submitted && password.errors">
                 <label *ngIf="password.errors.required" class="validation-message">Password is required.</label>
             </div>
         </div>
 
+        <!-- Button to submit login form -->
         <button class="btn btn-primary" type="submit">Login</button>
     </form>
 
