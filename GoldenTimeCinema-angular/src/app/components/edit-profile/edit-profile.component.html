@@ -11,7 +11,7 @@
       <label for="firstName">First Name</label>
       <input type="text" #firstName="ngModel" [(ngModel)]="userDetails.firstName" name="firstName" placeholder="First Name" class="form-control"
         required [pattern]="nameRegex" minlength="2" maxlength="30" [ngClass]="{ 'ng-invalid': editProfileForm.submitted && !firstName.valid }">
-      <!-- Display of Validation for firstname input -->
+      <!-- Display of Validation message for firstname input -->
       <div *ngIf="editProfileForm.submitted && firstName.errors">
         <label *ngIf="firstName.errors.required" class="validation-message">First name is required.</label>
         <label *ngIf="firstName.errors.minlength" class="validation-message">First name must have at least 2 characters.</label>
@@ -25,7 +25,7 @@
       <label for="lastName">Last Name</label>
       <input type="text" #lastName="ngModel" [(ngModel)]="userDetails.lastName" name="lastName" placeholder="Last Name" class="form-control"
         required [pattern]="nameRegex" minlength="2" maxlength="30" [ngClass]="{ 'ng-invalid': editProfileForm.submitted && !lastName.valid }">
-      <!-- Display of Validation for lastname input -->
+      <!-- Display of Validation message for lastname input -->
       <div *ngIf="editProfileForm.submitted && lastName.errors">
         <label *ngIf="lastName.errors.required" class="validation-message">Last name is required.</label>
         <label *ngIf="lastName.errors.minlength" class="validation-message">Last name must have at least 2 characters.</label>
@@ -39,7 +39,7 @@
       <label for="email">Email</label>
       <input type="text" #email="ngModel" [(ngModel)]="userDetails.email" name="email" placeholder="Email" class="form-control"
         required [pattern]="emailRegex" [ngClass]="{ 'ng-invalid': editProfileForm.submitted && !email.valid }">
-      <!-- Display of Validation for email input -->
+      <!-- Display of Validation message for email input -->
       <div *ngIf="editProfileForm.submitted && email.errors">
         <label *ngIf="email.errors.required" class="validation-message">Email is required.</label>
         <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
@@ -56,7 +56,7 @@
           {{ gender}}
         </option>
       </select>
-      <!-- Display of Validation for gender input -->
+      <!-- Display of Validation message for gender input -->
       <div *ngIf="editProfileForm.submitted && gender.errors">
         <label *ngIf="gender.errors.required" class="validation-message">Gender is required.</label>
       </div>
@@ -67,12 +67,14 @@
       <label for="dob">Date of birth</label>
       <input type="date" #dob="ngModel" [(ngModel)]="userDetails.dob" name="dob" placeholder="Date of Birth" class="form-control"
         required [ngClass]="{ 'ng-invalid': editProfileForm.submitted && !dob.valid }">
-      <!-- Display of Validation for date of birth input -->
+      <!-- Display of Validation message for date of birth input -->
       <div *ngIf="editProfileForm.submitted && dob.errors">
         <label *ngIf="dob.errors.required" class="validation-message">Date of birth is required.</label>
       </div>
     </div>
+    <!-- Button to go back to user profile -->
     <button class="btn btn-secondary" (click)="backToProfile()">Back to Profile</button>
+    <!-- Button to submit the Edit Profile form -->
     <button class="btn btn-primary" type="submit">Update</button>
   </form>
 </div>

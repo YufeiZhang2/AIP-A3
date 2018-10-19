@@ -1,6 +1,7 @@
 <br />
 <br />
 <div class="col-md-8-col-md-offset-2">
+
     <!-- Registration form -->
     <form #registerForm="ngForm" (ngSubmit)="registerForm.valid && onRegister(registerForm)">
         <!-- Firstname input for user registration -->
@@ -8,7 +9,7 @@
             <label for="firstName">First Name</label>
             <input type="text" #firstName="ngModel" [(ngModel)]="authService.selectedUser.firstName" name="firstName" placeholder="First Name"
                 class="form-control" required [pattern]="nameRegex" minlength="2" maxlength="30" [ngClass]="{ 'ng-invalid': registerForm.submitted && !firstName.valid }">
-            <!-- Display of Validation for firstname input -->
+            <!-- Display of Validation message for firstname input -->
             <div *ngIf="registerForm.submitted && firstName.errors">
                 <label *ngIf="firstName.errors.required" class="validation-message">First name is required.</label>
                 <label *ngIf="firstName.errors.minlength" class="validation-message">First name must have at least 2 characters.</label>
@@ -23,7 +24,7 @@
             <label for="lastName">Last Name</label>
             <input type="text" #lastName="ngModel" [(ngModel)]="authService.selectedUser.lastName" name="lastName" placeholder="Last Name"
                 class="form-control" required [pattern]="nameRegex" minlength="2" maxlength="30" [ngClass]="{ 'ng-invalid': registerForm.submitted && !lastName.valid }">
-            <!-- Display of Validation for lastname input -->
+            <!-- Display of Validation message for lastname input -->
             <div *ngIf="registerForm.submitted && lastName.errors">
                 <label *ngIf="lastName.errors.required" class="validation-message">Last name is required.</label>
                 <label *ngIf="lastName.errors.minlength" class="validation-message">Last name must have at least 2 characters.</label>
@@ -37,7 +38,7 @@
             <label for="email">Email</label>
             <input type="text" #email="ngModel" [(ngModel)]="authService.selectedUser.email" name="email" placeholder="Email" class="form-control"
                 required [pattern]="emailRegex" [ngClass]="{ 'ng-invalid': registerForm.submitted && !email.valid }">
-            <!-- Display of Validation for email input -->
+            <!-- Display of Validation message for email input -->
             <div *ngIf="registerForm.submitted && email.errors">
                 <label *ngIf="email.errors.required" class="validation-message">Email is required.</label>
                 <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
@@ -49,7 +50,7 @@
             <label for="password">Password</label>
             <input type="password" #password="ngModel" [(ngModel)]="authService.selectedUser.password" name="password" placeholder="Password"
                 class="form-control" minlength="4" required [ngClass]="{ 'ng-invalid': registerForm.submitted && !password.valid }">
-            <!-- Display of Validation for password input -->
+            <!-- Display of Validation message for password input -->
             <div *ngIf="registerForm.submitted && password.errors">
                 <label *ngIf="password.errors.required" class="validation-message">Password is required.</label>
                 <label *ngIf="password.errors.minlength" class="validation-message">Password must have at least 4 characters.</label>
@@ -66,7 +67,7 @@
                     {{ gender}}
                 </option>
             </select>
-            <!-- Display of Validation for gender input -->
+            <!-- Display of Validation message for gender input -->
             <div *ngIf="registerForm.submitted && gender.errors">
                 <label *ngIf="gender.errors.required" class="validation-message">Gender is required.</label>
             </div>
@@ -77,12 +78,13 @@
             <label for="dob">Date of birth</label>
             <input type="date" #dob="ngModel" [(ngModel)]="authService.selectedUser.dob" name="dob" placeholder="Date of Birth" class="form-control"
                 required [ngClass]="{ 'ng-invalid': registerForm.submitted && !dob.valid }">
-            <!-- Display of Validation for date of birth input -->
+            <!-- Display of Validation message for date of birth input -->
             <div *ngIf="registerForm.submitted && dob.errors">
                 <label *ngIf="dob.errors.required" class="validation-message">Date of birth is required.</label>
             </div>
         </div>
 
+        <!-- Button to submit register form -->
         <button class="btn btn-primary" type="submit">Register</button>
     </form>
 </div>

@@ -1,14 +1,22 @@
 <br />
 <br />
+
+<!-- Button leading to Home page -->
 <button class="btn btn-secondary" (click)="backToHome()">Home Page</button>
 <br />
 <br />
 <br />
 <h2>Booking:</h2>
+
+<!-- Display of selected movie with specified id -->
 <div *ngFor="let property of movie" id="movie">
   <br />
+
+  <!-- Display movie name -->
   <h3>{{property.name}}</h3>
   <br />
+
+  <!-- Display movie showtime sessions -->
   <label>
     <span>Sessions: </span>
   </label>
@@ -16,6 +24,8 @@
     <br />
   </div>
   <br />
+
+  <!-- Display movie ticket price -->
   <label>
     <span>Price: </span>{{property.price | currency:'AUD':true:'1.2-2'}}</label>
   <br />
@@ -34,7 +44,7 @@
     <label>Please enter your email: </label>
     <input type="text" #email="ngModel" [(ngModel)]="bookingService.email" name="email" placeholder="Email" class="form-control"
       required [pattern]="emailRegex" [ngClass]="{ 'ng-invalid': bookingForm.submitted && !email.valid }">
-    <!-- Display of Validation for email input -->
+    <!-- Display of Validation message for email input -->
     <div *ngIf="bookingForm.submitted && email.errors">
       <label *ngIf="email.errors.required" class="validation-message">Email is required.</label>
       <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
@@ -51,7 +61,7 @@
     <label>Please check your email:</label>
     <input type="text" #email="ngModel" [(ngModel)]="userDetails.email" name="email" placeholder="Email" class="form-control"
       required [pattern]="emailRegex" [ngClass]="{ 'ng-invalid': bookingForm.submitted && !email.valid }">
-    <!-- Display of Validation for email input -->
+    <!-- Display of Validation message for email input -->
     <div *ngIf="bookingForm.submitted && email.errors">
       <label *ngIf="email.errors.required" class="validation-message">Email is required.</label>
       <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
@@ -63,6 +73,5 @@
 
 <!-- If the movie has "coming soon" status -->
 <div>
-  <label *ngIf="bookingComplete" class="success">Your ticket has been succesfully booked. Please check your email for
-    more details.</label>
+  <label *ngIf="bookingComplete" class="success">Your ticket has been succesfully booked. Please check your email for more details.</label>
 </div>
