@@ -26,15 +26,15 @@ Make sure you have installed all of the following pre-requisites on your develop
 
 ### Installation
 
-Make sure you have installed all of the following pre-requisites on your development machine:
-
 • Clone this repository into a specified folder on your local machine
 
-• Run `npm install` in the root folder of your local repository to install node_modules for back-end development
+• Run `npm install` in the root folder of your local repository to install dependencies for back-end development
 
 • `cd .\GoldenTimeCinema-angular\` to change directory to front-end directory of Angular
 
-• Run `npm install` to install node_modules for front-end development
+• Run `npm install` to install dependencies for front-end development
+
+• To update these packages of dependencies, run `npm update` in the either directories as specified above
 
 ## Principles of code style
 
