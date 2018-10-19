@@ -2,6 +2,16 @@
 
 This is a repository that provides the deliverable for assignment 3 for our group Web Three(two nerds now becuase one teammate dropped the subject).
 
+## Build With (The MEAN Stack)
+
+• [MongoDB](https://www.mongodb.com/) - Document database, used by Back-end application to store data as JSON documents
+
+• [Express.js](https://expressjs.com/) - Back-end web application Framework running on top of Node.js
+
+• [Angular](https://angular.io/) - Front-end web application Framework
+
+• [Node.js](https://nodejs.org/en/) - JavaScript runtime environment
+
 ## Getting Started
 
 ### Pre-Requisites
