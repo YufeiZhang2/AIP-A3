@@ -18,7 +18,7 @@ export class AdminComponent implements OnInit {
     private movieService: MoviesService,
     private authService: AuthenticationService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit() {
     //get all movies
@@ -62,6 +62,7 @@ export class AdminComponent implements OnInit {
     });
   }
 
+  // button for navigting to add movie page 
   clickToAddMovie() {
     this.router.navigate(["/addMovieForm"]);
   }

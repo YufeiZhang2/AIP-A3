@@ -1,3 +1,4 @@
+//evaluate if two words match
 export class CheckWordsMatched {
     CompareWithWords(firstWord, secondWord): boolean {
         //remove all the whitespace of strings and make all the words become lower case to compare if they are matched
