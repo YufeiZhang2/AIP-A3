@@ -61,7 +61,7 @@ Make sure you have installed all of the following pre-requisites on your develop
 
 • Run `npm install` in the root folder of your local repository to install dependencies for back-end development
 
-• `cd .\GoldenTimeCinema-angular\` to change directory to front-end directory of Angular
+• `cd ./GoldenTimeCinema-angular/` to change directory to front-end directory of Angular
 
 • Run `npm install` to install dependencies for front-end development
 
@@ -73,7 +73,13 @@ Make sure you have installed all of the following pre-requisites on your develop
 
 • Run Mongo shell `mongod` in another terminal to access data in MongoDB
 
-• `cd .\GoldenTimeCinema-angular\` to change directory to front-end directory of Angular
+• `cd ./models/databseScript` to change directory to database script folder
+
+• Run `node movieData.js` to poupulate the sample data to the mongo database 'cinema'
+
+• `cd ../../` change directory to the root folder
+
+• `cd ./GoldenTimeCinema-angular/` to change directory to front-end directory of Angular
 
 • Run `ng build` to build the front-end project in Angular project folder
 
