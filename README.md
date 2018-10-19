@@ -29,8 +29,9 @@ Golden Time Cinema is a web application platform providing services to movie lov
     • Edit movie status and Delete unnecessary movies
 
     • To use the admin function, you can log into the admin account using this credentials (for testing purpose):
-        • Email: admin@goldentimecinema.com
-        • Password: 123456
+
+        Email: admin@goldentimecinema.com
+        Password: 123456
 
 ## Build With (The MEAN Stack)
 

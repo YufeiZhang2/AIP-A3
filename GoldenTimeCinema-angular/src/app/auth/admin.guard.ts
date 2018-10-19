@@ -23,9 +23,8 @@ export class AdminGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
-    // console.log("guard level: admin " + this.authService.isAdmin());
-    // console.log("next.data.isAdmin " + next.data.isAdmin);
 
+    // If user role is not admin, redirect to login page and delete token in local storage
     if (!this.authService.isAdmin() === next.data.isAdmin) {
       this.router.navigateByUrl("/login");
       this.authService.deleteToken();
