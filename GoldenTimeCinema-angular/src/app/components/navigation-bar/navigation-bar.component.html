@@ -1,32 +1,54 @@
 <br />
 <nav>
+  <!-- Display of navigation bar -->
   <ul class="nav justify-content-center">
+
+    <!-- Link to Home page -->
     <li class="nav-item" routerLinkActive="active">
       <a routerLink="../">{{home}}</a>
     </li>
+
+    <!-- Link to Search page -->
     <li class="nav-item" routerLinkActive="active">
       <a routerLink="../search">{{search}}</a>
     </li>
+
+    <!-- Link to Genres page -->
     <li class="nav-item" routerLinkActive="active">
       <a routerLink="../genre">{{genre}}</a>
     </li>
+
     <!-- Only display admin tab for admin user -->
+    <!-- Link to Admin page -->
     <li class="nav-item" *ngIf="authService.displayAdmin()" routerLinkActive="active">
       <a routerLink="../admin">{{admin}}</a>
     </li>
+
+
     <!-- User authService.isLoggedIn directly here to solve problem of manually refreshing the page to see changes -->
+    <!-- Below link will only be displayed if the user is logged in-->
+
+    <!-- Link to Login page -->
     <li class="nav-item" *ngIf="!authService.isLoggedIn()" routerLinkActive="active">
       <a routerLink="../login">{{logIn}}</a>
     </li>
+
+    <!-- Link to Register page -->
     <li class="nav-item" *ngIf="!authService.isLoggedIn()" routerLinkActive="active">
       <a routerLink="../register">{{register}}</a>
     </li>
+
+    <!-- Link to Ticket Order page -->
     <li class="nav-item" *ngIf="authService.isLoggedIn()" routerLinkActive="active">
       <a routerLink="../tickets">{{ticket}}</a>
     </li>
+
+    <!-- Link to User Profile page -->
     <li class="nav-item" *ngIf="authService.isLoggedIn()" routerLinkActive="active">
       <a routerLink="../userprofile">{{profile}}</a>
     </li>
+
+    <!-- Link to About us page -->
     <li class="nav-item" routerLinkActive="active">
       <a routerLink="../companyInformation">{{companyInformation}}</a>
     </li>

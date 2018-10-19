@@ -1,4 +1,6 @@
 <br />
+
+<!-- Block of movies with "Coming Soon" status -->
 <div class="comingSoonBlock">
   <div class="list-group">
     <div class="border border-light">
@@ -6,6 +8,8 @@
     </div>
     <ul if="list" class="list-group list-group-flush">
       <li class="list-group-item" *ngFor="let movie of movies">
+
+        <!-- Link to each "Coming Soon" movie details -->
         <a [routerLink]="['../movie', movie._id]" id="list">{{movie.name}}</a>
       </li>
     </ul>
