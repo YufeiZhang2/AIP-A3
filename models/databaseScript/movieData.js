@@ -1,11 +1,17 @@
 const mongoose = require("mongoose");
 const dbConfig = require("../../config/cinemaDb");
 
-// Connect to the Movie database
+// Connect to local database 'cinema'
 mongoose
-  .connect(dbConfig, { auth: { authdb: "admin" } })
-  .then(() => console.log("Connected to MongoDB...")) // Sucessfully connected
-  .catch(err => console.log("Bad connection", err)); // Catch an error
+  .connect(dbConfig)
+  .then(() => console.log(`Connected to MongoDB ${dbConfig}...`))
+  .catch(err => console.log("bad connection"));
+
+// // Remove comment to connect to cloud database 'cinema'
+// mongoose
+//   .connect(dbConfig, { auth: { authdb: "admin" } })
+//   .then(() => console.log(`Connected to MongoDB ${dbConfig}...`))
+//   .catch(err => console.log("bad connection"));
 
 const movieModel = mongoose.model(
   "movie",
@@ -320,14 +326,3 @@ async function createMovies() {
 }
 
 createMovies();
-
-// // Query documents:
-// async function getNowShowingMovies() {
-//   const movies = await Movie.find({ status: "nowShowing" }) //only find Now Showing movies
-//     .limit(5) // the number of movies shown is 5
-//     .sort({ name: 1 }) // sort the result based on name
-//     .select({ name: 1, directors: 1, runningTime: 1 }); // only display name, directors and running time
-//   console.log(movies);
-// }
-
-// getNowShowingMovies();

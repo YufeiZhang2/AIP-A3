@@ -3,13 +3,7 @@ import { FormArrayValidators } from "../common/validators/formArray.validators";
 import { MoviesService } from "../../services/movies.service";
 import { Router } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
-import {
-  FormGroup,
-  FormControl,
-  FormArray,
-  Validators,
-  ReactiveFormsModule
-} from "@angular/forms";
+import { FormGroup, FormControl, FormArray, Validators } from "@angular/forms";
 
 @Component({
   selector: "add-movie-form",
@@ -17,6 +11,8 @@ import {
   styleUrls: ["./add-movie-form.component.css"]
 })
 export class AddMovieFormComponent implements OnInit {
+
+  //create from group, form control and form array for user input for the infomation of a movie
   form = new FormGroup({
     name: new FormControl(
       "",

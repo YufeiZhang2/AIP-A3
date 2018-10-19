@@ -13,14 +13,17 @@ const usersController = require("./controllers/usersController");
 const dbConfig = require("./config/cinemaDb");
 const ticketsController = require("./controllers/ticketsController");
 
-// Connect mongoose to our database
+// Connect to local database 'cinema'
 mongoose
-  .connect(
-    dbConfig
-    // { auth: { authdb: "admin" } }
-  )
+  .connect(dbConfig)
   .then(() => console.log(`Connected to MongoDB ${dbConfig}...`))
   .catch(err => console.log("bad connection"));
+
+// // Remove comment to connect to cloud database 'cinema'
+// mongoose
+//   .connect(dbConfig, { auth: { authdb: "admin" } })
+//   .then(() => console.log(`Connected to MongoDB ${dbConfig}...`))
+//   .catch(err => console.log("bad connection"));
 
 //Initialize our app variable
 const app = express();
@@ -53,11 +56,6 @@ app.use((err, req, res, next) => {
     res.status(422).send(valErrors);
   }
 });
-
-//Handle errors when the api is not defined
-// app.use("/", (req, res) => {
-//   res.send("Invalid page");
-// });
 
 // All other routes, lead back to index page
 // Fix problem of "invalid page" when reloading the page

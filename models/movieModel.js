@@ -1,6 +1,6 @@
-//const Joi = require('joi');
 const mongoose = require("mongoose");
 
+//movie model
 const movieModel = mongoose.model(
     "movie",
     new mongoose.Schema({

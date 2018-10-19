@@ -6,7 +6,6 @@
 <br />
 <br />
 <form [formGroup]="form" id="form">
-
     <div class="form-group">
         <label for="name">Movie Name</label>
         <input formControlName="name" id="name" type="text" class="form-control">
@@ -42,15 +41,6 @@
                 {{showtime.value[i]}}
             </li>
         </ul>
-        <!-- <div *ngIf="showtime.touched && showtime.invalid" class="alert alert-danger">
-                <div *ngIf="showtime.errors.required">showtime is required</div>
-                <div *ngIf="showtime.errors.minlength">showtime requires at least
-                    {{showtime.errors.minlength.requiredLength}}
-                    charaters.</div>
-                <div *ngIf="showtime.errors.maxlength">showtime requires at most
-                    {{showtime.errors.maxlength.requiredLength}}
-                    charaters.</div>
-            </div> -->
     </div>
 
     <div class="form-group">
@@ -77,15 +67,7 @@
                 {{genre.value}}
             </li>
         </ul>
-        <!-- <div *ngIf="genres.touched && genres.invalid" class="alert alert-danger">
-                <div *ngIf="genres.errors.required">showtime is required</div>
-                <div *ngIf="genres.errors.minlength">showtime requires at least
-                    {{showtime.errors.minlength.requiredLength}}
-                    charaters.</div>
-                <div *ngIf="genres.errors.maxlength">showtime requires at most
-                    {{showtime.errors.maxlength.requiredLength}}
-                    charaters.</div>
-            </div> -->
+
     </div>
 
     <div class="form-group">
@@ -100,8 +82,6 @@
         </div>
     </div>
 
-
-
     <div class="form-group">
         <label for="storyline">Storyline</label>
         <textarea formControlName="storyline" id="storyline" clos="30" rows="10 " class="form-control"></textarea>
@@ -115,7 +95,6 @@
                 charaters.</div>
         </div>
     </div>
-
 
     <div class="form-group">
         <label for="Price">Price</label>
@@ -146,6 +125,5 @@
     <div class="alert alert-success" role="alert" *ngIf="form.valid">
         <label>You can submit the movie now.</label>
     </div>
-
 </form>
 <br />

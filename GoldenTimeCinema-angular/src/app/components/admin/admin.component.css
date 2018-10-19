@@ -2,12 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Semi-Bold|Source Sans Pro');
 @import url('https://fonts.googleapis.com/css?family=Source Sans Pro');
 
-
-button{
-    width: 5cm;
-    height: 1cm;
-}
-
 #admin{
 
     font-size: 20px;
@@ -28,4 +22,9 @@ h3{
     color: black;
     font-family: 'Cormorant SC', sans-serif;
     font-family: 'Bold', sans-serif;
+}
+
+button{
+    width: 5cm;
+    height: 1cm;
 }

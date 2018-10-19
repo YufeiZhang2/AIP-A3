@@ -1,12 +1,7 @@
 import { MoviesService } from "../../services/movies.service";
 import { Component, OnInit } from "@angular/core";
-import {
-  FormGroup,
-  FormControl,
-  FormArray,
-  Validators,
-  ReactiveFormsModule
-} from "@angular/forms";
+import { CheckWordsMatched } from "../common/checkWordsMatched";
+import { FormGroup, FormControl, Validators, } from "@angular/forms";
 
 @Component({
   selector: "search-bar",
@@ -17,6 +12,7 @@ export class SearchBarComponent implements OnInit {
   searchResultId;
   movies: any[];
   movieResult: any[];
+  //flag for indicating if a error message is shown in search page
   flag = false;
 
   form = new FormGroup({
@@ -46,38 +42,23 @@ export class SearchBarComponent implements OnInit {
 
         //if the result is not found, the flag is true.
         this.flag = true;
+
+        console.log(CheckWordsMatched.prototype.CompareWithWords(movie.name, this.form.value.movieName));
         //if words match, get the sepecific movie from database
-        if (this.CompareWithWords(movie.name, this.form.value.movieName)) {
+        if (CheckWordsMatched.prototype.CompareWithWords(movie.name, this.form.value.movieName)) {
           //get the object id of the matched movie
           this.searchResultId = movie._id;
           console.log(this.searchResultId);
           this.service
             .getMoviesById(this.searchResultId)
             .subscribe(response => {
+
               //if the result is found, the flag is false
               this.flag = false;
               this.movieResult = response.json();
-              console.log("i got the movie!", this.movieResult);
             });
         }
       }
     });
-  }
-
-  //method for verifying if two words match without whitespace
-  CompareWithWords(firstWord, secondWord) {
-    //remove all the whitespace of strings
-    const firstResult = firstWord
-      .toString()
-      .toLowerCase()
-      .trim()
-      .replace(/ /g, "");
-    const secondResult = secondWord
-      .toString()
-      .toLowerCase()
-      .trim()
-      .replace(/ /g, "");
-
-    return firstResult === secondResult ? true : false;
   }
 }

@@ -17,18 +17,7 @@ export class MovieInfoValidators {
             let movies = response.json();
             for (let movie of movies) {
               console.log(movie);
-              if (
-                control.value
-                  .toString()
-                  .toLowerCase()
-                  .trim()
-                  .replace(/ /g, "") ===
-                movie.name
-                  .toString()
-                  .toLowerCase()
-                  .trim()
-                  .replace(/ /g, "")
-              )
+              if (control.value.toString().toLowerCase().trim().replace(/ /g, "") === movie.name.toString().toLowerCase().trim().replace(/ /g, ""))
                 return resolve({ shouldBeUnique: true });
             }
             return resolve(null);
