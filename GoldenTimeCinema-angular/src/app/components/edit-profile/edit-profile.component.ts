@@ -26,6 +26,7 @@ export class EditProfileComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    // Try to get user profile when initialize this component
     this.authService.getUserProfile().subscribe(
       res => {
         this.userDetails = res["user"];
@@ -33,6 +34,8 @@ export class EditProfileComponent implements OnInit {
       err => {}
     );
   }
+
+  // When Edit Profile formed is submitted
   onUpdate(form: NgForm) {
     this.authService.updateUser(form.value).subscribe(
       res => {
@@ -51,6 +54,7 @@ export class EditProfileComponent implements OnInit {
     );
   }
 
+  // Navigate back to User profile page
   backToProfile() {
     this.router.navigate(["/userprofile"]);
   }

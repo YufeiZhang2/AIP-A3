@@ -48,9 +48,6 @@ export class TicketComponent implements OnInit {
     this.ticketService.deleteTicket(objectId).subscribe(response => {
       // Refresh the ticket list after deletion or changes will not be displayed without reloading the page
       this.refreshTicketList();
-
-      // console.log("Ticket is removed");
-      // console.log(response.json());
     });
   }
 }

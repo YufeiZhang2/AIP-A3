@@ -13,7 +13,7 @@ export class TicketService {
   // When user book a ticket,
   // ticket information is saved to the database
   // a notification message is sent to user's email
-  // Link to api in ticketController
+  // Link to api endpoint in ticketController
   bookMovie(booking: MovieBooking) {
     return this.http.post(environment.apiBaseUrl + "/book", booking);
   }

@@ -16,6 +16,7 @@ export class UserProfileComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    // Try to get user profile when initialize this component
     this.authService.getUserProfile().subscribe(
       res => {
         this.userDetails = res["user"];
@@ -30,6 +31,7 @@ export class UserProfileComponent implements OnInit {
     this.router.navigate(["/login"]);
   }
 
+  // Navigate to Edit Profile page
   clickToEditProfile() {
     this.router.navigate(["/editprofile"]);
   }

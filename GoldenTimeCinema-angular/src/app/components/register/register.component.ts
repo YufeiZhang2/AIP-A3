@@ -11,6 +11,8 @@ import { Router } from "@angular/router";
 export class RegisterComponent implements OnInit {
   // Email regular expression to validate email format
   emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  // Name regular expression to validate name format
   nameRegex = /^([a-zA-Z ]){2,30}$/;
   gender = null;
   genders = ["Female", "Male", "Other"];
@@ -29,6 +31,7 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+  // When the Register formed is submitted
   onRegister(form: NgForm) {
     this.authService.registerUser(form.value).subscribe(
       // if registration is successfull
@@ -48,6 +51,7 @@ export class RegisterComponent implements OnInit {
     );
   }
 
+  // Reset all parameter to empty/null/default
   resetForm(form: NgForm) {
     this.authService.selectedUser = {
       firstName: "",

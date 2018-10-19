@@ -34,13 +34,13 @@ export class AuthenticationService {
   // httpMethods
 
   // Register new user
-  // Link to api of register in userControl
+  // Link to api endpoint of register in userControl
   registerUser(user: User) {
     return this.http.post(this.url + "/register", user, this.noAuthHeader);
   }
 
   // Check user authentication
-  // Link to api authenticate in userControl
+  // Link to api endpoint of authenticate in userControl
   // require authentication credentials
   login(authCredentials) {
     return this.http.post(
@@ -52,13 +52,13 @@ export class AuthenticationService {
 
   // need jwt in the header
   // Get profile details of the current user
-  // Link to api of userprofile in userController
+  // Link to api of endpoint userprofile in userController
   getUserProfile() {
     return this.http.get(this.url + "/userprofile");
   }
 
   // Update profile details of the current user
-  // Link to api of editprofile in userController
+  // Link to api endpoint of editprofile in userController
   updateUser(user: User) {
     return this.http.put(this.url + "/editprofile", user);
   }
